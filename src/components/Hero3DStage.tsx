@@ -9,9 +9,13 @@ import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
 import { CTASection } from "./CTASection"
 import { Footer } from "./Footer"
+import { OrderForm } from "./OrderForm"
+import { PricingSection } from "./PricingSection"
+import { GallerySection } from "./GallerySection"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
+  const [isFormOpen, setIsFormOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +83,10 @@ export function Hero3DStage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mt-8 flex items-center gap-6"
               >
-                <button className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm">
+                <button 
+                  onClick={() => setIsFormOpen(true)}
+                  className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm"
+                >
                   Заказать услугу
                 </button>
                 <button className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
@@ -161,6 +168,8 @@ export function Hero3DStage() {
 
           <LogoCloud />
           <FeatureCardsSection />
+          <PricingSection />
+          <GallerySection />
           <AISection />
           <ProductDirectionSection />
           <WorkflowsSection />
@@ -168,6 +177,7 @@ export function Hero3DStage() {
           <Footer />
         </div>
       </section>
+      <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </>
   )
 }
