@@ -12,16 +12,11 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Logo */}
           <div className="col-span-2 md:col-span-1">
-            <svg width="20" height="20" viewBox="0 0 100 100" fill="none" className="text-white">
-              <path
-                d="M20 30 L50 10 L80 30 L80 70 L50 90 L20 70 Z"
-                fill="currentColor"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path d="M50 10 L50 50 L20 30" fill="#09090B" />
-              <path d="M50 50 L80 70 L50 90" fill="#09090B" />
-            </svg>
+            <img 
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b9a3c2f-fda5-4533-80d3-aafcd7b7efcb.png" 
+              alt="МАСТЕРОФФ"
+              className="h-8"
+            />
           </div>
 
           {/* Links */}
