@@ -12,6 +12,9 @@ import { Footer } from "./Footer"
 import { OrderForm } from "./OrderForm"
 import { PricingSection } from "./PricingSection"
 import { GallerySection } from "./GallerySection"
+import { AdvantagesSection } from "./AdvantagesSection"
+import { WhyUsSection } from "./WhyUsSection"
+import { TestimonialsSection } from "./TestimonialsSection"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -168,11 +171,11 @@ export function Hero3DStage() {
 
           <LogoCloud />
           <FeatureCardsSection />
+          <AdvantagesSection />
           <PricingSection />
           <GallerySection />
-          <AISection />
-          <ProductDirectionSection />
-          <WorkflowsSection />
+          <WhyUsSection />
+          <TestimonialsSection />
           <CTASection />
           <Footer />
         </div>
