@@ -66,7 +66,7 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
+                className="text-3xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
               >
                 Разнорабочие в Усть-Куте — быстро и качественно
               </motion.h1>
@@ -74,35 +74,38 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-6 text-lg text-zinc-400"
+                className="mt-6 text-base md:text-lg text-zinc-400"
               >
                 Помощь по дому и офису: ремонт, сборка мебели, электрика, сантехника.
-                <br />
+                <br className="hidden md:block" />
                 Работаем по всему Усть-Куту — выезд в день обращения.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 flex items-center gap-6"
+                className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4"
               >
                 <button 
                   onClick={() => setIsFormOpen(true)}
-                  className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm"
+                  className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm w-full sm:w-auto"
                 >
                   Заказать услугу
                 </button>
-                <button className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
+                <a 
+                  href="tel:+79991234567"
+                  className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm"
+                >
                   <span className="text-zinc-500">Звоните:</span> +7 (999) 123-45-67
                   <span aria-hidden="true">→</span>
-                </button>
+                </a>
               </motion.div>
             </div>
           </div>
 
           {/* 3D Stage - full bleed */}
           <div
-            className="relative mt-16"
+            className="relative mt-16 hidden md:block"
             style={{
               width: "100vw",
               marginLeft: "-50vw",
