@@ -13,9 +13,9 @@ export function DashboardMockup() {
       }}
     >
       <img 
-        src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/366dd0d4-cb9f-48ee-a86c-56ed2d9f48dc.png"
-        alt="Команда профессиональных разнорабочих"
-        className="w-full h-full object-contain"
+        src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c5224f9d-ea38-4269-a672-954e55510c81.jpg"
+        alt="Команда профессиональных разнорабочих МАСТЕРОФФ"
+        className="w-full h-full object-cover"
       />
     </motion.div>
   )
