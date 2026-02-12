@@ -13,8 +13,8 @@ export function DashboardMockup() {
       }}
     >
       <img 
-        src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/5da7e927-77de-4222-8106-a948a43456f2.jpg"
-        alt="Инструменты разнорабочих"
+        src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/4d71e070-352e-4c0b-8da9-80d72ed34f07.jpg"
+        alt="Заказ услуг через телефон"
         className="w-full h-full object-cover"
       />
     </motion.div>
