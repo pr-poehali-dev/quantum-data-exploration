@@ -149,7 +149,7 @@ export function FeatureCardsSection() {
       <div className="w-full flex justify-center px-6">
         <div className="w-full max-w-5xl">
           {/* Header row */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-12">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

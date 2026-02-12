@@ -123,7 +123,7 @@ export function Hero3DStage() {
 
           {/* 3D Stage - full bleed */}
           <div
-            className="relative mt-16 hidden md:block"
+            className="relative mt-8 hidden md:block"
             style={{
               width: "100vw",
               marginLeft: "-50vw",
