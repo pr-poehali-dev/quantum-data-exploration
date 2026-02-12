@@ -15,6 +15,7 @@ import { PricingSection } from "./PricingSection"
 import { AdvantagesSection } from "./AdvantagesSection"
 import { WhyUsSection } from "./WhyUsSection"
 import { TestimonialsSection } from "./TestimonialsSection"
+import { PromoSection } from "./PromoSection"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -172,6 +173,7 @@ export function Hero3DStage() {
             </div>
           </div>
 
+          <PromoSection />
           <FeatureCardsSection />
           <AdvantagesSection />
           <PricingSection />
