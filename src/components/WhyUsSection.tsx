@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon"
 
 export function WhyUsSection() {
   return (
-    <section className="relative py-40 px-6 md:px-12 lg:px-24" style={{ backgroundColor: "#09090B" }}>
+    <section className="relative py-24 px-6 md:px-12 lg:px-24" style={{ backgroundColor: "#09090B" }}>
       <div
         className="absolute inset-x-0 top-0 pointer-events-none"
         style={{
