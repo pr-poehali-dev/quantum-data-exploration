@@ -34,7 +34,7 @@ export function Hero3DStage() {
 
   const baseTransform = {
     translateX: 2,
-    scale: 1.2,
+    scale: 1.0,
     rotateX: 47,
     rotateY: 31,
     rotateZ: 324,
