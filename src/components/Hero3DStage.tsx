@@ -16,6 +16,7 @@ import { AdvantagesSection } from "./AdvantagesSection"
 import { WhyUsSection } from "./WhyUsSection"
 import { TestimonialsSection } from "./TestimonialsSection"
 import { PromoSection } from "./PromoSection"
+import { CookieNotice } from "./CookieNotice"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -217,6 +218,7 @@ export function Hero3DStage() {
         </div>
       </section>
       <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      <CookieNotice />
     </>
   )
 }
