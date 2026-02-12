@@ -30,11 +30,11 @@ export function Footer() {
             </p>
             <span className="hidden md:inline text-zinc-700">•</span>
             <a 
-              href="mailto:info@ustkut.ru" 
+              href="mailto:masteroff38@mail.ru" 
               className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
             >
               <Icon name="Mail" size={16} />
-              info@ustkut.ru
+              masteroff38@mail.ru
             </a>
             <span className="hidden md:inline text-zinc-700">•</span>
             <a 
