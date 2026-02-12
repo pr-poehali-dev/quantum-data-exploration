@@ -13,40 +13,40 @@ export function Footer() {
           </div>
 
           {/* Контакты */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-white font-medium text-sm mb-2">Контакты</h3>
+          <div className="flex flex-wrap items-center gap-4 text-sm">
             <a 
               href="tel:+79086461687" 
-              className="text-zinc-400 hover:text-white transition-colors text-sm"
+              className="text-zinc-400 hover:text-white transition-colors"
             >
               +7 (908) 646-16-87
             </a>
-            <p className="text-zinc-500 text-sm">Усть-Кут, Иркутская обл.</p>
+            <span className="text-zinc-700">•</span>
+            <p className="text-zinc-500">Усть-Кут, Иркутская обл.</p>
+            <span className="text-zinc-700">•</span>
             <a 
               href="mailto:info@ustkut.ru" 
-              className="text-zinc-400 hover:text-white transition-colors text-sm"
+              className="text-zinc-400 hover:text-white transition-colors"
             >
               info@ustkut.ru
             </a>
-            <div className="flex gap-3 mt-2">
-              <a 
-                href="https://wa.me/79086461687" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white transition-colors text-sm"
-              >
-                WhatsApp
-              </a>
-              <span className="text-zinc-700">•</span>
-              <a 
-                href="https://t.me/username" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white transition-colors text-sm"
-              >
-                Telegram
-              </a>
-            </div>
+            <span className="text-zinc-700">•</span>
+            <a 
+              href="https://wa.me/79086461687" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              WhatsApp
+            </a>
+            <span className="text-zinc-700">•</span>
+            <a 
+              href="https://t.me/username" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Telegram
+            </a>
           </div>
         </div>
       </div>
