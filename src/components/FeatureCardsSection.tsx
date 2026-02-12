@@ -138,7 +138,7 @@ const featureCards = [
 
 export function FeatureCardsSection() {
   return (
-    <div className="relative z-20 py-24" style={{ backgroundColor: "#09090B" }}>
+    <div className="relative z-20 py-16 md:py-24" style={{ backgroundColor: "#09090B" }}>
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"
         style={{

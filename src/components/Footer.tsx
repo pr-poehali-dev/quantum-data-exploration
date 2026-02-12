@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon"
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-800 py-12 px-6" style={{ backgroundColor: "#09090B" }}>
+    <footer className="border-t border-zinc-800 py-8 md:py-12 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Logo */}

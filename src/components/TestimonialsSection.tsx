@@ -48,7 +48,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="relative py-24 px-6" style={{ backgroundColor: "#09090B" }}>
+    <section className="relative py-16 md:py-24 px-6" style={{ backgroundColor: "#09090B" }}>
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"
         style={{

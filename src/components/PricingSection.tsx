@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon"
 
 export function PricingSection() {
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#09090B" }}>
+    <section className="py-16 md:py-24 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
