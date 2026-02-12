@@ -71,6 +71,21 @@ export function Hero3DStage() {
               >
                 Разнорабочие в Усть-Куте — быстро и качественно
               </motion.h1>
+
+              {/* Mobile image */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="mt-8 md:hidden rounded-2xl overflow-hidden border border-zinc-800"
+              >
+                <img 
+                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b05c49e-96f3-4ed6-8ea5-b6da088e62ec.jpg"
+                  alt="Команда профессиональных разнорабочих МАСТЕРОФФ"
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -100,20 +115,6 @@ export function Hero3DStage() {
                   <span className="text-zinc-500">Звоните:</span> +7 (908) 646-16-87
                   <span aria-hidden="true">→</span>
                 </a>
-              </motion.div>
-
-              {/* Mobile image */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="mt-12 md:hidden rounded-2xl overflow-hidden border border-zinc-800"
-              >
-                <img 
-                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b05c49e-96f3-4ed6-8ea5-b6da088e62ec.jpg"
-                  alt="Команда профессиональных разнорабочих МАСТЕРОФФ"
-                  className="w-full h-auto object-cover"
-                />
               </motion.div>
             </div>
           </div>
