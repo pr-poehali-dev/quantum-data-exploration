@@ -3,7 +3,7 @@ import { ChevronRight, Plus } from "lucide-react"
 
 const featureCards = [
   {
-    title: "Ремонт и отделка",
+    title: "Уборка снега и территории",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
         <svg
@@ -51,7 +51,7 @@ const featureCards = [
     ),
   },
   {
-    title: "Сборка мебели",
+    title: "Копка ям и помощь на стройке",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         <img
@@ -64,7 +64,7 @@ const featureCards = [
     ),
   },
   {
-    title: "Электрика и сантехника",
+    title: "Услуги грузчиков и перенос мебели",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         <img
@@ -115,8 +115,7 @@ export function FeatureCardsSection() {
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">
-                Мы оказываем полный спектр услуг разнорабочих:
-                от мелкого ремонта до крупных работ. Быстро, качественно и по честным ценам.{" "}
+                Уборка снега, уборка территории, копка ям, помощь на стройке, услуги грузчиков, перенос мебели и многое другое. Быстро, качественно и по честным ценам.{" "}
                 <a href="#" className="text-white inline-flex items-center gap-1 hover:underline">
                   Заказать услугу <ChevronRight className="w-4 h-4" />
                 </a>
