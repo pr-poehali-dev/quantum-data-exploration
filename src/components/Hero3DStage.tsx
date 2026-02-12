@@ -93,10 +93,10 @@ export function Hero3DStage() {
                   Заказать услугу
                 </button>
                 <a 
-                  href="tel:+79991234567"
+                  href="tel:+79086461687"
                   className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm"
                 >
-                  <span className="text-zinc-500">Звоните:</span> +7 (999) 123-45-67
+                  <span className="text-zinc-500">Звоните:</span> +7 (908) 646-16-87
                   <span aria-hidden="true">→</span>
                 </a>
               </motion.div>

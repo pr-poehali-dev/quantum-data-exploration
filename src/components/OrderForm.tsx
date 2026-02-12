@@ -19,7 +19,7 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AТелефон: ${formData.phone}%0AУслуга: ${formData.service}%0AОписание: ${formData.description}`
-    window.open(`https://wa.me/79991234567?text=${message}`, "_blank")
+    window.open(`https://wa.me/79086461687?text=${message}`, "_blank")
     onClose()
   }
 

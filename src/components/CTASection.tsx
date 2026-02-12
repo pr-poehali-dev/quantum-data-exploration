@@ -8,13 +8,13 @@ export function CTASection() {
           </h2>
           <div className="flex items-center gap-3">
             <a 
-              href="tel:+79991234567"
+              href="tel:+79086461687"
               className="px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm"
             >
               Позвонить
             </a>
             <a
-              href="https://wa.me/79991234567"
+              href="https://wa.me/79086461687"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm"

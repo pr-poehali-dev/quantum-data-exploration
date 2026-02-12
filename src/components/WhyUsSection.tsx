@@ -114,15 +114,15 @@ export function WhyUsSection() {
               </div>
 
               <a
-                href="tel:+79991234567"
+                href="tel:+79086461687"
                 className="block w-full py-4 bg-white text-zinc-900 text-center font-medium rounded-xl hover:bg-zinc-100 transition-colors text-lg mb-4"
               >
-                +7 (999) 123-45-67
+                +7 (908) 646-16-87
               </a>
 
               <div className="flex gap-3">
                 <a
-                  href="https://wa.me/79991234567"
+                  href="https://wa.me/79086461687"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 border border-zinc-700 text-white text-center font-medium rounded-xl hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2"
