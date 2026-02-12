@@ -101,6 +101,20 @@ export function Hero3DStage() {
                   <span aria-hidden="true">→</span>
                 </a>
               </motion.div>
+
+              {/* Mobile image */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mt-12 md:hidden rounded-2xl overflow-hidden border border-zinc-800"
+              >
+                <img 
+                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b05c49e-96f3-4ed6-8ea5-b6da088e62ec.jpg"
+                  alt="Команда профессиональных разнорабочих МАСТЕРОФФ"
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
             </div>
           </div>
 
