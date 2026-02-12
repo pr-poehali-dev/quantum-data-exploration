@@ -76,12 +76,12 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
               className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
             >
               <option value="">Выберите услугу</option>
-              <option value="Ремонт и отделка">Ремонт и отделка</option>
-              <option value="Сборка мебели">Сборка мебели</option>
-              <option value="Электрика">Электрика</option>
-              <option value="Сантехника">Сантехника</option>
-              <option value="Поклейка обоев">Поклейка обоев</option>
-              <option value="Покраска">Покраска</option>
+              <option value="Уборка снега">Уборка снега</option>
+              <option value="Уборка территории">Уборка территории</option>
+              <option value="Копка ям">Копка ям</option>
+              <option value="Помощь на стройке">Помощь на стройке</option>
+              <option value="Услуги грузчиков">Услуги грузчиков</option>
+              <option value="Перенос мебели">Перенос мебели</option>
               <option value="Другое">Другое</option>
             </select>
           </div>
