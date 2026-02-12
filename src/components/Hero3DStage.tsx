@@ -173,13 +173,19 @@ export function Hero3DStage() {
             </div>
           </div>
 
-          <PromoSection />
+          <div id="services">
+            <PromoSection />
+          </div>
           <FeatureCardsSection />
           <AdvantagesSection />
-          <PricingSection />
+          <div id="pricing">
+            <PricingSection />
+          </div>
           <WhyUsSection />
           <TestimonialsSection />
-          <CTASection />
+          <div id="contacts">
+            <CTASection />
+          </div>
           <Footer />
         </div>
       </section>
