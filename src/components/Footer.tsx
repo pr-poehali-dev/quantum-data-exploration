@@ -13,23 +13,23 @@ export function Footer() {
           </div>
 
           {/* Контакты */}
-          <div className="flex flex-wrap items-center gap-4 text-sm">
+          <div className="flex flex-col md:flex-row md:flex-wrap md:items-center gap-3 md:gap-4 text-sm">
             <a 
               href="tel:+79086461687" 
               className="text-zinc-400 hover:text-white transition-colors"
             >
               +7 (908) 646-16-87
             </a>
-            <span className="text-zinc-700">•</span>
+            <span className="hidden md:inline text-zinc-700">•</span>
             <p className="text-zinc-500">Усть-Кут, Иркутская обл.</p>
-            <span className="text-zinc-700">•</span>
+            <span className="hidden md:inline text-zinc-700">•</span>
             <a 
               href="mailto:info@ustkut.ru" 
               className="text-zinc-400 hover:text-white transition-colors"
             >
               info@ustkut.ru
             </a>
-            <span className="text-zinc-700">•</span>
+            <span className="hidden md:inline text-zinc-700">•</span>
             <a 
               href="https://wa.me/79086461687" 
               target="_blank" 
@@ -38,7 +38,7 @@ export function Footer() {
             >
               WhatsApp
             </a>
-            <span className="text-zinc-700">•</span>
+            <span className="hidden md:inline text-zinc-700">•</span>
             <a 
               href="https://t.me/username" 
               target="_blank" 
