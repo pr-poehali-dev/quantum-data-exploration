@@ -13,7 +13,7 @@ export function DashboardMockup() {
       }}
     >
       <img 
-        src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/143d89ff-4171-40dc-915d-af95ea25c53f.jpg"
+        src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/00056cbb-4b2c-4f47-a65f-68add49492b9.png"
         alt="Команда профессиональных разнорабочих"
         className="w-full h-full object-cover"
       />
