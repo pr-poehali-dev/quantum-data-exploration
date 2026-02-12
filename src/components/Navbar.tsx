@@ -1,3 +1,5 @@
+import Icon from "@/components/ui/icon"
+
 export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-[#09090B]/80 backdrop-blur-md">
@@ -10,7 +12,7 @@ export function Navbar() {
               className="h-8"
             />
           </div>
-          <div className="flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Услуги
             </a>
@@ -21,6 +23,13 @@ export function Navbar() {
               Контакты
             </a>
           </div>
+          <a 
+            href="tel:+79086461687"
+            className="md:hidden flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+          >
+            <Icon name="Phone" size={16} />
+            Позвонить
+          </a>
         </div>
       </div>
     </nav>
