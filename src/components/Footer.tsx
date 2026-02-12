@@ -1,3 +1,5 @@
+import Icon from "@/components/ui/icon"
+
 export function Footer() {
   return (
     <footer className="border-t border-zinc-800 py-12 px-6" style={{ backgroundColor: "#09090B" }}>
@@ -16,17 +18,22 @@ export function Footer() {
           <div className="flex flex-col md:flex-row md:flex-wrap md:items-center gap-3 md:gap-4 text-sm">
             <a 
               href="tel:+79086461687" 
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
             >
+              <Icon name="Phone" size={16} />
               +7 (908) 646-16-87
             </a>
             <span className="hidden md:inline text-zinc-700">•</span>
-            <p className="text-zinc-500">Усть-Кут, Иркутская обл.</p>
+            <p className="text-zinc-500 flex items-center gap-2">
+              <Icon name="MapPin" size={16} />
+              Усть-Кут, Иркутская обл.
+            </p>
             <span className="hidden md:inline text-zinc-700">•</span>
             <a 
               href="mailto:info@ustkut.ru" 
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
             >
+              <Icon name="Mail" size={16} />
               info@ustkut.ru
             </a>
             <span className="hidden md:inline text-zinc-700">•</span>
@@ -34,8 +41,9 @@ export function Footer() {
               href="https://wa.me/79086461687" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
             >
+              <Icon name="MessageCircle" size={16} />
               WhatsApp
             </a>
             <span className="hidden md:inline text-zinc-700">•</span>
@@ -43,8 +51,9 @@ export function Footer() {
               href="https://t.me/username" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
             >
+              <Icon name="Send" size={16} />
               Telegram
             </a>
           </div>
