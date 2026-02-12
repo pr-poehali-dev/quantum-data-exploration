@@ -62,60 +62,62 @@ export function Hero3DStage() {
         <div className="relative z-10 pt-28 flex flex-col">
           {/* Hero text - contained and centered */}
           <div className="w-full flex justify-center px-6 mt-16">
-            <div className="w-full max-w-4xl">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-3xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
-              >
-                Разнорабочие в Усть-Куте — быстро и качественно
-              </motion.h1>
-
-              {/* Mobile image */}
+            <div className="w-full max-w-4xl relative">
+              {/* Mobile background image */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 }}
-                className="mt-8 md:hidden rounded-2xl overflow-hidden border border-zinc-800"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="md:hidden absolute inset-0 -mx-6 -mt-16 -mb-16 rounded-3xl overflow-hidden"
               >
                 <img 
                   src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b05c49e-96f3-4ed6-8ea5-b6da088e62ec.jpg"
                   alt="Команда профессиональных разнорабочих МАСТЕРОФФ"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover opacity-30"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/60 via-[#09090B]/80 to-[#09090B]"></div>
               </motion.div>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-6 text-base md:text-lg text-zinc-400"
-              >
-                Помощь по дому и офису: ремонт, сборка мебели, электрика, сантехника.
-                <br className="hidden md:block" />
-                Работаем по всему Усть-Куту — выезд в день обращения.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4"
-              >
-                <button 
-                  onClick={() => setIsFormOpen(true)}
-                  className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm w-full sm:w-auto"
+              <div className="relative z-10">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-3xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
                 >
-                  Заказать услугу
-                </button>
-                <a 
-                  href="tel:+79086461687"
-                  className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm"
+                  Разнорабочие в Усть-Куте — быстро и качественно
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="mt-6 text-base md:text-lg text-zinc-400"
                 >
-                  <span className="text-zinc-500">Звоните:</span> +7 (908) 646-16-87
-                  <span aria-hidden="true">→</span>
-                </a>
-              </motion.div>
+                  Помощь по дому и офису: ремонт, сборка мебели, электрика, сантехника.
+                  <br className="hidden md:block" />
+                  Работаем по всему Усть-Куту — выезд в день обращения.
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+                >
+                  <button 
+                    onClick={() => setIsFormOpen(true)}
+                    className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm w-full sm:w-auto"
+                  >
+                    Заказать услугу
+                  </button>
+                  <a 
+                    href="tel:+79086461687"
+                    className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm"
+                  >
+                    <span className="text-zinc-500">Звоните:</span> +7 (908) 646-16-87
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </motion.div>
+              </div>
             </div>
           </div>
 
