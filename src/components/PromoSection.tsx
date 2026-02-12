@@ -44,13 +44,13 @@ export function PromoSection() {
                 Позвонить сейчас
               </a>
               <a
-                href="https://wa.me/79086461687"
+                href="https://t.me/masteroff_ustkut"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors flex items-center gap-2"
               >
-                <Icon name="MessageCircle" size={18} />
-                Написать в WhatsApp
+                <Icon name="Send" size={18} />
+                Написать в Telegram
               </a>
             </div>
 
