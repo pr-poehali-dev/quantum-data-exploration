@@ -1,6 +1,6 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { X } from "lucide-react"
 import Icon from "@/components/ui/icon"
 
 interface OrderFormProps {
@@ -15,6 +15,7 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
     service: "",
     description: "",
   })
+  const [agreed, setAgreed] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -37,7 +38,7 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
           onClick={onClose}
           className="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors"
         >
-          <X className="w-5 h-5" />
+          <Icon name="X" size={20} />
         </button>
 
         <h2 className="text-2xl font-medium text-white mb-6">Заказать услугу</h2>
@@ -95,6 +96,27 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
               placeholder="Расскажите подробнее о работе..."
             />
           </div>
+
+          <label className="flex items-start gap-3 cursor-pointer pt-1">
+            <input
+              type="checkbox"
+              required
+              checked={agreed}
+              onChange={(e) => setAgreed(e.target.checked)}
+              className="mt-0.5 w-4 h-4 rounded border-zinc-600 bg-zinc-800 text-white accent-white"
+            />
+            <span className="text-xs text-zinc-500 leading-relaxed">
+              Я даю согласие на обработку{" "}
+              <Link
+                to="/privacy"
+                target="_blank"
+                className="text-zinc-400 underline hover:text-white transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                персональных данных
+              </Link>
+            </span>
+          </label>
 
           <div className="flex gap-3 pt-2">
             <button
