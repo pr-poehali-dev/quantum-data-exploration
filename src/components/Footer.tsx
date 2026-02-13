@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Icon from "@/components/ui/icon"
 
 export function Footer() {
@@ -57,6 +58,18 @@ export function Footer() {
               Telegram
             </a>
           </div>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-zinc-600 text-xs">
+            &copy; {new Date().getFullYear()} МАСТЕРОФФ. Все права защищены.
+          </p>
+          <Link
+            to="/privacy"
+            className="text-zinc-600 hover:text-zinc-400 transition-colors text-xs"
+          >
+            Политика обработки персональных данных
+          </Link>
         </div>
       </div>
     </footer>
