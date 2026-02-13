@@ -4,7 +4,7 @@ export function CTASection() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-medium text-white tracking-tight">
-            Нужна помощь по дому? Напишите в Telegram!
+            Нужна помощь по дому? Звоните прямо сейчас!
           </h2>
           <div className="flex items-center gap-3">
             <a 
