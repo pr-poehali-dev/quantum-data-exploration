@@ -14,7 +14,7 @@ export function CTASection() {
               Позвонить
             </a>
             <a
-              href="https://wa.me/79086461687"
+              href="https://t.me/masteroff38"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm"
