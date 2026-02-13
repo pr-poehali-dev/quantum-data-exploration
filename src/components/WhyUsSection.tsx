@@ -51,7 +51,7 @@ export function WhyUsSection() {
               <div>
                 <h3 className="text-xl font-medium text-white mb-2">Заявка</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                  Позвоните, напишите в WhatsApp или Telegram. Расскажите о задаче — мы примем заявку и уточним
+                  Позвоните или напишите в Telegram. Расскажите о задаче — мы примем заявку и уточним
                   детали.
                 </p>
               </div>
@@ -122,16 +122,7 @@ export function WhyUsSection() {
 
               <div className="flex gap-3">
                 <a
-                  href="https://wa.me/79086461687"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 py-3 border border-zinc-700 text-white text-center font-medium rounded-xl hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2"
-                >
-                  <Icon name="MessageCircle" size={18} />
-                  WhatsApp
-                </a>
-                <a
-                  href="https://t.me/username"
+                  href="https://t.me/masteroff38"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 border border-zinc-700 text-white text-center font-medium rounded-xl hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2"

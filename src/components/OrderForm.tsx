@@ -19,8 +19,8 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AТелефон: ${formData.phone}%0AУслуга: ${formData.service}%0AОписание: ${formData.description}`
-    window.open(`https://wa.me/79086461687?text=${message}`, "_blank")
+    const message = encodeURIComponent(`Новая заявка:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nУслуга: ${formData.service}\nОписание: ${formData.description}`)
+    window.open(`https://t.me/masteroff38?text=${message}`, "_blank")
     onClose()
   }
 
@@ -123,20 +123,8 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
               type="submit"
               className="flex-1 px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm flex items-center justify-center gap-2"
             >
-              <Icon name="MessageCircle" size={16} />
-              Отправить в WhatsApp
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AТелефон: ${formData.phone}%0AУслуга: ${formData.service}%0AОписание: ${formData.description}`
-                window.open(`https://t.me/share/url?url=&text=${message}`, "_blank")
-                onClose()
-              }}
-              className="px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm flex items-center justify-center gap-2"
-            >
               <Icon name="Send" size={16} />
-              Telegram
+              Отправить в Telegram
             </button>
           </div>
         </form>

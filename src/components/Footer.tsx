@@ -39,17 +39,7 @@ export function Footer() {
             </a>
             <span className="hidden md:inline text-zinc-700">•</span>
             <a 
-              href="https://wa.me/79086461687" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <Icon name="MessageCircle" size={16} />
-              WhatsApp
-            </a>
-            <span className="hidden md:inline text-zinc-700">•</span>
-            <a 
-              href="https://t.me/username" 
+              href="https://t.me/masteroff38" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"

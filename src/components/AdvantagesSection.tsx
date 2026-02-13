@@ -30,7 +30,7 @@ const advantages = [
   {
     icon: "MessageCircle",
     title: "Всегда на связи",
-    description: "Отвечаем в WhatsApp, Telegram и по телефону. Консультируем бесплатно.",
+    description: "Отвечаем в Telegram и по телефону. Консультируем бесплатно.",
   },
 ]
 
