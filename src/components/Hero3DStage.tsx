@@ -17,6 +17,7 @@ import { WhyUsSection } from "./WhyUsSection"
 import { TestimonialsSection } from "./TestimonialsSection"
 import { PromoSection } from "./PromoSection"
 import { CookieNotice } from "./CookieNotice"
+import { JoinTeamSection } from "./JoinTeamSection"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -211,6 +212,7 @@ export function Hero3DStage() {
           </div>
           <WhyUsSection />
           <TestimonialsSection />
+          <JoinTeamSection />
           <div id="contacts">
             <CTASection />
           </div>
