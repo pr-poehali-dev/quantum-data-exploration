@@ -17,11 +17,23 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
   })
   const [agreed, setAgreed] = useState(false)
 
+  const buildMessage = () =>
+    `Новая заявка:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nУслуга: ${formData.service}\nОписание: ${formData.description}`
+
+  const sendTo = (target: "telegram" | "max" | "vk") => {
+    const message = encodeURIComponent(buildMessage())
+    const urls = {
+      telegram: `https://t.me/masteroff38?text=${message}`,
+      max: `https://ok.me/masteroff38?text=${message}`,
+      vk: `https://vk.me/masteroff38?message=${message}`,
+    }
+    window.open(urls[target], "_blank")
+    onClose()
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const message = encodeURIComponent(`Новая заявка:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nУслуга: ${formData.service}\nОписание: ${formData.description}`)
-    window.open(`https://t.me/masteroff38?text=${message}`, "_blank")
-    onClose()
+    sendTo("telegram")
   }
 
   if (!isOpen) return null
@@ -118,14 +130,40 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
             </span>
           </label>
 
-          <div className="flex gap-3 pt-2">
+          <div className="flex flex-col gap-2 pt-2">
             <button
               type="submit"
-              className="flex-1 px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm flex items-center justify-center gap-2"
+              className="w-full px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm flex items-center justify-center gap-2"
             >
               <Icon name="Send" size={16} />
               Отправить в Telegram
             </button>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  const form = document.querySelector("form") as HTMLFormElement
+                  if (form?.checkValidity() && agreed) sendTo("max")
+                  else form?.reportValidity()
+                }}
+                className="flex-1 px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm flex items-center justify-center gap-2"
+              >
+                <Icon name="MessageCircle" size={16} />
+                Max
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const form = document.querySelector("form") as HTMLFormElement
+                  if (form?.checkValidity() && agreed) sendTo("vk")
+                  else form?.reportValidity()
+                }}
+                className="flex-1 px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm flex items-center justify-center gap-2"
+              >
+                <Icon name="MessageSquare" size={16} />
+                ВКонтакте
+              </button>
+            </div>
           </div>
         </form>
       </motion.div>
