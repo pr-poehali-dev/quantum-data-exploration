@@ -24,8 +24,8 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
     const message = encodeURIComponent(buildMessage())
     const urls = {
       telegram: `https://t.me/masteroff38?text=${message}`,
-      max: `https://ok.me/masteroff38?text=${message}`,
-      vk: `https://vk.me/masteroff38?message=${message}`,
+      max: `https://ok.me/89086461687?text=${message}`,
+      vk: `https://vk.com/m_off38ru?message=${message}`,
     }
     window.open(urls[target], "_blank")
     onClose()
