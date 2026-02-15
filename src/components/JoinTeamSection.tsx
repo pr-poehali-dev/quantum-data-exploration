@@ -34,17 +34,13 @@ export function JoinTeamSection() {
             </div>
 
             <a
-              href="https://forms.yandex.ru/u/67b0af2e90fa7b2a85e1cbed/"
+              href="https://t.me/masteroff38"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm shrink-0"
             >
-              Заполнить анкету
-              <Icon
-                name="ArrowRight"
-                size={16}
-                className="transition-transform group-hover:translate-x-0.5"
-              />
+              <Icon name="Send" size={16} />
+              Написать в Telegram
             </a>
           </div>
         </motion.div>
