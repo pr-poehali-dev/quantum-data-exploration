@@ -64,7 +64,7 @@ export function Hero3DStage() {
         <div className="relative z-10 pt-28 flex flex-col">
           {/* Hero text - contained and centered */}
           <div className="w-full flex justify-center px-6 mt-16">
-            <div className="w-full max-w-4xl relative">
+            <div className="w-full max-w-4xl relative border border-zinc-800 rounded-2xl p-8 md:p-12 bg-zinc-950/50">
               {/* Mobile background image */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -130,75 +130,6 @@ export function Hero3DStage() {
                   </a>
                 </motion.div>
               </div>
-            </div>
-          </div>
-
-          {/* 3D Stage - full bleed */}
-          <div
-            className="relative mt-8 hidden md:block"
-            style={{
-              width: "100vw",
-              marginLeft: "-50vw",
-              marginRight: "-50vw",
-              position: "relative",
-              left: "50%",
-              right: "50%",
-              height: "700px",
-              marginTop: "-60px",
-            }}
-          >
-            <div
-              className="absolute bottom-0 left-0 right-0 h-72 z-10 pointer-events-none"
-              style={{
-                background: "linear-gradient(to top, #09090B 20%, transparent 100%)",
-              }}
-            />
-
-            {/* Perspective container */}
-            <div
-              style={{
-                transform: `translateY(${yOffset}px)`,
-                transition: "transform 0.1s ease-out",
-                contain: "strict",
-                perspective: "4000px",
-                perspectiveOrigin: "100% 0",
-                width: "100%",
-                height: "100%",
-                transformStyle: "preserve-3d",
-                position: "relative",
-              }}
-            >
-              {/* Transformed base */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  delay: 0.5,
-                  duration: 1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                style={{
-                  backgroundColor: "#09090B",
-                  transformOrigin: "0 0",
-                  backfaceVisibility: "hidden",
-                  WebkitBackfaceVisibility: "hidden",
-                  border: "1px solid #1e1e1e",
-                  borderRadius: "10px",
-                  width: "1600px",
-                  height: "900px",
-                  margin: "280px auto auto",
-                  position: "absolute",
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  transform: `translate(${baseTransform.translateX}%) scale(${baseTransform.scale}) rotateX(${baseTransform.rotateX}deg) rotateY(${baseTransform.rotateY}deg) rotate(${baseTransform.rotateZ}deg)`,
-                  transformStyle: "preserve-3d",
-                  overflow: "hidden",
-                }}
-              >
-                <DashboardMockup />
-              </motion.div>
             </div>
           </div>
 
