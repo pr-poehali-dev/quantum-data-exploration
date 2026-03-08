@@ -64,7 +64,15 @@ export function Hero3DStage() {
         <div className="relative z-10 pt-28 flex flex-col">
           {/* Hero text - contained and centered */}
           <div className="w-full flex justify-center px-6 mt-16">
-            <div className="w-full max-w-4xl relative border border-zinc-800 rounded-2xl p-8 md:p-12 bg-zinc-950/50">
+            <div className="w-full max-w-4xl relative border border-zinc-800 rounded-2xl p-8 md:p-12 bg-zinc-950/50 overflow-hidden">
+              {/* Dot grid pattern */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                }}
+              />
               {/* Mobile background image */}
               <motion.div
                 initial={{ opacity: 0 }}
