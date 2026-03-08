@@ -88,54 +88,71 @@ export function Hero3DStage() {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/60 via-[#09090B]/80 to-[#09090B]"></div>
               </motion.div>
 
-              <div className="relative z-10">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.05 }}
-                  className="mb-3"
-                >
-                  <span className="text-xs md:text-sm text-zinc-500 tracking-wider uppercase">
-                    Сервис МАСТЕРОФФ
-                  </span>
-                </motion.div>
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-3xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
-                >
-                  Разнорабочие в Усть-Куте — быстро и качественно
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="mt-6 text-base md:text-lg text-zinc-400"
-                >
-                  Помощь по дому и офису: ремонт, сборка мебели, электрика, сантехника.
-                  <br className="hidden md:block" />
-                  Работаем по всему Усть-Куту — выезд в день обращения.
-                </motion.p>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4"
-                >
-                  <button 
-                    onClick={() => setIsFormOpen(true)}
-                    className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm w-full sm:w-auto"
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                {/* Text */}
+                <div className="flex-1">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.05 }}
+                    className="mb-3"
                   >
-                    Заказать услугу
-                  </button>
-                  <a 
-                    href="tel:+79086461687"
-                    className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm"
+                    <span className="text-xs md:text-sm text-zinc-500 tracking-wider uppercase">
+                      Сервис МАСТЕРОФФ
+                    </span>
+                  </motion.div>
+                  <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-[1.1] text-balance"
                   >
-                    <span className="text-zinc-500">Звоните:</span> +7 (908) 646-16-87
-                    <span aria-hidden="true">→</span>
-                  </a>
+                    Разнорабочие в Усть-Куте — быстро и качественно
+                  </motion.h1>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="mt-6 text-base text-zinc-400"
+                  >
+                    Помощь по дому и офису: ремонт, сборка мебели, электрика, сантехника.
+                    <br className="hidden md:block" />
+                    Работаем по всему Усть-Куту — выезд в день обращения.
+                  </motion.p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+                  >
+                    <button
+                      onClick={() => setIsFormOpen(true)}
+                      className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm w-full sm:w-auto"
+                    >
+                      Заказать услугу
+                    </button>
+                    <a
+                      href="tel:+79086461687"
+                      className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm"
+                    >
+                      <span className="text-zinc-500">Звоните:</span> +7 (908) 646-16-87
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </motion.div>
+                </div>
+
+                {/* 3D image */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="hidden md:flex flex-shrink-0 w-64 h-64 items-center justify-center"
+                >
+                  <img
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/51167be5-fc97-4f69-8a17-9b9b4d7c7777.jpg"
+                    alt="Инструменты мастера"
+                    className="w-full h-full object-contain drop-shadow-2xl"
+                  />
                 </motion.div>
               </div>
             </div>
