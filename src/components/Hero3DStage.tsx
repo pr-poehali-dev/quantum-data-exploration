@@ -141,19 +141,7 @@ export function Hero3DStage() {
                   </motion.div>
                 </div>
 
-                {/* 3D image */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="hidden md:flex flex-shrink-0 w-64 h-64 items-center justify-center"
-                >
-                  <img
-                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/51167be5-fc97-4f69-8a17-9b9b4d7c7777.jpg"
-                    alt="Инструменты мастера"
-                    className="w-full h-full object-contain drop-shadow-2xl"
-                  />
-                </motion.div>
+
               </div>
             </div>
           </div>
