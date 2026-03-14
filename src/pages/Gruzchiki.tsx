@@ -96,47 +96,59 @@ export default function Gruzchiki() {
 
         {/* Hero */}
         <section className="relative overflow-hidden pt-28 pb-16 px-6">
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "900px",
-              height: "600px",
-              background: "radial-gradient(ellipse at center, rgba(249,115,22,0.07) 0%, transparent 70%)",
-            }}
-          />
           <div className="max-w-4xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 overflow-hidden"
             >
-              <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5">
-                <Icon name="MapPin" size={12} />
-                Усть-Кут — выезд в день обращения
-              </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-5">
-                Услуги грузчиков<br className="hidden md:block" /> в Усть-Куте
-              </h1>
-              <p className="text-zinc-400 text-lg max-w-2xl leading-relaxed mb-8">
-                Надёжные грузчики для переезда, погрузки и разгрузки. Работаем быстро, аккуратно, без опозданий — с вещами обращаемся бережно.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="tel:+79086461687"
-                  className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
-                >
-                  <Icon name="Phone" size={18} />
-                  +7 (908) 646-16-87
-                </a>
-                <button
-                  onClick={() => setIsFormOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
-                >
-                  Оставить заявку
-                </button>
+              {/* Dot grid pattern */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                }}
+              />
+              {/* Orange glow */}
+              <div
+                className="absolute pointer-events-none"
+                style={{
+                  top: "50%",
+                  right: "-100px",
+                  transform: "translateY(-50%)",
+                  width: "500px",
+                  height: "400px",
+                  background: "radial-gradient(ellipse at center, rgba(249,115,22,0.08) 0%, transparent 70%)",
+                }}
+              />
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5">
+                  <Icon name="MapPin" size={12} />
+                  Усть-Кут — выезд в день обращения
+                </div>
+                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-5">
+                  Услуги грузчиков<br className="hidden md:block" /> в Усть-Куте
+                </h1>
+                <p className="text-zinc-400 text-lg max-w-2xl leading-relaxed mb-8">
+                  Надёжные грузчики для переезда, погрузки и разгрузки. Работаем быстро, аккуратно, без опозданий — с вещами обращаемся бережно.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="tel:+79086461687"
+                    className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                  >
+                    <Icon name="Phone" size={18} />
+                    +7 (908) 646-16-87
+                  </a>
+                  <button
+                    onClick={() => setIsFormOpen(true)}
+                    className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                  >
+                    Оставить заявку
+                  </button>
+                </div>
               </div>
             </motion.div>
           </div>
