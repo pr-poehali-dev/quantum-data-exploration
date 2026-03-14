@@ -64,7 +64,7 @@ export function Hero3DStage() {
         <div className="relative z-10 pt-28 flex flex-col">
           {/* Hero text - contained and centered */}
           <div className="w-full flex justify-center px-6 mt-16">
-            <div className="w-full max-w-4xl relative rounded-2xl p-8 md:p-12 overflow-hidden">
+            <div className="w-full max-w-4xl relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 overflow-hidden">
               {/* Dot grid pattern */}
               <div
                 className="absolute inset-0 pointer-events-none"
@@ -147,9 +147,9 @@ export function Hero3DStage() {
           </div>
 
           <div id="services">
-            <PromoSection />
+            <FeatureCardsSection />
           </div>
-          <FeatureCardsSection />
+          <PromoSection />
           <AdvantagesSection />
           <div id="pricing">
             <PricingSection />
