@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import Icon from "@/components/ui/icon"
 
 export function Navbar() {
@@ -24,6 +25,9 @@ export function Navbar() {
             <a href="#services" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Услуги
             </a>
+            <Link to="/gruzchiki" className="text-sm text-zinc-400 hover:text-white transition-colors">
+              Грузчики
+            </Link>
             <a href="#pricing" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Стоимость
             </a>
@@ -61,6 +65,13 @@ export function Navbar() {
             >
               Услуги
             </a>
+            <Link
+              to="/gruzchiki"
+              onClick={handleLinkClick}
+              className="text-base text-zinc-400 hover:text-white transition-colors py-2"
+            >
+              Грузчики
+            </Link>
             <a 
               href="#pricing" 
               onClick={handleLinkClick}
