@@ -168,25 +168,37 @@ export default function Gruzchiki() {
         {/* Услуги */}
         <section className="px-6 pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-semibold text-white mb-8">Что мы делаем</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {services.map((s, i) => (
-                <motion.div
-                  key={s.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex gap-4"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center">
-                    <Icon name={s.icon} size={20} className="text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-medium mb-1">{s.title}</h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">{s.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-10 overflow-hidden">
+              {/* Dot grid pattern */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                }}
+              />
+              <div className="relative z-10">
+                <h2 className="text-2xl font-semibold text-white mb-8">Что мы делаем</h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {services.map((s, i) => (
+                    <motion.div
+                      key={s.title}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: i * 0.06 }}
+                      className="bg-zinc-800/50 border border-zinc-700/50 rounded-xl p-6 flex gap-4"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                        <Icon name={s.icon} size={20} className="text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-medium mb-1">{s.title}</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed">{s.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
