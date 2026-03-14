@@ -63,7 +63,7 @@ export function Hero3DStage() {
         {/* Main content */}
         <div className="relative z-10 pt-28 flex flex-col">
           {/* Hero text - contained and centered */}
-          <div className="w-full flex justify-center px-6 mt-16">
+          <div className="w-full flex justify-center px-6 mt-16 mb-16">
             <div className="w-full max-w-4xl relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 overflow-hidden">
               {/* Dot grid pattern */}
               <div
