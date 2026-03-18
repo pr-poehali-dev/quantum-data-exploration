@@ -39,7 +39,7 @@ export function Hero3DStage() {
               transition={{ duration: 0.4 }}
               className="w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-visible"
             >
-              <div className="grid md:grid-cols-[1fr_420px] divide-x divide-zinc-800">
+              <div className="grid md:grid-cols-[1fr_420px]">
                 {/* Левая колонка */}
                 <div className="p-8 md:p-12 flex flex-col justify-start">
                   <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
