@@ -104,10 +104,10 @@ export default function Gruzchiki() {
           >
             {/* Фото — поверх блока справа, выходит за верхний край */}
             <img
-              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/b4ada817-e459-4776-839a-c239b3a605a4.jpg"
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/9a337383-9ab4-4a33-bb0a-18b831dc0255.png"
               alt="Грузчик"
               className="hidden md:block absolute pointer-events-none"
-              style={{ right: "20px", bottom: 0, top: "auto", height: "100%", width: "auto", zIndex: 5 }}
+              style={{ right: "20px", bottom: 0, top: "auto", height: "110%", width: "auto", zIndex: 5 }}
             />
 
             <div className="grid md:grid-cols-[1fr_420px]">
