@@ -37,9 +37,9 @@ export function Hero3DStage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full max-w-7xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden relative"
+              className="w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden"
             >
-              <div className="grid md:grid-cols-[1fr_420px]">
+              <div>
                 {/* Левая колонка */}
                 <div className="p-8 md:p-12 flex flex-col justify-start">
                   <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
@@ -136,18 +136,6 @@ export function Hero3DStage() {
                         <div className="text-xs text-zinc-400">+7 (908) 646-16-87</div>
                       </div>
                     </a>
-                  </div>
-                </div>
-
-                {/* Правая колонка — фото */}
-                <div className="relative hidden md:block min-h-[600px] bg-zinc-950">
-                  <img
-                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b87e1f3c-8b3f-4ab7-bfb1-f38005b13571.png"
-                    alt="Разнорабочий в Усть-Куте"
-                    className="absolute bottom-0 left-0 w-full h-full object-contain object-bottom z-10"
-                  />
-                  <div className="absolute bottom-8 left-0 right-0 mx-6 z-20 bg-orange-500 text-white font-extrabold text-2xl text-center py-4 rounded-2xl shadow-lg">
-                    от 500 руб./час
                   </div>
                 </div>
 
