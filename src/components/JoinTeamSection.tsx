@@ -10,36 +10,36 @@ export function JoinTeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-900/60 p-8 md:p-12"
+          className="relative overflow-hidden rounded-3xl p-8 md:p-12"
+          style={{ backgroundColor: "#1a1a1a" }}
         >
-          <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
-
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center">
-                  <Icon name="Users" size={20} className="text-indigo-400" />
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: "rgba(245,197,24,0.12)" }}>
+                  <Icon name="Users" size={20} style={{ color: "#F5C518" }} />
                 </div>
-                <span className="text-xs uppercase tracking-widest text-zinc-500 font-medium">
+                <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "#F5C518" }}>
                   Вакансия
                 </span>
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white tracking-tight mb-3">
-                Хочешь к нам в команду?
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-3">
+                Хочешь к нам{" "}
+                <span className="inline-block px-2 py-0.5 rounded-md" style={{ backgroundColor: "#F5C518", color: "#09090B" }}>в команду?</span>
               </h2>
-              <p className="text-zinc-400 text-base md:text-lg max-w-lg">
-                Мы ищем ответственных мастеров на&nbsp;руки. Стабильная загрузка, достойная оплата, дружный коллектив.
+              <p className="text-zinc-400 text-base max-w-lg">
+                Мы ищем ответственных мастеров на руки. Стабильная загрузка, достойная оплата, дружный коллектив.
               </p>
             </div>
 
             <a
-              href="https://t.me/masteroff38"
+              href="https://t.me/masteroff_uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm shrink-0"
+              className="flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-black text-base hover:opacity-90 transition-opacity shrink-0"
+              style={{ backgroundColor: "#F5C518" }}
             >
-              <Icon name="Send" size={16} />
+              <Icon name="Send" size={18} className="text-black" />
               Написать в Telegram
             </a>
           </div>
