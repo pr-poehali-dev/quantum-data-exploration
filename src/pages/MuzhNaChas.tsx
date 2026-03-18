@@ -187,8 +187,11 @@ export default function MuzhNaChas() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="rounded-2xl p-8 flex flex-col items-center text-center gap-4"
-                  style={{ backgroundColor: "#1a1a1a" }}
+                  whileHover={{ y: -8, scale: 1.03 }}
+                  className="rounded-2xl p-8 flex flex-col items-center text-center gap-4 cursor-pointer"
+                  style={{ backgroundColor: "#1a1a1a", transition: "box-shadow 0.3s", boxShadow: "0 0 0 0 transparent" }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 8px 32px rgba(245,197,24,0.15)")}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
                 >
                   <Icon name={s.icon} size={40} style={{ color: "#F5C518" }} />
                   <h3 className="font-bold text-base leading-snug" style={{ color: "#F5C518" }}>{s.title}</h3>
@@ -223,8 +226,11 @@ export default function MuzhNaChas() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="rounded-2xl p-8 flex flex-col items-center text-center"
+                  whileHover={{ y: -8, scale: 1.03 }}
+                  className="rounded-2xl p-8 flex flex-col items-center text-center cursor-pointer"
                   style={{ backgroundColor: "#1a1a1a" }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 8px 32px rgba(245,197,24,0.15)")}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
                 >
                   <Icon name={a.icon} size={40} className="mb-5" style={{ color: "#F5C518" }} />
                   <h3 className="font-bold text-base mb-3 leading-snug" style={{ color: "#F5C518" }}>{a.title}</h3>
