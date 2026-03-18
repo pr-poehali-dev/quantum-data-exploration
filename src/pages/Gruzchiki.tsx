@@ -164,26 +164,58 @@ export default function Gruzchiki() {
                   </div>
 
                   {/* Мессенджеры */}
-                  <div className="flex gap-3 mt-4">
-                    <a
-                      href="https://wa.me/79086461687"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-zinc-800/80 border border-zinc-700 rounded-xl px-4 py-2 text-zinc-300 text-xs hover:border-zinc-500 transition-colors"
-                    >
-                      <Icon name="MessageCircle" size={16} className="text-green-400" />
-                      WhatsApp
-                    </a>
+                  <p className="text-zinc-400 text-sm mb-3 mt-4">
+                    Напишите нам в мессенджер для бесплатной консультации:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
                     <a
                       href="https://t.me/masteroff_uk"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-zinc-800/80 border border-zinc-700 rounded-xl px-4 py-2 text-zinc-300 text-xs hover:border-zinc-500 transition-colors"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60"
                     >
-                      <Icon name="Send" size={16} className="text-sky-400" />
-                      Telegram
+                      <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Send" size={14} className="text-white" />
+                      </div>
+                      <div>
+                        <div className="text-white text-sm font-medium">Telegram</div>
+                        <div className="flex items-center gap-1 text-xs text-zinc-400">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                          в сети
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="https://wa.me/79086461687"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
+                        <Icon name="MessageCircle" size={14} className="text-white" />
+                      </div>
+                      <div>
+                        <div className="text-white text-sm font-medium">WhatsApp</div>
+                        <div className="flex items-center gap-1 text-xs text-zinc-400">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                          в сети
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="tel:+79086461687"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Phone" size={14} className="text-white" />
+                      </div>
+                      <div>
+                        <div className="text-white text-sm font-medium">Позвонить</div>
+                        <div className="text-xs text-zinc-400">+7 (908) 646-16-87</div>
+                      </div>
                     </a>
                   </div>
+
                 </div>
 
                 {/* Правая колонка — фото */}
