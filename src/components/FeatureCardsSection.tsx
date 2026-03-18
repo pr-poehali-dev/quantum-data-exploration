@@ -5,51 +5,16 @@ const featureCards = [
   {
     title: "Уборка снега",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 791 669"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="max-w-full max-h-full"
-        >
-          <path
-            opacity="0.25"
-            d="M377.449 24.2664L22.1248 192.099C9.24419 198.183 1.16249 211.29 1.51081 225.531L10.925 610.428C11.5763 637.054 39.9132 653.778 63.5378 641.48L409.448 461.403C421.355 455.204 428.824 442.895 428.824 429.471V56.8179C428.824 30.407 401.33 12.9865 377.449 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M497.594 24.2664L142.269 192.099C129.389 198.183 121.307 211.29 121.655 225.531L131.07 610.428C131.721 637.054 160.058 653.778 183.682 641.48L529.592 461.403C541.5 455.204 548.969 442.895 548.969 429.471V56.8179C548.969 30.407 521.475 12.9865 497.594 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M617.738 24.2664L262.414 192.099C249.533 198.183 241.451 211.29 241.8 225.531L251.214 610.428C251.865 637.054 280.202 653.778 303.827 641.48L649.737 461.403C661.644 455.204 669.113 442.895 669.113 429.471V56.8179C669.113 30.407 641.619 12.9865 617.738 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M737.883 24.2664L382.558 192.099C369.678 198.183 361.596 211.29 361.944 225.531L371.358 610.428C372.01 637.054 400.347 653.778 423.971 641.48L769.881 461.403C781.789 455.204 789.258 442.895 789.258 429.471V56.8179C789.258 30.407 761.764 12.9865 737.883 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-        </svg>
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <img
+          src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/e34c190b-3244-4469-a1e2-2e7ea82e1da6.jpeg"
+          alt="Уборка снега"
+          className="w-full h-full object-cover"
+        />
       </div>
     ),
   },
+
   {
     title: "Уборка территории",
     illustration: (
