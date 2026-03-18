@@ -70,28 +70,7 @@ export function Hero3DStage() {
                     ))}
                   </ul>
 
-                  {/* Форма */}
-                  <p className="text-white font-semibold text-base mb-3">
-                    Оставьте заявку на бесплатную консультацию<br />или позвоните нам
-                  </p>
-                  <div className="flex gap-0 mb-2 rounded-lg overflow-hidden border border-zinc-700 max-w-md">
-                    <input
-                      type="tel"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+7(900) 000-00-00"
-                      className="flex-1 px-4 py-3 text-white text-base outline-none bg-zinc-800 placeholder-zinc-500"
-                    />
-                    <button
-                      onClick={() => setIsFormOpen(true)}
-                      className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-semibold px-5 py-3 text-sm whitespace-nowrap"
-                    >
-                      Оставить заявку
-                    </button>
-                  </div>
-                  <p className="text-zinc-500 text-xs mb-6">
-                    Нажимая на кнопку, вы даёте согласие на обработку персональных данных
-                  </p>
+
 
                   {/* Мессенджеры */}
                   <p className="text-zinc-400 text-sm mb-3">
