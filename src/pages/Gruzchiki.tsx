@@ -101,107 +101,121 @@ export default function Gruzchiki() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 overflow-hidden"
+              className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl overflow-hidden"
             >
               {/* Dot grid pattern */}
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
+                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)",
                   backgroundSize: "24px 24px",
                 }}
               />
-              {/* Orange glow */}
-              <div
-                className="absolute pointer-events-none"
-                style={{
-                  top: "50%",
-                  right: "-80px",
-                  transform: "translateY(-50%)",
-                  width: "500px",
-                  height: "400px",
-                  background: "radial-gradient(ellipse at center, rgba(249,115,22,0.1) 0%, transparent 70%)",
-                }}
-              />
 
-              <div className="relative z-10 grid md:grid-cols-[1fr_320px] gap-8 items-start">
+              <div className="relative z-10 grid md:grid-cols-[1fr_380px] min-h-[480px]">
                 {/* Левая колонка */}
-                <div>
-                  <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5">
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5 w-fit">
                     <Icon name="MapPin" size={12} />
                     Усть-Кут — выезд в день обращения
                   </div>
-                  <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
-                    Услуги грузчиков<br /> в Усть-Куте
+                  <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                    Грузчики<br />в Усть-Куте
                   </h1>
-                  <p className="text-zinc-400 text-base leading-relaxed mb-6">
-                    Надёжные грузчики для переезда, погрузки и разгрузки. Работаем быстро, аккуратно, без опозданий — с вещами обращаемся бережно.
-                  </p>
 
-                  {/* Список преимуществ */}
-                  <ul className="space-y-2 mb-8">
+                  {/* Список */}
+                  <ul className="space-y-3 mb-8">
                     {[
-                      "Выезд в течение 1 часа",
-                      "Работаем без выходных, 24/7",
-                      "Бригада 1–4 грузчика на выбор",
-                      "Без скрытых доплат — цена фиксирована",
-                      "Бережная работа с хрупкими вещами",
+                      "Погрузим и разгрузим любой транспорт",
+                      "Поможем с переездом квартиры или офиса",
+                      "Вынесем мусор и строительные отходы",
+                      "Поднимем на этаж стройматериалы и мебель",
+                      "Работаем аккуратно — без царапин и повреждений",
                     ].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-zinc-300 text-sm">
-                        <Icon name="CheckCircle2" size={16} className="text-orange-400 flex-shrink-0" />
+                      <li key={item} className="flex items-start gap-3 text-zinc-300 text-sm">
+                        <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center">
+                          <Icon name="ChevronRight" size={12} className="text-orange-400" />
+                        </span>
                         {item}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  {/* Форма */}
+                  <div className="mb-3">
+                    <p className="text-zinc-400 text-sm mb-3">
+                      Оставьте заявку или позвоните нам — перезвоним за 2 минуты
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <a
+                        href="tel:+79086461687"
+                        className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                      >
+                        <Icon name="Phone" size={18} />
+                        +7 (908) 646-16-87
+                      </a>
+                      <button
+                        onClick={() => setIsFormOpen(true)}
+                        className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                      >
+                        Оставить заявку
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Мессенджеры */}
+                  <div className="flex gap-3 mt-4">
                     <a
-                      href="tel:+79086461687"
-                      className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                      href="https://wa.me/79086461687"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-zinc-800/80 border border-zinc-700 rounded-xl px-4 py-2 text-zinc-300 text-xs hover:border-zinc-500 transition-colors"
                     >
-                      <Icon name="Phone" size={18} />
-                      +7 (908) 646-16-87
+                      <Icon name="MessageCircle" size={16} className="text-green-400" />
+                      WhatsApp
                     </a>
-                    <button
-                      onClick={() => setIsFormOpen(true)}
-                      className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                    <a
+                      href="https://t.me/masteroff_uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-zinc-800/80 border border-zinc-700 rounded-xl px-4 py-2 text-zinc-300 text-xs hover:border-zinc-500 transition-colors"
                     >
-                      Оставить заявку
-                    </button>
+                      <Icon name="Send" size={16} className="text-sky-400" />
+                      Telegram
+                    </a>
                   </div>
                 </div>
 
-                {/* Правая колонка — карточка с ценами */}
-                <div className="bg-zinc-800/60 border border-zinc-700/60 rounded-2xl p-6 flex flex-col gap-4">
-                  <div className="text-center pb-4 border-b border-zinc-700">
-                    <div className="text-zinc-400 text-xs mb-1">Стоимость работ</div>
-                    <div className="text-orange-400 text-4xl font-bold">от 500 ₽</div>
-                    <div className="text-zinc-500 text-sm">в час за одного грузчика</div>
-                  </div>
-                  <div className="space-y-3">
-                    {[
-                      { label: "1 грузчик", price: "от 500 ₽/ч" },
-                      { label: "2 грузчика", price: "от 900 ₽/ч" },
-                      { label: "Бригада 3–4 чел.", price: "от 1 400 ₽/ч" },
-                      { label: "Минимальный заказ", price: "2 часа" },
-                    ].map((row) => (
-                      <div key={row.label} className="flex justify-between items-center">
-                        <span className="text-zinc-400 text-sm">{row.label}</span>
-                        <span className="text-white text-sm font-medium">{row.price}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <a
-                    href="tel:+79086461687"
-                    className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg transition-colors font-medium text-sm"
+                {/* Правая колонка — фото */}
+                <div className="relative hidden md:flex items-end justify-center overflow-hidden">
+                  {/* Жёлтый круг-фон */}
+                  <div
+                    className="absolute bottom-0 right-0 left-0 mx-auto"
+                    style={{
+                      width: "320px",
+                      height: "320px",
+                      borderRadius: "50%",
+                      background: "radial-gradient(circle, rgba(249,115,22,0.25) 0%, rgba(249,115,22,0.05) 70%)",
+                      bottom: "-40px",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      position: "absolute",
+                    }}
+                  />
+                  {/* Плашка с ценой */}
+                  <div
+                    className="absolute bottom-8 left-4 bg-orange-500 text-white font-bold text-lg px-5 py-3 rounded-xl z-20 shadow-lg"
+                    style={{ boxShadow: "0 4px 24px rgba(249,115,22,0.4)" }}
                   >
-                    <Icon name="Phone" size={16} />
-                    Позвонить и уточнить цену
-                  </a>
-                  <div className="flex items-center gap-2 justify-center text-zinc-500 text-xs">
-                    <Icon name="ShieldCheck" size={14} className="text-zinc-500" />
-                    Оплата после выполнения работы
+                    от 500 руб./час
                   </div>
+                  {/* Фото грузчика */}
+                  <img
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/b4ada817-e459-4776-839a-c239b3a605a4.jpg"
+                    alt="Грузчик в Усть-Куте"
+                    className="relative z-10 h-full max-h-[480px] w-full object-cover object-top"
+                    style={{ mixBlendMode: "normal" }}
+                  />
                 </div>
               </div>
             </motion.div>
