@@ -76,7 +76,7 @@ export function Hero3DStage() {
                   <p className="text-zinc-400 text-sm mb-3">
                     Напишите нам в мессенджер для бесплатной консультации:
                   </p>
-                  <div className="grid grid-cols-2 gap-3 max-w-md">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
                     <a
                       href="https://t.me/masteroff_uk"
                       target="_blank"
