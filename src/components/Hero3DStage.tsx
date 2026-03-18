@@ -37,8 +37,14 @@ export function Hero3DStage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden"
+              className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden relative"
             >
+              {/* Фото — абсолютно поверх всего блока, справа */}
+              <img
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/adfe8232-2b44-4757-aae2-26ce17b1c8c6.png"
+                alt="Разнорабочий в Усть-Куте"
+                className="absolute bottom-0 right-0 h-full w-auto object-contain object-bottom pointer-events-none z-10 hidden md:block"
+              />
               <div className="grid md:grid-cols-[1fr_400px]">
                 {/* Левая колонка */}
                 <div className="p-8 md:p-12 flex flex-col justify-start">
@@ -139,21 +145,8 @@ export function Hero3DStage() {
                   </div>
                 </div>
 
-                {/* Правая колонка — фото */}
-                <div className="relative hidden md:block bg-zinc-900 rounded-r-3xl">
-                  <img
-                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/adfe8232-2b44-4757-aae2-26ce17b1c8c6.png"
-                    alt="Разнорабочий в Усть-Куте"
-                    style={{
-                      position: "absolute",
-                      bottom: "-10px",
-                      right: "-10px",
-                      height: "110%",
-                      width: "auto",
-                      objectFit: "contain",
-                    }}
-                  />
-                </div>
+                {/* Правая колонка — пустая, для отступа под фото */}
+                <div className="hidden md:block" />
 
               </div>
             </motion.div>
