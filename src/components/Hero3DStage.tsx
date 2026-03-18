@@ -39,13 +39,7 @@ export function Hero3DStage() {
               transition={{ duration: 0.4 }}
               className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative"
             >
-              {/* Фото поверх блока — не обрезается */}
-              <img
-                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/adfe8232-2b44-4757-aae2-26ce17b1c8c6.png"
-                alt="Разнорабочий"
-                className="hidden md:block absolute bottom-0 right-0 pointer-events-none"
-                style={{ height: "110%", width: "auto", zIndex: 20 }}
-              />
+
               <div className="grid md:grid-cols-[1fr_420px] items-stretch">
                 {/* Левая колонка */}
                 <div className="p-8 md:p-12 flex flex-col justify-start">
