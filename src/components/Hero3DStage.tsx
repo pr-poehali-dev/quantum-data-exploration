@@ -37,12 +37,19 @@ export function Hero3DStage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative"
+              className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
             >
+              {/* Фото — поверх блока справа, выходит за верхний край */}
+              <img
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/f715742e-1e4f-4258-9bc4-f0e25e86dfd5.png"
+                alt="Разнорабочий"
+                className="hidden md:block absolute pointer-events-none"
+                style={{ right: 0, top: "-10%", height: "120%", width: "auto", zIndex: 5 }}
+              />
 
-              <div className="grid md:grid-cols-[1fr_420px] items-stretch">
+              <div className="grid md:grid-cols-[1fr_420px]">
                 {/* Левая колонка */}
-                <div className="p-8 md:p-12 flex flex-col justify-start">
+                <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
                   <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                     Разнорабочие<br />в Усть-Куте
                   </h1>
