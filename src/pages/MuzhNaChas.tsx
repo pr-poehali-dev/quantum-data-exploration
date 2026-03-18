@@ -179,7 +179,7 @@ export default function MuzhNaChas() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
               {services.map((s, i) => (
                 <motion.div
                   key={s.title}
@@ -187,17 +187,13 @@ export default function MuzhNaChas() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="rounded-2xl p-6 flex flex-col gap-4 border border-zinc-800 group hover:border-yellow-500/40 transition-all duration-300"
-                  style={{ backgroundColor: "#111113" }}
+                  className="rounded-2xl p-8 flex flex-col items-center text-center gap-4"
+                  style={{ backgroundColor: "#1a1a1a" }}
                 >
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "rgba(245,197,24,0.1)" }}>
-                    <Icon name={s.icon} size={22} style={{ color: "#F5C518" }} />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1" style={{ color: "#F5C518" }}>{s.title}</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed">{s.desc}</p>
-                  </div>
-                  <div className="mt-auto pt-3 border-t border-zinc-800">
+                  <Icon name={s.icon} size={40} style={{ color: "#F5C518" }} />
+                  <h3 className="font-bold text-base leading-snug" style={{ color: "#F5C518" }}>{s.title}</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">{s.desc}</p>
+                  <div className="mt-auto">
                     <span className="font-bold text-sm text-white">{s.price}</span>
                   </div>
                 </motion.div>
@@ -219,7 +215,7 @@ export default function MuzhNaChas() {
               Мы предлагаем профессиональные услуги мастеров на дом для решения любых бытовых задач. Наша команда обладает необходимыми навыками и опытом.
             </motion.p>
 
-            <div className="grid md:grid-cols-4 gap-5">
+            <div className="grid md:grid-cols-4 gap-1">
               {advantages.map((a, i) => (
                 <motion.div
                   key={a.title}
@@ -227,11 +223,11 @@ export default function MuzhNaChas() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="rounded-2xl p-6 border border-zinc-800"
-                  style={{ backgroundColor: "#111113" }}
+                  className="rounded-2xl p-8 flex flex-col items-center text-center"
+                  style={{ backgroundColor: "#1a1a1a" }}
                 >
-                  <Icon name={a.icon} size={32} className="mb-4" style={{ color: "#F5C518" }} />
-                  <h3 className="font-bold text-base mb-2" style={{ color: "#F5C518" }}>{a.title}</h3>
+                  <Icon name={a.icon} size={40} className="mb-5" style={{ color: "#F5C518" }} />
+                  <h3 className="font-bold text-base mb-3 leading-snug" style={{ color: "#F5C518" }}>{a.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{a.desc}</p>
                 </motion.div>
               ))}
