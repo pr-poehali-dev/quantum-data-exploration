@@ -37,7 +37,7 @@ export function Hero3DStage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden"
+              className="w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-visible"
             >
               <div className="grid md:grid-cols-[1fr_420px] divide-x divide-zinc-800">
                 {/* Левая колонка */}
@@ -140,12 +140,12 @@ export function Hero3DStage() {
                 </div>
 
                 {/* Правая колонка — фото */}
-                <div className="relative hidden md:flex items-end justify-center bg-zinc-900 overflow-hidden min-h-[560px]">
-                  {/* Фото грузчика — во весь блок */}
+                <div className="relative hidden md:flex items-end justify-center bg-zinc-900 min-h-[560px]">
+                  {/* Фото грузчика — выходит за края блока */}
                   <img
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b87e1f3c-8b3f-4ab7-bfb1-f38005b13571.png"
                     alt="Разнорабочий в Усть-Куте"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[110%] w-auto object-contain z-10"
                   />
                   {/* Плашка цены */}
                   <div className="absolute bottom-8 left-0 right-0 mx-6 z-20 bg-orange-500 text-white font-extrabold text-2xl text-center py-4 rounded-2xl shadow-lg">
