@@ -218,25 +218,39 @@ export default function MuzhNaChas() {
               Мы предлагаем профессиональные услуги мастеров на дом для решения любых бытовых задач. Наша команда обладает необходимыми навыками и опытом.
             </motion.p>
 
-            <div className="grid md:grid-cols-4 gap-1">
-              {advantages.map((a, i) => (
-                <motion.div
-                  key={a.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  className="rounded-2xl p-8 flex flex-col items-center text-center cursor-pointer"
-                  style={{ backgroundColor: "#1a1a1a" }}
-                  onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 8px 32px rgba(245,197,24,0.15)")}
-                  onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
-                >
-                  <Icon name={a.icon} size={40} className="mb-5" style={{ color: "#F5C518" }} />
-                  <h3 className="font-bold text-base mb-3 leading-snug" style={{ color: "#F5C518" }}>{a.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{a.desc}</p>
-                </motion.div>
-              ))}
+            <div className="flex flex-col md:flex-row items-stretch gap-0">
+              {advantages.map((a, i) => {
+                const isEdge = i === 0 || i === advantages.length - 1
+                const borderRadius = i === 0
+                  ? "20px 0 0 20px"
+                  : i === advantages.length - 1
+                  ? "0 20px 20px 0"
+                  : "0"
+                return (
+                  <motion.div
+                    key={a.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                    whileHover={{ y: -8, scale: 1.03, zIndex: 10 }}
+                    className="flex flex-col items-center text-center cursor-pointer relative"
+                    style={{
+                      backgroundColor: "#1a1a1a",
+                      borderRadius,
+                      padding: isEdge ? "28px 24px" : "40px 24px",
+                      flex: isEdge ? "0 0 22%" : "1",
+                      alignSelf: isEdge ? "center" : "stretch",
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 8px 32px rgba(245,197,24,0.18)")}
+                    onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
+                  >
+                    <Icon name={a.icon} size={isEdge ? 36 : 44} className="mb-5" style={{ color: "#F5C518" }} />
+                    <h3 className="font-bold leading-snug mb-3" style={{ color: "#F5C518", fontSize: isEdge ? "14px" : "16px" }}>{a.title}</h3>
+                    <p className="text-zinc-400 leading-relaxed" style={{ fontSize: isEdge ? "12px" : "13px" }}>{a.desc}</p>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </section>
