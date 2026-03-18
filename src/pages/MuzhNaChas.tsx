@@ -218,14 +218,9 @@ export default function MuzhNaChas() {
               Мы предлагаем профессиональные услуги мастеров на дом для решения любых бытовых задач. Наша команда обладает необходимыми навыками и опытом.
             </motion.p>
 
-            <div className="flex flex-col md:flex-row items-stretch gap-0">
+            <div className="flex flex-col md:flex-row items-stretch" style={{ gap: 0, borderRadius: "20px", overflow: "hidden" }}>
               {advantages.map((a, i) => {
                 const isEdge = i === 0 || i === advantages.length - 1
-                const borderRadius = i === 0
-                  ? "20px 0 0 20px"
-                  : i === advantages.length - 1
-                  ? "0 20px 20px 0"
-                  : "0"
                 return (
                   <motion.div
                     key={a.title}
@@ -237,7 +232,6 @@ export default function MuzhNaChas() {
                     className="flex flex-col items-center text-center cursor-pointer relative"
                     style={{
                       backgroundColor: "#1a1a1a",
-                      borderRadius,
                       padding: isEdge ? "28px 24px" : "40px 24px",
                       flex: isEdge ? "0 0 22%" : "1",
                       alignSelf: isEdge ? "center" : "stretch",
