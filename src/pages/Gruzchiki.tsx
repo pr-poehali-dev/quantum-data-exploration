@@ -95,8 +95,8 @@ export default function Gruzchiki() {
         <Navbar />
 
         {/* Hero */}
-        <section className="relative overflow-hidden pt-28 pb-16 px-6">
-          <div className="max-w-4xl mx-auto relative z-10">
+        <section className="relative overflow-hidden pt-24 pb-16 px-6">
+          <div className="max-w-5xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -116,64 +116,95 @@ export default function Gruzchiki() {
                 className="absolute pointer-events-none"
                 style={{
                   top: "50%",
-                  right: "-100px",
+                  right: "-80px",
                   transform: "translateY(-50%)",
                   width: "500px",
                   height: "400px",
-                  background: "radial-gradient(ellipse at center, rgba(249,115,22,0.08) 0%, transparent 70%)",
+                  background: "radial-gradient(ellipse at center, rgba(249,115,22,0.1) 0%, transparent 70%)",
                 }}
               />
-              <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5">
-                  <Icon name="MapPin" size={12} />
-                  Усть-Кут — выезд в день обращения
+
+              <div className="relative z-10 grid md:grid-cols-[1fr_320px] gap-8 items-start">
+                {/* Левая колонка */}
+                <div>
+                  <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5">
+                    <Icon name="MapPin" size={12} />
+                    Усть-Кут — выезд в день обращения
+                  </div>
+                  <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+                    Услуги грузчиков<br /> в Усть-Куте
+                  </h1>
+                  <p className="text-zinc-400 text-base leading-relaxed mb-6">
+                    Надёжные грузчики для переезда, погрузки и разгрузки. Работаем быстро, аккуратно, без опозданий — с вещами обращаемся бережно.
+                  </p>
+
+                  {/* Список преимуществ */}
+                  <ul className="space-y-2 mb-8">
+                    {[
+                      "Выезд в течение 1 часа",
+                      "Работаем без выходных, 24/7",
+                      "Бригада 1–4 грузчика на выбор",
+                      "Без скрытых доплат — цена фиксирована",
+                      "Бережная работа с хрупкими вещами",
+                    ].map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-zinc-300 text-sm">
+                        <Icon name="CheckCircle2" size={16} className="text-orange-400 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="tel:+79086461687"
+                      className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                    >
+                      <Icon name="Phone" size={18} />
+                      +7 (908) 646-16-87
+                    </a>
+                    <button
+                      onClick={() => setIsFormOpen(true)}
+                      className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                    >
+                      Оставить заявку
+                    </button>
+                  </div>
                 </div>
-                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-5">
-                  Услуги грузчиков<br className="hidden md:block" /> в Усть-Куте
-                </h1>
-                <p className="text-zinc-400 text-lg max-w-2xl leading-relaxed mb-8">
-                  Надёжные грузчики для переезда, погрузки и разгрузки. Работаем быстро, аккуратно, без опозданий — с вещами обращаемся бережно.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
+
+                {/* Правая колонка — карточка с ценами */}
+                <div className="bg-zinc-800/60 border border-zinc-700/60 rounded-2xl p-6 flex flex-col gap-4">
+                  <div className="text-center pb-4 border-b border-zinc-700">
+                    <div className="text-zinc-400 text-xs mb-1">Стоимость работ</div>
+                    <div className="text-orange-400 text-4xl font-bold">от 500 ₽</div>
+                    <div className="text-zinc-500 text-sm">в час за одного грузчика</div>
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { label: "1 грузчик", price: "от 500 ₽/ч" },
+                      { label: "2 грузчика", price: "от 900 ₽/ч" },
+                      { label: "Бригада 3–4 чел.", price: "от 1 400 ₽/ч" },
+                      { label: "Минимальный заказ", price: "2 часа" },
+                    ].map((row) => (
+                      <div key={row.label} className="flex justify-between items-center">
+                        <span className="text-zinc-400 text-sm">{row.label}</span>
+                        <span className="text-white text-sm font-medium">{row.price}</span>
+                      </div>
+                    ))}
+                  </div>
                   <a
                     href="tel:+79086461687"
-                    className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
+                    className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg transition-colors font-medium text-sm"
                   >
-                    <Icon name="Phone" size={18} />
-                    +7 (908) 646-16-87
+                    <Icon name="Phone" size={16} />
+                    Позвонить и уточнить цену
                   </a>
-                  <button
-                    onClick={() => setIsFormOpen(true)}
-                    className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
-                  >
-                    Оставить заявку
-                  </button>
+                  <div className="flex items-center gap-2 justify-center text-zinc-500 text-xs">
+                    <Icon name="ShieldCheck" size={14} className="text-zinc-500" />
+                    Оплата после выполнения работы
+                  </div>
                 </div>
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Badges */}
-        <section className="px-6 pb-14">
-          <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { icon: "Clock", label: "Выезд за 1 час" },
-              { icon: "Banknote", label: "от 500 ₽/час" },
-              { icon: "Users", label: "1–4 грузчика" },
-              { icon: "CalendarCheck", label: "7 дней в неделю" },
-            ].map((item) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 flex flex-col items-center text-center gap-2"
-              >
-                <Icon name={item.icon} size={22} className="text-orange-400" />
-                <span className="text-white text-sm font-medium">{item.label}</span>
-              </motion.div>
-            ))}
           </div>
         </section>
 
