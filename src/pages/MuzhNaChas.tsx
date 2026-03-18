@@ -78,7 +78,7 @@ export default function MuzhNaChas() {
             className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
           >
             <img
-              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d10a119d-8182-45c5-84eb-26f31e594144.jpg"
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/72c5344d-457d-4867-91bc-87a986493536.png"
               alt="Муж на час"
               className="hidden md:block absolute pointer-events-none"
               style={{ right: "20px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
