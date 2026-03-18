@@ -160,7 +160,7 @@ export function Hero3DStage() {
                   </div>
                   {/* Фото грузчика */}
                   <img
-                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/a893b77e-0ca4-44e3-9894-1b305ff667cf.jpeg"
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b87e1f3c-8b3f-4ab7-bfb1-f38005b13571.png"
                     alt="Разнорабочий в Усть-Куте"
                     className="relative z-10 w-full max-h-[500px] object-contain object-bottom"
                   />
