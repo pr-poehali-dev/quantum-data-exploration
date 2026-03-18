@@ -145,7 +145,7 @@ export function Hero3DStage() {
                   <img
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b87e1f3c-8b3f-4ab7-bfb1-f38005b13571.png"
                     alt="Разнорабочий в Усть-Куте"
-                    className="absolute bottom-0 left-0 w-full h-[115%] object-cover object-top z-10"
+                    className="absolute bottom-0 left-0 w-full h-full object-contain object-bottom z-10"
                   />
                   {/* Плашка цены */}
                   <div className="absolute bottom-8 left-0 right-0 mx-6 z-20 bg-orange-500 text-white font-extrabold text-2xl text-center py-4 rounded-2xl shadow-lg">
