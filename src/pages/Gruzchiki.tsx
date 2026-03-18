@@ -103,27 +103,14 @@ export default function Gruzchiki() {
               transition={{ duration: 0.5 }}
               className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl overflow-hidden"
             >
-              {/* Dot grid pattern */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)",
-                  backgroundSize: "24px 24px",
-                }}
-              />
-
               <div className="relative z-10 grid md:grid-cols-[1fr_380px] min-h-[480px]">
                 {/* Левая колонка */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded-full mb-5 w-fit">
-                    <Icon name="MapPin" size={12} />
-                    Усть-Кут — выезд в день обращения
-                  </div>
-                  <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
+                  <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                     Грузчики<br />в Усть-Куте
                   </h1>
 
-                  {/* Список */}
+                  {/* Список с оранжевыми стрелками */}
                   <ul className="space-y-3 mb-8">
                     {[
                       "Погрузим и разгрузим любой транспорт",
@@ -132,39 +119,15 @@ export default function Gruzchiki() {
                       "Поднимем на этаж стройматериалы и мебель",
                       "Работаем аккуратно — без царапин и повреждений",
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-zinc-300 text-sm">
-                        <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center">
-                          <Icon name="ChevronRight" size={12} className="text-orange-400" />
-                        </span>
+                      <li key={item} className="flex items-center gap-3 text-zinc-300 text-base">
+                        <span className="text-orange-500 text-xl font-bold leading-none">›</span>
                         {item}
                       </li>
                     ))}
                   </ul>
 
-                  {/* Форма */}
-                  <div className="mb-3">
-                    <p className="text-zinc-400 text-sm mb-3">
-                      Оставьте заявку или позвоните нам — перезвоним за 2 минуты
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <a
-                        href="tel:+79086461687"
-                        className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
-                      >
-                        <Icon name="Phone" size={18} />
-                        +7 (908) 646-16-87
-                      </a>
-                      <button
-                        onClick={() => setIsFormOpen(true)}
-                        className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white px-6 py-3 rounded-lg transition-colors font-medium text-base"
-                      >
-                        Оставить заявку
-                      </button>
-                    </div>
-                  </div>
-
                   {/* Мессенджеры */}
-                  <p className="text-zinc-400 text-sm mb-3 mt-4">
+                  <p className="text-zinc-400 text-sm mb-3">
                     Напишите нам в мессенджер для бесплатной консультации:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
@@ -215,7 +178,6 @@ export default function Gruzchiki() {
                       </div>
                     </a>
                   </div>
-
                 </div>
 
                 {/* Правая колонка — фото */}
