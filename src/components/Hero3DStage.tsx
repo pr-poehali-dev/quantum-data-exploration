@@ -44,7 +44,7 @@ export function Hero3DStage() {
                 src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/f715742e-1e4f-4258-9bc4-f0e25e86dfd5.png"
                 alt="Разнорабочий"
                 className="hidden md:block absolute pointer-events-none"
-                style={{ right: 0, top: "0%", height: "100%", width: "auto", zIndex: 5 }}
+                style={{ right: "-80px", top: "0%", height: "100%", width: "auto", zIndex: 5 }}
               />
 
               <div className="grid md:grid-cols-[1fr_420px]">
