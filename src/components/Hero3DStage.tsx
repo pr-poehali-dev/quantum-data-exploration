@@ -39,7 +39,7 @@ export function Hero3DStage() {
               transition={{ duration: 0.4 }}
               className="w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden"
             >
-              <div className="grid md:grid-cols-[1fr_420px]">
+              <div className="grid md:grid-cols-[1fr_420px] divide-x divide-zinc-800">
                 {/* Левая колонка */}
                 <div className="p-8 md:p-12 flex flex-col justify-start">
                   <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
@@ -140,29 +140,29 @@ export function Hero3DStage() {
                 </div>
 
                 {/* Правая колонка — фото */}
-                <div className="relative hidden md:flex items-end justify-center bg-zinc-950 overflow-hidden min-h-[560px]">
-                  {/* Оранжевый круг в нашем цвете */}
+                <div className="relative hidden md:flex items-end justify-center bg-zinc-900 overflow-hidden min-h-[560px]">
+                  {/* Жёлтый круг как на фото */}
                   <div
                     style={{
                       position: "absolute",
-                      width: "360px",
-                      height: "360px",
+                      width: "420px",
+                      height: "420px",
                       borderRadius: "50%",
-                      background: "radial-gradient(circle, rgba(249,115,22,0.35) 0%, rgba(249,115,22,0.08) 70%)",
-                      bottom: "20px",
+                      backgroundColor: "#FFD600",
+                      bottom: "60px",
                       left: "50%",
                       transform: "translateX(-50%)",
                     }}
                   />
-                  {/* Плашка цены в оранжевом */}
+                  {/* Плашка цены */}
                   <div className="absolute bottom-8 left-0 right-0 mx-6 z-20 bg-orange-500 text-white font-extrabold text-2xl text-center py-4 rounded-2xl shadow-lg">
                     от 500 руб./час
                   </div>
-                  {/* Фото */}
+                  {/* Фото грузчика */}
                   <img
-                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/7fb41e15-0c91-4c78-a878-7275718c4bf2.jpg"
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/a893b77e-0ca4-44e3-9894-1b305ff667cf.jpeg"
                     alt="Разнорабочий в Усть-Куте"
-                    className="relative z-10 w-full max-h-[520px] object-cover object-top"
+                    className="relative z-10 w-full max-h-[500px] object-contain object-bottom"
                   />
                 </div>
               </div>
