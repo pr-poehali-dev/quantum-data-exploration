@@ -140,11 +140,11 @@ export function Hero3DStage() {
                 </div>
 
                 {/* Правая колонка — фото */}
-                <div className="relative hidden md:block overflow-hidden">
+                <div className="relative hidden md:block" style={{ minHeight: "600px" }}>
                   <img
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/adfe8232-2b44-4757-aae2-26ce17b1c8c6.png"
                     alt="Разнорабочий в Усть-Куте"
-                    className="absolute bottom-0 left-0 w-full h-[110%] object-contain object-bottom"
+                    style={{ position: "absolute", bottom: 0, left: 0, width: "100%", height: "110%", objectFit: "contain", objectPosition: "bottom" }}
                   />
                 </div>
 
