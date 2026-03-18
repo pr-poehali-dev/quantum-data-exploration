@@ -141,19 +141,7 @@ export function Hero3DStage() {
 
                 {/* Правая колонка — фото */}
                 <div className="relative hidden md:flex items-end justify-center bg-zinc-900 overflow-hidden min-h-[560px]">
-                  {/* Жёлтый круг как на фото */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      width: "420px",
-                      height: "420px",
-                      borderRadius: "50%",
-                      backgroundColor: "#FFD600",
-                      bottom: "60px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                    }}
-                  />
+
                   {/* Плашка цены */}
                   <div className="absolute bottom-8 left-0 right-0 mx-6 z-20 bg-orange-500 text-white font-extrabold text-2xl text-center py-4 rounded-2xl shadow-lg">
                     от 500 руб./час
