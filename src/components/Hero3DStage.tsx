@@ -43,7 +43,7 @@ export function Hero3DStage() {
               <img
                 src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/adfe8232-2b44-4757-aae2-26ce17b1c8c6.png"
                 alt="Разнорабочий в Усть-Куте"
-                className="absolute bottom-0 right-0 h-full w-auto object-contain object-bottom pointer-events-none z-10 hidden md:block"
+                className="absolute bottom-0 right-[-60px] h-full w-auto object-contain object-bottom pointer-events-none z-10 hidden md:block"
               />
               <div className="grid md:grid-cols-[1fr_400px]">
                 {/* Левая колонка */}
