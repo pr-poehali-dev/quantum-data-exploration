@@ -140,11 +140,20 @@ export function Hero3DStage() {
                 </div>
 
                 {/* Правая колонка — фото */}
-                <div className="relative hidden md:block bg-zinc-900 min-h-[500px]">
+                <div className="relative hidden md:block bg-zinc-900 rounded-r-3xl overflow-visible">
                   <img
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/adfe8232-2b44-4757-aae2-26ce17b1c8c6.png"
                     alt="Разнорабочий в Усть-Куте"
-                    style={{ position: "absolute", bottom: 0, right: "-20px", height: "120%", width: "auto", objectFit: "contain", zIndex: 10 }}
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      height: "calc(100% + 60px)",
+                      width: "auto",
+                      objectFit: "contain",
+                      zIndex: 10,
+                    }}
                   />
                 </div>
 
