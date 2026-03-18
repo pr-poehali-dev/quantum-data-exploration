@@ -37,12 +37,12 @@ export function Hero3DStage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-2xl"
+              className="w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden"
             >
               <div className="grid md:grid-cols-[1fr_420px]">
                 {/* Левая колонка */}
                 <div className="p-8 md:p-12 flex flex-col justify-start">
-                  <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-7">
+                  <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                     Разнорабочие<br />в Усть-Куте
                   </h1>
 
@@ -55,7 +55,7 @@ export function Hero3DStage() {
                       "Упакуем вещи при переезде",
                       "Поднимем на этаж стройматериалы",
                     ].map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-zinc-800 text-base">
+                      <li key={item} className="flex items-center gap-3 text-zinc-300 text-base">
                         <span className="text-orange-500 text-xl font-bold leading-none">›</span>
                         {item}
                       </li>
@@ -63,30 +63,30 @@ export function Hero3DStage() {
                   </ul>
 
                   {/* Форма */}
-                  <p className="text-zinc-800 font-semibold text-base mb-3">
+                  <p className="text-white font-semibold text-base mb-3">
                     Оставьте заявку на бесплатную консультацию<br />или позвоните нам
                   </p>
-                  <div className="flex gap-0 mb-2 rounded-lg overflow-hidden border border-zinc-300 max-w-md">
+                  <div className="flex gap-0 mb-2 rounded-lg overflow-hidden border border-zinc-700 max-w-md">
                     <input
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+7(900) 000-00-00"
-                      className="flex-1 px-4 py-3 text-zinc-900 text-base outline-none bg-white placeholder-zinc-400"
+                      className="flex-1 px-4 py-3 text-white text-base outline-none bg-zinc-800 placeholder-zinc-500"
                     />
                     <button
                       onClick={() => setIsFormOpen(true)}
-                      className="bg-orange-400 hover:bg-orange-500 transition-colors text-white font-semibold px-5 py-3 text-sm whitespace-nowrap"
+                      className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-semibold px-5 py-3 text-sm whitespace-nowrap"
                     >
                       Оставить заявку
                     </button>
                   </div>
-                  <p className="text-zinc-400 text-xs mb-6">
+                  <p className="text-zinc-500 text-xs mb-6">
                     Нажимая на кнопку, вы даёте согласие на обработку персональных данных
                   </p>
 
                   {/* Мессенджеры */}
-                  <p className="text-zinc-700 text-sm mb-3">
+                  <p className="text-zinc-400 text-sm mb-3">
                     Напишите нам в мессенджер для бесплатной консультации:
                   </p>
                   <div className="grid grid-cols-2 gap-3 max-w-md">
@@ -94,13 +94,13 @@ export function Hero3DStage() {
                       href="https://t.me/masteroff_uk"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 border border-zinc-200 rounded-xl px-4 py-3 hover:border-sky-400 transition-colors bg-white"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60"
                     >
                       <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0">
                         <Icon name="Send" size={14} className="text-white" />
                       </div>
                       <div>
-                        <div className="text-zinc-900 text-sm font-medium">Telegram</div>
+                        <div className="text-white text-sm font-medium">Telegram</div>
                         <div className="flex items-center gap-1 text-xs text-zinc-400">
                           <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
                           в сети
@@ -111,13 +111,13 @@ export function Hero3DStage() {
                       href="https://wa.me/79086461687"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 border border-zinc-200 rounded-xl px-4 py-3 hover:border-green-400 transition-colors bg-white"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60"
                     >
                       <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
                         <Icon name="MessageCircle" size={14} className="text-white" />
                       </div>
                       <div>
-                        <div className="text-zinc-900 text-sm font-medium">WhatsApp</div>
+                        <div className="text-white text-sm font-medium">WhatsApp</div>
                         <div className="flex items-center gap-1 text-xs text-zinc-400">
                           <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
                           в сети
@@ -126,13 +126,13 @@ export function Hero3DStage() {
                     </a>
                     <a
                       href="tel:+79086461687"
-                      className="flex items-center gap-3 border border-zinc-200 rounded-xl px-4 py-3 hover:border-orange-400 transition-colors bg-white"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60"
                     >
                       <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
                         <Icon name="Phone" size={14} className="text-white" />
                       </div>
                       <div>
-                        <div className="text-zinc-900 text-sm font-medium">Позвонить</div>
+                        <div className="text-white text-sm font-medium">Позвонить</div>
                         <div className="text-xs text-zinc-400">+7 (908) 646-16-87</div>
                       </div>
                     </a>
@@ -140,26 +140,23 @@ export function Hero3DStage() {
                 </div>
 
                 {/* Правая колонка — фото */}
-                <div className="relative hidden md:flex items-end justify-center bg-zinc-50 overflow-hidden min-h-[560px]">
-                  {/* Жёлтый круг */}
+                <div className="relative hidden md:flex items-end justify-center bg-zinc-950 overflow-hidden min-h-[560px]">
+                  {/* Оранжевый круг в нашем цвете */}
                   <div
                     style={{
                       position: "absolute",
                       width: "360px",
                       height: "360px",
                       borderRadius: "50%",
-                      backgroundColor: "#FFD600",
+                      background: "radial-gradient(circle, rgba(249,115,22,0.35) 0%, rgba(249,115,22,0.08) 70%)",
                       bottom: "20px",
                       left: "50%",
                       transform: "translateX(-50%)",
                     }}
                   />
-                  {/* Синяя плашка цены */}
-                  <div
-                    className="absolute bottom-8 left-0 right-0 mx-6 z-20 text-white font-extrabold text-2xl text-center py-4 rounded-2xl"
-                    style={{ backgroundColor: "#1565C0" }}
-                  >
-                    от 1 000 руб./час
+                  {/* Плашка цены в оранжевом */}
+                  <div className="absolute bottom-8 left-0 right-0 mx-6 z-20 bg-orange-500 text-white font-extrabold text-2xl text-center py-4 rounded-2xl shadow-lg">
+                    от 500 руб./час
                   </div>
                   {/* Фото */}
                   <img
