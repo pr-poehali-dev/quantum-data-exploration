@@ -51,9 +51,13 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-zinc-600 text-xs">
-            &copy; {new Date().getFullYear()} МАСТЕРОФФ. Все права защищены.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-2">
+            <p className="text-zinc-600 text-xs">
+              &copy; {new Date().getFullYear()} МАСТЕРОФФ. Все права защищены.
+            </p>
+            <span className="hidden md:inline text-zinc-700 text-xs">•</span>
+            <p className="text-zinc-500 text-xs font-medium">ПРОЕКТ ООО ПЕРСОНАЛ24</p>
+          </div>
           <Link
             to="/privacy"
             className="text-zinc-600 hover:text-zinc-400 transition-colors text-xs"
