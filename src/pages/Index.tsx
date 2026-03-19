@@ -35,47 +35,8 @@ const Index = () => {
             className="text-white font-extrabold leading-none tracking-tight relative inline-block"
             style={{ fontSize: "clamp(3.5rem, 14vw, 10rem)" }}
           >
-            <span className="relative inline-block">
-              <svg
-                className="absolute pointer-events-none"
-                style={{
-                  top: "-8px",
-                  left: "-8px",
-                  width: "calc(100% + 16px)",
-                  height: "calc(100% + 16px)",
-                }}
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                fill="none"
-              >
-                <rect
-                  x="1" y="1" width="98" height="98" rx="10" ry="10"
-                  stroke="url(#snakeGrad)"
-                  strokeWidth="2.5"
-                  strokeDasharray="380"
-                  strokeDashoffset="0"
-                  fill="none"
-                  style={{
-                    animation: "snakeSpin 2.5s linear infinite",
-                  }}
-                />
-                <defs>
-                  <linearGradient id="snakeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
-                    <stop offset="0%" stopColor="#ef4444" />
-                    <stop offset="50%" stopColor="#ffffff" />
-                    <stop offset="100%" stopColor="#ef4444" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              МАСТЕР<span className="bg-yellow-500 text-zinc-950 px-2 rounded-lg">ОФФ</span>
-            </span>
+            МАСТЕР<span className="bg-yellow-500 text-zinc-950 px-2 rounded-lg">ОФФ</span>
           </motion.h1>
-          <style>{`
-            @keyframes snakeSpin {
-              from { stroke-dashoffset: 0; }
-              to { stroke-dashoffset: -380; }
-            }
-          `}</style>
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
