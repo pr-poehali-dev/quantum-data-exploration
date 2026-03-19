@@ -35,7 +35,7 @@ const Index = () => {
             className="text-white font-extrabold leading-none tracking-tight"
             style={{ fontSize: "clamp(3.5rem, 14vw, 10rem)" }}
           >
-            МАСТЕР<span className="text-yellow-500">ОФФ</span>
+            МАСТЕР<span className="bg-yellow-500 text-zinc-950 px-2">ОФФ</span>
           </motion.h1>
 
           <motion.p
