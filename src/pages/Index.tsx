@@ -2,6 +2,19 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 
+const TOOLS = [
+  { emoji: "🔨", size: 36, x: "8%",  y: "15%", duration: 6,  delay: 0 },
+  { emoji: "🔧", size: 28, x: "80%", y: "10%", duration: 7,  delay: 1 },
+  { emoji: "🪛", size: 32, x: "88%", y: "55%", duration: 8,  delay: 0.5 },
+  { emoji: "📏", size: 26, x: "5%",  y: "65%", duration: 9,  delay: 2 },
+  { emoji: "🪚", size: 34, x: "75%", y: "80%", duration: 7,  delay: 1.5 },
+  { emoji: "🔩", size: 22, x: "20%", y: "82%", duration: 10, delay: 0.3 },
+  { emoji: "🪝", size: 28, x: "50%", y: "88%", duration: 6,  delay: 2.5 },
+  { emoji: "⚙️", size: 30, x: "92%", y: "25%", duration: 11, delay: 1 },
+  { emoji: "🔑", size: 24, x: "15%", y: "35%", duration: 8,  delay: 3 },
+  { emoji: "🪣", size: 28, x: "60%", y: "5%",  duration: 9,  delay: 0.8 },
+];
+
 const Index = () => {
   const navigate = useNavigate();
 
@@ -9,6 +22,19 @@ const Index = () => {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
       <Navbar />
       <main className="flex-1 flex items-center justify-center overflow-hidden relative">
+        {/* плавающие инструменты */}
+        {TOOLS.map((tool, i) => (
+          <motion.span
+            key={i}
+            className="absolute pointer-events-none select-none"
+            style={{ left: tool.x, top: tool.y, fontSize: tool.size, opacity: 0.18 }}
+            animate={{ y: [0, -18, 0, 12, 0], rotate: [0, 10, -8, 6, 0] }}
+            transition={{ duration: tool.duration, delay: tool.delay, repeat: Infinity, ease: "easeInOut" }}
+          >
+            {tool.emoji}
+          </motion.span>
+        ))}
+
         {/* фоновый акцент */}
         <div
           className="absolute inset-0 pointer-events-none"
