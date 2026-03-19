@@ -11,6 +11,7 @@ import Gruzchiki from "./pages/Gruzchiki";
 import MasterNaChas from "./pages/MasterNaChas";
 import MuzhNaChas from "./pages/MuzhNaChas";
 import Raznorabochie from "./pages/Raznorabochie";
+import Vakansii from "./pages/Vakansii";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/master-na-chas" element={<MasterNaChas />} />
             <Route path="/muzh-na-chas" element={<MuzhNaChas />} />
             <Route path="/raznorabochie" element={<Raznorabochie />} />
+            <Route path="/vakansii" element={<Vakansii />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

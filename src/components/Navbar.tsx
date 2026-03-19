@@ -93,6 +93,9 @@ export function Navbar() {
               )}
             </div>
 
+            <Link to="/vakansii" className="text-sm text-zinc-400 hover:text-white transition-colors">
+              Вакансии
+            </Link>
             <a href="/#pricing" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Стоимость
             </a>
@@ -174,6 +177,13 @@ export function Navbar() {
               </div>
             )}
 
+            <Link
+              to="/vakansii"
+              onClick={handleLinkClick}
+              className="text-base text-zinc-400 hover:text-white transition-colors py-2"
+            >
+              Вакансии
+            </Link>
             <a
               href="/#pricing"
               onClick={handleLinkClick}
