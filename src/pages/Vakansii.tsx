@@ -101,8 +101,8 @@ export default function Vakansii() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto"
             >
-              Подработка от <span className="text-white font-semibold">300 ₽/час</span> и официальное трудоустройство от{" "}<br />
-              <span className="text-white font-semibold">45 000 ₽/мес</span>
+              Подработка от <span className="text-white font-semibold">300 ₽/час</span> и официальное трудоустройство<br />
+              от <span className="text-white font-semibold">45 000 ₽/мес</span>
             </motion.p>
           </div>
         </section>
