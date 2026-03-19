@@ -10,6 +10,7 @@ import Privacy from "./pages/Privacy";
 import Gruzchiki from "./pages/Gruzchiki";
 import MasterNaChas from "./pages/MasterNaChas";
 import MuzhNaChas from "./pages/MuzhNaChas";
+import Raznorabochie from "./pages/Raznorabochie";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/gruzchiki" element={<Gruzchiki />} />
             <Route path="/master-na-chas" element={<MasterNaChas />} />
             <Route path="/muzh-na-chas" element={<MuzhNaChas />} />
+            <Route path="/raznorabochie" element={<Raznorabochie />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

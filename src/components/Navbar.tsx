@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import Icon from "@/components/ui/icon"
 
 const servicesMenu = [
-  { label: "Разнорабочие", href: "/#services", description: "Ремонт, сборка, монтаж" },
+  { label: "Разнорабочие", href: "/raznorabochie", description: "Ремонт, сборка, монтаж" },
   { label: "Грузчики", href: "/gruzchiki", description: "Переезд, погрузка, разгрузка" },
   { label: "Мастер на час", href: "/master-na-chas", description: "Сантехника, электрика, ремонт" },
   { label: "Муж на час", href: "/muzh-na-chas", description: "Мелкий ремонт на дому" },
