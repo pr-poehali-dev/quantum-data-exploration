@@ -104,7 +104,8 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Наши услуги
+              Наши{" "}
+              <span className="inline-block px-2 py-0.5 rounded-md" style={{ backgroundColor: "#F5C518", color: "#09090B" }}>услуги</span>
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
