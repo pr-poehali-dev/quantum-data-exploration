@@ -58,10 +58,10 @@ const Index = () => {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-white font-extrabold leading-none tracking-tight relative inline-block"
+            className="font-extrabold leading-none tracking-tight relative inline-flex items-center"
             style={{ fontSize: "clamp(3.5rem, 14vw, 10rem)" }}
           >
-            МАСТЕР<span className="bg-yellow-500 text-zinc-950 px-2 rounded-lg">ОФФ</span>
+            <span className="bg-zinc-800 text-white px-4 py-1">МАСТЕР</span><span className="bg-yellow-500 text-zinc-950 px-4 py-1">ОФФ</span>
           </motion.h1>
 
           <motion.p
