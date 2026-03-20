@@ -112,7 +112,7 @@ export default function Raznorabochie() {
                       <Icon name="MessageCircle" size={14} className="text-black" />
                     </div>
                     <div>
-                      <div className="text-white text-sm font-medium">Написать в MAX</div>
+                      <div className="text-white text-sm font-medium">MAX</div>
                       <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
                     </div>
                   </a>
