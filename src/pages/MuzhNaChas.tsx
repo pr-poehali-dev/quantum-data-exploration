@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { OrderForm } from "@/components/OrderForm"
 import Icon from "@/components/ui/icon"
+import { FloatingCallButton } from "@/components/FloatingCallButton"
 
 const services = [
   { icon: "Wrench", title: "Мелкий ремонт", desc: "Повесим полки, карнизы, картины, зеркала. Всё ровно и надёжно.", price: "от 300 ₽" },
@@ -451,6 +452,7 @@ export default function MuzhNaChas() {
       </div>
 
       <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      <FloatingCallButton />
     </>
   )
 }

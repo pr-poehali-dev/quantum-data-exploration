@@ -11,6 +11,7 @@ import { CTASection } from "@/components/CTASection"
 import { PromoSection } from "@/components/PromoSection"
 import Icon from "@/components/ui/icon"
 import { useState } from "react"
+import { FloatingCallButton } from "@/components/FloatingCallButton"
 
 export default function Gruzchiki() {
   const [isFormOpen, setIsFormOpen] = useState(false)
@@ -182,6 +183,7 @@ export default function Gruzchiki() {
       </div>
 
       <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      <FloatingCallButton />
     </>
   )
 }
