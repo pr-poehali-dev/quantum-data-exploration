@@ -412,7 +412,7 @@ export default function MuzhNaChas() {
                   </a>
                   <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-zinc-300 hover:text-white transition-colors text-sm">
                     <Icon name="Send" size={16} style={{ color: "#F5C518" }} />
-                    @masteroff_uk
+                    Telegram
                   </a>
                 </div>
               </motion.div>
