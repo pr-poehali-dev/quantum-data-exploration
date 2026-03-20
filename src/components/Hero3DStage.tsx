@@ -95,7 +95,7 @@ export function Hero3DStage() {
                       </div>
                     </a>
                     <a
-                      href="https://wa.me/79500990931"
+                      href="https://max.ru/79500990931"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60"
@@ -124,7 +124,7 @@ export function Hero3DStage() {
                       </div>
                     </a>
                     <a
-                      href="https://wa.me/79500990931"
+                      href="https://max.ru/79500990931"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60"

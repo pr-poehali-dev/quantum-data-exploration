@@ -116,7 +116,7 @@ export default function MuzhNaChas() {
                       </div>
                     </div>
                   </a>
-                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                  <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60">
                     <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="MessageCircle" size={14} className="text-white" />
@@ -138,7 +138,7 @@ export default function MuzhNaChas() {
                       <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
                     </div>
                   </a>
-                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                  <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60">
                     <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #4F8EF7 0%, #9B59F5 100%)" }}>
                       <Icon name="MessageCircle" size={14} className="text-white" />
@@ -396,7 +396,7 @@ export default function MuzhNaChas() {
                   Не ждите, пока задача станет проблемой! Свяжитесь с нами прямо сейчас — мы готовы помочь с любым бытовым вопросом.
                 </p>
                 <div className="flex gap-3 mb-6">
-                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                  <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl flex items-center justify-center transition-opacity hover:opacity-80" style={{ backgroundColor: "#25D366" }}>
                     <Icon name="MessageCircle" size={20} className="text-white" />
                   </a>
@@ -436,7 +436,7 @@ export default function MuzhNaChas() {
                   <Icon name="Send" size={20} style={{ color: "#F5C518" }} />
                   Написать в Telegram
                 </a>
-                <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-all"
                   style={{ backgroundColor: "#111113" }}>
                   <Icon name="MessageCircle" size={20} style={{ color: "#F5C518" }} />
