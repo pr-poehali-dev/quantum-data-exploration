@@ -12,6 +12,7 @@ import MasterNaChas from "./pages/MasterNaChas";
 import MuzhNaChas from "./pages/MuzhNaChas";
 import Raznorabochie from "./pages/Raznorabochie";
 import Vakansii from "./pages/Vakansii";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner";
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/muzh-na-chas" element={<MuzhNaChas />} />
             <Route path="/raznorabochie" element={<Raznorabochie />} />
             <Route path="/vakansii" element={<Vakansii />} />
+            <Route path="/pricing" element={<Pricing />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
