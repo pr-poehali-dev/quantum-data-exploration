@@ -64,7 +64,7 @@ const Index = () => {
             <img
               src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0f37afeb-2ed1-4004-a259-f654f185140c.png"
               alt="МАСТЕРОФФ"
-              style={{ height: "clamp(3.5rem, 14vw, 10rem)", width: "auto" }}
+              style={{ height: "clamp(6rem, 22vw, 16rem)", width: "auto" }}
             />
           </motion.h1>
 
