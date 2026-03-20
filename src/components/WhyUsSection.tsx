@@ -91,14 +91,14 @@ export function WhyUsSection() {
                   Telegram
                 </a>
                 <a
-                  href="https://max.ru/79500990931"
+                  href="https://wa.me/79500990931"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 text-white text-center font-medium rounded-xl flex items-center justify-center gap-2 border border-zinc-700 hover:border-yellow-500/50 transition-colors text-sm"
                   style={{ backgroundColor: "#111113" }}
                 >
                   <Icon name="MessageCircle" size={16} style={{ color: "#F5C518" }} />
-                  MAX
+                  WhatsApp
                 </a>
               </div>
 
