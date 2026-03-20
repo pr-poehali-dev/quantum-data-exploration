@@ -9,9 +9,9 @@ export function Footer() {
           {/* Logo */}
           <div>
             <img 
-              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b9a3c2f-fda5-4533-80d3-aafcd7b7efcb.png" 
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0f37afeb-2ed1-4004-a259-f654f185140c.png" 
               alt="МАСТЕРОФФ"
-              className="h-8"
+              className="h-10"
             />
           </div>
 
