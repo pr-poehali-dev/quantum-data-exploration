@@ -158,6 +158,46 @@ export default function MuzhNaChas() {
           </motion.div>
         </div>
 
+        {/* Физические и юридические лица */}
+        <div className="w-full flex justify-center px-4 md:px-10 mb-12">
+          <div className="w-full max-w-6xl grid md:grid-cols-2 gap-6">
+            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col gap-4">
+              <div className="flex items-center gap-3 mb-1">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                  <Icon name="User" size={20} className="text-amber-400" />
+                </div>
+                <h2 className="text-white text-xl font-bold">Физическим лицам</h2>
+              </div>
+              <p className="text-zinc-400 text-sm leading-relaxed">Помогаем жителям Усть-Кута с бытовыми задачами: ремонт, сантехника, электрика, сборка мебели. Муж на час приедет и решит любой домашний вопрос быстро и качественно.</p>
+              <ul className="flex flex-col gap-2 mt-1">
+                {["Разовые и регулярные вызовы", "Оплата наличными или картой", "Выезд в день обращения", "Без предоплаты"].map(item => (
+                  <li key={item} className="flex items-center gap-2 text-zinc-300 text-sm">
+                    <Icon name="Check" size={15} className="text-amber-400 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col gap-4">
+              <div className="flex items-center gap-3 mb-1">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                  <Icon name="Building2" size={20} className="text-amber-400" />
+                </div>
+                <h2 className="text-white text-xl font-bold">Юридическим лицам</h2>
+              </div>
+              <p className="text-zinc-400 text-sm leading-relaxed">Заключаем договор с организациями и ИП. Предоставляем закрывающие документы. Подходим для обслуживания офисов, магазинов и коммерческих помещений по регулярному договору.</p>
+              <ul className="flex flex-col gap-2 mt-1">
+                {["Официальный договор", "Полный пакет документов", "Работа с НДС", "Абонентское обслуживание"].map(item => (
+                  <li key={item} className="flex items-center gap-2 text-zinc-300 text-sm">
+                    <Icon name="Check" size={15} className="text-amber-400 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Статистика */}
         <section className="px-4 md:px-10 pb-16">
           <div className="max-w-6xl mx-auto">
