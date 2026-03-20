@@ -106,6 +106,16 @@ export default function Raznorabochie() {
                       <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
                     </div>
                   </a>
+                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
+                      <Icon name="MessageCircle" size={14} className="text-black" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-medium">Написать в MAX</div>
+                      <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="hidden md:block" />
