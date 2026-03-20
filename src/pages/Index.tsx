@@ -58,10 +58,14 @@ const Index = () => {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-white font-extrabold leading-none tracking-tight relative inline-block"
+            className="relative inline-block"
             style={{ fontSize: "clamp(3.5rem, 14vw, 10rem)" }}
           >
-            МАСТЕР<span className="bg-yellow-500 text-zinc-950 px-2 rounded-lg">ОФФ</span>
+            <img
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0f37afeb-2ed1-4004-a259-f654f185140c.png"
+              alt="МАСТЕРОФФ"
+              style={{ height: "clamp(3.5rem, 14vw, 10rem)", width: "auto" }}
+            />
           </motion.h1>
 
           <motion.p
