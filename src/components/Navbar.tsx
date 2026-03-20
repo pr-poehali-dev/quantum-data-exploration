@@ -105,7 +105,8 @@ export function Navbar() {
 
             <a
               href="tel:+79500990931"
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-bold"
+              style={{ backgroundColor: "#F5C518", color: "#09090B" }}
             >
               <Icon name="Phone" size={16} />
               Позвонить
@@ -116,7 +117,8 @@ export function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <a
               href="tel:+79500990931"
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-bold"
+              style={{ backgroundColor: "#F5C518", color: "#09090B" }}
             >
               <Icon name="Phone" size={16} />
               Позвонить
