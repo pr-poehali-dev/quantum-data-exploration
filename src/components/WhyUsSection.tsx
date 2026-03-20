@@ -72,11 +72,11 @@ export function WhyUsSection() {
               </div>
 
               <a
-                href="tel:+79086461687"
+                href="tel:+79500990931"
                 className="block w-full py-4 text-center font-bold rounded-xl text-black text-lg mb-4 hover:opacity-90 transition-opacity"
                 style={{ backgroundColor: "#F5C518" }}
               >
-                +7 (908) 646-16-87
+                +7 (950) 099-09-31
               </a>
 
               <div className="flex gap-3">
@@ -91,7 +91,7 @@ export function WhyUsSection() {
                   Telegram
                 </a>
                 <a
-                  href="https://wa.me/79086461687"
+                  href="https://wa.me/79500990931"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 text-white text-center font-medium rounded-xl flex items-center justify-center gap-2 border border-zinc-700 hover:border-yellow-500/50 transition-colors text-sm"

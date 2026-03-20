@@ -53,7 +53,7 @@ export default function Vakansii() {
         <title>Вакансии в Усть-Куте | Подработка и работа — МАСТЕРОФФ</title>
         <meta
           name="description"
-          content="Вакансии в Усть-Куте: разнорабочие, грузчики, мастера на час. Подработка от 300 руб/час, официальное трудоустройство от 45 000 руб/мес. Гибкий график. Звоните: +7 (908) 646-16-87"
+          content="Вакансии в Усть-Куте: разнорабочие, грузчики, мастера на час. Подработка от 300 руб/час, официальное трудоустройство от 45 000 руб/мес. Гибкий график. Звоните: +7 (950) 099-09-31"
         />
         <meta name="keywords" content="вакансии усть-кут, подработка усть-кут, работа усть-кут, грузчик усть-кут, разнорабочий усть-кут, мастер на час работа" />
         <meta property="og:title" content="Вакансии в Усть-Куте | МАСТЕРОФФ" />
@@ -224,7 +224,7 @@ export default function Vakansii() {
                   <li className="flex items-center gap-2"><Icon name="Check" size={14} className="text-zinc-400 shrink-0" />Рост до бригадира</li>
                 </ul>
                 <a
-                  href="tel:+79086461687"
+                  href="tel:+79500990931"
                   className="flex items-center justify-center gap-2 w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-5 py-3 rounded-xl transition-colors"
                 >
                   <Icon name="Phone" size={16} />

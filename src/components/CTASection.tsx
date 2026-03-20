@@ -26,12 +26,12 @@ export function CTASection() {
           </div>
           <div className="flex flex-col gap-3 w-full md:w-auto min-w-[220px]">
             <a
-              href="tel:+79086461687"
+              href="tel:+79500990931"
               className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-bold text-base text-black hover:opacity-90 transition-opacity"
               style={{ backgroundColor: "#F5C518" }}
             >
               <Icon name="Phone" size={18} className="text-black" />
-              +7 (908) 646-16-87
+              +7 (950) 099-09-31
             </a>
             <a
               href="https://t.me/masteroff_uk"

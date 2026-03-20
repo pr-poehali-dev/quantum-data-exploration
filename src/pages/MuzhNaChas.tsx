@@ -59,7 +59,7 @@ export default function MuzhNaChas() {
     <>
       <Helmet>
         <title>Муж на час в Усть-Куте | МАСТЕРОФФ — мелкий ремонт от 300 ₽</title>
-        <meta name="description" content="Муж на час в Усть-Куте. Мелкий ремонт, сантехника, электрика, сборка мебели. Выезд в день обращения. От 300 руб. Звоните: +7 (908) 646-16-87" />
+        <meta name="description" content="Муж на час в Усть-Куте. Мелкий ремонт, сантехника, электрика, сборка мебели. Выезд в день обращения. От 300 руб. Звоните: +7 (950) 099-09-31" />
         <meta name="keywords" content="муж на час усть-кут, мелкий ремонт усть-кут, мастер на дом усть-кут, повесить полку усть-кут, сборка мебели усть-кут" />
         <meta property="og:title" content="Муж на час в Усть-Куте | МАСТЕРОФФ" />
         <meta property="og:type" content="website" />
@@ -116,7 +116,7 @@ export default function MuzhNaChas() {
                       </div>
                     </div>
                   </a>
-                  <a href="https://wa.me/79086461687" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60">
                     <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="MessageCircle" size={14} className="text-white" />
@@ -128,14 +128,14 @@ export default function MuzhNaChas() {
                       </div>
                     </div>
                   </a>
-                  <a href="tel:+79086461687"
+                  <a href="tel:+79500990931"
                     className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60">
                     <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
                       <Icon name="Phone" size={14} className="text-black" />
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">Позвонить</div>
-                      <div className="text-xs text-zinc-400">+7 (908) 646-16-87</div>
+                      <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
                     </div>
                   </a>
                 </div>
@@ -343,7 +343,7 @@ export default function MuzhNaChas() {
                   Не ждите, пока задача станет проблемой! Свяжитесь с нами прямо сейчас — мы готовы помочь с любым бытовым вопросом.
                 </p>
                 <div className="flex gap-3 mb-6">
-                  <a href="https://wa.me/79086461687" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl flex items-center justify-center transition-opacity hover:opacity-80" style={{ backgroundColor: "#25D366" }}>
                     <Icon name="MessageCircle" size={20} className="text-white" />
                   </a>
@@ -353,9 +353,9 @@ export default function MuzhNaChas() {
                   </a>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <a href="tel:+79086461687" className="flex items-center gap-3 text-zinc-300 hover:text-white transition-colors text-sm">
+                  <a href="tel:+79500990931" className="flex items-center gap-3 text-zinc-300 hover:text-white transition-colors text-sm">
                     <Icon name="Phone" size={16} style={{ color: "#F5C518" }} />
-                    +7 (908) 646-16-87
+                    +7 (950) 099-09-31
                   </a>
                   <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-zinc-300 hover:text-white transition-colors text-sm">
                     <Icon name="Send" size={16} style={{ color: "#F5C518" }} />
@@ -371,11 +371,11 @@ export default function MuzhNaChas() {
                   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block"></span>
                   <span className="text-zinc-400 text-sm">Мастера онлайн — выезд сегодня</span>
                 </div>
-                <a href="tel:+79086461687"
+                <a href="tel:+79500990931"
                   className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-bold text-base text-black transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "#F5C518" }}>
                   <Icon name="Phone" size={20} className="text-black" />
-                  +7 (908) 646-16-87
+                  +7 (950) 099-09-31
                 </a>
                 <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-all"
@@ -383,7 +383,7 @@ export default function MuzhNaChas() {
                   <Icon name="Send" size={20} style={{ color: "#F5C518" }} />
                   Написать в Telegram
                 </a>
-                <a href="https://wa.me/79086461687" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-all"
                   style={{ backgroundColor: "#111113" }}>
                   <Icon name="MessageCircle" size={20} style={{ color: "#F5C518" }} />

@@ -104,7 +104,7 @@ export function Navbar() {
             </a>
 
             <a
-              href="tel:+79086461687"
+              href="tel:+79500990931"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
             >
               <Icon name="Phone" size={16} />
@@ -115,7 +115,7 @@ export function Navbar() {
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-3">
             <a
-              href="tel:+79086461687"
+              href="tel:+79500990931"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
             >
               <Icon name="Phone" size={16} />

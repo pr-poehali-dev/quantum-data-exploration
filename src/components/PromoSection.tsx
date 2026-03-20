@@ -37,7 +37,7 @@ export function PromoSection() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+79086461687"
+                href="tel:+79500990931"
                 className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2"
               >
                 <Icon name="Phone" size={18} />

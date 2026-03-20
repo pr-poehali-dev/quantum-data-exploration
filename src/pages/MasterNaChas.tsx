@@ -21,7 +21,7 @@ export default function MasterNaChas() {
         <title>Мастер на час в Усть-Куте | МАСТЕРОФФ — от 500 ₽/час</title>
         <meta
           name="description"
-          content="Мастер на час в Усть-Куте. Мелкий ремонт, сантехника, электрика, сборка мебели, двери и замки. Выезд в день обращения. От 500 руб/час. Звоните: +7 (908) 646-16-87"
+          content="Мастер на час в Усть-Куте. Мелкий ремонт, сантехника, электрика, сборка мебели, двери и замки. Выезд в день обращения. От 500 руб/час. Звоните: +7 (950) 099-09-31"
         />
         <meta
           name="keywords"
@@ -89,7 +89,7 @@ export default function MasterNaChas() {
                       </div>
                     </div>
                   </a>
-                  <a href="https://wa.me/79086461687" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60">
                     <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="MessageCircle" size={14} className="text-white" />
@@ -102,14 +102,14 @@ export default function MasterNaChas() {
                       </div>
                     </div>
                   </a>
-                  <a href="tel:+79086461687"
+                  <a href="tel:+79500990931"
                     className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60">
                     <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="Phone" size={14} className="text-white" />
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">Позвонить</div>
-                      <div className="text-xs text-zinc-400">+7 (908) 646-16-87</div>
+                      <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
                     </div>
                   </a>
                 </div>
