@@ -61,7 +61,7 @@ const Index = () => {
             className="font-extrabold leading-none tracking-tight relative inline-flex items-center"
             style={{ fontSize: "clamp(3.5rem, 14vw, 10rem)" }}
           >
-            <span className="text-white">МАСТЕР</span><span className="bg-yellow-500 text-zinc-950 px-3 relative" style={{borderTop: '4px solid white', borderBottom: '4px solid white'}}>ОФФ</span>
+            <span className="text-white bg-zinc-900 px-3" style={{borderTop: '5px solid white', borderBottom: '5px solid white'}}>МАСТЕР</span><span className="bg-yellow-500 text-zinc-950 px-3" style={{borderTop: '5px solid white', borderBottom: '5px solid white'}}>ОФФ</span>
           </motion.h1>
 
           <motion.p
