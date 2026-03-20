@@ -61,19 +61,11 @@ const Index = () => {
             className="font-extrabold leading-none tracking-tight relative inline-flex items-center"
             style={{ fontSize: "clamp(3.5rem, 14vw, 10rem)" }}
           >
-            <span className="relative text-white" style={{
-              borderTop: '4px solid white',
-              borderBottom: '10px solid #EAB308',
-              paddingBottom: '2px',
-              clipPath: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)'
-            }}>МАСТЕР</span><span className="text-zinc-950 px-3 ml-1" style={{
-              background: '#EAB308',
-              borderRadius: '10px',
-              border: '4px solid white',
-              borderBottom: '10px solid #EAB308',
-              outline: '4px solid white',
-              outlineOffset: '0px'
-            }}>ОФФ</span>
+            <span className="relative inline-flex flex-col" style={{ gap: 0 }}>
+              <span className="block bg-white" style={{ height: '4px', marginLeft: '8%' }}></span>
+              <span className="text-white px-2">МАСТЕР<span className="text-zinc-950 px-3" style={{ background: '#EAB308', borderRadius: '8px' }}>ОФФ</span></span>
+              <span className="block bg-yellow-500" style={{ height: '10px', clipPath: 'polygon(3% 0%, 100% 0%, 100% 100%, 0% 100%)' }}></span>
+            </span>
           </motion.h1>
 
           <motion.p
