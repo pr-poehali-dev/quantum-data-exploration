@@ -8,11 +8,31 @@ import { PricingSection } from "@/components/PricingSection"
 import { WhyUsSection } from "@/components/WhyUsSection"
 import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { CTASection } from "@/components/CTASection"
-import { PromoSection } from "@/components/PromoSection"
 import { FeatureCardsSection } from "@/components/FeatureCardsSection"
 import { JoinTeamSection } from "@/components/JoinTeamSection"
 import Icon from "@/components/ui/icon"
 import { useState } from "react"
+
+function FloatingCallButton() {
+  return (
+    <a
+      href="tel:+79500990931"
+      className="fixed bottom-8 right-6 z-50 flex items-center justify-center"
+      aria-label="Позвонить"
+    >
+      <span className="absolute inline-flex rounded-full w-16 h-16 bg-orange-500/30 animate-ping" style={{ animationDuration: "1.4s" }} />
+      <span className="absolute inline-flex rounded-full w-20 h-20 bg-orange-500/15 animate-ping" style={{ animationDuration: "1.4s", animationDelay: "0.3s" }} />
+      <span className="absolute inline-flex rounded-full w-24 h-24 bg-orange-500/08 animate-ping" style={{ animationDuration: "1.4s", animationDelay: "0.6s" }} />
+      <motion.span
+        animate={{ scale: [1, 1.08, 1] }}
+        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+        className="relative flex items-center justify-center w-14 h-14 rounded-full bg-orange-500 shadow-lg shadow-orange-500/40"
+      >
+        <Icon name="Phone" size={24} className="text-white" />
+      </motion.span>
+    </a>
+  )
+}
 
 export default function Raznorabochie() {
   const [isFormOpen, setIsFormOpen] = useState(false)
@@ -167,7 +187,6 @@ export default function Raznorabochie() {
         </div>
 
         <FeatureCardsSection />
-        <PromoSection />
         <AdvantagesSection />
         <PricingSection />
         <WhyUsSection />
@@ -178,6 +197,7 @@ export default function Raznorabochie() {
       </div>
 
       <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      <FloatingCallButton />
     </>
   )
 }
