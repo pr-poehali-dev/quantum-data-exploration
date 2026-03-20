@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
+import { FloatingCallButton } from "@/components/FloatingCallButton";
 
 const TOOLS = [
   { emoji: "🔨", size: 36, x: "8%",  y: "15%", duration: 6,  delay: 0 },
@@ -19,6 +20,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
+    <>
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
       <Navbar />
       <main className="flex-1 flex items-center justify-center overflow-hidden relative">
@@ -91,6 +93,8 @@ const Index = () => {
         </div>
       </main>
     </div>
+    <FloatingCallButton />
+    </>
   );
 };
 

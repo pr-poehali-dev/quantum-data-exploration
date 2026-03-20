@@ -8,7 +8,6 @@ import { PricingSection } from "@/components/PricingSection"
 import { WhyUsSection } from "@/components/WhyUsSection"
 import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { CTASection } from "@/components/CTASection"
-import { PromoSection } from "@/components/PromoSection"
 import Icon from "@/components/ui/icon"
 import { useState } from "react"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
@@ -173,7 +172,6 @@ export default function Gruzchiki() {
           </div>
         </div>
 
-        <PromoSection />
         <AdvantagesSection />
         <PricingSection />
         <WhyUsSection />

@@ -9,7 +9,6 @@ import { PricingSection } from "@/components/PricingSection"
 import { WhyUsSection } from "@/components/WhyUsSection"
 import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { CTASection } from "@/components/CTASection"
-import { PromoSection } from "@/components/PromoSection"
 import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
 
@@ -173,7 +172,6 @@ export default function MasterNaChas() {
           </div>
         </div>
 
-        <PromoSection />
         <AdvantagesSection />
         <PricingSection />
         <WhyUsSection />
