@@ -349,7 +349,7 @@ export default function SborkaMebeli() {
               </div>
               <div className="hidden md:flex items-end justify-center relative">
                 <img
-                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7c5cac30-e338-45de-b829-b6804d5b8806.png"
+                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ab56fcb6-9ba8-4ea1-84a8-67bcac486383.png"
                   alt="Мастер по сборке мебели"
                   className="absolute pointer-events-none"
                   style={{ right: "20px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5, objectFit: "contain", objectPosition: "bottom" }}
