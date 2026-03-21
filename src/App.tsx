@@ -13,6 +13,7 @@ import MuzhNaChas from "./pages/MuzhNaChas";
 import Raznorabochie from "./pages/Raznorabochie";
 import Vakansii from "./pages/Vakansii";
 import Pricing from "./pages/Pricing";
+import SborkaMebeli from "./pages/SborkaMebeli";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner";
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/raznorabochie" element={<Raznorabochie />} />
             <Route path="/vakansii" element={<Vakansii />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/sborka-mebeli" element={<SborkaMebeli />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

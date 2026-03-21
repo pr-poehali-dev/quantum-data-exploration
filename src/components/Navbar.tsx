@@ -7,6 +7,7 @@ const servicesMenu = [
   { label: "Грузчики", href: "/gruzchiki", description: "Переезд, погрузка, разгрузка" },
   { label: "Мастер на час", href: "/master-na-chas", description: "Сантехника, электрика, ремонт" },
   { label: "Муж на час", href: "/muzh-na-chas", description: "Мелкий ремонт на дому" },
+  { label: "Сборка мебели", href: "/sborka-mebeli", description: "Шкафы, кухни, кровати, прихожие" },
 ]
 
 export function Navbar() {
