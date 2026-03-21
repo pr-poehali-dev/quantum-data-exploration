@@ -209,6 +209,71 @@ function HighlightWord({ children }: { children: string }) {
   )
 }
 
+const allWorks = [
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/29329eca-8a80-4dc5-bcc0-2c5f65b97c2d.png",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2a95c4de-e46a-4dbb-858e-e9bc070a4c66.png",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2744f248-505e-4749-8c21-7b7e6e34cdd4.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/68ff25b5-3703-4e0b-a358-d1505c11e119.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/67beef40-b5b8-4a2f-a923-790739827e9d.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/643afe1d-2d4f-44ba-a9b2-ad26766ef330.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0a83affa-22f9-4a55-93e7-1bab5ecfc9ca.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/cfdaafd8-a6f1-45e2-a0bc-a06f3cc84032.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/9f935c95-d664-43a2-aef2-f71dbb8552ed.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7e3d4cb4-90be-43d6-a07c-cded4ebe2c2d.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/e6a9c1f9-24cc-42c7-9657-532bd21c7c28.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3aaf7f6b-0af2-45d6-b5e0-fb5d07a8f8cb.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/8cab30db-2774-4554-9f22-2d283bc74029.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/40d9f95f-567f-4db5-a762-2220a7341578.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/f0ece068-6867-46a2-85e0-0263b6f98aa3.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/5130534a-8c83-48ad-bd7e-6d2f281d62dd.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7f76e43b-4482-4d54-ba52-9cc1adde1d75.jpg",
+]
+
+const STEP = 8
+
+function WorksSection() {
+  const [shown, setShown] = useState(STEP)
+  const visible = allWorks.slice(0, shown)
+
+  return (
+    <section className="px-4 md:px-10 pb-20" style={{ backgroundColor: "#0d0d10" }}>
+      <div className="max-w-6xl mx-auto py-16">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+            Примеры <HighlightWord>наших работ</HighlightWord>
+          </h2>
+          <p className="text-zinc-400 mt-4 text-sm max-w-xl mx-auto">Реальные фото выполненных заказов наших мастеров</p>
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {visible.map((src, i) => (
+            <motion.div
+              key={src}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: (i % STEP) * 0.04 }}
+              className="rounded-2xl overflow-hidden aspect-square bg-zinc-800"
+            >
+              <img src={src} alt={`Пример работы ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+            </motion.div>
+          ))}
+        </div>
+        {shown < allWorks.length && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShown(v => Math.min(v + STEP, allWorks.length))}
+              className="flex items-center gap-2 px-8 py-4 rounded-xl border border-zinc-700 text-white font-semibold hover:border-zinc-500 transition-colors"
+            >
+              <Icon name="ChevronDown" size={18} />
+              Загрузить ещё ({allWorks.length - shown} фото)
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  )
+}
+
 function AccordionSection({ section }: { section: PriceSection }) {
   const [isOpen, setIsOpen] = useState(false)
   return (
@@ -502,6 +567,9 @@ export default function SborkaMebeli() {
             </div>
           </div>
         </section>
+
+        {/* Примеры работ */}
+        <WorksSection />
 
         {/* Прайс-лист */}
         <section className="px-4 md:px-10 pb-20">
