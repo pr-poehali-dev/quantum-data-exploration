@@ -100,9 +100,9 @@ export function Navbar() {
             <Link to="/pricing" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Стоимость
             </Link>
-            <a href="/#contacts" className="text-sm text-zinc-400 hover:text-white transition-colors">
+            <Link to="/contacts" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Контакты
-            </a>
+            </Link>
 
             <a
               href="tel:+79500990931"
@@ -194,13 +194,13 @@ export function Navbar() {
             >
               Стоимость
             </Link>
-            <a
-              href="/#contacts"
+            <Link
+              to="/contacts"
               onClick={handleLinkClick}
               className="text-base text-zinc-400 hover:text-white transition-colors py-2"
             >
               Контакты
-            </a>
+            </Link>
           </div>
         </div>
       )}
