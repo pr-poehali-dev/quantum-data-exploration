@@ -330,6 +330,14 @@ export default function SborkaMebeli() {
         <meta property="og:description" content="Сборка любой мебели в Усть-Куте. Шкафы-купе, кухни, спальни, прихожие. Цены от 400 руб. Выезд в день обращения." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://quantum-data-exploration.poehali.app/sborka-mebeli" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Сборка мебели в Усть-Куте",
+          "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
+          "areaServed": { "@type": "City", "name": "Усть-Кут" },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "47", "bestRating": "5", "worstRating": "1" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>

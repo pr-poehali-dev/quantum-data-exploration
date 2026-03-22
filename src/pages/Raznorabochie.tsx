@@ -25,6 +25,14 @@ export default function Raznorabochie() {
           name="description"
           content="Разнорабочие в Усть-Куте. Вывоз мусора, сборка мебели, уборка, помощь при переезде. Выезд в день обращения. Звоните: +7 (950) 099-09-31"
         />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Разнорабочие в Усть-Куте",
+          "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
+          "areaServed": { "@type": "City", "name": "Усть-Кут" },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "33", "bestRating": "5", "worstRating": "1" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>

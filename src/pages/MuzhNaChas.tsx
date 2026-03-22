@@ -65,6 +65,14 @@ export default function MuzhNaChas() {
         <meta property="og:title" content="Муж на час в Усть-Куте | МАСТЕРОФФ" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://quantum-data-exploration.poehali.app/muzh-na-chas" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Муж на час в Усть-Куте",
+          "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
+          "areaServed": { "@type": "City", "name": "Усть-Кут" },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "21", "bestRating": "5", "worstRating": "1" }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
