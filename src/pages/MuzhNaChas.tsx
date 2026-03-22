@@ -71,7 +71,12 @@ export default function MuzhNaChas() {
           "name": "Муж на час в Усть-Куте",
           "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
           "areaServed": { "@type": "City", "name": "Усть-Кут" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "21", "bestRating": "5", "worstRating": "1" }
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "21", "bestRating": "5", "worstRating": "1" },
+          "review": [
+            { "@type": "Review", "author": { "@type": "Person", "name": "Елена К." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Муж на час помог собрать кухню и повесить зеркала. Всё сделал быстро и аккуратно." },
+            { "@type": "Review", "author": { "@type": "Person", "name": "Андрей Б." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Поменял замок на входной двери. Мастер приехал в тот же день, работой доволен." },
+            { "@type": "Review", "author": { "@type": "Person", "name": "Светлана Ж." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Отлично справился с мелким ремонтом — заменил петли на двери и прочистил трубу. Рекомендую!" }
+          ]
         })}</script>
       </Helmet>
 

@@ -37,7 +37,12 @@ export default function MasterNaChas() {
           "name": "Мастер на час в Усть-Куте",
           "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
           "areaServed": { "@type": "City", "name": "Усть-Кут" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "29", "bestRating": "5", "worstRating": "1" }
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "29", "bestRating": "5", "worstRating": "1" },
+          "review": [
+            { "@type": "Review", "author": { "@type": "Person", "name": "Наталья В." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Вызвала мастера для замены розеток и установки люстры. Пришёл вовремя, сделал аккуратно." },
+            { "@type": "Review", "author": { "@type": "Person", "name": "Владимир С." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Мастер починил кран и заменил смеситель. Быстро, качественно, без лишних трат." },
+            { "@type": "Review", "author": { "@type": "Person", "name": "Марина Л." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Повесили карнизы и полки. Всё ровно, мусор убрали за собой. Очень довольна!" }
+          ]
         })}</script>
       </Helmet>
 

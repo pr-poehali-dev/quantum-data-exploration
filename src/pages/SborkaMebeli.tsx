@@ -336,7 +336,12 @@ export default function SborkaMebeli() {
           "name": "Сборка мебели в Усть-Куте",
           "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
           "areaServed": { "@type": "City", "name": "Усть-Кут" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "47", "bestRating": "5", "worstRating": "1" }
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "47", "bestRating": "5", "worstRating": "1" },
+          "review": [
+            { "@type": "Review", "author": { "@type": "Person", "name": "Ирина М." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Заказала сборку шкафа-купе ИКЕА. Мастер приехал в тот же день, собрал быстро и аккуратно." },
+            { "@type": "Review", "author": { "@type": "Person", "name": "Роман Т." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Собирали кухонный гарнитур. Всё сделано ровно, без царапин. Остался очень доволен." },
+            { "@type": "Review", "author": { "@type": "Person", "name": "Юлия Д." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Разобрали старую мебель и собрали новую спальню. Работали аккуратно, мусор убрали. Рекомендую!" }
+          ]
         })}</script>
       </Helmet>
 
