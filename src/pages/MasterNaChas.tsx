@@ -30,7 +30,7 @@ export default function MasterNaChas() {
         <meta property="og:title" content="Мастер на час в Усть-Куте | МАСТЕРОФФ" />
         <meta property="og:description" content="Мастер на час в Усть-Куте — мелкий ремонт, сантехника, электрика. Выезд в день обращения. От 500 ₽/час." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://quantum-data-exploration.poehali.app/master-na-chas" />
+        <link rel="canonical" href="https://servismasteroff.ru/master-na-chas" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",

@@ -329,7 +329,7 @@ export default function SborkaMebeli() {
         <meta property="og:title" content="Сборка мебели в Усть-Куте | МАСТЕРОФФ" />
         <meta property="og:description" content="Сборка любой мебели в Усть-Куте. Шкафы-купе, кухни, спальни, прихожие. Цены от 400 руб. Выезд в день обращения." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://quantum-data-exploration.poehali.app/sborka-mebeli" />
+        <link rel="canonical" href="https://servismasteroff.ru/sborka-mebeli" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",

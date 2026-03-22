@@ -30,7 +30,7 @@ export default function Gruzchiki() {
         <meta property="og:title" content="Услуги грузчиков в Усть-Куте | МАСТЕРОФФ" />
         <meta property="og:description" content="Грузчики в Усть-Куте — погрузка, переезд, разгрузка фур. Выезд в день обращения. От 500 ₽/час." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://quantum-data-exploration.poehali.app/gruzchiki" />
+        <link rel="canonical" href="https://servismasteroff.ru/gruzchiki" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",

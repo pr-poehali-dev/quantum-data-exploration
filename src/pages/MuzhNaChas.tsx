@@ -64,7 +64,7 @@ export default function MuzhNaChas() {
         <meta name="keywords" content="муж на час усть-кут, мелкий ремонт усть-кут, мастер на дом усть-кут, повесить полку усть-кут, сборка мебели усть-кут" />
         <meta property="og:title" content="Муж на час в Усть-Куте | МАСТЕРОФФ" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://quantum-data-exploration.poehali.app/muzh-na-chas" />
+        <link rel="canonical" href="https://servismasteroff.ru/muzh-na-chas" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
