@@ -90,7 +90,7 @@ export default function MasterNaChas() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
                   <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60">
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
                     <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="Send" size={14} className="text-white" />
                     </div>
@@ -103,7 +103,7 @@ export default function MasterNaChas() {
                     </div>
                   </a>
                   <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60">
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
                     <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="MessageCircle" size={14} className="text-white" />
                     </div>
@@ -126,7 +126,7 @@ export default function MasterNaChas() {
                     </div>
                   </a>
                   <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60">
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
                     <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #4F8EF7 0%, #9B59F5 100%)" }}>
                       <Icon name="MessageCircle" size={14} className="text-white" />
                     </div>

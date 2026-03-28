@@ -118,7 +118,7 @@ export function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <a
               href="tel:+79500990931"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-bold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-bold whitespace-nowrap"
               style={{ backgroundColor: "#F5C518", color: "#09090B" }}
             >
               <Icon name="Phone" size={16} />
