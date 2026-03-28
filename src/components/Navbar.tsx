@@ -114,13 +114,13 @@ export function Navbar() {
               )}
             </div>
 
-            {/* Dropdown Заборы */}
+            {/* Dropdown Строительство */}
             <div className="relative" ref={zaboryDropdownRef}>
               <button
                 onClick={() => setIsZaboryOpen((v) => !v)}
                 className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition-colors"
               >
-                Заборы
+                Строительство
                 <Icon
                   name="ChevronDown"
                   size={14}
@@ -230,12 +230,12 @@ export function Navbar() {
               </div>
             )}
 
-            {/* Аккордеон заборы */}
+            {/* Аккордеон строительство */}
             <button
               onClick={() => setIsMobileZaboryOpen((v) => !v)}
               className="flex items-center justify-between w-full text-base text-zinc-400 hover:text-white transition-colors py-2"
             >
-              Заборы
+              Строительство
               <Icon
                 name="ChevronDown"
                 size={16}
