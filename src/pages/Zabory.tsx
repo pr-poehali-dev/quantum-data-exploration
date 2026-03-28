@@ -8,15 +8,15 @@ import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
 
 const fenceTypes = [
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/37afb4c1-f7e1-4980-bc8b-5475082e03d6.jpg", title: "Забор из дерева", price: "от 800 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/eaaac284-dcbb-432f-bec7-e5c8cfbec56b.jpg", title: "Забор из евроштакетника", price: "от 1 200 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/b95aab06-57f0-4a72-b1de-c80571038da8.jpg", title: "Забор из профлиста", price: "от 1 000 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/dc8df06a-5361-44b7-a17d-67e535581b02.jpg", title: "Заборы 2D и 3D", price: "от 600 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/c4bf1169-47ed-4f22-aa46-edd146d454a6.jpg", title: "Забор из сетки-рабицы", price: "от 350 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/d3d594ea-1e2e-4e79-ba6c-6d5c3e1b8206.jpg", title: "Забор-жалюзи", price: "от 2 000 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/b09ef372-6fba-4f9e-b12f-104ab98de051.jpg", title: "Забор из кирпича", price: "от 4 000 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/f24a9d1e-1349-41f8-897a-560ff62ba6fc.jpg", title: "Забор из профтрубы", price: "от 1 500 ₽/м²" },
-  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/2f65f4e4-59e1-4c3d-91d6-09c9887c5d71.jpg", title: "Забор из поликарбоната", price: "от 1 100 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/fc18cd29-d503-49d0-9996-6ea66c5e4ac3.jpg", title: "Забор из дерева", price: "от 800 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/23061f60-4b80-4b49-a1b5-d1fd936bb5d2.jpg", title: "Забор из евроштакетника", price: "от 1 200 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/e654d5a2-221b-404f-942f-d8789e2db474.jpg", title: "Забор из профлиста", price: "от 1 000 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/675f47f3-700b-478e-948c-3678e2554072.jpg", title: "Заборы 2D и 3D", price: "от 600 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/1352ae9f-d945-421d-991b-7deeef97623d.jpg", title: "Забор из сетки-рабицы", price: "от 350 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/5e369530-b4e2-4381-bd30-96126fec0b3b.jpg", title: "Забор-жалюзи", price: "от 2 000 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/5d660024-28ba-47b0-a378-cc5ae6706348.jpg", title: "Забор из кирпича", price: "от 4 000 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/228c946f-7f58-4198-9903-fb8ae6a4ec48.jpg", title: "Забор из профтрубы", price: "от 1 500 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/bafbd5f6-4949-4759-b3ea-f9130acaa486.jpg", title: "Забор из поликарбоната", price: "от 1 100 ₽/м²" },
 ]
 
 const advantages = [
@@ -243,16 +243,16 @@ export default function Zabory() {
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">Виды заборов</h2>
               <p className="text-zinc-400 max-w-xl mx-auto">Устанавливаем все популярные виды ограждений</p>
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {fenceTypes.map((s, i) => (
                 <motion.div
                   key={s.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
+                  transition={{ duration: 0.6, delay: 0.1 + i * 0.07 }}
                   className="bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors cursor-pointer group overflow-hidden relative flex flex-col justify-end"
-                  style={{ borderRadius: "30px", height: "300px", isolation: "isolate" }}
+                  style={{ borderRadius: "30px", height: "320px", isolation: "isolate" }}
                 >
                   <div
                     className="absolute top-0 left-0 w-full h-full"
