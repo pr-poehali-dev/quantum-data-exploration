@@ -15,6 +15,7 @@ import Vakansii from "./pages/Vakansii";
 import Pricing from "./pages/Pricing";
 import SborkaMebeli from "./pages/SborkaMebeli";
 import Contacts from "./pages/Contacts";
+import Plotnik from "./pages/Plotnik";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner";
 
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/sborka-mebeli" element={<SborkaMebeli />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path="/plotnik" element={<Plotnik />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

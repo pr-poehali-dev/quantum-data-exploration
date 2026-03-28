@@ -8,6 +8,7 @@ const servicesMenu = [
   { label: "Мастер на час", href: "/master-na-chas", description: "Сантехника, электрика, ремонт" },
   { label: "Муж на час", href: "/muzh-na-chas", description: "Мелкий ремонт на дому" },
   { label: "Сборка мебели", href: "/sborka-mebeli", description: "Шкафы, кухни, кровати, прихожие" },
+  { label: "Плотник", href: "/plotnik", description: "Двери, ламинат, обшивка, полки" },
 ]
 
 export function Navbar() {
