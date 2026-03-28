@@ -202,7 +202,7 @@ export default function Pricing() {
             </p>
             <a
               href="tel:+79500990931"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-base transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-base transition-colors whitespace-nowrap"
               style={{ backgroundColor: "#F5C518", color: "#09090B" }}
             >
               <Icon name="Phone" size={18} />

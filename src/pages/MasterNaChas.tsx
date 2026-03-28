@@ -116,7 +116,7 @@ export default function MasterNaChas() {
                     </div>
                   </a>
                   <a href="tel:+79500990931"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60">
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
                     <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
                       <Icon name="Phone" size={14} className="text-white" />
                     </div>

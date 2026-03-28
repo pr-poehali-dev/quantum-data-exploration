@@ -27,7 +27,7 @@ export function CTASection() {
           <div className="flex flex-col gap-3 w-full md:w-auto min-w-[220px]">
             <a
               href="tel:+79500990931"
-              className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-bold text-base text-black hover:opacity-90 transition-opacity"
+              className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-bold text-base text-black hover:opacity-90 transition-opacity whitespace-nowrap"
               style={{ backgroundColor: "#F5C518" }}
             >
               <Icon name="Phone" size={18} className="text-black" />
@@ -37,7 +37,7 @@ export function CTASection() {
               href="https://t.me/masteroff_uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-colors"
+              className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-colors whitespace-nowrap"
               style={{ backgroundColor: "#111113" }}
             >
               <Icon name="Send" size={18} style={{ color: "#F5C518" }} />

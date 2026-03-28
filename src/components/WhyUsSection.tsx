@@ -73,7 +73,7 @@ export function WhyUsSection() {
 
               <a
                 href="tel:+79500990931"
-                className="block w-full py-4 text-center font-bold rounded-xl text-black text-lg mb-4 hover:opacity-90 transition-opacity"
+                className="block w-full py-4 text-center font-bold rounded-xl text-black text-lg mb-4 hover:opacity-90 transition-opacity whitespace-nowrap"
                 style={{ backgroundColor: "#F5C518" }}
               >
                 +7 (950) 099-09-31

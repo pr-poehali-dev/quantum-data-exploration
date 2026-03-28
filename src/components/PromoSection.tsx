@@ -38,7 +38,7 @@ export function PromoSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="tel:+79500990931"
-                className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2"
+                className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2 whitespace-nowrap"
               >
                 <Icon name="Phone" size={18} />
                 Позвонить сейчас
@@ -47,7 +47,7 @@ export function PromoSection() {
                 href="https://t.me/masteroff_ustkut"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors flex items-center gap-2"
+                className="px-6 py-3 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors flex items-center gap-2 whitespace-nowrap"
               >
                 <Icon name="Send" size={18} />
                 Написать в Telegram
