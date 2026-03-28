@@ -11,11 +11,11 @@ const services = [
   { icon: "DoorOpen", title: "Установка дверей", desc: "Межкомнатные и входные двери под ключ. Подгонка по размеру, установка коробки, наличников, замков.", price: "от 1 500 ₽" },
   { icon: "Layers", title: "Монтаж напольных покрытий", desc: "Укладка ламината, паркетной доски, линолеума. Выравнивание основания, плинтусы.", price: "от 200 ₽/м²" },
   { icon: "LayoutTemplate", title: "Обшивка стен и потолков", desc: "Вагонка, МДФ-панели, рейки, деревянные декоративные покрытия — любые материалы.", price: "от 300 ₽/м²" },
-  { icon: "Hammer", title: "Изготовление деревянных конструкций", desc: "Перегородки, антресоли, ниши, подиумы, декоративные балки под заказ.", price: "от 2 000 ₽" },
-  { icon: "Frame", title: "Монтаж деревянной лестницы", desc: "Сборка, установка и подключение готовых лестниц. Балясины, поручни, ступени.", price: "от 5 000 ₽" },
-  { icon: "Scissors", title: "Замена наличников и плинтусов", desc: "Демонтаж старых, установка новых. Стыковка в углах, герметизация, прокраска.", price: "от 80 ₽/п.м" },
-  { icon: "Package", title: "Изготовление полок и стеллажей", desc: "Деревянные полки на заказ по вашим размерам. Крепление к стенам любого типа.", price: "от 500 ₽" },
-  { icon: "Wrench", title: "Мелкий столярный ремонт", desc: "Рассохшиеся двери, скрипящий пол, сломанные петли, задиры на мебели — исправим быстро.", price: "от 300 ₽" },
+  { icon: "Hammer", title: "Деревянные конструкции", desc: "Перегородки, антресоли, ниши, подиумы, декоративные балки под заказ.", price: "от 2 000 ₽" },
+  { icon: "Frame", title: "Монтаж лестниц", desc: "Сборка, установка готовых лестниц. Балясины, поручни, ступени.", price: "от 5 000 ₽" },
+  { icon: "Scissors", title: "Наличники и плинтусы", desc: "Демонтаж старых, установка новых. Стыковка в углах, герметизация.", price: "от 80 ₽/п.м" },
+  { icon: "Package", title: "Полки и стеллажи", desc: "Деревянные полки на заказ по вашим размерам. Крепление к стенам любого типа.", price: "от 500 ₽" },
+  { icon: "Wrench", title: "Столярный ремонт", desc: "Рассохшиеся двери, скрипящий пол, сломанные петли, задиры на мебели — исправим быстро.", price: "от 300 ₽" },
 ]
 
 const advantages = [
@@ -36,13 +36,6 @@ const reviews = [
   { name: "Игорь М.", text: "Установили межкомнатные двери в три комнаты. Работа аккуратная, всё ровно. Приехали на следующий день после звонка.", service: "Установка дверей", stars: 5 },
   { name: "Светлана Р.", text: "Заказала укладку ламината в спальне. Мастер сделал быстро и чисто. Плинтусы под цвет, швы ровные. Очень довольна!", service: "Укладка ламината", stars: 5 },
   { name: "Дмитрий К.", text: "Делал полки в кладовой под заказ. Точно в размер, хорошо закреплены. Посоветовал хорошее дерево по бюджету.", service: "Полки на заказ", stars: 5 },
-]
-
-const stats = [
-  { value: "500+", label: "выполненных столярных работ" },
-  { value: "В день", label: "выезд мастера" },
-  { value: "8+", label: "видов работ" },
-  { value: "0 ₽", label: "за выезд и оценку" },
 ]
 
 interface PriceItem { label: string; price: string }
@@ -120,130 +113,97 @@ export default function Plotnik() {
         <link rel="canonical" href="https://servismasteroff.ru/plotnik" />
       </Helmet>
 
-      <Navbar />
-
-      <main className="pt-20" style={{ backgroundColor: "#09090B", color: "#fff" }}>
+      <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
+        <Navbar />
 
         {/* Hero */}
-        <section className="py-16 md:py-24 px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-                <div className="flex items-center gap-2 mb-6">
-                  <span className="w-2 h-2 rounded-full bg-green-400 inline-block animate-pulse"></span>
-                  <span className="text-zinc-400 text-sm">Мастера онлайн — выезд сегодня</span>
-                </div>
-                <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-                  Плотник{" "}
-                  <span className="inline-block px-2 py-0.5 rounded-md" style={{ backgroundColor: "#F5C518", color: "#09090B" }}>
-                    на дом
-                  </span>{" "}
-                  в Усть-Куте
+        <div className="w-full flex justify-center px-4 md:px-10 pt-28 mt-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
+          >
+            <div className="grid md:grid-cols-[1fr_420px]">
+              <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
+                  Плотник<br />в Усть-Куте
                 </h1>
-                <p className="text-zinc-400 text-lg mb-8">
-                  Установка дверей, укладка ламината, обшивка стен, полки на заказ и любой столярный ремонт. Опытный мастер с инструментом — приедет в день заявки.
-                </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <a
-                    href="tel:+79500990931"
-                    className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-base whitespace-nowrap"
-                    style={{ backgroundColor: "#F5C518", color: "#09090B" }}
-                  >
-                    <Icon name="Phone" size={18} />
-                    +7 (950) 099-09-31
-                  </a>
-                  <button
-                    onClick={() => setIsFormOpen(true)}
-                    className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-colors whitespace-nowrap"
-                    style={{ backgroundColor: "#111113" }}
-                  >
-                    <Icon name="ClipboardList" size={18} style={{ color: "#F5C518" }} />
-                    Оставить заявку
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  {stats.map((s) => (
-                    <div key={s.label} className="rounded-xl p-4" style={{ backgroundColor: "#1a1a1a" }}>
-                      <div className="text-xl font-extrabold" style={{ color: "#F5C518" }}>{s.value}</div>
-                      <div className="text-zinc-400 text-sm">{s.label}</div>
-                    </div>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "Установка межкомнатных и входных дверей",
+                    "Укладка ламината, паркета и линолеума",
+                    "Обшивка стен и потолков вагонкой и МДФ",
+                    "Полки и стеллажи на заказ по вашим размерам",
+                    "Мелкий столярный ремонт — быстро и недорого",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-zinc-300 text-base">
+                      <span className="text-orange-500 text-xl font-bold leading-none">›</span>
+                      {item}
+                    </li>
                   ))}
-                </div>
-              </motion.div>
+                </ul>
 
-              <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-                <div className="rounded-2xl overflow-hidden border border-zinc-800 p-6" style={{ backgroundColor: "#1a1a1a" }}>
-                  <div className="flex items-center gap-3 mb-5 pb-5 border-b border-zinc-800">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
-                      <Icon name="Hammer" size={22} className="text-black" />
+                <p className="text-zinc-400 text-sm mb-3">
+                  Напишите нам в мессенджер для бесплатной консультации:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
+                  <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
+                    <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Send" size={14} className="text-white" />
                     </div>
                     <div>
-                      <div className="text-white font-bold">Плотник МАСТЕРОФФ</div>
-                      <div className="flex items-center gap-1.5 text-sm text-zinc-400">
+                      <div className="text-white text-sm font-medium">Telegram</div>
+                      <div className="flex items-center gap-1 text-xs text-zinc-400">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
-                        Принимает заявки
+                        в сети
                       </div>
                     </div>
-                  </div>
-                  <p className="text-zinc-300 text-sm mb-5">Добрый день! 👋 Расскажите, что нужно сделать — назову цену и приеду в удобное время.</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
-                      <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Send" size={14} className="text-white" />
+                  </a>
+                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
+                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
+                      <Icon name="MessageCircle" size={14} className="text-white" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-medium">WhatsApp</div>
+                      <div className="flex items-center gap-1 text-xs text-zinc-400">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                        в сети
                       </div>
-                      <div>
-                        <div className="text-white text-sm font-medium">Telegram</div>
-                        <div className="flex items-center gap-1 text-xs text-zinc-400">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
-                          в сети
-                        </div>
+                    </div>
+                  </a>
+                  <a href="tel:+79500990931"
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
+                    <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Phone" size={14} className="text-white" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-medium">Позвонить</div>
+                      <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
+                    </div>
+                  </a>
+                  <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #4F8EF7 0%, #9B59F5 100%)" }}>
+                      <Icon name="MessageCircle" size={14} className="text-white" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-medium">MAX</div>
+                      <div className="flex items-center gap-1 text-xs text-zinc-400">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                        в сети
                       </div>
-                    </a>
-                    <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
-                      <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-                        <Icon name="MessageCircle" size={14} className="text-white" />
-                      </div>
-                      <div>
-                        <div className="text-white text-sm font-medium">WhatsApp</div>
-                        <div className="flex items-center gap-1 text-xs text-zinc-400">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
-                          в сети
-                        </div>
-                      </div>
-                    </a>
-                    <a href="tel:+79500990931"
-                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
-                      <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Phone" size={14} className="text-white" />
-                      </div>
-                      <div>
-                        <div className="text-white text-sm font-medium">Позвонить</div>
-                        <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
-                      </div>
-                    </a>
-                    <a href="https://max.ru/79500990931" target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60 whitespace-nowrap">
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #4F8EF7 0%, #9B59F5 100%)" }}>
-                        <Icon name="MessageCircle" size={14} className="text-white" />
-                      </div>
-                      <div>
-                        <div className="text-white text-sm font-medium">MAX</div>
-                        <div className="flex items-center gap-1 text-xs text-zinc-400">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
-                          в сети
-                        </div>
-                      </div>
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                 </div>
-              </motion.div>
+              </div>
+              <div className="hidden md:block" />
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
 
         {/* Услуги */}
         <section className="py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
@@ -432,7 +392,7 @@ export default function Plotnik() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 px-6" style={{ backgroundColor: "#09090B" }}>
+        <section className="py-16 md:py-20 px-6" style={{ backgroundColor: "#09090B" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -477,9 +437,9 @@ export default function Plotnik() {
           </div>
         </section>
 
-      </main>
+        <Footer />
+      </div>
 
-      <Footer />
       <FloatingCallButton />
 
       {isFormOpen && (
