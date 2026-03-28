@@ -8,15 +8,15 @@ import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
 
 const fenceTypes = [
-  { icon: "TreePine", title: "Забор из дерева", desc: "Классический деревянный забор — штакетник, доска, бревно. Экологично, надёжно, легко ремонтируется.", price: "от 800 ₽/м²" },
-  { icon: "Fence", title: "Забор из евроштакетника", desc: "Металлический штакетник — популярный выбор. Прочный, красивый, не требует покраски.", price: "от 1 200 ₽/м²" },
-  { icon: "RectangleHorizontal", title: "Забор из профлиста", desc: "Надёжный сплошной забор. Хорошая шумозащита и приватность. Быстрый монтаж.", price: "от 1 000 ₽/м²" },
-  { icon: "Grid3x3", title: "Заборы 2D и 3D", desc: "Сварные секции из проволоки. 3D-панели прочнее, не прогибаются. Идеальны для дачи.", price: "от 600 ₽/м²" },
-  { icon: "Network", title: "Забор из сетки-рабицы", desc: "Бюджетный вариант для быстрого ограждения. Натяжная или секционная установка.", price: "от 350 ₽/м²" },
-  { icon: "Layers", title: "Забор-жалюзи", desc: "Алюминиевые или стальные ламели под углом — пропускают воздух, но скрывают участок.", price: "от 2 000 ₽/м²" },
-  { icon: "Building2", title: "Забор из кирпича", desc: "Капитальное ограждение с долгим сроком службы. Столбы или сплошная кладка.", price: "от 4 000 ₽/м²" },
-  { icon: "Minus", title: "Забор из профтрубы", desc: "Сварной забор из квадратных труб. Прочный, современный дизайн, не ржавеет под грунтом.", price: "от 1 500 ₽/м²" },
-  { icon: "Sun", title: "Забор из поликарбоната", desc: "Лёгкий и прозрачный. Пропускает свет, защищает от ветра. Отлично смотрится на даче.", price: "от 1 100 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/37afb4c1-f7e1-4980-bc8b-5475082e03d6.jpg", title: "Забор из дерева", price: "от 800 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/eaaac284-dcbb-432f-bec7-e5c8cfbec56b.jpg", title: "Забор из евроштакетника", price: "от 1 200 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/b95aab06-57f0-4a72-b1de-c80571038da8.jpg", title: "Забор из профлиста", price: "от 1 000 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/dc8df06a-5361-44b7-a17d-67e535581b02.jpg", title: "Заборы 2D и 3D", price: "от 600 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/c4bf1169-47ed-4f22-aa46-edd146d454a6.jpg", title: "Забор из сетки-рабицы", price: "от 350 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/d3d594ea-1e2e-4e79-ba6c-6d5c3e1b8206.jpg", title: "Забор-жалюзи", price: "от 2 000 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/b09ef372-6fba-4f9e-b12f-104ab98de051.jpg", title: "Забор из кирпича", price: "от 4 000 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/f24a9d1e-1349-41f8-897a-560ff62ba6fc.jpg", title: "Забор из профтрубы", price: "от 1 500 ₽/м²" },
+  { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/2f65f4e4-59e1-4c3d-91d6-09c9887c5d71.jpg", title: "Забор из поликарбоната", price: "от 1 100 ₽/м²" },
 ]
 
 const advantages = [
@@ -251,18 +251,23 @@ export default function Zabory() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="rounded-2xl p-5 flex flex-col gap-3 border border-zinc-800 hover:border-yellow-500/30 transition-colors"
-                  style={{ backgroundColor: "#1a1a1a" }}
+                  className="bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors cursor-pointer group overflow-hidden relative flex flex-col justify-end"
+                  style={{ borderRadius: "30px", height: "300px", isolation: "isolate" }}
                 >
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#F5C518" }}>
-                    <Icon name={s.icon as "Home"} size={20} className="text-black" />
+                  <div
+                    className="absolute top-0 left-0 w-full h-full"
+                    style={{
+                      maskImage: "linear-gradient(#000 55%, transparent 100%)",
+                      WebkitMaskImage: "linear-gradient(#000 55%, transparent 100%)",
+                    }}
+                  >
+                    <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
                   </div>
-                  <div>
-                    <div className="text-white font-bold mb-1">{s.title}</div>
-                    <div className="text-zinc-400 text-sm">{s.desc}</div>
-                  </div>
-                  <div className="mt-auto pt-2 border-t border-zinc-800">
-                    <span className="text-sm font-bold" style={{ color: "#F5C518" }}>{s.price}</span>
+                  <div className="relative z-10 flex items-end justify-between w-full p-6">
+                    <div>
+                      <div className="text-white font-bold text-base leading-tight">{s.title}</div>
+                      <div className="text-sm font-semibold mt-1" style={{ color: "#F5C518" }}>{s.price}</div>
+                    </div>
                   </div>
                 </motion.div>
               ))}
