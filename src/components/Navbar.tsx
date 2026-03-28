@@ -128,25 +128,16 @@ export function Navbar() {
                 />
               </button>
               {isZaboryOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl overflow-hidden">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl overflow-hidden">
                   <div className="p-1.5">
                     <Link
                       to="/zabory"
                       onClick={() => setIsZaboryOpen(false)}
                       className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-zinc-800 transition-colors group"
                     >
-                      <span className="text-sm font-bold" style={{ color: "#F5C518" }}>Все виды заборов</span>
+                      <span className="text-sm text-white font-medium">Заборы</span>
+                      <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Все виды ограждений</span>
                     </Link>
-                    {zaboryMenu.map((item) => (
-                      <Link
-                        key={item.label}
-                        to={item.href}
-                        onClick={() => setIsZaboryOpen(false)}
-                        className="flex flex-col px-3 py-2 rounded-lg hover:bg-zinc-800 transition-colors"
-                      >
-                        <span className="text-sm text-white">{item.label}</span>
-                      </Link>
-                    ))}
                   </div>
                 </div>
               )}
@@ -249,18 +240,9 @@ export function Navbar() {
                   onClick={handleLinkClick}
                   className="flex flex-col py-2 border-l border-zinc-800 pl-4"
                 >
-                  <span className="text-sm font-bold" style={{ color: "#F5C518" }}>Все виды заборов</span>
+                  <span className="text-sm text-white font-medium">Заборы</span>
+                  <span className="text-xs text-zinc-500">Все виды ограждений</span>
                 </Link>
-                {zaboryMenu.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    onClick={handleLinkClick}
-                    className="flex flex-col py-1.5 border-l border-zinc-800 pl-4"
-                  >
-                    <span className="text-sm text-white">{item.label}</span>
-                  </Link>
-                ))}
               </div>
             )}
 
