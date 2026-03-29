@@ -231,7 +231,7 @@ export default function OtdelkaBani() {
             <p className="text-zinc-500 text-lg">Мы оказываем профессиональные услуги по созданию идеального места отдыха.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" style={{ paddingTop: "60px" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stats.map((s, i) => (
               <motion.div
                 key={s.num}
@@ -239,22 +239,15 @@ export default function OtdelkaBani() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative rounded-2xl border border-zinc-100"
-                style={{ backgroundColor: "#fff", paddingTop: "60px" }}
+                className="rounded-2xl overflow-hidden border border-zinc-100"
+                style={{ backgroundColor: "#fff" }}
               >
-                {/* Веник торчит сверху */}
-                <img
-                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
-                  alt="веник"
-                  className="absolute select-none pointer-events-none z-10"
-                  style={{ width: 110, height: 110, objectFit: "contain", top: -50, left: "50%", transform: "translateX(-50%)" }}
-                />
                 {/* Зелёная карточка с числом */}
                 <div
-                  className="relative flex items-center justify-center"
+                  className="flex items-center justify-center py-10"
                   style={{
                     background: "linear-gradient(135deg, #2d6a2d 0%, #4a9a4a 50%, #2d6a2d 100%)",
-                    minHeight: "130px",
+                    minHeight: "140px",
                   }}
                 >
                   <span className="text-5xl font-black text-white drop-shadow-lg">{s.num}</span>
