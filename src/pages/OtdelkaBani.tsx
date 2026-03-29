@@ -70,40 +70,44 @@ const reasons = [
 const workStages = [
   {
     title: "Утепление, пароизоляция, прокладка проводки",
-    dark: false,
+    img: "",
+    imgAlt: "Утепление и пароизоляция",
     items: [
       "Каркас из бруса 50×50",
       "Утеплитель — закладывается в каркас",
-      "Фольга (пароизоляция) — используется обожжённая фольга, стыки и разрывы проклеиваются алюминиевым скотчем.",
-      "Контробрешётка — рейка 20×50. Используется для монтажа отделки стен, дополнительно создаёт воздушную подушку для циркуляции воздуха.",
+      "Фольга (пароизоляция) — обожжённая фольга, стыки проклеиваются алюминиевым скотчем",
+      "Контробрешётка — рейка 20×50, создаёт воздушную подушку для циркуляции воздуха",
     ],
   },
   {
     title: "Отделка стен и потолка, монтаж двери и окон",
-    dark: true,
+    img: "",
+    imgAlt: "Деревянная вагонка",
     items: [
-      "Для отделки могут использоваться:",
-      "Материалы нашего производства: вагонка из липы и термолипы различных профилей, имитация бруса, необрезная доска, горбыль, 3D панели, паркетная вагонка.",
-      "Импортируемые материалы: вагонка из канадского кедра, абаш.",
+      "Вагонка из липы и термолипы различных профилей",
+      "Имитация бруса, необрезная доска, горбыль, 3D панели",
+      "Импортные материалы: вагонка из канадского кедра, абаш",
     ],
   },
   {
     title: "Изготовление полков, монтаж печи и дымохода",
-    dark: false,
+    img: "",
+    imgAlt: "Печь для бани",
     items: [
-      "Для отделки могут быть использованы:",
-      "Монтаж полков — полок изготавливается из: липы, абаша, канадского кедра.",
-      "Установка печи (дровяная или электрическая) и дымохода (ТиС — из нержавейки российского производства, Schiedel Permeter — из нержавейки российского производства, Schiedel UNI — керамический дымоход немецкого производства).",
-      "Теплоизоляция и облицовка печного узла и портала печи.",
+      "Полок изготавливается из: липы, абаша, канадского кедра",
+      "Установка печи (дровяная или электрическая)",
+      "Дымоход: ТиС, Schiedel Permeter, Schiedel UNI (немецкий керамический)",
+      "Теплоизоляция и облицовка печного узла",
     ],
   },
   {
     title: "Изготовление элементов декора",
-    dark: true,
+    img: "",
+    imgAlt: "Гималайская соль",
     items: [
-      "Сборка и монтаж элементов декора.",
-      "Изделия из можжевельника - помимо красивого внешнего вида, можжевельник выделяет аромасла, которые обладают приятным ароматом и являются природным антисептиком.",
-      "Изделия из гималайской соли — панно, светильники или полностью стена. Помимо декора и элемента освещения, гималайская соль ионизирует воздух в парной и насыщает его полезными микроэлементами, которые способствуют профилактике заболеваний верхних дыхательных путей.",
+      "Изделия из можжевельника — природный антисептик с приятным ароматом",
+      "Панно и светильники из гималайской соли",
+      "Соляная стена — ионизирует воздух, насыщает полезными микроэлементами",
     ],
   },
 ]
@@ -447,39 +451,48 @@ export default function OtdelkaBani() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl p-6 relative overflow-hidden"
-                style={{
-                  backgroundColor: stage.dark ? "#1a1a1a" : "#fff",
-                  border: stage.dark ? "1px solid #2a2a2a" : "1px solid #e5e5e5",
-                }}
+                className="rounded-2xl overflow-hidden bg-white"
+                style={{ border: "1px solid #e5e5e5" }}
               >
-                <h3
-                  className="font-bold text-lg mb-4 leading-tight"
-                  style={{ color: stage.dark ? "#5dbf5d" : "#2d6a2d" }}
-                >
-                  {stage.title}
-                </h3>
-                <ul className="flex flex-col gap-3">
-                  {stage.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2">
-                      {j === 0 && stage.items.length > 1 && item.endsWith(":") ? (
-                        <span className={stage.dark ? "text-zinc-400 text-sm" : "text-zinc-600 text-sm"}>{item}</span>
-                      ) : (
-                        <>
+                {/* Верхняя часть: текст + фото */}
+                <div className="flex gap-0">
+                  {/* Текстовая часть */}
+                  <div className="flex-1 p-6">
+                    {/* Зелёная полоска слева */}
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-1 rounded-full flex-shrink-0 mt-1" style={{ height: "100%", minHeight: 40, backgroundColor: "#4a9a4a" }} />
+                      <h3 className="font-bold text-base leading-tight" style={{ color: "#2d6a2d" }}>
+                        {stage.title}
+                      </h3>
+                    </div>
+                    <ul className="flex flex-col gap-2.5">
+                      {stage.items.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2">
                           <span className="mt-0.5 flex-shrink-0">
-                            <Icon name="CheckCircle2" size={16} style={{ color: "#4a9a4a" }} />
+                            <Icon name="CheckCircle2" size={15} style={{ color: "#4a9a4a" }} />
                           </span>
-                          <span
-                            className="text-sm leading-relaxed"
-                            style={{ color: stage.dark ? "#d4d4d4" : "#444" }}
-                          >
-                            {item}
-                          </span>
-                        </>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                          <span className="text-sm leading-relaxed text-zinc-600">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Фото справа */}
+                  <div
+                    className="flex-shrink-0 flex items-center justify-center"
+                    style={{ width: 140, backgroundColor: "#f5f5f3" }}
+                  >
+                    {stage.img ? (
+                      <img src={stage.img} alt={stage.imgAlt} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="flex flex-col items-center justify-center gap-2 p-4 text-center">
+                        <Icon name="ImageOff" size={28} className="text-zinc-300" />
+                        <span className="text-xs text-zinc-400 leading-tight">{stage.imgAlt}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {/* Нижняя зелёная полоска */}
+                <div style={{ height: 4, backgroundColor: "#4a9a4a", opacity: 0.25 }} />
               </motion.div>
             ))}
           </div>
