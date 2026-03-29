@@ -251,7 +251,12 @@ export default function OtdelkaBani() {
                   }}
                 >
                   <span className="text-5xl font-black text-white drop-shadow-lg">{s.num}</span>
-                  <span className="absolute bottom-3 right-4 text-4xl opacity-70 select-none">🌿</span>
+                  <img
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
+                    alt="веник"
+                    className="absolute select-none pointer-events-none"
+                    style={{ width: 56, height: 56, bottom: 8, right: 12, objectFit: "contain", opacity: 0.85 }}
+                  />
                 </div>
                 {/* Текст */}
                 <div className="p-6">
