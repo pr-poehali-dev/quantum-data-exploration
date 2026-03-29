@@ -559,6 +559,44 @@ export default function OtdelkaBani() {
         </div>
       </section>
 
+      {/* Волнистый переход */}
+      <div className="relative" style={{ backgroundColor: "#f0ede8" }}>
+        {/* Волна сверху */}
+        <div style={{ backgroundColor: "#f0ede8" }}>
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", marginTop: -1 }}>
+            <path d="M0,0 L0,60 Q360,120 720,60 Q1080,0 1440,60 L1440,0 Z" fill="#f0ede8" />
+            <rect x="0" y="0" width="1440" height="2" fill="#fff" />
+          </svg>
+        </div>
+
+        {/* Белая волна + кнопка */}
+        <div className="relative" style={{ marginTop: -60 }}>
+          <svg viewBox="0 0 1440 130" xmlns="http://www.w3.org/2000/svg" style={{ display: "block" }}>
+            <path d="M0,0 L1440,0 L1440,40 Q1080,130 720,80 Q360,30 0,100 Z" fill="#fff" />
+          </svg>
+          {/* Круглая кнопка со стрелкой */}
+          <div className="absolute left-1/2 -translate-x-1/2" style={{ top: 30 }}>
+            <div
+              className="w-14 h-14 rounded-full flex items-center justify-center"
+              style={{ backgroundColor: "#fff", border: "2px solid #c8e0c8", boxShadow: "0 4px 16px rgba(0,0,0,0.08)" }}
+            >
+              <Icon name="ChevronDown" size={24} style={{ color: "#4a9a4a" }} />
+            </div>
+          </div>
+          {/* Дерево слева */}
+          <div
+            className="absolute bottom-0 left-0 select-none pointer-events-none"
+            style={{ width: 180, opacity: 0.85 }}
+          >
+            <img
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
+              alt=""
+              style={{ width: 80, objectFit: "contain", filter: "hue-rotate(0deg) saturate(1.2)" }}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Галерея проектов */}
       <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
         <div className="max-w-6xl mx-auto">
