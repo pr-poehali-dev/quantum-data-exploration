@@ -242,15 +242,37 @@ export default function OtdelkaBani() {
                 className="rounded-2xl overflow-hidden border border-zinc-100"
                 style={{ backgroundColor: "#fff" }}
               >
-                {/* Зелёная карточка с числом */}
+                {/* Зелёная карточка с фоном листвы */}
                 <div
-                  className="flex items-center justify-center py-10"
-                  style={{
-                    background: "linear-gradient(135deg, #2d6a2d 0%, #4a9a4a 50%, #2d6a2d 100%)",
-                    minHeight: "140px",
-                  }}
+                  className="relative flex items-center justify-center overflow-hidden"
+                  style={{ minHeight: "150px" }}
                 >
-                  <span className="text-5xl font-black text-white drop-shadow-lg">{s.num}</span>
+                  {/* Фото листвы как фон */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80')",
+                      filter: "blur(2px) brightness(0.55) saturate(1.4)",
+                      transform: "scale(1.08)",
+                    }}
+                  />
+                  {/* Зелёный градиент поверх */}
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(160deg, rgba(20,70,20,0.6) 0%, rgba(50,120,50,0.35) 100%)" }}
+                  />
+                  {/* Мягкое свечение по центру */}
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "radial-gradient(ellipse at center, rgba(100,200,100,0.18) 0%, transparent 70%)" }}
+                  />
+                  {/* Цифра */}
+                  <span
+                    className="relative z-10 font-black text-white"
+                    style={{ fontSize: "52px", textShadow: "0 2px 24px rgba(0,0,0,0.5), 0 0 40px rgba(80,180,80,0.3)" }}
+                  >
+                    {s.num}
+                  </span>
                 </div>
                 {/* Текст */}
                 <div className="p-6">
