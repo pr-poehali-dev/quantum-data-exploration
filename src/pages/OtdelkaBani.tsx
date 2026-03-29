@@ -386,12 +386,12 @@ export default function OtdelkaBani() {
                   >
                     {r.num}
                   </span>
-                  <span
-                    className="absolute z-20 text-5xl select-none"
-                    style={{ bottom: -4, right: 0 }}
-                  >
-                    {r.emoji}
-                  </span>
+                  <img
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
+                    alt="веник"
+                    className="absolute z-20 select-none pointer-events-none"
+                    style={{ width: 64, height: 64, bottom: -8, right: -8, objectFit: "contain" }}
+                  />
                 </div>
                 <h3 className="font-bold text-base text-zinc-900 mb-2 leading-snug">{r.title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{r.desc}</p>
