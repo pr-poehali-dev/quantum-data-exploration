@@ -138,7 +138,7 @@ export default function OtdelkaBani() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://static.tildacdn.com/tild3935-3633-4336-b861-633034653137/e6fce4c2-11b2-48e2-9.png')",
+            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/17b61bfe-f7c1-45e8-8669-6a1db835f7ae.jpg')",
             filter: "brightness(0.45)",
           }}
         />
