@@ -244,19 +244,19 @@ export default function OtdelkaBani() {
               >
                 {/* Зелёная карточка с числом */}
                 <div
-                  className="relative flex items-center justify-center py-10"
+                  className="relative flex flex-col items-center justify-center py-8"
                   style={{
                     background: "linear-gradient(135deg, #2d6a2d 0%, #4a9a4a 50%, #2d6a2d 100%)",
-                    minHeight: "140px",
+                    minHeight: "180px",
                   }}
                 >
-                  <span className="text-5xl font-black text-white drop-shadow-lg">{s.num}</span>
                   <img
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
                     alt="веник"
-                    className="absolute select-none pointer-events-none"
-                    style={{ width: 56, height: 56, bottom: 8, right: 12, objectFit: "contain", opacity: 0.85 }}
+                    className="select-none pointer-events-none"
+                    style={{ width: 90, height: 90, objectFit: "contain" }}
                   />
+                  <span className="text-5xl font-black text-white drop-shadow-lg mt-2">{s.num}</span>
                 </div>
                 {/* Текст */}
                 <div className="p-6">
