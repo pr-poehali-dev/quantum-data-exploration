@@ -21,6 +21,7 @@ const servicesMenu = [
   { label: "Муж на час", href: "/muzh-na-chas", description: "Мелкий ремонт на дому" },
   { label: "Сборка мебели", href: "/sborka-mebeli", description: "Шкафы, кухни, кровати, прихожие" },
   { label: "Плотник", href: "/plotnik", description: "Двери, ламинат, обшивка, полки" },
+  { label: "Отделка бань и саун", href: "/otdelka-bani", description: "Внутренняя отделка под ключ" },
 ]
 
 export function Navbar() {
