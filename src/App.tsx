@@ -17,6 +17,7 @@ import SborkaMebeli from "./pages/SborkaMebeli";
 import Contacts from "./pages/Contacts";
 import Plotnik from "./pages/Plotnik";
 import Zabory from "./pages/Zabory";
+import OtdelkaBani from "./pages/OtdelkaBani";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner";
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/plotnik" element={<Plotnik />} />
             <Route path="/zabory" element={<Zabory />} />
+            <Route path="/otdelka-bani" element={<OtdelkaBani />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
