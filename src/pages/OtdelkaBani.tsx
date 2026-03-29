@@ -31,31 +31,37 @@ const stats = [
 const reasons = [
   {
     num: "01",
+    emoji: "🏛️",
     title: "Демонстрационные парные",
     desc: "В нашем шоуруме вы можете оценить качество нашей отделки, материалов и оборудования",
   },
   {
     num: "02",
+    emoji: "📋",
     title: "Понятная и прозрачная смета",
     desc: "У нас нет скрытых платежей. Стоимость жёстко фиксируется после заключения договора",
   },
   {
     num: "03",
+    emoji: "🏭",
     title: "Собственное производство",
     desc: "Мы самостоятельно производим пиломатериал из липы и даём гарантию на качество",
   },
   {
     num: "04",
+    emoji: "🏅",
     title: "Честная гарантия на работы",
     desc: "Все недочёты и поломки мы устраняем за свой счёт",
   },
   {
     num: "05",
+    emoji: "👷",
     title: "Мастера с огромным опытом",
     desc: "Все профильные специалисты работают в штате более 5 лет",
   },
   {
     num: "06",
+    emoji: "🏠",
     title: "Отделка под ключ",
     desc: "Оказываем полный цикл от производства до монтажа",
   },
@@ -343,7 +349,7 @@ export default function OtdelkaBani() {
             <p className="text-zinc-500 text-lg">Оказываем полный цикл от производства до монтажа</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-14">
             {reasons.map((r, i) => (
               <motion.div
                 key={r.num}
@@ -351,16 +357,43 @@ export default function OtdelkaBani() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex flex-col items-start"
+                className="flex flex-col items-center text-center"
               >
-                {/* Большая цифра с зелёным цветом */}
-                <div
-                  className="text-7xl font-black leading-none mb-4 select-none"
-                  style={{ color: "#4a9a4a", opacity: 0.85 }}
-                >
-                  {r.num}
+                {/* Цифра + иконка поверх */}
+                <div className="relative flex items-center justify-center mb-5" style={{ width: 140, height: 120 }}>
+                  <span
+                    className="absolute font-black select-none leading-none"
+                    style={{
+                      fontSize: "110px",
+                      color: "#4a9a4a",
+                      opacity: 0.18,
+                      lineHeight: 1,
+                      top: 0,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                    }}
+                  >
+                    {r.num}
+                  </span>
+                  <span
+                    className="relative z-10 font-black select-none leading-none"
+                    style={{
+                      fontSize: "80px",
+                      color: "#4a9a4a",
+                      opacity: 1,
+                      lineHeight: 1,
+                    }}
+                  >
+                    {r.num}
+                  </span>
+                  <span
+                    className="absolute z-20 text-5xl select-none"
+                    style={{ bottom: -4, right: 0 }}
+                  >
+                    {r.emoji}
+                  </span>
                 </div>
-                <h3 className="font-bold text-lg text-zinc-900 mb-2">{r.title}</h3>
+                <h3 className="font-bold text-base text-zinc-900 mb-2 leading-snug">{r.title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{r.desc}</p>
               </motion.div>
             ))}
