@@ -238,13 +238,14 @@ export default function OtdelkaBani() {
               >
                 {/* Зелёная карточка с числом */}
                 <div
-                  className="flex items-center justify-center py-10"
+                  className="relative flex items-center justify-center py-10"
                   style={{
                     background: "linear-gradient(135deg, #2d6a2d 0%, #4a9a4a 50%, #2d6a2d 100%)",
                     minHeight: "140px",
                   }}
                 >
                   <span className="text-5xl font-black text-white drop-shadow-lg">{s.num}</span>
+                  <span className="absolute bottom-3 right-4 text-4xl opacity-70 select-none">🌿</span>
                 </div>
                 {/* Текст */}
                 <div className="p-6">
