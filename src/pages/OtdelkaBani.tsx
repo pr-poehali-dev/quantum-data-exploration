@@ -102,8 +102,28 @@ const workStages = [
   },
 ]
 
+const faq = [
+  {
+    q: "Какую древесину вы используете?",
+    a: "Мы используем липу собственного производства — вагонку, горбыль, необрезную доску, вагонку-рейку и RMB. Также работаем с канадским кедром и абашем.",
+  },
+  {
+    q: "Можно ли у вас приобрести только материалы?",
+    a: "Да, вы можете купить материалы без монтажа. У нас в шоуруме представлены все образцы — приезжайте, выберете подходящие.",
+  },
+  {
+    q: "Кто выезжает на замер?",
+    a: "На замер выезжает наш технический специалист с опытом более 5 лет. Замер бесплатный, без обязательств.",
+  },
+  {
+    q: "Сколько времени потребуется для отделки парной «под ключ»?",
+    a: "Стандартный проект занимает от 7 до 14 дней в зависимости от площади и сложности работ. Сроки фиксируются в договоре.",
+  },
+]
+
 export default function OtdelkaBani() {
   const [isFormOpen, setIsFormOpen] = useState(false)
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
@@ -406,6 +426,183 @@ export default function OtdelkaBani() {
                     </li>
                   ))}
                 </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Баннер: Сделаем отделку */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center"
+            style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
+          >
+            <div className="p-10 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-black text-zinc-900 mb-4 leading-tight">
+                Сделаем отделку бани и сауны по одному из наших готовых проектов или разработаем для вас индивидуальный дизайн
+              </h2>
+              <p className="text-zinc-600 mb-7 leading-relaxed">
+                Расчёт делается бесплатно! С вами свяжется наш менеджер для уточнения деталей. После этого мы составим подробный расчёт стоимости материалов и работ.
+              </p>
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="px-8 py-4 rounded-xl font-bold text-white text-base uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
+                style={{ backgroundColor: "#3a7a3a" }}
+              >
+                Рассчитать стоимость
+              </button>
+            </div>
+            <div className="hidden md:flex items-center justify-center p-8">
+              <div
+                className="w-full rounded-2xl flex items-center justify-center text-zinc-400 text-sm"
+                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              >
+                Фото материалов — добавите сами
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Галерея проектов */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-2xl md:text-3xl font-black uppercase text-zinc-900">
+              Каждый год мы выполняем более 300 проектов<br />различной сложности и планировки
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="relative rounded-2xl overflow-hidden group cursor-pointer"
+                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              >
+                <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
+                  Фото проекта {i} — добавите сами
+                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                <div className="absolute top-4 left-4">
+                  <span
+                    className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white"
+                    style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
+                  >
+                    Подробнее...
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Баннер: Как избежать затрат */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center"
+            style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
+          >
+            <div className="p-10 md:p-12">
+              <p className="text-base font-bold uppercase mb-2" style={{ color: "#3a7a3a" }}>
+                Как избежать неожиданных затрат?
+              </p>
+              <h2 className="text-2xl md:text-3xl font-black text-zinc-900 mb-4 leading-tight">
+                Найдём скрытые расходы в вашей смете!
+              </h2>
+              <p className="text-zinc-600 mb-7 leading-relaxed">
+                Отправьте нам вашу смету, и мы проведём подробный аудит. Проверим каждый пункт и выявим возможные скрытые расходы.
+              </p>
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="px-8 py-4 rounded-xl font-bold text-white text-base uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
+                style={{ backgroundColor: "#3a7a3a" }}
+              >
+                Проверить смету
+              </button>
+            </div>
+            <div className="hidden md:flex items-center justify-center p-8">
+              <div
+                className="w-full rounded-2xl flex items-center justify-center text-zinc-400 text-sm"
+                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              >
+                Фото бани — добавите сами
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-black uppercase text-zinc-900 mb-2">
+              Вопросы, на которые
+            </h2>
+            <h2 className="text-3xl md:text-4xl font-black uppercase" style={{ color: "#3a7a3a" }}>
+              у нас уже есть ответ
+            </h2>
+          </motion.div>
+          <div className="flex flex-col gap-3">
+            {faq.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="rounded-2xl overflow-hidden"
+                style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
+              >
+                <button
+                  className="w-full flex items-center justify-between px-6 py-5 text-left"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                >
+                  <span className="font-semibold text-zinc-900 text-base pr-4">{item.q}</span>
+                  <span
+                    className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-transform duration-200"
+                    style={{ border: "1.5px solid #aaa" }}
+                  >
+                    <Icon
+                      name={openFaq === i ? "Minus" : "Plus"}
+                      size={16}
+                      className="text-zinc-600"
+                    />
+                  </span>
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 pb-5 text-zinc-600 text-sm leading-relaxed border-t border-zinc-200 pt-4">
+                    {item.a}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
