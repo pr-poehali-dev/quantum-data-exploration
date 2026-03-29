@@ -31,37 +31,37 @@ const stats = [
 const reasons = [
   {
     num: "01",
-    emoji: "🏛️",
+    icon: "ShowerHead",
     title: "Демонстрационные парные",
     desc: "В нашем шоуруме вы можете оценить качество нашей отделки, материалов и оборудования",
   },
   {
     num: "02",
-    emoji: "📋",
+    icon: "FolderOpen",
     title: "Понятная и прозрачная смета",
     desc: "У нас нет скрытых платежей. Стоимость жёстко фиксируется после заключения договора",
   },
   {
     num: "03",
-    emoji: "🏭",
+    icon: "Settings2",
     title: "Собственное производство",
     desc: "Мы самостоятельно производим пиломатериал из липы и даём гарантию на качество",
   },
   {
     num: "04",
-    emoji: "🏅",
+    icon: "Medal",
     title: "Честная гарантия на работы",
     desc: "Все недочёты и поломки мы устраняем за свой счёт",
   },
   {
     num: "05",
-    emoji: "👷",
+    icon: "UserCheck",
     title: "Мастера с огромным опытом",
     desc: "Все профильные специалисты работают в штате более 5 лет",
   },
   {
     num: "06",
-    emoji: "🏠",
+    icon: "KeyRound",
     title: "Отделка под ключ",
     desc: "Оказываем полный цикл от производства до монтажа",
   },
@@ -370,7 +370,7 @@ export default function OtdelkaBani() {
             <p className="text-zinc-500 text-lg">Оказываем полный цикл от производства до монтажа</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
             {reasons.map((r, i) => (
               <motion.div
                 key={r.num}
@@ -380,39 +380,38 @@ export default function OtdelkaBani() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="flex flex-col items-center text-center"
               >
-                {/* Цифра + иконка поверх */}
-                <div className="relative flex items-center justify-center mb-5" style={{ width: 140, height: 120 }}>
+                {/* Большая цифра + иконка поверх + растительность */}
+                <div className="relative flex items-center justify-center mb-6" style={{ width: 160, height: 140 }}>
+                  {/* Большая полупрозрачная цифра */}
                   <span
                     className="absolute font-black select-none leading-none"
                     style={{
-                      fontSize: "110px",
+                      fontSize: "130px",
                       color: "#4a9a4a",
-                      opacity: 0.18,
+                      opacity: 0.15,
                       lineHeight: 1,
-                      top: 0,
+                      top: "50%",
                       left: "50%",
-                      transform: "translateX(-50%)",
+                      transform: "translate(-50%, -50%)",
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {r.num}
                   </span>
-                  <span
-                    className="relative z-10 font-black select-none leading-none"
-                    style={{
-                      fontSize: "80px",
-                      color: "#4a9a4a",
-                      opacity: 1,
-                      lineHeight: 1,
-                    }}
-                  >
-                    {r.num}
-                  </span>
+                  {/* Зелёная растительность слева */}
                   <img
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
-                    alt="веник"
-                    className="absolute z-20 select-none pointer-events-none"
-                    style={{ width: 64, height: 64, bottom: -8, right: -8, objectFit: "contain" }}
+                    alt=""
+                    className="absolute select-none pointer-events-none"
+                    style={{ width: 70, height: 70, bottom: 0, left: -10, objectFit: "contain", opacity: 0.7, transform: "scaleX(-1)" }}
                   />
+                  {/* Иконка по центру */}
+                  <div
+                    className="relative z-10 flex items-center justify-center rounded-2xl"
+                    style={{ width: 72, height: 72, backgroundColor: "#f0f7f0", border: "2px solid #c8e6c8" }}
+                  >
+                    <Icon name={r.icon as "Home"} size={32} style={{ color: "#3a7a3a" }} />
+                  </div>
                 </div>
                 <h3 className="font-bold text-base text-zinc-900 mb-2 leading-snug">{r.title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{r.desc}</p>
