@@ -522,7 +522,7 @@ export default function OtdelkaBani() {
       </section>
 
       {/* Баннер: Сделаем отделку */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+      <section className="py-16 px-6" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
