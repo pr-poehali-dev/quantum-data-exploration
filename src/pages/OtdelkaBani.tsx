@@ -187,21 +187,18 @@ export default function OtdelkaBani() {
 
       </section>
 
-      {/* Бонусы — наезжают на следующий блок */}
-      <div className="relative z-10 flex justify-center px-6" style={{ marginTop: "-40px", marginBottom: "0px" }}>
+      {/* Бонусы — наезжают на белый блок */}
+      <div className="relative z-10 px-6 max-w-6xl mx-auto w-full" style={{ marginTop: "-36px", marginBottom: "-36px" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="w-full max-w-3xl rounded-2xl overflow-hidden"
-          style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.45)" }}
+          className="w-full rounded-2xl overflow-hidden"
+          style={{ boxShadow: "0 12px 50px rgba(0,0,0,0.5)" }}
         >
           <div
             className="grid grid-cols-3"
-            style={{
-              backgroundColor: "rgba(20,20,20,0.97)",
-              border: "1px solid rgba(255,255,255,0.08)",
-            }}
+            style={{ backgroundColor: "#1a1a1a" }}
           >
             {[
               { icon: "Box", text: "3D-дизайн", sub: "в подарок" },
@@ -210,15 +207,15 @@ export default function OtdelkaBani() {
             ].map((b, i) => (
               <div
                 key={b.text}
-                className="flex items-center gap-4 px-8 py-6"
-                style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none" }}
+                className="flex items-center gap-5 px-10 py-7"
+                style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
-                  <Icon name={b.icon as "Box"} size={22} className="text-black" />
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
+                  <Icon name={b.icon as "Box"} size={26} className="text-black" />
                 </div>
                 <div>
-                  <div className="text-white font-bold leading-tight" style={{ fontSize: "15px" }}>{b.text}</div>
-                  <div className="text-zinc-400 text-sm">{b.sub}</div>
+                  <div className="text-white font-bold text-base leading-tight">{b.text}</div>
+                  <div className="text-zinc-400 text-sm mt-0.5">{b.sub}</div>
                 </div>
               </div>
             ))}
@@ -227,7 +224,7 @@ export default function OtdelkaBani() {
       </div>
 
       {/* О компании — 3 карточки со статистикой */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#ffffff" }}>
+      <section className="px-6 pt-24 pb-20" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
