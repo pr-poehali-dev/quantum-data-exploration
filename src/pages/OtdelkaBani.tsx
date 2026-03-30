@@ -168,20 +168,26 @@ export default function OtdelkaBani() {
             </h1>
 
             <div
-              className="inline-block px-6 py-5 rounded-2xl mb-6"
+              className="inline-block px-8 py-7 rounded-2xl mb-0 relative"
               style={{ backgroundColor: "rgba(0,0,0,0.65)", border: "1px solid rgba(245,197,24,0.3)" }}
             >
-              <p className="text-white font-bold text-xl mb-1">Идеальная баня</p>
-              <p className="font-black text-2xl" style={{ color: "#F5C518" }}>ЗА 7 ДНЕЙ</p>
+              <p className="text-white font-bold text-2xl mb-1">Идеальная баня</p>
+              <p className="font-black text-4xl mb-6" style={{ color: "#F5C518" }}>ЗА 7 ДНЕЙ</p>
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="block w-full px-8 py-4 rounded-xl font-bold text-black text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
+                style={{ backgroundColor: "#F5C518" }}
+              >
+                Рассчитать стоимость
+              </button>
+              {/* Белая стрелка вниз к бонусам */}
+              <div className="absolute pointer-events-none" style={{ bottom: "-90px", left: "60%" }}>
+                <svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10,5 Q60,10 55,60" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+                  <path d="M45,52 L55,62 L65,50" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
-
-            <button
-              onClick={() => setIsFormOpen(true)}
-              className="block px-8 py-4 rounded-xl font-bold text-black text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
-              style={{ backgroundColor: "#F5C518" }}
-            >
-              Рассчитать стоимость
-            </button>
           </motion.div>
         </div>
 
