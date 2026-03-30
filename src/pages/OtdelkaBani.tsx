@@ -185,39 +185,46 @@ export default function OtdelkaBani() {
           </motion.div>
         </div>
 
-        {/* Нижние бонусы */}
+      </section>
+
+      {/* Бонусы — наезжают на следующий блок */}
+      <div className="relative z-10 flex justify-center px-6" style={{ marginTop: "-40px", marginBottom: "0px" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl px-6"
+          className="w-full max-w-3xl rounded-2xl overflow-hidden"
+          style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.45)" }}
         >
           <div
-            className="rounded-t-2xl grid grid-cols-3 divide-x"
+            className="grid grid-cols-3"
             style={{
-              backgroundColor: "rgba(20,20,20,0.95)",
-              borderTop: "1px solid rgba(255,255,255,0.08)",
-              divideColor: "rgba(255,255,255,0.08)",
+              backgroundColor: "rgba(20,20,20,0.97)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             {[
               { icon: "Box", text: "3D-дизайн", sub: "в подарок" },
               { icon: "FileText", text: "Расчёт сметы", sub: "бесплатно" },
               { icon: "ShieldCheck", text: "Гарантия на всё", sub: "1 год" },
-            ].map((b) => (
-              <div key={b.text} className="flex items-center gap-3 px-6 py-4">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
-                  <Icon name={b.icon as "Box"} size={18} className="text-black" />
+            ].map((b, i) => (
+              <div
+                key={b.text}
+                className="flex items-center gap-4 px-8 py-6"
+                style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none" }}
+              >
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
+                  <Icon name={b.icon as "Box"} size={22} className="text-black" />
                 </div>
                 <div>
-                  <div className="text-white text-sm font-bold leading-tight">{b.text}</div>
-                  <div className="text-zinc-400 text-xs">{b.sub}</div>
+                  <div className="text-white font-bold leading-tight" style={{ fontSize: "15px" }}>{b.text}</div>
+                  <div className="text-zinc-400 text-sm">{b.sub}</div>
                 </div>
               </div>
             ))}
           </div>
         </motion.div>
-      </section>
+      </div>
 
       {/* О компании — 3 карточки со статистикой */}
       <section className="py-20 px-6" style={{ backgroundColor: "#ffffff" }}>
