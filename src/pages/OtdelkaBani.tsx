@@ -559,14 +559,20 @@ export default function OtdelkaBani() {
         </div>
       </section>
 
-      {/* Переход: стрелка */}
-      <div className="flex justify-center py-8" style={{ backgroundColor: "#f0ede8" }}>
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center"
-          style={{ backgroundColor: "#fff", border: "2px solid #b8d8b8", boxShadow: "0 4px 20px rgba(0,0,0,0.10)" }}
-        >
-          <Icon name="ChevronDown" size={28} style={{ color: "#5aaa5a" }} />
+      {/* Переход: треугольник */}
+      <div className="relative" style={{ backgroundColor: "#f0ede8" }}>
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" style={{ display: "block" }} preserveAspectRatio="none">
+          <polygon points="0,0 1440,0 720,80" fill="#ffffff" />
+        </svg>
+        <div className="absolute left-1/2 -translate-x-1/2" style={{ top: 44 }}>
+          <div
+            className="w-16 h-16 rounded-full flex items-center justify-center"
+            style={{ backgroundColor: "#fff", border: "2px solid #b8d8b8", boxShadow: "0 4px 20px rgba(0,0,0,0.10)" }}
+          >
+            <Icon name="ChevronDown" size={28} style={{ color: "#5aaa5a" }} />
+          </div>
         </div>
+        <div style={{ height: 24 }} />
       </div>
 
       {/* Галерея проектов */}
