@@ -71,7 +71,7 @@ const workStages = [
   {
     title: "Утепление, пароизоляция, прокладка проводки",
     dark: false,
-    img: "",
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b6c698e-d818-44fb-8950-91b07a7adc95.jpg",
     items: [
       "Каркас из бруса 50×50",
       "Утеплитель — закладывается в каркас",
@@ -82,7 +82,7 @@ const workStages = [
   {
     title: "Отделка стен и потолка, монтаж двери и окон",
     dark: true,
-    img: "",
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/a318467a-03b9-4f9b-9fce-756c3166562e.jpg",
     items: [
       "Для отделки могут использоваться:",
       "Материалы нашего производства: вагонка из липы и термолипы различных профилей, имитация бруса, необрезная доска, горбыль, 3D панели, паркетная вагонка.",
@@ -92,7 +92,7 @@ const workStages = [
   {
     title: "Изготовление полков, монтаж печи и дымохода",
     dark: true,
-    img: "",
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0de238d6-d598-498e-a78e-a8240730e52e.jpg",
     items: [
       "Для отделки могут быть использованы:",
       "Монтаж полков — полок изготавливается из: липы, абаша, канадского кедра.",
@@ -103,7 +103,7 @@ const workStages = [
   {
     title: "Изготовление элементов декора",
     dark: false,
-    img: "",
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6413c3f1-32d5-418d-acee-5af22e369673.jpg",
     items: [
       "Сборка и монтаж элементов декора.",
       "Изделия из можжевельника - помимо красивого внешнего вида, можжевельник выделяет аромасла, которые обладают приятным ароматом и являются природным антисептиком.",
@@ -601,7 +601,11 @@ export default function OtdelkaBani() {
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
+            {[
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3a4e6936-22fe-4094-9aef-4788b1ff20ff.jpg",
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/efcb386f-651a-432b-a197-409b395fa8c5.jpg",
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c02bf6bd-2b79-4c67-b367-54c2330ea1b2.jpg",
+            ].map((src, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -611,9 +615,11 @@ export default function OtdelkaBani() {
                 className="relative rounded-2xl overflow-hidden group cursor-pointer"
                 style={{ height: "260px", backgroundColor: "#d5d0c5" }}
               >
-                <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
-                  Фото проекта {i} — добавите сами
-                </div>
+                <img
+                  src={src}
+                  alt={`Проект отделки бани ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                 <div className="absolute top-4 left-4">
                   <span
