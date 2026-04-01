@@ -852,9 +852,9 @@ export default function OtdelkaBani() {
             </div>
             <div className="hidden md:flex items-center justify-center p-8">
               <img
-                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/80668809-8891-40d4-9e47-f5bc9ba39baf.jpg"
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/28a09cfc-af78-416e-bc54-84b1057932f2.png"
                 alt="Отделка бани"
-                className="w-full rounded-2xl object-cover"
+                className="w-full rounded-2xl object-contain"
                 style={{ height: "260px" }}
               />
             </div>
