@@ -663,6 +663,20 @@ export default function OtdelkaBani() {
           )}
           <div className="relative">
             {/* Дерево слева от первого проекта */}
+            {/* Тень дерева на земле */}
+            <div
+              className="hidden md:block absolute pointer-events-none select-none"
+              style={{
+                left: "-160px",
+                bottom: "-6px",
+                width: "320px",
+                height: "40px",
+                zIndex: 9,
+                background: "radial-gradient(ellipse 80% 100% at 40% 100%, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)",
+                filter: "blur(6px)",
+                transform: "scaleX(1.2)",
+              }}
+            />
             <img
               src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/94bd3aec-0afe-4b88-a9ae-d3dc94f360c4.png"
               alt="Дерево"
