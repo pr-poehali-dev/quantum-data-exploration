@@ -252,8 +252,8 @@ export default function OtdelkaBani() {
                 className="flex items-center gap-5 px-10 py-7"
                 style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}
               >
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
-                  <img src={b.img} alt={b.text} className="w-10 h-10 object-contain" />
+                <div className="flex items-center justify-center flex-shrink-0">
+                  <img src={b.img} alt={b.text} className="w-16 h-16 object-contain" />
                 </div>
                 <div>
                   <div className="text-white font-bold text-base leading-tight">{b.text}</div>
