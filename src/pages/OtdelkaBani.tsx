@@ -131,6 +131,18 @@ const faq = [
   },
 ]
 
+const project2Photos = [
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/47194948-8427-49c8-b9ce-3df30077af93.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4ec43766-cab0-4858-8501-79e50101f3fe.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7b83bba2-2aad-4ad7-8df9-2bc3fed171bc.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/63100a50-752f-48a4-a4f6-967a1bbaf020.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0e6c8a6b-07f0-4de8-85e3-e33bb42de96f.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/06336d74-ebfa-4d43-ac49-e83fd8b51d5e.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/e62107ee-113f-4e56-ba0b-c612c979b20a.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/59cd4ee0-6cc2-4ebb-a799-2d73b80ee3cd.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ed617b54-ff09-4373-bb91-71725688cd39.jpg",
+];
+
 const project1Photos = [
   "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6413c3f1-32d5-418d-acee-5af22e369673.jpg",
   "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3a4e6936-22fe-4094-9aef-4788b1ff20ff.jpg",
@@ -143,6 +155,7 @@ export default function OtdelkaBani() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [p1Idx, setP1Idx] = useState(0)
+  const [p2Idx, setP2Idx] = useState(0)
   const [lightbox, setLightbox] = useState<{ photos: string[]; idx: number } | null>(null)
 
   return (
@@ -679,7 +692,7 @@ export default function OtdelkaBani() {
                 onClick={(e) => { e.stopPropagation(); setP1Idx(i => (i + 1) % project1Photos.length); }}
               >›</button>
             </motion.div>
-            {/* Проект 2 */}
+            {/* Проект 2 — слайдер */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -687,16 +700,39 @@ export default function OtdelkaBani() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative rounded-2xl overflow-hidden group cursor-pointer"
               style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              onClick={() => setLightbox({ photos: project2Photos, idx: p2Idx })}
             >
-              <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
-                Фото проекта 2 — добавите сами
-              </div>
+              <img
+                src={project2Photos[p2Idx]}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                alt={`Проект 2 фото ${p2Idx + 1}`}
+              />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
               <div className="absolute top-4 left-4">
                 <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
                   Подробнее...
                 </span>
               </div>
+              {/* Точки навигации */}
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                {project2Photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setP2Idx(idx); }}
+                    className="rounded-full transition-all duration-200"
+                    style={{ width: idx === p2Idx ? 18 : 8, height: 8, backgroundColor: idx === p2Idx ? "#fff" : "rgba(255,255,255,0.5)" }}
+                  />
+                ))}
+              </div>
+              {/* Стрелки */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP2Idx(i => (i - 1 + project2Photos.length) % project2Photos.length); }}
+              >‹</button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP2Idx(i => (i + 1) % project2Photos.length); }}
+              >›</button>
             </motion.div>
             {/* Проект 3 */}
             <motion.div
