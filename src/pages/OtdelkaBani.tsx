@@ -593,12 +593,12 @@ export default function OtdelkaBani() {
                 Рассчитать стоимость
               </button>
             </div>
-            <div className="hidden md:flex items-center justify-center p-8">
+            <div className="hidden md:flex items-end justify-start overflow-hidden">
               <img
-                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/952ca024-d9b6-42ac-934e-7171846a2b97.jpg"
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/41419224-1b6e-425d-b4ce-1101cdc6ae68.png"
                 alt="Отделка бани"
-                className="w-full rounded-2xl object-cover"
-                style={{ height: "260px" }}
+                className="object-contain object-bottom-left"
+                style={{ height: "320px", maxWidth: "100%" }}
               />
             </div>
           </motion.div>
