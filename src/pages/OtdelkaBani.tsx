@@ -600,48 +600,29 @@ export default function OtdelkaBani() {
               Каждый год мы выполняем более 300 проектов<br />различной сложности и планировки
             </h2>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ca1fe51e-a2ce-4144-ad8e-ce33d9217ff8.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/46d571b7-b878-46d0-80ae-bf17e5d799d0.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/60cf40ad-4832-4b39-851f-affaa620a2d4.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/621d47f2-d249-4555-ba88-dac56d1c40f0.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b92f2f83-7b26-40cd-96f3-f88016f8a045.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/f4199068-9e42-47e1-9062-5c87e8e6e020.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/47d4dd59-b785-4167-8aa8-734b1eee56b1.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/47194948-8427-49c8-b9ce-3df30077af93.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4ec43766-cab0-4858-8501-79e50101f3fe.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7b83bba2-2aad-4ad7-8df9-2bc3fed171bc.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/63100a50-752f-48a4-a4f6-967a1bbaf020.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0e6c8a6b-07f0-4de8-85e3-e33bb42de96f.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/06336d74-ebfa-4d43-ac49-e83fd8b51d5e.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/e62107ee-113f-4e56-ba0b-c612c979b20a.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/59cd4ee0-6cc2-4ebb-a799-2d73b80ee3cd.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ed617b54-ff09-4373-bb91-71725688cd39.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b6c698e-d818-44fb-8950-91b07a7adc95.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/a318467a-03b9-4f9b-9fce-756c3166562e.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0de238d6-d598-498e-a78e-a8240730e52e.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6413c3f1-32d5-418d-acee-5af22e369673.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3a4e6936-22fe-4094-9aef-4788b1ff20ff.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/efcb386f-651a-432b-a197-409b395fa8c5.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c02bf6bd-2b79-4c67-b367-54c2330ea1b2.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/877b6b11-4336-4d37-9223-cd04f1e9918c.jpg",
-            ].map((src, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[1, 2, 3].map((i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (i % 8) * 0.07 }}
-                className="relative rounded-xl overflow-hidden group cursor-pointer"
-                style={{ height: "200px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="relative rounded-2xl overflow-hidden group cursor-pointer"
+                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
               >
-                <img
-                  src={src}
-                  alt={`Проект ${i + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
+                  Фото проекта {i} — добавите сами
+                </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                <div className="absolute top-4 left-4">
+                  <span
+                    className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white"
+                    style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
+                  >
+                    Подробнее...
+                  </span>
+                </div>
               </motion.div>
             ))}
           </div>
