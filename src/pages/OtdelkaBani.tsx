@@ -315,12 +315,11 @@ export default function OtdelkaBani() {
               className="rounded-2xl overflow-hidden"
               style={{ minHeight: "420px", backgroundColor: "#ddd" }}
             >
-              <div
-                className="w-full h-full min-h-[420px] flex items-center justify-center text-zinc-400 text-sm"
-                style={{ backgroundColor: "#e5e5e5" }}
-              >
-                <span>Фото парной — вы добавите позже</span>
-              </div>
+              <img
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/5da8e402-605a-4244-82a7-e1a4e3575632.jpg"
+                alt="Внутренняя отделка парной"
+                className="w-full h-full min-h-[420px] object-cover"
+              />
             </motion.div>
 
             {/* Текст */}
