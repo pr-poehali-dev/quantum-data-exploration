@@ -134,7 +134,6 @@ const faq = [
 export default function OtdelkaBani() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const [lightboxImg, setLightboxImg] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
