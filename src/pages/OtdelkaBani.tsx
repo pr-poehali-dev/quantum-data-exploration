@@ -241,7 +241,7 @@ export default function OtdelkaBani() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-black uppercase mb-3" style={{ color: "#1a1a1a" }}>
+            <h2 className="text-3xl md:text-4xl font-black uppercase mb-3" style={{ color: "#1a3a1a" }}>
               Компания «Мастерофф»
             </h2>
             <p className="text-zinc-500 text-lg">Мы оказываем профессиональные услуги по созданию идеального места отдыха.</p>
