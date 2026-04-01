@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer"
 import { OrderForm } from "@/components/OrderForm"
 import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
+import { FloatingLeaves } from "@/components/FloatingLeaves"
 
 const stats = [
   {
@@ -918,6 +919,7 @@ export default function OtdelkaBani() {
 
       <Footer />
       <FloatingCallButton />
+      <FloatingLeaves />
       <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </div>
   )
