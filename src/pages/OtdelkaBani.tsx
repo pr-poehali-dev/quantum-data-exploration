@@ -138,8 +138,8 @@ export default function OtdelkaBani() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
       <Helmet>
-        <title>Отделка бань и саун под ключ в Москве | Бригада мастеров</title>
-        <meta name="description" content="Внутренняя отделка бань и саун под ключ. Более 20 лет опыта, 8000+ проектов. Идеальная баня за 7 дней. Звоните!" />
+        <title>Отделка бань и саун в Усть-Куте под ключ | Бригада мастеров</title>
+        <meta name="description" content="Внутренняя отделка бань и саун в Усть-Куте под ключ. Более 20 лет опыта, 8000+ проектов. Идеальная баня за 7 дней. Звоните!" />
       </Helmet>
       <Navbar />
 
@@ -164,7 +164,9 @@ export default function OtdelkaBani() {
             <h1 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-6">
               <span style={{ color: "#F5C518" }}>Внутренняя отделка</span>
               <br />
-              <span className="text-white">бань и саун «под ключ»</span>
+              <span className="text-white">бань и саун</span>
+              <br />
+              <span className="text-white">в Усть-Куте</span>
             </h1>
 
             <div
