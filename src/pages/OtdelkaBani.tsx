@@ -380,7 +380,7 @@ export default function OtdelkaBani() {
           >
             <h2 className="text-3xl md:text-4xl font-black uppercase mb-3">
               <span style={{ color: "#4a9a4a" }}>6 причин</span>{" "}
-              <span className="text-zinc-900">выбрать «Бригаду мастеров»</span>
+              <span className="text-zinc-900">выбрать «Мастерофф»</span>
             </h2>
             <p className="text-zinc-500 text-lg">Оказываем полный цикл от производства до монтажа</p>
           </motion.div>
