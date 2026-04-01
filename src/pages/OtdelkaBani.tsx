@@ -559,12 +559,12 @@ export default function OtdelkaBani() {
               </button>
             </div>
             <div className="hidden md:flex items-center justify-center p-8">
-              <div
-                className="w-full rounded-2xl flex items-center justify-center text-zinc-400 text-sm"
-                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
-              >
-                Фото материалов — добавите сами
-              </div>
+              <img
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/952ca024-d9b6-42ac-934e-7171846a2b97.jpg"
+                alt="Отделка бани"
+                className="w-full rounded-2xl object-cover"
+                style={{ height: "260px" }}
+              />
             </div>
           </motion.div>
         </div>
