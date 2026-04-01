@@ -20,6 +20,7 @@ import Zabory from "./pages/Zabory";
 import OtdelkaBani from "./pages/OtdelkaBani";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner";
+import { FloatingLeaves } from "./components/FloatingLeaves";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />
+          <FloatingLeaves />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
