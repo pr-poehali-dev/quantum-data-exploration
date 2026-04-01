@@ -143,6 +143,16 @@ const project2Photos = [
   "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ed617b54-ff09-4373-bb91-71725688cd39.jpg",
 ];
 
+const project3Photos = [
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ca1fe51e-a2ce-4144-ad8e-ce33d9217ff8.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/46d571b7-b878-46d0-80ae-bf17e5d799d0.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/60cf40ad-4832-4b39-851f-affaa620a2d4.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/621d47f2-d249-4555-ba88-dac56d1c40f0.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b92f2f83-7b26-40cd-96f3-f88016f8a045.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/f4199068-9e42-47e1-9062-5c87e8e6e020.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/47d4dd59-b785-4167-8aa8-734b1eee56b1.jpg",
+];
+
 const project1Photos = [
   "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6413c3f1-32d5-418d-acee-5af22e369673.jpg",
   "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3a4e6936-22fe-4094-9aef-4788b1ff20ff.jpg",
@@ -156,6 +166,7 @@ export default function OtdelkaBani() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [p1Idx, setP1Idx] = useState(0)
   const [p2Idx, setP2Idx] = useState(0)
+  const [p3Idx, setP3Idx] = useState(0)
   const [lightbox, setLightbox] = useState<{ photos: string[]; idx: number } | null>(null)
 
   return (
@@ -742,16 +753,39 @@ export default function OtdelkaBani() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="relative rounded-2xl overflow-hidden group cursor-pointer"
               style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              onClick={() => setLightbox({ photos: project3Photos, idx: p3Idx })}
             >
-              <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
-                Фото проекта 3 — добавите сами
-              </div>
+              <img
+                src={project3Photos[p3Idx]}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                alt={`Проект 3 фото ${p3Idx + 1}`}
+              />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
               <div className="absolute top-4 left-4">
                 <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
                   Подробнее...
                 </span>
               </div>
+              {/* Точки навигации */}
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                {project3Photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setP3Idx(idx); }}
+                    className="rounded-full transition-all duration-200"
+                    style={{ width: idx === p3Idx ? 18 : 8, height: 8, backgroundColor: idx === p3Idx ? "#fff" : "rgba(255,255,255,0.5)" }}
+                  />
+                ))}
+              </div>
+              {/* Стрелки */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP3Idx(i => (i - 1 + project3Photos.length) % project3Photos.length); }}
+              >‹</button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP3Idx(i => (i + 1) % project3Photos.length); }}
+              >›</button>
             </motion.div>
           </div>
         </div>
