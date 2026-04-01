@@ -668,7 +668,7 @@ export default function OtdelkaBani() {
               alt="Дерево"
               className="hidden md:block absolute pointer-events-none select-none"
               style={{
-                left: "-140px",
+                left: "-200px",
                 bottom: "0px",
                 width: "220px",
                 zIndex: 10,
