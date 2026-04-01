@@ -131,9 +131,19 @@ const faq = [
   },
 ]
 
+const project1Photos = [
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6413c3f1-32d5-418d-acee-5af22e369673.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3a4e6936-22fe-4094-9aef-4788b1ff20ff.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/efcb386f-651a-432b-a197-409b395fa8c5.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c02bf6bd-2b79-4c67-b367-54c2330ea1b2.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/877b6b11-4336-4d37-9223-cd04f1e9918c.jpg",
+];
+
 export default function OtdelkaBani() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [p1Idx, setP1Idx] = useState(0)
+  const [lightbox, setLightbox] = useState<{ photos: string[]; idx: number } | null>(null)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
@@ -600,31 +610,113 @@ export default function OtdelkaBani() {
               Каждый год мы выполняем более 300 проектов<br />различной сложности и планировки
             </h2>
           </motion.div>
+          {/* Лайтбокс */}
+          {lightbox && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+              onClick={() => setLightbox(null)}
+            >
+              <button
+                className="absolute top-4 right-4 text-white text-3xl font-bold z-10"
+                onClick={() => setLightbox(null)}
+              >✕</button>
+              <button
+                className="absolute left-4 text-white text-4xl font-bold z-10 px-4"
+                onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx - 1 + l.photos.length) % l.photos.length } : null); }}
+              >‹</button>
+              <img
+                src={lightbox.photos[lightbox.idx]}
+                className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute right-4 text-white text-4xl font-bold z-10 px-4"
+                onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx + 1) % l.photos.length } : null); }}
+              >›</button>
+              <div className="absolute bottom-4 text-white text-sm">{lightbox.idx + 1} / {lightbox.photos.length}</div>
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative rounded-2xl overflow-hidden group cursor-pointer"
-                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
-              >
-                <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
-                  Фото проекта {i} — добавите сами
-                </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                <div className="absolute top-4 left-4">
-                  <span
-                    className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white"
-                    style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
-                  >
-                    Подробнее...
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+            {/* Проект 1 — слайдер с 5 фото */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              onClick={() => setLightbox({ photos: project1Photos, idx: p1Idx })}
+            >
+              <img
+                src={project1Photos[p1Idx]}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                alt={`Проект 1 фото ${p1Idx + 1}`}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+                  Подробнее...
+                </span>
+              </div>
+              {/* Точки навигации */}
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                {project1Photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setP1Idx(idx); }}
+                    className="rounded-full transition-all duration-200"
+                    style={{ width: idx === p1Idx ? 18 : 8, height: 8, backgroundColor: idx === p1Idx ? "#fff" : "rgba(255,255,255,0.5)" }}
+                  />
+                ))}
+              </div>
+              {/* Стрелки */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP1Idx(i => (i - 1 + project1Photos.length) % project1Photos.length); }}
+              >‹</button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP1Idx(i => (i + 1) % project1Photos.length); }}
+              >›</button>
+            </motion.div>
+            {/* Проект 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
+                Фото проекта 2 — добавите сами
+              </div>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+                  Подробнее...
+                </span>
+              </div>
+            </motion.div>
+            {/* Проект 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
+                Фото проекта 3 — добавите сами
+              </div>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+                  Подробнее...
+                </span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
