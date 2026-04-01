@@ -661,6 +661,20 @@ export default function OtdelkaBani() {
               <div className="absolute bottom-4 text-white text-sm">{lightbox.idx + 1} / {lightbox.photos.length}</div>
             </div>
           )}
+          <div className="relative">
+            {/* Дерево слева от первого проекта */}
+            <img
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/94bd3aec-0afe-4b88-a9ae-d3dc94f360c4.png"
+              alt="Дерево"
+              className="hidden md:block absolute pointer-events-none select-none"
+              style={{
+                left: "-140px",
+                bottom: "0px",
+                width: "220px",
+                zIndex: 10,
+                filter: "drop-shadow(2px 4px 8px rgba(0,0,0,0.15))"
+              }}
+            />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Проект 1 — слайдер с 5 фото */}
             <motion.div
@@ -788,6 +802,7 @@ export default function OtdelkaBani() {
                 onClick={(e) => { e.stopPropagation(); setP3Idx(i => (i + 1) % project3Photos.length); }}
               >›</button>
             </motion.div>
+          </div>
           </div>
         </div>
       </section>
