@@ -71,7 +71,7 @@ const workStages = [
   {
     title: "Утепление, пароизоляция, прокладка проводки",
     dark: false,
-    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4b6c698e-d818-44fb-8950-91b07a7adc95.jpg",
+    img: "",
     items: [
       "Каркас из бруса 50×50",
       "Утеплитель — закладывается в каркас",
@@ -82,7 +82,7 @@ const workStages = [
   {
     title: "Отделка стен и потолка, монтаж двери и окон",
     dark: true,
-    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/a318467a-03b9-4f9b-9fce-756c3166562e.jpg",
+    img: "",
     items: [
       "Для отделки могут использоваться:",
       "Материалы нашего производства: вагонка из липы и термолипы различных профилей, имитация бруса, необрезная доска, горбыль, 3D панели, паркетная вагонка.",
@@ -92,7 +92,7 @@ const workStages = [
   {
     title: "Изготовление полков, монтаж печи и дымохода",
     dark: true,
-    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0de238d6-d598-498e-a78e-a8240730e52e.jpg",
+    img: "",
     items: [
       "Для отделки могут быть использованы:",
       "Монтаж полков — полок изготавливается из: липы, абаша, канадского кедра.",
@@ -103,7 +103,7 @@ const workStages = [
   {
     title: "Изготовление элементов декора",
     dark: false,
-    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6413c3f1-32d5-418d-acee-5af22e369673.jpg",
+    img: "",
     items: [
       "Сборка и монтаж элементов декора.",
       "Изделия из можжевельника - помимо красивого внешнего вида, можжевельник выделяет аромасла, которые обладают приятным ароматом и являются природным антисептиком.",
@@ -600,12 +600,13 @@ export default function OtdelkaBani() {
               Каждый год мы выполняем более 300 проектов<br />различной сложности и планировки
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Первая строка — 3 фото */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             {[
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/3a4e6936-22fe-4094-9aef-4788b1ff20ff.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/efcb386f-651a-432b-a197-409b395fa8c5.jpg",
-              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c02bf6bd-2b79-4c67-b367-54c2330ea1b2.jpg",
-            ].map((src, i) => (
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ccd68e19-4fd7-40ba-b6f0-3a48aa95495b.jpg",
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b39649d7-ce63-418c-99a0-a3d98ba66495.jpg",
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/69842aa6-c02b-4432-b498-e2a1edb4ceac.jpg",
+            ].map((url, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -613,22 +614,38 @@ export default function OtdelkaBani() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="relative rounded-2xl overflow-hidden group cursor-pointer"
-                style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+                style={{ height: "260px" }}
               >
                 <img
-                  src={src}
-                  alt={`Проект отделки бани ${i + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={url}
+                  alt={`Проект бани ${i + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                <div className="absolute top-4 left-4">
-                  <span
-                    className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white"
-                    style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
-                  >
-                    Подробнее...
-                  </span>
-                </div>
+              </motion.div>
+            ))}
+          </div>
+          {/* Вторая строка — 2 фото по центру */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:px-[16.67%]">
+            {[
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c509b667-243a-438c-8bc5-f9dac27862aa.jpg",
+              "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/39769dbd-a47d-42b4-b92f-f9a4a8276869.jpg",
+            ].map((url, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (i + 3) * 0.1 }}
+                className="relative rounded-2xl overflow-hidden group cursor-pointer"
+                style={{ height: "260px" }}
+              >
+                <img
+                  src={url}
+                  alt={`Проект бани ${i + 4}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
               </motion.div>
             ))}
           </div>
