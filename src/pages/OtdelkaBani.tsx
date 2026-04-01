@@ -243,9 +243,9 @@ export default function OtdelkaBani() {
             style={{ backgroundColor: "#1a1a1a" }}
           >
             {[
-              { icon: "Box", text: "3D-дизайн", sub: "в подарок" },
-              { icon: "FileText", text: "Расчёт сметы", sub: "бесплатно" },
-              { icon: "ShieldCheck", text: "Гарантия на всё", sub: "1 год" },
+              { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b1357e7d-2e8c-4267-bbef-09138cf6c386.png", text: "3D-дизайн", sub: "в подарок" },
+              { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b0cfe89a-b74c-4534-8126-b963b7591620.png", text: "Расчёт сметы", sub: "бесплатно" },
+              { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/07f30a49-3adc-4e52-946a-aefc555cf204.png", text: "Гарантия на всё", sub: "1 год" },
             ].map((b, i) => (
               <div
                 key={b.text}
@@ -253,7 +253,7 @@ export default function OtdelkaBani() {
                 style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}
               >
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F5C518" }}>
-                  <Icon name={b.icon as "Box"} size={26} className="text-black" />
+                  <img src={b.img} alt={b.text} className="w-10 h-10 object-contain" />
                 </div>
                 <div>
                   <div className="text-white font-bold text-base leading-tight">{b.text}</div>
