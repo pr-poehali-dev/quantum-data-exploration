@@ -601,12 +601,12 @@ export default function Zabory() {
                 Рассчитать стоимость
               </button>
             </div>
-            <div className="hidden md:flex items-end justify-center overflow-hidden p-6">
+            <div className="hidden md:flex items-end justify-center overflow-hidden">
               <img
-                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/23061f60-4b80-4b49-a1b5-d1fd936bb5d2.jpg"
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/84becc4b-7c3a-44c1-bce2-0fb4a7a74965.png"
                 alt="Забор"
-                className="w-full rounded-2xl object-cover"
-                style={{ height: "260px" }}
+                className="object-contain"
+                style={{ height: "340px", maxWidth: "100%" }}
               />
             </div>
           </motion.div>
