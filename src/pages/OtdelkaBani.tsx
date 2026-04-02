@@ -688,75 +688,7 @@ export default function OtdelkaBani() {
         </div>
       </section>
 
-      {/* Галерея проектов */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-10"
-          >
-            <h2 className="text-2xl md:text-3xl font-black uppercase text-zinc-900">
-              Каждый год мы выполняем более 300 проектов<br />различной сложности и планировки
-            </h2>
-          </motion.div>
-          {/* Лайтбокс */}
-          {lightbox && (
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
-              onClick={() => setLightbox(null)}
-            >
-              <button
-                className="absolute top-4 right-4 text-white text-3xl font-bold z-10"
-                onClick={() => setLightbox(null)}
-              >✕</button>
-              <button
-                className="absolute left-4 text-white text-4xl font-bold z-10 px-4"
-                onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx - 1 + l.photos.length) % l.photos.length } : null); }}
-              >‹</button>
-              <img
-                src={lightbox.photos[lightbox.idx]}
-                className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <button
-                className="absolute right-4 text-white text-4xl font-bold z-10 px-4"
-                onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx + 1) % l.photos.length } : null); }}
-              >›</button>
-              <div className="absolute bottom-4 text-white text-sm">{lightbox.idx + 1} / {lightbox.photos.length}</div>
-            </div>
-          )}
-          <div className="relative">
-            {/* Дерево слева от первого проекта */}
-            {/* Тень дерева на земле */}
-            <div
-              className="hidden md:block absolute pointer-events-none select-none"
-              style={{
-                left: "-160px",
-                bottom: "-6px",
-                width: "320px",
-                height: "40px",
-                zIndex: 9,
-                background: "radial-gradient(ellipse 80% 100% at 40% 100%, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)",
-                filter: "blur(6px)",
-                transform: "scaleX(1.2)",
-              }}
-            />
-            <img
-              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/94bd3aec-0afe-4b88-a9ae-d3dc94f360c4.png"
-              alt="Дерево"
-              className="hidden md:block absolute pointer-events-none select-none"
-              style={{
-                left: "-200px",
-                bottom: "0px",
-                width: "220px",
-                zIndex: 10,
-                filter: "drop-shadow(2px 4px 8px rgba(0,0,0,0.15))"
-              }}
-            />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {false && <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Проект 1 — слайдер с 5 фото */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
