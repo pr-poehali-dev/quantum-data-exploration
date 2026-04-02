@@ -199,7 +199,7 @@ export default function OtdelkaBani() {
             <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-5 md:mb-6">
               <span style={{ color: "#F5C518" }}>Внутренняя отделка</span>
               <br />
-              <span className="text-white">бань и саун</span>
+              <span className="text-white">бань</span>
               <br />
               <span className="text-white">в Усть-Куте</span>
             </h1>
