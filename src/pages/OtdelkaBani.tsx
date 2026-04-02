@@ -173,6 +173,10 @@ const ourWorksPhotos = [
 export default function OtdelkaBani() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [p1Idx, setP1Idx] = useState(0)
+  const [p2Idx, setP2Idx] = useState(0)
+  const [p3Idx, setP3Idx] = useState(0)
+  const [lightbox, setLightbox] = useState<{ photos: string[]; idx: number } | null>(null)
   const [worksLightbox, setWorksLightbox] = useState<number | null>(null)
 
   return (
@@ -684,7 +688,205 @@ export default function OtdelkaBani() {
         </div>
       </section>
 
-
+      {/* Галерея проектов */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-2xl md:text-3xl font-black uppercase text-zinc-900">
+              Каждый год мы выполняем более 300 проектов<br />различной сложности и планировки
+            </h2>
+          </motion.div>
+          {/* Лайтбокс */}
+          {lightbox && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+              onClick={() => setLightbox(null)}
+            >
+              <button
+                className="absolute top-4 right-4 text-white text-3xl font-bold z-10"
+                onClick={() => setLightbox(null)}
+              >✕</button>
+              <button
+                className="absolute left-4 text-white text-4xl font-bold z-10 px-4"
+                onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx - 1 + l.photos.length) % l.photos.length } : null); }}
+              >‹</button>
+              <img
+                src={lightbox.photos[lightbox.idx]}
+                className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute right-4 text-white text-4xl font-bold z-10 px-4"
+                onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx + 1) % l.photos.length } : null); }}
+              >›</button>
+              <div className="absolute bottom-4 text-white text-sm">{lightbox.idx + 1} / {lightbox.photos.length}</div>
+            </div>
+          )}
+          <div className="relative">
+            {/* Дерево слева от первого проекта */}
+            {/* Тень дерева на земле */}
+            <div
+              className="hidden md:block absolute pointer-events-none select-none"
+              style={{
+                left: "-160px",
+                bottom: "-6px",
+                width: "320px",
+                height: "40px",
+                zIndex: 9,
+                background: "radial-gradient(ellipse 80% 100% at 40% 100%, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)",
+                filter: "blur(6px)",
+                transform: "scaleX(1.2)",
+              }}
+            />
+            <img
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/94bd3aec-0afe-4b88-a9ae-d3dc94f360c4.png"
+              alt="Дерево"
+              className="hidden md:block absolute pointer-events-none select-none"
+              style={{
+                left: "-200px",
+                bottom: "0px",
+                width: "220px",
+                zIndex: 10,
+                filter: "drop-shadow(2px 4px 8px rgba(0,0,0,0.15))"
+              }}
+            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Проект 1 — слайдер с 5 фото */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              onClick={() => setLightbox({ photos: project1Photos, idx: p1Idx })}
+            >
+              <img
+                src={project1Photos[p1Idx]}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                alt={`Проект 1 фото ${p1Idx + 1}`}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+                  Подробнее...
+                </span>
+              </div>
+              {/* Точки навигации */}
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                {project1Photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setP1Idx(idx); }}
+                    className="rounded-full transition-all duration-200"
+                    style={{ width: idx === p1Idx ? 18 : 8, height: 8, backgroundColor: idx === p1Idx ? "#fff" : "rgba(255,255,255,0.5)" }}
+                  />
+                ))}
+              </div>
+              {/* Стрелки */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP1Idx(i => (i - 1 + project1Photos.length) % project1Photos.length); }}
+              >‹</button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP1Idx(i => (i + 1) % project1Photos.length); }}
+              >›</button>
+            </motion.div>
+            {/* Проект 2 — слайдер */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              onClick={() => setLightbox({ photos: project2Photos, idx: p2Idx })}
+            >
+              <img
+                src={project2Photos[p2Idx]}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                alt={`Проект 2 фото ${p2Idx + 1}`}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+                  Подробнее...
+                </span>
+              </div>
+              {/* Точки навигации */}
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                {project2Photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setP2Idx(idx); }}
+                    className="rounded-full transition-all duration-200"
+                    style={{ width: idx === p2Idx ? 18 : 8, height: 8, backgroundColor: idx === p2Idx ? "#fff" : "rgba(255,255,255,0.5)" }}
+                  />
+                ))}
+              </div>
+              {/* Стрелки */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP2Idx(i => (i - 1 + project2Photos.length) % project2Photos.length); }}
+              >‹</button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP2Idx(i => (i + 1) % project2Photos.length); }}
+              >›</button>
+            </motion.div>
+            {/* Проект 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              style={{ height: "260px", backgroundColor: "#d5d0c5" }}
+              onClick={() => setLightbox({ photos: project3Photos, idx: p3Idx })}
+            >
+              <img
+                src={project3Photos[p3Idx]}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                alt={`Проект 3 фото ${p3Idx + 1}`}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+                  Подробнее...
+                </span>
+              </div>
+              {/* Точки навигации */}
+              <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                {project3Photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setP3Idx(idx); }}
+                    className="rounded-full transition-all duration-200"
+                    style={{ width: idx === p3Idx ? 18 : 8, height: 8, backgroundColor: idx === p3Idx ? "#fff" : "rgba(255,255,255,0.5)" }}
+                  />
+                ))}
+              </div>
+              {/* Стрелки */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP3Idx(i => (i - 1 + project3Photos.length) % project3Photos.length); }}
+              >‹</button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-2xl font-bold px-1 bg-black/30 rounded-lg"
+                onClick={(e) => { e.stopPropagation(); setP3Idx(i => (i + 1) % project3Photos.length); }}
+              >›</button>
+            </motion.div>
+          </div>
+          </div>
+        </div>
+      </section>
 
       {/* Баннер: Как избежать затрат */}
       <section className="py-10 md:py-16 px-4 md:px-6" style={{ backgroundColor: "#f0ede8" }}>
