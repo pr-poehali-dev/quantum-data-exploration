@@ -162,6 +162,14 @@ const project1Photos = [
   "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/877b6b11-4336-4d37-9223-cd04f1e9918c.jpg",
 ];
 
+const ourWorksPhotos = [
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/50d3485d-ec51-4576-831a-c229e5e86c22.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d2ae7bcf-e316-4e70-930e-4556105cc7b1.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/1d19eac0-dfcd-418a-bb64-bb5ebefbc1d2.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/75c10f3c-d8ce-4538-b1e4-16208ebea0fa.jpg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/681824f1-d551-4c73-9d16-c507a82ab9ad.jpg",
+]
+
 export default function OtdelkaBani() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -169,6 +177,7 @@ export default function OtdelkaBani() {
   const [p2Idx, setP2Idx] = useState(0)
   const [p3Idx, setP3Idx] = useState(0)
   const [lightbox, setLightbox] = useState<{ photos: string[]; idx: number } | null>(null)
+  const [worksLightbox, setWorksLightbox] = useState<number | null>(null)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
@@ -606,6 +615,78 @@ export default function OtdelkaBani() {
         </div>
         <div style={{ height: 24 }} />
       </div>
+
+      {/* Наши работы */}
+      <section className="py-12 md:py-20 px-4 md:px-6" style={{ backgroundColor: "#ffffff" }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 md:mb-10"
+          >
+            <h2 className="text-2xl md:text-4xl font-black uppercase text-zinc-900 mb-2">
+              Наши <span style={{ color: "#4a9a4a" }}>работы</span>
+            </h2>
+            <p className="text-zinc-500 text-base md:text-lg">Нажмите на фото, чтобы рассмотреть подробнее</p>
+          </motion.div>
+
+          {/* Лайтбокс наших работ */}
+          {worksLightbox !== null && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+              onClick={() => setWorksLightbox(null)}
+            >
+              <button
+                className="absolute top-4 right-4 text-white text-3xl font-bold z-10 w-12 h-12 flex items-center justify-center"
+                onClick={() => setWorksLightbox(null)}
+              >✕</button>
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 px-3 py-2 bg-black/40 rounded-xl"
+                onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i - 1 + ourWorksPhotos.length) % ourWorksPhotos.length : null); }}
+              >‹</button>
+              <img
+                src={ourWorksPhotos[worksLightbox]}
+                alt="Наша работа"
+                className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 px-3 py-2 bg-black/40 rounded-xl"
+                onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i + 1) % ourWorksPhotos.length : null); }}
+              >›</button>
+              <div className="absolute bottom-4 text-white text-sm">{worksLightbox + 1} / {ourWorksPhotos.length}</div>
+            </div>
+          )}
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {ourWorksPhotos.map((photo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.07 }}
+                className={`relative overflow-hidden rounded-2xl cursor-pointer group ${i === 0 ? "col-span-2 md:col-span-2 row-span-1" : ""}`}
+                style={{ height: i === 0 ? "300px" : "200px" }}
+                onClick={() => setWorksLightbox(i)}
+              >
+                <img
+                  src={photo}
+                  alt={`Работа ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+                    <Icon name="ZoomIn" size={22} className="text-white" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Галерея проектов */}
       <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
