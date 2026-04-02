@@ -599,7 +599,7 @@ export default function OtdelkaBani() {
         <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" style={{ display: "block" }} preserveAspectRatio="none">
           <polygon points="0,0 1440,0 720,160" fill="#ffffff" />
         </svg>
-        <div className="absolute left-1/2 -translate-x-1/2" style={{ top: 100 }}>
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2">
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center"
             style={{ backgroundColor: "#fff", border: "2px solid #b8d8b8", boxShadow: "0 4px 20px rgba(0,0,0,0.10)" }}
