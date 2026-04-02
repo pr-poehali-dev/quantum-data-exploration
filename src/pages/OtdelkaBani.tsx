@@ -189,14 +189,14 @@ export default function OtdelkaBani() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.7) 60%, transparent 100%)" }} />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-24 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="max-w-xl"
           >
-            <h1 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-6">
+            <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-5 md:mb-6">
               <span style={{ color: "#F5C518" }}>Внутренняя отделка</span>
               <br />
               <span className="text-white">бань и саун</span>
@@ -205,20 +205,20 @@ export default function OtdelkaBani() {
             </h1>
 
             <div
-              className="inline-block px-8 py-7 rounded-2xl mb-0 relative"
+              className="inline-block w-full max-w-sm px-5 md:px-8 py-5 md:py-7 rounded-2xl mb-0 relative"
               style={{ backgroundColor: "rgba(0,0,0,0.65)", border: "1px solid rgba(245,197,24,0.3)" }}
             >
-              <p className="text-white font-bold text-2xl mb-1">Идеальная баня</p>
-              <p className="font-black text-4xl mb-6" style={{ color: "#F5C518" }}>ЗА 7 ДНЕЙ</p>
+              <p className="text-white font-bold text-xl md:text-2xl mb-1">Идеальная баня</p>
+              <p className="font-black text-3xl md:text-4xl mb-5 md:mb-6" style={{ color: "#F5C518" }}>ЗА 7 ДНЕЙ</p>
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="block w-full px-8 py-4 rounded-xl font-bold text-black text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
+                className="block w-full px-4 md:px-8 py-3 md:py-4 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-normal md:tracking-wide transition-all hover:opacity-90 hover:scale-105"
                 style={{ backgroundColor: "#F5C518" }}
               >
                 Рассчитать стоимость
               </button>
-              {/* Белая стрелка вниз к бонусам */}
-              <div className="absolute pointer-events-none" style={{ bottom: "-90px", left: "60%" }}>
+              {/* Белая стрелка вниз к бонусам — только десктоп */}
+              <div className="hidden md:block absolute pointer-events-none" style={{ bottom: "-90px", left: "60%" }}>
                 <svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10,5 Q60,10 55,60" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
                   <path d="M45,52 L55,62 L65,50" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
@@ -231,7 +231,7 @@ export default function OtdelkaBani() {
       </section>
 
       {/* Бонусы — наезжают на белый блок */}
-      <div className="relative z-10 px-6 max-w-6xl mx-auto w-full" style={{ marginTop: "-36px", marginBottom: "-36px" }}>
+      <div className="relative z-10 px-4 md:px-6 max-w-6xl mx-auto w-full" style={{ marginTop: "-36px", marginBottom: "-36px" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -240,7 +240,7 @@ export default function OtdelkaBani() {
           style={{ boxShadow: "0 12px 50px rgba(0,0,0,0.5)" }}
         >
           <div
-            className="grid grid-cols-3"
+            className="grid grid-cols-1 md:grid-cols-3"
             style={{ backgroundColor: "#1a1a1a" }}
           >
             {[
@@ -250,15 +250,14 @@ export default function OtdelkaBani() {
             ].map((b, i) => (
               <div
                 key={b.text}
-                className="flex flex-col md:flex-row items-center gap-2 md:gap-5 px-2 md:px-10 py-4 md:py-7"
-                style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}
+                className={`flex flex-row items-center gap-4 px-6 py-5 md:gap-5 md:px-10 md:py-7 ${i < 2 ? "border-b md:border-b-0 md:border-r border-white/10" : ""}`}
               >
                 <div className="flex items-center justify-center flex-shrink-0">
-                  <img src={b.img} alt={b.text} className="w-8 h-8 md:w-16 md:h-16 object-contain" />
+                  <img src={b.img} alt={b.text} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                 </div>
-                <div className="text-center md:text-left">
-                  <div className="text-white font-bold text-xs md:text-base leading-tight">{b.text}</div>
-                  <div className="text-zinc-400 text-xs md:text-sm mt-0.5">{b.sub}</div>
+                <div>
+                  <div className="text-white font-bold text-sm md:text-base leading-tight">{b.text}</div>
+                  <div className="text-zinc-400 text-sm md:text-sm mt-0.5">{b.sub}</div>
                 </div>
               </div>
             ))}
@@ -338,9 +337,9 @@ export default function OtdelkaBani() {
       </section>
 
       {/* Фото парной + текст */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#f8f8f8" }}>
+      <section className="py-12 md:py-20 px-4 md:px-6" style={{ backgroundColor: "#f8f8f8" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
             {/* Фото — placeholder до загрузки */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -348,12 +347,12 @@ export default function OtdelkaBani() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="rounded-2xl overflow-hidden"
-              style={{ minHeight: "420px", backgroundColor: "#ddd" }}
+              style={{ minHeight: "260px", backgroundColor: "#ddd" }}
             >
               <img
                 src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/5da8e402-605a-4244-82a7-e1a4e3575632.jpg"
                 alt="Внутренняя отделка парной"
-                className="w-full h-full min-h-[420px] object-cover"
+                className="w-full h-full min-h-[260px] md:min-h-[420px] object-cover"
               />
             </motion.div>
 
@@ -404,23 +403,23 @@ export default function OtdelkaBani() {
       </section>
 
       {/* 6 причин */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#fff" }}>
+      <section className="py-12 md:py-20 px-4 md:px-6" style={{ backgroundColor: "#fff" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-14"
+            className="text-center mb-10 md:mb-14"
           >
-            <h2 className="text-3xl md:text-4xl font-black uppercase mb-3">
+            <h2 className="text-2xl md:text-4xl font-black uppercase mb-3">
               <span style={{ color: "#4a9a4a" }}>6 причин</span>{" "}
               <span className="text-zinc-900">выбрать «Мастерофф»</span>
             </h2>
-            <p className="text-zinc-500 text-lg">Оказываем полный цикл от производства до монтажа</p>
+            <p className="text-zinc-500 text-base md:text-lg">Оказываем полный цикл от производства до монтажа</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 md:gap-x-10 gap-y-8 md:gap-y-12">
             {reasons.map((r, i) => (
               <motion.div
                 key={r.num}
@@ -431,7 +430,7 @@ export default function OtdelkaBani() {
                 className="flex flex-col items-center text-center"
               >
                 {/* Большая цифра + иконка поверх + растительность */}
-                <div className="relative flex items-center justify-center mb-6" style={{ width: 160, height: 140 }}>
+                <div className="relative flex items-center justify-center mb-4 md:mb-6" style={{ width: 120, height: 110 }}>
                   {/* Большая полупрозрачная цифра */}
                   <span
                     className="absolute font-black select-none leading-none"
@@ -453,18 +452,18 @@ export default function OtdelkaBani() {
                     src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/7456542a-a8b6-4854-a6db-866e3b8ed4d8.png"
                     alt=""
                     className="absolute select-none pointer-events-none"
-                    style={{ width: 70, height: 70, bottom: 0, left: -10, objectFit: "contain", opacity: 0.7, transform: "scaleX(-1)" }}
+                    style={{ width: 55, height: 55, bottom: 0, left: -8, objectFit: "contain", opacity: 0.7, transform: "scaleX(-1)" }}
                   />
                   {/* Иконка по центру */}
                   <div
                     className="relative z-10 flex items-center justify-center rounded-2xl"
-                    style={{ width: 72, height: 72, backgroundColor: "#f0f7f0", border: "2px solid #c8e6c8" }}
+                    style={{ width: 58, height: 58, backgroundColor: "#f0f7f0", border: "2px solid #c8e6c8" }}
                   >
-                    <Icon name={r.icon as "Home"} size={32} style={{ color: "#3a7a3a" }} />
+                    <Icon name={r.icon as "Home"} size={26} style={{ color: "#3a7a3a" }} />
                   </div>
                 </div>
-                <h3 className="font-bold text-base text-zinc-900 mb-2 leading-snug">{r.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{r.desc}</p>
+                <h3 className="font-bold text-sm md:text-base text-zinc-900 mb-1 md:mb-2 leading-snug">{r.title}</h3>
+                <p className="text-zinc-500 text-xs md:text-sm leading-relaxed">{r.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -472,20 +471,20 @@ export default function OtdelkaBani() {
       </section>
 
       {/* Этапы работ */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#f4f4f4" }}>
+      <section className="py-12 md:py-20 px-4 md:px-6" style={{ backgroundColor: "#f4f4f4" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-12"
+            className="mb-8 md:mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-black uppercase text-zinc-900 mb-3">
-              Берём полную ответственность<br />от начала до конца проекта
+            <h2 className="text-2xl md:text-4xl font-black uppercase text-zinc-900 mb-3">
+              Берём полную ответственность от начала до конца проекта
             </h2>
-            <p className="text-zinc-600 text-lg">
-              Полный цикл работ выполняется от 7 до 14 дней,<br />в зависимости от сложности работ.
+            <p className="text-zinc-600 text-base md:text-lg">
+              Полный цикл работ выполняется от 7 до 14 дней, в зависимости от сложности работ.
             </p>
           </motion.div>
 
@@ -557,7 +556,7 @@ export default function OtdelkaBani() {
       </section>
 
       {/* Баннер: Сделаем отделку */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#ffffff" }}>
+      <section className="py-10 md:py-16 px-4 md:px-6" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -567,7 +566,7 @@ export default function OtdelkaBani() {
             className="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center"
             style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
           >
-            <div className="p-10 md:p-12">
+            <div className="p-6 md:p-10 lg:p-12">
               <h2 className="text-2xl md:text-3xl font-black text-zinc-900 mb-4 leading-tight">
                 Сделаем отделку бани и сауны по одному из наших готовых проектов или разработаем для вас индивидуальный дизайн
               </h2>
@@ -811,7 +810,7 @@ export default function OtdelkaBani() {
       </section>
 
       {/* Баннер: Как избежать затрат */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+      <section className="py-10 md:py-16 px-4 md:px-6" style={{ backgroundColor: "#f0ede8" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -821,7 +820,7 @@ export default function OtdelkaBani() {
             className="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center"
             style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
           >
-            <div className="p-10 md:p-12">
+            <div className="p-6 md:p-10 lg:p-12">
               <p className="text-base font-bold uppercase mb-2" style={{ color: "#3a7a3a" }}>
                 Как избежать неожиданных затрат?
               </p>
@@ -852,19 +851,19 @@ export default function OtdelkaBani() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+      <section className="py-10 md:py-16 px-4 md:px-6" style={{ backgroundColor: "#f0ede8" }}>
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-black uppercase text-zinc-900 mb-2">
+            <h2 className="text-2xl md:text-4xl font-black uppercase text-zinc-900 mb-2">
               Вопросы, на которые
             </h2>
-            <h2 className="text-3xl md:text-4xl font-black uppercase" style={{ color: "#3a7a3a" }}>
+            <h2 className="text-2xl md:text-4xl font-black uppercase" style={{ color: "#3a7a3a" }}>
               у нас уже есть ответ
             </h2>
           </motion.div>
@@ -880,10 +879,10 @@ export default function OtdelkaBani() {
                 style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
               >
                 <button
-                  className="w-full flex items-center justify-between px-6 py-5 text-left"
+                  className="w-full flex items-center justify-between px-4 md:px-6 py-4 md:py-5 text-left"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-                  <span className="font-semibold text-zinc-900 text-base pr-4">{item.q}</span>
+                  <span className="font-semibold text-zinc-900 text-sm md:text-base pr-4">{item.q}</span>
                   <span
                     className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-transform duration-200"
                     style={{ border: "1.5px solid #aaa" }}
@@ -896,7 +895,7 @@ export default function OtdelkaBani() {
                   </span>
                 </button>
                 {openFaq === i && (
-                  <div className="px-6 pb-5 text-zinc-600 text-sm leading-relaxed border-t border-zinc-200 pt-4">
+                  <div className="px-4 md:px-6 pb-4 md:pb-5 text-zinc-600 text-sm leading-relaxed border-t border-zinc-200 pt-4">
                     {item.a}
                   </div>
                 )}
@@ -908,7 +907,7 @@ export default function OtdelkaBani() {
 
       {/* CTA */}
       <section
-        className="py-16 px-6 text-center"
+        className="py-12 md:py-16 px-4 md:px-6 text-center"
         style={{ background: "linear-gradient(135deg, #1a3a1a 0%, #2d5a2d 100%)" }}
       >
         <div className="max-w-2xl mx-auto">
@@ -918,15 +917,15 @@ export default function OtdelkaBani() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 uppercase">
+            <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase">
               Хотите идеальную баню?
             </h2>
-            <p className="text-zinc-300 mb-8 text-lg">
+            <p className="text-zinc-300 mb-6 md:mb-8 text-base md:text-lg">
               Оставьте заявку — рассчитаем стоимость бесплатно и пришлём 3D-визуализацию
             </p>
             <button
               onClick={() => setIsFormOpen(true)}
-              className="px-10 py-4 rounded-xl font-black text-black text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
+              className="w-full md:w-auto px-6 md:px-10 py-4 rounded-xl font-black text-black text-base md:text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
               style={{ backgroundColor: "#F5C518" }}
             >
               Получить расчёт бесплатно
