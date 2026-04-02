@@ -539,27 +539,16 @@ export default function OtdelkaBani() {
                     </ul>
                   </div>
                   {/* Фото справа внизу */}
-                  <div className="flex-shrink-0 flex items-end justify-center p-4" style={{ width: 130 }}>
-                    {stage.img ? (
+                  {stage.img && (
+                    <div className="flex-shrink-0 flex items-end justify-center p-4" style={{ width: 130 }}>
                       <img
                         src={stage.img}
                         alt={stage.title}
                         className="rounded-xl object-cover"
                         style={{ width: 110, height: 110 }}
                       />
-                    ) : (
-                      <div
-                        className="rounded-xl flex items-center justify-center"
-                        style={{
-                          width: 110, height: 110,
-                          backgroundColor: stage.dark ? "#2a2a2a" : "#f0f7f0",
-                          border: `1px dashed ${stage.dark ? "#444" : "#b0d0b0"}`,
-                        }}
-                      >
-                        <Icon name="ImagePlus" size={26} style={{ color: stage.dark ? "#555" : "#9ab89a" }} />
-                      </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
