@@ -250,15 +250,15 @@ export default function OtdelkaBani() {
             ].map((b, i) => (
               <div
                 key={b.text}
-                className="flex items-center gap-5 px-10 py-7"
+                className="flex flex-col md:flex-row items-center gap-2 md:gap-5 px-2 md:px-10 py-4 md:py-7"
                 style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}
               >
                 <div className="flex items-center justify-center flex-shrink-0">
-                  <img src={b.img} alt={b.text} className="w-16 h-16 object-contain" />
+                  <img src={b.img} alt={b.text} className="w-8 h-8 md:w-16 md:h-16 object-contain" />
                 </div>
-                <div>
-                  <div className="text-white font-bold text-base leading-tight">{b.text}</div>
-                  <div className="text-zinc-400 text-sm mt-0.5">{b.sub}</div>
+                <div className="text-center md:text-left">
+                  <div className="text-white font-bold text-xs md:text-base leading-tight">{b.text}</div>
+                  <div className="text-zinc-400 text-xs md:text-sm mt-0.5">{b.sub}</div>
                 </div>
               </div>
             ))}
