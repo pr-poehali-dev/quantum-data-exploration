@@ -280,7 +280,7 @@ export default function Zabory() {
             <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-5 md:mb-6">
               <span style={{ color: "#F5C518" }}>Строительство</span>
               <br />
-              <span className="text-white">заборов в Усть-Куте</span>
+              <span className="text-white whitespace-nowrap">заборов в Усть-Куте</span>
             </h1>
 
             <div
