@@ -91,7 +91,7 @@ export default function Raznorabochie() {
                     <div>
                       <div className="text-white text-sm font-medium">Telegram</div>
                       <div className="flex items-center gap-1 text-xs text-zinc-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse"></span>
                         в сети
                       </div>
                     </div>
@@ -104,7 +104,7 @@ export default function Raznorabochie() {
                     <div>
                       <div className="text-white text-sm font-medium">WhatsApp</div>
                       <div className="flex items-center gap-1 text-xs text-zinc-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse"></span>
                         в сети
                       </div>
                     </div>
@@ -127,7 +127,7 @@ export default function Raznorabochie() {
                     <div>
                       <div className="text-white text-sm font-medium">MAX</div>
                       <div className="flex items-center gap-1 text-xs text-zinc-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse"></span>
                         в сети
                       </div>
                     </div>
