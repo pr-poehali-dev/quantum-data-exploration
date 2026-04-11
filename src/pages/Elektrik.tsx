@@ -58,7 +58,7 @@ export default function Elektrik() {
             className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
           >
             <img
-              src="https://cdn.poehali.dev/files/90b9c5d2-4ab0-40fd-bb0c-1126009acdc5.png"
+              src="https://cdn.poehali.dev/files/79b5a37e-5cde-4c5d-9be7-a69f8c92785f.png"
               alt="Электрик"
               className="hidden md:block absolute pointer-events-none"
               style={{ right: "0px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
