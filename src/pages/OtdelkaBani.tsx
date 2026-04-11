@@ -182,53 +182,50 @@ export default function OtdelkaBani() {
       <FloatingLeaves />
 
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative w-full overflow-hidden" style={{ minHeight: "100svh" }}>
+        {/* Фото девушки — главное фото */}
+        <img
+          src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/22d8f2ca-8247-42ba-814d-d13a6e593ce8.jpg"
+          alt="Внутренняя отделка бань в Усть-Куте"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+
+        {/* Тёмный градиент снизу — под надпись */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0"
           style={{
-            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/17b61bfe-f7c1-45e8-8669-6a1db835f7ae.jpg')",
-            filter: "brightness(0.45)",
+            background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 35%, transparent 65%)",
           }}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.7) 60%, transparent 100%)" }} />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-24 w-full">
+        {/* Надпись под девушкой */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center pb-10 md:pb-14 px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="max-w-xl"
+            className="text-center"
           >
-            <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-5 md:mb-6">
-              <span style={{ color: "#F5C518" }}>Внутренняя отделка </span><span className="text-white">бань</span>
+            <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-6 md:mb-8 tracking-wide">
+              <span className="text-white">ВНУТРЕННЯЯ ОТДЕЛКА БАНЬ</span>
               <br />
-              <span className="text-white">в Усть-Куте</span>
+              <span style={{ color: "#F5C518" }}>В УСТЬ-КУТЕ</span>
             </h1>
 
-            <div
-              className="inline-block w-full max-w-sm px-5 md:px-8 py-5 md:py-7 rounded-2xl mb-0 relative"
-              style={{ backgroundColor: "rgba(0,0,0,0.65)", border: "1px solid rgba(245,197,24,0.3)" }}
-            >
-              <p className="text-white font-bold text-xl md:text-2xl mb-1">Идеальная баня</p>
-              <p className="font-black text-3xl md:text-4xl mb-5 md:mb-6" style={{ color: "#F5C518" }}>ЗА 7 ДНЕЙ</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="block w-full px-4 md:px-8 py-3 md:py-4 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-normal md:tracking-wide transition-all hover:opacity-90 hover:scale-105"
+                className="px-8 md:px-12 py-4 md:py-5 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
                 style={{ backgroundColor: "#F5C518" }}
               >
                 Рассчитать стоимость
               </button>
-              {/* Белая стрелка вниз к бонусам — только десктоп */}
-              <div className="hidden md:block absolute pointer-events-none" style={{ bottom: "-90px", left: "60%" }}>
-                <svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10,5 Q60,10 55,60" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-                  <path d="M45,52 L55,62 L65,50" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <div className="text-white/70 text-sm md:text-base font-medium">
+                Идеальная баня <span style={{ color: "#F5C518" }} className="font-bold">за 7 дней</span>
               </div>
             </div>
           </motion.div>
         </div>
-
       </section>
 
       {/* Бонусы — наезжают на белый блок */}
