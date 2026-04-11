@@ -182,7 +182,7 @@ export default function OtdelkaBani() {
       <FloatingLeaves />
 
       {/* HERO */}
-      <section className="relative w-full overflow-hidden" style={{ minHeight: "100svh" }}>
+      <section className="relative w-full overflow-hidden" style={{ minHeight: "70svh" }}>
         {/* Фото девушки — главное фото */}
         <img
           src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/22d8f2ca-8247-42ba-814d-d13a6e593ce8.jpg"
