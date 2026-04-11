@@ -218,14 +218,11 @@ export default function OtdelkaBani() {
               <button
                 onClick={() => setIsFormOpen(true)}
                 className="px-8 md:px-12 py-4 md:py-5 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
-                style={{ backgroundColor: "#F5C518", boxShadow: "0 0 0 2px #F5C518, 0 0 0 5px rgba(245,197,24,0.3)" }}
+                style={{ backgroundColor: "#F5C518" }}
               >
                 Рассчитать стоимость
               </button>
-              <div
-                className="text-white text-sm md:text-base font-medium px-6 py-4 rounded-xl"
-                style={{ border: "2px solid rgba(255,255,255,0.4)", backdropFilter: "blur(4px)", background: "rgba(0,0,0,0.25)" }}
-              >
+              <div className="text-white/80 text-sm md:text-base font-medium">
                 Идеальная баня <span style={{ color: "#F5C518" }} className="font-bold">за 7 дней</span>
               </div>
             </div>
@@ -233,40 +230,7 @@ export default function OtdelkaBani() {
         </div>
       </section>
 
-      {/* Бонусы — наезжают на белый блок */}
-      <div className="relative z-10 px-4 md:px-6 max-w-6xl mx-auto w-full" style={{ marginTop: "-36px", marginBottom: "-36px" }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="w-full rounded-2xl overflow-hidden"
-          style={{ boxShadow: "0 12px 50px rgba(0,0,0,0.5)" }}
-        >
-          <div
-            className="grid grid-cols-1 md:grid-cols-3"
-            style={{ backgroundColor: "#1a1a1a" }}
-          >
-            {[
-              { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b1357e7d-2e8c-4267-bbef-09138cf6c386.png", text: "3D-дизайн", sub: "в подарок" },
-              { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b0cfe89a-b74c-4534-8126-b963b7591620.png", text: "Расчёт сметы", sub: "бесплатно" },
-              { img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/07f30a49-3adc-4e52-946a-aefc555cf204.png", text: "Гарантия на всё", sub: "1 год" },
-            ].map((b, i) => (
-              <div
-                key={b.text}
-                className={`flex flex-row items-center gap-4 px-6 py-5 md:gap-5 md:px-10 md:py-7 ${i < 2 ? "border-b md:border-b-0 md:border-r border-white/10" : ""}`}
-              >
-                <div className="flex items-center justify-center flex-shrink-0">
-                  <img src={b.img} alt={b.text} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-                </div>
-                <div>
-                  <div className="text-white font-bold text-sm md:text-base leading-tight">{b.text}</div>
-                  <div className="text-zinc-400 text-sm md:text-sm mt-0.5">{b.sub}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+
 
       {/* О компании — 3 карточки со статистикой */}
       <section className="px-6 pt-24 pb-20" style={{ backgroundColor: "#ffffff" }}>
