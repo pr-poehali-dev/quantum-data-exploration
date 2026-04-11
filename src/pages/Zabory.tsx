@@ -310,37 +310,7 @@ export default function Zabory() {
         </div>
       </section>
 
-      {/* Бонусы */}
-      <div className="relative z-10 px-4 md:px-6 max-w-6xl mx-auto w-full" style={{ marginTop: "-36px", marginBottom: "-36px" }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="w-full rounded-2xl overflow-hidden"
-          style={{ boxShadow: "0 12px 50px rgba(0,0,0,0.5)" }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ backgroundColor: "#1a1a1a" }}>
-            {[
-              { icon: "Ruler", text: "Замер бесплатно", sub: "выезд на объект" },
-              { icon: "ShieldCheck", text: "Гарантия на работу", sub: "всё по договору" },
-              { icon: "BadgeDollarSign", text: "Фиксированная цена", sub: "без доплат" },
-            ].map((b, i) => (
-              <div
-                key={b.text}
-                className={`flex flex-row items-center gap-4 px-6 py-5 md:gap-5 md:px-10 md:py-7 ${i < 2 ? "border-b md:border-b-0 md:border-r border-white/10" : ""}`}
-              >
-                <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl" style={{ backgroundColor: "#F5C518" }}>
-                  <Icon name={b.icon as "Home"} size={22} className="text-black" />
-                </div>
-                <div>
-                  <div className="text-white font-bold text-sm md:text-base leading-tight">{b.text}</div>
-                  <div className="text-zinc-400 text-sm mt-0.5">{b.sub}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+
 
       {/* О компании */}
       <section className="px-4 md:px-6 pt-24 pb-12 md:pb-20" style={{ backgroundColor: "#ffffff" }}>
