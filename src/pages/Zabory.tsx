@@ -298,7 +298,8 @@ export default function Zabory() {
               animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
             >
-              <p className="text-black font-black text-lg uppercase tracking-wide mb-0.5">🔥 Акция! До конца месяца</p>
+              <p className="text-black font-black text-lg uppercase tracking-wide mb-0.5">🔥 Акция!</p>
+              <p className="text-black font-bold text-sm uppercase tracking-wide mb-1">До конца месяца</p>
               <p className="text-black text-sm leading-snug">Закажите строительство или установку забора сейчас и получите скидку до <span className="font-black text-base">-20%</span></p>
             </motion.div>
           </motion.div>
