@@ -187,7 +187,7 @@ export default function OtdelkaBani() {
         <img
           src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/22d8f2ca-8247-42ba-814d-d13a6e593ce8.jpg"
           alt="Внутренняя отделка бань в Усть-Куте"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center 10%" }}
         />
 
         {/* Тёмный градиент снизу — под надпись */}
