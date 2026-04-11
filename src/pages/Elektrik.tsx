@@ -144,6 +144,17 @@ export default function Elektrik() {
           </motion.div>
         </div>
 
+        {/* Плашка минимальная стоимость */}
+        <div className="w-full flex justify-center px-4 md:px-10 mb-8">
+          <div className="w-full max-w-6xl">
+            <div className="inline-flex items-center gap-3 bg-yellow-500/10 border border-yellow-500/30 rounded-2xl px-6 py-4">
+              <Icon name="Zap" size={20} className="text-yellow-400 shrink-0" />
+              <span className="text-zinc-300 text-sm">Минимальная стоимость вызова электрика —</span>
+              <span className="text-yellow-400 font-black text-lg">от 2 500 ₽</span>
+            </div>
+          </div>
+        </div>
+
         {/* Физические и юридические лица */}
         <div className="w-full flex justify-center px-4 md:px-10 mb-12">
           <div className="w-full max-w-6xl grid md:grid-cols-2 gap-6">
