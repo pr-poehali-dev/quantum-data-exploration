@@ -261,40 +261,36 @@ export default function Zabory() {
 
       {/* HERO */}
       <section className="relative min-h-[90vh] flex items-stretch overflow-hidden">
-        <div className="flex flex-col md:flex-row w-full">
-          {/* Левая плашка с текстом */}
+        {/* Фото на весь фон */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/67fc18e2-525e-46af-b907-eaae1030397b.jpg')",
+          }}
+        />
+
+        {/* Левая плашка поверх фото */}
+        <div className="relative z-10 flex items-stretch w-full">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="flex flex-col justify-center px-8 md:px-14 py-14 md:py-20 w-full md:w-5/12 z-10"
-            style={{ backgroundColor: "#1a1a1a" }}
+            className="flex flex-col justify-center px-10 md:px-16 py-16 md:py-24 w-full md:w-5/12"
+            style={{ backgroundColor: "rgba(80, 85, 60, 0.92)" }}
           >
-            <h1 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-6">
-              <span style={{ color: "#F5C518" }}>Строительство</span>
-              <br />
-              <span className="text-white">заборов</span>
-              <br />
-              <span className="text-white">в Усть-Куте</span>
+            <h1 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-6 text-white">
+              Строительство<br />заборов<br />в Усть-Куте
             </h1>
-            <p className="text-white/70 text-lg mb-2 font-semibold">Под ключ</p>
-            <p className="font-black text-2xl md:text-3xl mb-8" style={{ color: "#F5C518" }}>ЗАМЕР БЕСПЛАТНО</p>
+            <p className="text-white/80 text-xl font-semibold mb-2">Под ключ</p>
+            <p className="font-black text-2xl md:text-3xl mb-10 text-white">ЗАМЕР БЕСПЛАТНО</p>
             <button
               onClick={() => setIsFormOpen(true)}
-              className="px-8 py-4 rounded-xl font-bold text-black text-base uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105 w-full md:w-auto"
+              className="px-8 py-4 font-bold text-black text-base uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105 w-full md:w-auto"
               style={{ backgroundColor: "#F5C518" }}
             >
               Получить расчёт
             </button>
           </motion.div>
-
-          {/* Правая часть — фото забора */}
-          <div
-            className="w-full md:w-7/12 min-h-[300px] bg-cover bg-center"
-            style={{
-              backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/67fc18e2-525e-46af-b907-eaae1030397b.jpg')",
-            }}
-          />
         </div>
       </section>
 
