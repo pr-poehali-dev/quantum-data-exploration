@@ -265,12 +265,12 @@ export default function Zabory() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.08) 0%, transparent 60%)" }} />
 
         {/* Картинка дома с забором справа */}
-        <div className="absolute bottom-0 right-0 w-full md:w-3/5 h-full flex items-end justify-end pointer-events-none select-none">
+        <div className="absolute bottom-0 right-0 w-full md:w-4/5 h-full flex items-end justify-end pointer-events-none select-none">
           <img
             src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6d36bdbc-faac-42f6-8599-f4382704f706.png"
             alt="Дом с забором"
             className="w-full object-contain object-bottom"
-            style={{ maxHeight: "85vh" }}
+            style={{ maxHeight: "100vh" }}
           />
         </div>
 
