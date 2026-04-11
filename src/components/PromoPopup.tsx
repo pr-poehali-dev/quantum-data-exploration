@@ -70,9 +70,9 @@ export function PromoPopup() {
               transition={{ type: "spring", damping: 20, stiffness: 260 }}
             >
               {/* Gradient bg */}
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900" />
+              <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 pointer-events-none" />
               <div
-                className="absolute inset-0 opacity-20"
+                className="absolute inset-0 opacity-20 pointer-events-none"
                 style={{
                   background:
                     "radial-gradient(ellipse at top left, #F5C518 0%, transparent 60%), radial-gradient(ellipse at bottom right, #ea580c 0%, transparent 60%)",
@@ -81,7 +81,7 @@ export function PromoPopup() {
 
               {/* Sparkling border */}
               <div
-                className="absolute inset-0 rounded-3xl"
+                className="absolute inset-0 rounded-3xl pointer-events-none"
                 style={{
                   padding: "1.5px",
                   background: "linear-gradient(135deg, #F5C518, #ea580c, #F5C518)",
@@ -94,7 +94,7 @@ export function PromoPopup() {
               {/* Close button */}
               <button
                 onClick={close}
-                className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
+                className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
               >
                 <Icon name="X" size={16} />
               </button>
