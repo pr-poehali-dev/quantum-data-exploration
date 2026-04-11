@@ -603,7 +603,7 @@ export default function Zabory() {
             </div>
             <div className="hidden md:flex items-end justify-center overflow-hidden">
               <img
-                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/84becc4b-7c3a-44c1-bce2-0fb4a7a74965.png"
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/0fb842fa-893a-46e7-a931-e567d6f24832.png"
                 alt="Забор"
                 className="object-contain rounded-lg"
                 style={{ height: "460px", maxWidth: "100%" }}
