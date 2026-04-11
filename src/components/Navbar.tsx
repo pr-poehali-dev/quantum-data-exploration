@@ -22,6 +22,7 @@ const servicesMenu = [
   { label: "Сборка мебели", href: "/sborka-mebeli", description: "Шкафы, кухни, кровати, прихожие" },
   { label: "Плотник", href: "/plotnik", description: "Двери, ламинат, обшивка, полки" },
   { label: "Отделка бань и саун", href: "/otdelka-bani", description: "Внутренняя отделка под ключ" },
+  { label: "Электрик", href: "/elektrik", description: "Проводка, розетки, щитки, техника" },
 ]
 
 export function Navbar() {
