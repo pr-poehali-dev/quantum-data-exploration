@@ -264,6 +264,19 @@ export default function Zabory() {
         {/* Декоративный градиент слева */}
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.08) 0%, transparent 60%)" }} />
 
+        {/* Облака */}
+        <svg className="absolute top-0 left-0 w-full pointer-events-none select-none" style={{ zIndex: 2, opacity: 0.18 }} viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="200" cy="80" rx="160" ry="55" fill="white"/>
+          <ellipse cx="320" cy="65" rx="120" ry="45" fill="white"/>
+          <ellipse cx="100" cy="90" rx="100" ry="40" fill="white"/>
+          <ellipse cx="700" cy="60" rx="130" ry="48" fill="white"/>
+          <ellipse cx="820" cy="45" rx="100" ry="38" fill="white"/>
+          <ellipse cx="620" cy="72" rx="90" ry="35" fill="white"/>
+          <ellipse cx="1150" cy="75" rx="150" ry="52" fill="white"/>
+          <ellipse cx="1280" cy="55" rx="110" ry="42" fill="white"/>
+          <ellipse cx="1060" cy="88" rx="95" ry="36" fill="white"/>
+        </svg>
+
         {/* Картинка дома с забором справа */}
         <div className="absolute bottom-0 right-0 w-full md:w-4/5 h-full flex items-end justify-end pointer-events-none select-none">
           <img
