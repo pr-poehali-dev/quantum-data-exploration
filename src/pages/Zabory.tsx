@@ -260,64 +260,53 @@ export default function Zabory() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #0f1a0f 0%, #1a2e1a 50%, #0d1a0d 100%)" }}>
-        {/* Декоративный градиент слева */}
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.08) 0%, transparent 60%)" }} />
+      <section className="relative flex flex-col overflow-hidden" style={{ minHeight: "90vh", background: "linear-gradient(180deg, #c8dfe8 0%, #e8f4e8 40%, #f5f5f0 100%)" }}>
 
-        {/* Облака */}
-        <svg className="absolute top-0 left-0 w-full pointer-events-none select-none" style={{ zIndex: 2, opacity: 0.18 }} viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="200" cy="80" rx="160" ry="55" fill="white"/>
-          <ellipse cx="320" cy="65" rx="120" ry="45" fill="white"/>
-          <ellipse cx="100" cy="90" rx="100" ry="40" fill="white"/>
-          <ellipse cx="700" cy="60" rx="130" ry="48" fill="white"/>
-          <ellipse cx="820" cy="45" rx="100" ry="38" fill="white"/>
-          <ellipse cx="620" cy="72" rx="90" ry="35" fill="white"/>
-          <ellipse cx="1150" cy="75" rx="150" ry="52" fill="white"/>
-          <ellipse cx="1280" cy="55" rx="110" ry="42" fill="white"/>
-          <ellipse cx="1060" cy="88" rx="95" ry="36" fill="white"/>
-        </svg>
-
-        {/* Картинка дома с забором справа */}
-        <div className="absolute bottom-0 right-0 w-full md:w-4/5 h-full flex items-end justify-end pointer-events-none select-none">
+        {/* Картинка дома с забором — по центру-справа */}
+        <div className="absolute bottom-16 right-0 w-full md:w-3/4 pointer-events-none select-none" style={{ zIndex: 1 }}>
           <img
             src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6d36bdbc-faac-42f6-8599-f4382704f706.png"
             alt="Дом с забором"
             className="w-full object-contain object-bottom"
-            style={{ maxHeight: "100vh" }}
           />
         </div>
 
-        {/* Затемнение справа для плавного перехода */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,20,10,1) 30%, rgba(10,20,10,0.6) 55%, transparent 80%)" }} />
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-24 w-full">
+        {/* Основной контент */}
+        <div className="relative z-10 flex-1 flex flex-col justify-center max-w-6xl mx-auto px-6 md:px-10 w-full pt-16 pb-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="max-w-xl"
           >
-            <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-5 md:mb-6">
-              <span style={{ color: "#F5C518" }}>Строительство</span>
-              <br />
-              <span className="text-white whitespace-nowrap">заборов в Усть-Куте</span>
-            </h1>
-
-            <div
-              className="inline-block w-full max-w-sm px-5 md:px-8 py-5 md:py-7 rounded-2xl mb-0 relative"
-              style={{ backgroundColor: "rgba(0,0,0,0.55)", border: "1px solid rgba(245,197,24,0.3)" }}
+            <h1
+              className="text-5xl md:text-8xl leading-none mb-4 text-zinc-900"
+              style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
-              <p className="text-white font-bold text-xl md:text-2xl mb-1">Под ключ</p>
-              <p className="font-black text-3xl md:text-4xl mb-5 md:mb-6" style={{ color: "#F5C518" }}>ЗАМЕР БЕСПЛАТНО</p>
-              <button
-                onClick={() => setIsFormOpen(true)}
-                className="block w-full px-4 md:px-8 py-3 md:py-4 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-normal md:tracking-wide transition-all hover:opacity-90 hover:scale-105"
-                style={{ backgroundColor: "#F5C518" }}
-              >
-                Получить расчёт
-              </button>
-            </div>
+              Заборы<br />в Усть-Куте
+            </h1>
+            <p className="text-sm md:text-base font-bold tracking-widest text-zinc-500 uppercase mb-2">
+              Профнастил &nbsp;|&nbsp; Евроштакетник &nbsp;|&nbsp; Рабица
+            </p>
           </motion.div>
+        </div>
+
+        {/* Нижние кнопки-плашки */}
+        <div className="relative z-10 w-full" style={{ background: "rgba(255,255,255,0.75)", backdropFilter: "blur(8px)" }}>
+          <div className="max-w-6xl mx-auto grid grid-cols-3">
+            {[
+              { label: "ЗАБОРЫ" },
+              { label: "ВОРОТА" },
+              { label: "ЗАМЕР БЕСПЛАТНО" },
+            ].map((item, i) => (
+              <button
+                key={item.label}
+                onClick={() => setIsFormOpen(true)}
+                className={`py-5 md:py-7 text-sm md:text-base font-bold tracking-widest text-zinc-800 uppercase transition-all hover:bg-white/80 ${i < 2 ? "border-r border-zinc-200" : ""}`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
