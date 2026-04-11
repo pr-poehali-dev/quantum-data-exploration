@@ -300,7 +300,7 @@ export default function Zabory() {
         </div>
 
         {/* Нижние кнопки-плашки */}
-        <div className="relative z-10 w-full" style={{ background: "rgba(255,255,255,0.75)", backdropFilter: "blur(8px)" }}>
+        <div className="relative z-10 w-full" style={{ background: "rgba(200,223,232,0.85)", backdropFilter: "blur(8px)" }}>
           <div className="max-w-6xl mx-auto grid grid-cols-3">
             {[
               { label: "ЗАБОРЫ" },
