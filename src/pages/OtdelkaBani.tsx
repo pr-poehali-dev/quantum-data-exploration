@@ -199,7 +199,7 @@ export default function OtdelkaBani() {
         />
 
         {/* Надпись под девушкой */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center pb-10 md:pb-14 px-4">
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center pb-6 md:pb-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -207,22 +207,25 @@ export default function OtdelkaBani() {
             className="text-center"
           >
             <h1
-              className="text-4xl md:text-6xl leading-tight mb-6 md:mb-8 text-white"
+              className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10 text-white"
               style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
               Внутренняя отделка бань<br />
               <span style={{ color: "#F5C518" }}>в Усть-Куте</span>
             </h1>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={() => setIsFormOpen(true)}
                 className="px-8 md:px-12 py-4 md:py-5 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105"
-                style={{ backgroundColor: "#F5C518" }}
+                style={{ backgroundColor: "#F5C518", boxShadow: "0 0 0 2px #F5C518, 0 0 0 5px rgba(245,197,24,0.3)" }}
               >
                 Рассчитать стоимость
               </button>
-              <div className="text-white/70 text-sm md:text-base font-medium">
+              <div
+                className="text-white text-sm md:text-base font-medium px-6 py-4 rounded-xl"
+                style={{ border: "2px solid rgba(255,255,255,0.4)", backdropFilter: "blur(4px)", background: "rgba(0,0,0,0.25)" }}
+              >
                 Идеальная баня <span style={{ color: "#F5C518" }} className="font-bold">за 7 дней</span>
               </div>
             </div>
