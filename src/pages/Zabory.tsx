@@ -282,7 +282,7 @@ export default function Zabory() {
             transition={{ duration: 0.7 }}
           >
             <h1
-              className="text-5xl md:text-8xl leading-none mb-4 text-zinc-900"
+              className="text-4xl md:text-6xl leading-tight mb-4 text-zinc-900"
               style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
               Строительство<br />и установка заборов<br />в Усть-Куте
