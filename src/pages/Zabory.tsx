@@ -606,7 +606,7 @@ export default function Zabory() {
                 src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/84becc4b-7c3a-44c1-bce2-0fb4a7a74965.png"
                 alt="Забор"
                 className="object-contain rounded-lg"
-                style={{ height: "340px", maxWidth: "100%" }}
+                style={{ height: "460px", maxWidth: "100%" }}
               />
             </div>
           </motion.div>
