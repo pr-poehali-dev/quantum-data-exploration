@@ -287,9 +287,15 @@ export default function Zabory() {
             >
               Строительство<br />и установка заборов<br />в Усть-Куте
             </h1>
-            <p className="text-sm md:text-base font-bold tracking-widest text-zinc-500 uppercase mb-2">
+            <p className="text-sm md:text-base font-bold tracking-widest text-zinc-500 uppercase mb-6">
               Профнастил &nbsp;|&nbsp; Евроштакетник &nbsp;|&nbsp; Рабица
             </p>
+
+            {/* Акция */}
+            <div className="inline-block rounded-2xl px-6 py-4 max-w-xs" style={{ backgroundColor: "#F5C518" }}>
+              <p className="text-black font-black text-lg uppercase tracking-wide mb-0.5">🔥 Акция! До конца месяца</p>
+              <p className="text-black text-sm leading-snug">Закажите строительство или установку забора сейчас и получите скидку до <span className="font-black text-base">-20%</span></p>
+            </div>
           </motion.div>
         </div>
 
