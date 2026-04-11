@@ -61,7 +61,7 @@ export default function Elektrik() {
               src="https://cdn.poehali.dev/files/d2969d14-44e2-4a27-90dc-2ca7f3180bd2.png"
               alt="Электрик"
               className="hidden md:block absolute pointer-events-none"
-              style={{ right: "0px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
+              style={{ right: "-60px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
             />
             <div className="grid md:grid-cols-[1fr_420px]">
               <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
