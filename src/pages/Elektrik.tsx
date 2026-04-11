@@ -212,7 +212,6 @@ export default function Elektrik() {
         </div>
 
         <AdvantagesSection />
-        <PricingSection />
         <WhyUsSection />
         <TestimonialsSection />
         <CTASection />
