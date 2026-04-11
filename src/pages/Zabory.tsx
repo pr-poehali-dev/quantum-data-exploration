@@ -584,7 +584,7 @@ export default function Zabory() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center"
-            style={{ backgroundColor: "#e8e4dc", border: "1px solid #d5d0c5" }}
+            style={{ backgroundColor: "#f5f2ea", border: "1px solid #d5d0c5" }}
           >
             <div className="p-6 md:p-10 lg:p-12">
               <h2 className="text-2xl md:text-3xl font-black text-zinc-900 mb-4 leading-tight">
