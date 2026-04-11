@@ -206,10 +206,12 @@ export default function OtdelkaBani() {
             transition={{ duration: 0.7 }}
             className="text-center"
           >
-            <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-6 md:mb-8 tracking-wide">
-              <span className="text-white">ВНУТРЕННЯЯ ОТДЕЛКА БАНЬ</span>
-              <br />
-              <span style={{ color: "#F5C518" }}>В УСТЬ-КУТЕ</span>
+            <h1
+              className="text-4xl md:text-6xl leading-tight mb-6 md:mb-8 text-white"
+              style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
+            >
+              Внутренняя отделка бань<br />
+              <span style={{ color: "#F5C518" }}>в Усть-Куте</span>
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
