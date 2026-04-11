@@ -264,7 +264,7 @@ export default function Zabory() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/ad70d08b-edd6-4333-bb83-6becc3bd58b5.jpg')",
+            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/dfbc5487-fcae-4587-b650-76185a963ceb.jpg')",
             filter: "brightness(0.65)",
           }}
         />
