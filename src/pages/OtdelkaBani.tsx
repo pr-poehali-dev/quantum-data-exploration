@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer"
 import { OrderForm } from "@/components/OrderForm"
 import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
+import { FloatingLeaves } from "@/components/FloatingLeaves"
 
 
 const stats = [
@@ -177,6 +178,8 @@ export default function OtdelkaBani() {
         <meta name="description" content="Внутренняя отделка бань и саун в Усть-Куте под ключ. Более 20 лет опыта, 8000+ проектов. Идеальная баня за 7 дней. Звоните!" />
       </Helmet>
       <Navbar />
+
+      <FloatingLeaves />
 
       {/* HERO */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
