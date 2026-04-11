@@ -260,36 +260,43 @@ export default function Zabory() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-stretch overflow-hidden">
-        {/* Фото на весь фон */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/bcab7f82-5af7-4110-97eb-439e9a49aa22.jpg')",
+            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/e654d5a2-221b-404f-942f-d8789e2db474.jpg')",
+            filter: "brightness(0.65)",
           }}
         />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.75) 60%, transparent 100%)" }} />
 
-        {/* Левая плашка поверх фото */}
-        <div className="relative z-10 flex items-stretch w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-24 w-full">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="flex flex-col justify-center px-10 md:px-16 py-16 md:py-24 w-full md:w-5/12"
-            style={{ backgroundColor: "rgba(80, 85, 60, 0.92)" }}
+            className="max-w-xl"
           >
-            <h1 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-6 text-white">
-              Строительство<br />заборов<br />в Усть-Куте
+            <h1 className="text-3xl md:text-6xl font-black uppercase leading-tight mb-5 md:mb-6">
+              <span style={{ color: "#F5C518" }}>Строительство</span>
+              <br />
+              <span className="text-white whitespace-nowrap">заборов в Усть-Куте</span>
             </h1>
-            <p className="text-white/80 text-xl font-semibold mb-2">Под ключ</p>
-            <p className="font-black text-2xl md:text-3xl mb-10 text-white">ЗАМЕР БЕСПЛАТНО</p>
-            <button
-              onClick={() => setIsFormOpen(true)}
-              className="px-8 py-4 font-bold text-black text-base uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105 w-full md:w-auto"
-              style={{ backgroundColor: "#F5C518" }}
+
+            <div
+              className="inline-block w-full max-w-sm px-5 md:px-8 py-5 md:py-7 rounded-2xl mb-0 relative"
+              style={{ backgroundColor: "rgba(0,0,0,0.65)", border: "1px solid rgba(245,197,24,0.3)" }}
             >
-              Получить расчёт
-            </button>
+              <p className="text-white font-bold text-xl md:text-2xl mb-1">Под ключ</p>
+              <p className="font-black text-3xl md:text-4xl mb-5 md:mb-6" style={{ color: "#F5C518" }}>ЗАМЕР БЕСПЛАТНО</p>
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="block w-full px-4 md:px-8 py-3 md:py-4 rounded-xl font-bold text-black text-base md:text-lg uppercase tracking-normal md:tracking-wide transition-all hover:opacity-90 hover:scale-105"
+                style={{ backgroundColor: "#F5C518" }}
+              >
+                Получить расчёт
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
