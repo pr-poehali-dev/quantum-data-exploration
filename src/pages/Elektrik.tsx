@@ -133,10 +133,13 @@ export default function Elektrik() {
                   </a>
                 </div>
               </div>
-              <div className="hidden md:flex items-center justify-center p-8">
-                <div className="w-48 h-48 rounded-full bg-yellow-500/10 flex items-center justify-center">
-                  <Icon name="Zap" size={80} className="text-yellow-400" />
-                </div>
+              <div className="hidden md:block relative">
+                <img
+                  src="https://cdn.poehali.dev/files/90b9c5d2-4ab0-40fd-bb0c-1126009acdc5.png"
+                  alt="Электрик"
+                  className="absolute pointer-events-none"
+                  style={{ right: "0px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
+                />
               </div>
             </div>
           </motion.div>
