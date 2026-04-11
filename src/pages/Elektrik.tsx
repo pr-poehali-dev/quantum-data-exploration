@@ -57,6 +57,12 @@ export default function Elektrik() {
             transition={{ duration: 0.4 }}
             className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
           >
+            <img
+              src="https://cdn.poehali.dev/files/90b9c5d2-4ab0-40fd-bb0c-1126009acdc5.png"
+              alt="Электрик"
+              className="hidden md:block absolute pointer-events-none"
+              style={{ right: "20px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
+            />
             <div className="grid md:grid-cols-[1fr_420px]">
               <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
@@ -133,14 +139,7 @@ export default function Elektrik() {
                   </a>
                 </div>
               </div>
-              <div className="hidden md:block relative">
-                <img
-                  src="https://cdn.poehali.dev/files/90b9c5d2-4ab0-40fd-bb0c-1126009acdc5.png"
-                  alt="Электрик"
-                  className="absolute pointer-events-none"
-                  style={{ right: "0px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
-                />
-              </div>
+              <div className="hidden md:block" />
             </div>
           </motion.div>
         </div>
