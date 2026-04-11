@@ -271,6 +271,9 @@ export default function Zabory() {
           />
         </div>
 
+        {/* Плавный переход слева — текст не перекрывает картинку */}
+        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2, background: "linear-gradient(to right, rgba(232,244,232,1) 0%, rgba(232,244,232,0.85) 25%, rgba(232,244,232,0.3) 45%, transparent 65%)" }} />
+
         {/* Основной контент */}
         <div className="relative z-10 flex-1 flex flex-col justify-center max-w-6xl mx-auto px-6 md:px-10 w-full pt-4 pb-8">
           <motion.div
