@@ -260,15 +260,22 @@ export default function Zabory() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/e654d5a2-221b-404f-942f-d8789e2db474.jpg')",
-            filter: "brightness(0.65)",
-          }}
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.75) 60%, transparent 100%)" }} />
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #0f1a0f 0%, #1a2e1a 50%, #0d1a0d 100%)" }}>
+        {/* Декоративный градиент слева */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.08) 0%, transparent 60%)" }} />
+
+        {/* Картинка дома с забором справа */}
+        <div className="absolute bottom-0 right-0 w-full md:w-3/5 h-full flex items-end justify-end pointer-events-none select-none">
+          <img
+            src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6d36bdbc-faac-42f6-8599-f4382704f706.png"
+            alt="Дом с забором"
+            className="w-full object-contain object-bottom"
+            style={{ maxHeight: "85vh" }}
+          />
+        </div>
+
+        {/* Затемнение справа для плавного перехода */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,20,10,1) 30%, rgba(10,20,10,0.6) 55%, transparent 80%)" }} />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-24 w-full">
           <motion.div
@@ -285,7 +292,7 @@ export default function Zabory() {
 
             <div
               className="inline-block w-full max-w-sm px-5 md:px-8 py-5 md:py-7 rounded-2xl mb-0 relative"
-              style={{ backgroundColor: "rgba(0,0,0,0.65)", border: "1px solid rgba(245,197,24,0.3)" }}
+              style={{ backgroundColor: "rgba(0,0,0,0.55)", border: "1px solid rgba(245,197,24,0.3)" }}
             >
               <p className="text-white font-bold text-xl md:text-2xl mb-1">Под ключ</p>
               <p className="font-black text-3xl md:text-4xl mb-5 md:mb-6" style={{ color: "#F5C518" }}>ЗАМЕР БЕСПЛАТНО</p>
