@@ -265,7 +265,7 @@ export default function Zabory() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/e654d5a2-221b-404f-942f-d8789e2db474.jpg')",
-            filter: "brightness(0.4)",
+            filter: "brightness(0.65)",
           }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.75) 60%, transparent 100%)" }} />
