@@ -265,7 +265,7 @@ export default function Zabory() {
         {/* Картинка дома с забором — по центру-справа */}
         <div className="absolute bottom-16 right-0 w-full md:w-3/4 pointer-events-none select-none" style={{ zIndex: 1 }}>
           <img
-            src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/6d36bdbc-faac-42f6-8599-f4382704f706.png"
+            src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2140eb80-07dc-465d-922f-a5c23b699f83.png"
             alt="Дом с забором"
             className="w-full object-contain object-bottom"
           />
