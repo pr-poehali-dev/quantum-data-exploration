@@ -272,7 +272,7 @@ export default function Zabory() {
         </div>
 
         {/* Основной контент */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center max-w-6xl mx-auto px-6 md:px-10 w-full pt-16 pb-8">
+        <div className="relative z-10 flex-1 flex flex-col justify-start max-w-6xl mx-auto px-6 md:px-10 w-full pt-8 pb-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
