@@ -285,7 +285,7 @@ export default function Zabory() {
               className="text-5xl md:text-8xl leading-none mb-4 text-zinc-900"
               style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
-              Строительство<br />и установка<br />заборов<br />в Усть-Куте
+              Строительство и установка заборов в Усть-Куте
             </h1>
             <p className="text-sm md:text-base font-bold tracking-widest text-zinc-500 uppercase mb-2">
               Профнастил &nbsp;|&nbsp; Евроштакетник &nbsp;|&nbsp; Рабица
