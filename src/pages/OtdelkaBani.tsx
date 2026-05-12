@@ -217,21 +217,7 @@ export default function OtdelkaBani() {
         </div>
       </section>
 
-      {/* Жёлтая плашка */}
-      <div className="w-full" style={{ backgroundColor: "#F5C518" }}>
-        <div className="max-w-6xl mx-auto px-4 md:px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-black font-bold text-xl md:text-2xl" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
-            Идеальная баня <span className="font-black">за 7 дней</span>
-          </div>
-          <button
-            onClick={() => setIsFormOpen(true)}
-            className="px-8 md:px-12 py-3 md:py-4 rounded-xl font-bold text-white text-base md:text-lg uppercase tracking-wide transition-all hover:opacity-90 hover:scale-105 whitespace-nowrap"
-            style={{ backgroundColor: "#1a1a1a" }}
-          >
-            Рассчитать стоимость
-          </button>
-        </div>
-      </div>
+
 
       {/* О компании — 3 карточки со статистикой */}
       <section className="px-6 pt-24 pb-20" style={{ backgroundColor: "#ffffff" }}>
