@@ -23,6 +23,7 @@ const servicesMenu = [
   { label: "Плотник", href: "/plotnik", description: "Двери, ламинат, обшивка, полки" },
   { label: "Отделка бань и саун", href: "/otdelka-bani", description: "Внутренняя отделка под ключ" },
   { label: "Электрик", href: "/elektrik", description: "Проводка, розетки, щитки, техника" },
+  { label: "Сантехник", href: "/santehnik", description: "Трубы, смесители, протечки, монтаж" },
 ]
 
 export function Navbar() {
