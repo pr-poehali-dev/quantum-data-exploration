@@ -4,7 +4,6 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { OrderForm } from "@/components/OrderForm"
 import { AdvantagesSection } from "@/components/AdvantagesSection"
-import { PricingSection } from "@/components/PricingSection"
 import { WhyUsSection } from "@/components/WhyUsSection"
 import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { CTASection } from "@/components/CTASection"
@@ -186,7 +185,6 @@ export default function Gruzchiki() {
         </div>
 
         <AdvantagesSection />
-        <PricingSection />
         <WhyUsSection />
         <TestimonialsSection />
         <CTASection />
