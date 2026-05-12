@@ -132,7 +132,14 @@ export default function Santehnik() {
                   </a>
                 </div>
               </div>
-              <div className="hidden md:block" />
+              <div className="hidden md:flex items-end justify-center overflow-hidden">
+                <img
+                  src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/4ff86e0c-6342-4d86-9cb4-1508f21548db.png"
+                  alt="Сантехник"
+                  className="h-full w-auto object-contain object-bottom"
+                  style={{ maxHeight: "480px" }}
+                />
+              </div>
             </div>
           </motion.div>
         </div>
