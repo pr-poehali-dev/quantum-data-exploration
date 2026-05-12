@@ -76,7 +76,7 @@ const Index = () => {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="text-zinc-400 text-lg md:text-2xl mt-4 mb-10 max-w-xl"
           >
-            Первый сервис разнорабочих в Усть‑Куте
+            Первый сервис бытовых услуг в Усть‑Куте
           </motion.p>
 
           <motion.button
