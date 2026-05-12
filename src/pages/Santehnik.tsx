@@ -213,6 +213,67 @@ export default function Santehnik() {
         <AdvantagesSection />
         <WhyUsSection />
         <TestimonialsSection />
+
+        {/* Отзывы с микроразметкой для Яндекса */}
+        <section
+          className="py-16 px-4 md:px-10"
+          style={{ backgroundColor: "#111113" }}
+          itemScope
+          itemType="https://schema.org/LocalBusiness"
+        >
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-2">
+                Оценки клиентов — сантехник в Усть-Куте
+              </h2>
+              <div className="flex items-center justify-center gap-2 mt-3" itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map(i => (
+                    <span key={i} style={{ color: "#F5C518", fontSize: 22 }}>★</span>
+                  ))}
+                </div>
+                <span className="text-white font-bold text-xl" itemProp="ratingValue">5.0</span>
+                <span className="text-zinc-400 text-sm">(<span itemProp="reviewCount">34</span> отзыва)</span>
+                <meta itemProp="bestRating" content="5" />
+                <meta itemProp="worstRating" content="1" />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                { name: "Ирина М.", date: "2026-03-15", text: "Вызвала сантехника — прорвало трубу под раковиной. Приехал через час, всё починил аккуратно. Цена честная, без накруток." },
+                { name: "Сергей К.", date: "2026-02-20", text: "Заменили смеситель и унитаз за один визит. Работа выполнена качественно, мастер вежливый и опрятный. Рекомендую!" },
+                { name: "Людмила Н.", date: "2026-04-05", text: "Установили стиральную машину и подключили к водопроводу. Всё работает отлично, никаких протечек. Буду обращаться ещё." },
+              ].map((r) => (
+                <div
+                  key={r.name}
+                  className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col gap-3"
+                  itemProp="review"
+                  itemScope
+                  itemType="https://schema.org/Review"
+                >
+                  <div className="flex gap-1" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+                    {[1,2,3,4,5].map(i => (
+                      <span key={i} style={{ color: "#F5C518" }}>★</span>
+                    ))}
+                    <meta itemProp="ratingValue" content="5" />
+                    <meta itemProp="bestRating" content="5" />
+                  </div>
+                  <p className="text-zinc-300 text-sm leading-relaxed flex-1" itemProp="reviewBody">"{r.text}"</p>
+                  <div className="flex items-center justify-between pt-3 border-t border-zinc-800">
+                    <span className="text-white font-semibold text-sm" itemProp="author" itemScope itemType="https://schema.org/Person">
+                      <span itemProp="name">{r.name}</span>
+                    </span>
+                    <time className="text-zinc-500 text-xs" itemProp="datePublished" dateTime={r.date}>
+                      {new Date(r.date).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" })}
+                    </time>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <CTASection />
         <Footer />
       </div>
