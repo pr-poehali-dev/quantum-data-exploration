@@ -74,9 +74,18 @@ const Index = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-zinc-400 text-lg md:text-2xl mt-4 mb-10 max-w-xl"
+            className="text-zinc-400 text-lg md:text-2xl mt-4 mb-4 max-w-xl"
           >
-            Первый сервис бытовых услуг в Усть‑Куте
+            Сервис бытовых услуг в Усть‑Куте
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.32 }}
+            className="text-zinc-500 text-sm md:text-base mb-10 max-w-lg"
+          >
+            Мастер на час · Сантехник · Электрик · Сборка мебели · Грузчики
           </motion.p>
 
           <motion.button
