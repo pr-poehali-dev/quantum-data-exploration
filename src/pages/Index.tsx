@@ -85,7 +85,7 @@ const Index = () => {
             transition={{ duration: 0.5, delay: 0.32 }}
             className="text-zinc-500 text-sm md:text-base mb-10 max-w-lg"
           >
-            Мастер на час · Сантехник · Электрик · Сборка мебели · Грузчики
+            Мастер на час · Сантехник · Электрик · Грузчики
           </motion.p>
 
           <motion.button
