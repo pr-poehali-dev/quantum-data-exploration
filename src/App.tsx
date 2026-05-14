@@ -19,7 +19,8 @@ import Plotnik from "./pages/Plotnik";
 import Zabory from "./pages/Zabory";
 import OtdelkaBani from "./pages/OtdelkaBani";
 import Elektrik from "./pages/Elektrik";
-import Santehnik from "./pages/Santehnik";
+import Santehnik from "./pages/Santehnik"
+import Klining from "./pages/Klining";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner"
 import { PromoPopup } from "./components/PromoPopup";
@@ -49,6 +50,7 @@ const App = () => (
             <Route path="/otdelka-bani" element={<OtdelkaBani />} />
             <Route path="/elektrik" element={<Elektrik />} />
             <Route path="/santehnik" element={<Santehnik />} />
+            <Route path="/klining" element={<Klining />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

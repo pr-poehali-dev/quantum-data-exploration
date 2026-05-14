@@ -24,6 +24,7 @@ const servicesMenu = [
   { label: "Отделка бань и саун", href: "/otdelka-bani", description: "Внутренняя отделка под ключ" },
   { label: "Электрик", href: "/elektrik", description: "Проводка, розетки, щитки, техника" },
   { label: "Сантехник", href: "/santehnik", description: "Трубы, смесители, протечки, монтаж" },
+  { label: "Клининг", href: "/klining", description: "Уборка квартир, офисов, химчистка" },
 ]
 
 export function Navbar() {
