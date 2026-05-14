@@ -156,14 +156,19 @@ export function Navbar() {
               Контакты
             </Link>
 
-            <a
-              href="tel:+79500990931"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-sm font-bold"
-              style={{ backgroundColor: "#F5C518", color: "#09090B" }}
-            >
-              <Icon name="Phone" size={16} />
-              Позвонить
-            </a>
+            <div className="flex items-center gap-3">
+              <div className="relative flex items-center justify-center w-9 h-9 flex-shrink-0">
+                <span className="absolute inline-flex rounded-full w-9 h-9 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
+                <span className="absolute inline-flex rounded-full w-11 h-11 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.15)", animationDuration: "1.4s", animationDelay: "0.3s" }} />
+                <span className="relative flex items-center justify-center w-9 h-9 rounded-full" style={{ backgroundColor: "#F5C518" }}>
+                  <Icon name="Phone" size={16} style={{ color: "#09090B" }} />
+                </span>
+              </div>
+              <div className="flex flex-col leading-tight">
+                <a href="tel:+79500990931" className="text-sm font-bold text-white hover:text-yellow-400 transition-colors">+7 (950) 099-09-31</a>
+                <a href="tel:+73953270234" className="text-xs text-zinc-400 hover:text-yellow-400 transition-colors">8 (3953) 27-02-34</a>
+              </div>
+            </div>
           </div>
 
           {/* Mobile controls */}
@@ -270,6 +275,19 @@ export function Navbar() {
             >
               Контакты
             </Link>
+            <div className="flex items-center gap-3 pt-2 pb-1">
+              <div className="relative flex items-center justify-center w-9 h-9 flex-shrink-0">
+                <span className="absolute inline-flex rounded-full w-9 h-9 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
+                <span className="absolute inline-flex rounded-full w-11 h-11 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.15)", animationDuration: "1.4s", animationDelay: "0.3s" }} />
+                <span className="relative flex items-center justify-center w-9 h-9 rounded-full" style={{ backgroundColor: "#F5C518" }}>
+                  <Icon name="Phone" size={16} style={{ color: "#09090B" }} />
+                </span>
+              </div>
+              <div className="flex flex-col leading-tight">
+                <a href="tel:+79500990931" className="text-base font-bold text-white">+7 (950) 099-09-31</a>
+                <a href="tel:+73953270234" className="text-sm text-zinc-400">8 (3953) 27-02-34</a>
+              </div>
+            </div>
           </div>
         </div>
       )}
