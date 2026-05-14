@@ -256,6 +256,52 @@ export default function Klining() {
           </div>
         </section>
 
+        {/* Мойка окон — акция */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+              <div className="grid md:grid-cols-2">
+                <div className="p-8 md:p-10 bg-gray-50">
+                  <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">Все окна и балконы в квартире по единой цене!</h2>
+                  <p className="text-gray-500 text-center mb-8">Закажите мытьё всех окон и балкона</p>
+                  <div className="mb-5">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Как проходит мойка окон</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Мойщик приезжает в назначенное время со всем необходимым оборудованием и профессиональными моющими средствами. По окончании работ вам остаётся лишь принять работу.</p>
+                  </div>
+                  <div className="mb-6">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Что мы поможем?</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Мойщик помоет окна с обеих сторон, рамы внутри и снаружи, подоконники и откосы. При заказе мытья окон и балконов — моются все окна и балконы в квартире, независимо от количества.</p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm border-2 hover:opacity-80 transition-opacity" style={{ borderColor: "#25D366", color: "#25D366" }}>
+                      <Icon name="MessageCircle" size={16} />Написать WhatsApp
+                    </a>
+                    <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm border-2 hover:opacity-80 transition-opacity" style={{ borderColor: "#2AABEE", color: "#2AABEE" }}>
+                      <Icon name="Send" size={16} />Написать Telegram
+                    </a>
+                  </div>
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                  <div className="relative mb-5">
+                    <div className="rounded-2xl p-6 text-center bg-white border-2" style={{ borderColor: ORANGE }}>
+                      <div className="text-4xl font-extrabold mb-1" style={{ color: ORANGE }}>3 000 руб.</div>
+                      <div className="text-gray-500 text-sm">Цена не зависит от количества окон в квартире</div>
+                    </div>
+                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center text-white text-xs font-extrabold text-center leading-tight" style={{ backgroundColor: "#e53e3e" }}>АКЦИЯ</div>
+                  </div>
+                  <p className="text-gray-700 font-medium mb-3 text-sm">Оставьте заявку</p>
+                  <div className="flex flex-col gap-2 mb-3">
+                    <label className="flex items-center gap-2 text-gray-600 text-sm cursor-pointer"><input type="radio" name="windows" defaultChecked className="accent-orange-500" />Окна и балконы</label>
+                    <label className="flex items-center gap-2 text-gray-600 text-sm cursor-pointer"><input type="radio" name="windows" className="accent-orange-500" />Только окна</label>
+                  </div>
+                  <input type="tel" placeholder="+7 (000) 000-00-00" className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm outline-none focus:border-orange-400 transition-colors mb-3 bg-white" />
+                  <a href="tel:+79500990931" className="block w-full py-3 rounded-xl text-white font-bold text-sm text-center hover:opacity-90 transition-opacity" style={{ backgroundColor: ORANGE }}>Отправить заявку</a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Прайс */}
         <section className="py-12 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -392,87 +438,6 @@ export default function Klining() {
                 </div>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Мойка окон — акция */}
-        <section className="py-12 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-3xl overflow-hidden border border-gray-100 shadow-sm"
-            >
-              <div className="grid md:grid-cols-2">
-                <div className="p-8 md:p-10 bg-gray-50">
-                  <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">
-                    Все окна и балконы в квартире по единой цене!
-                  </h2>
-                  <p className="text-gray-500 text-center mb-8">Закажите мытьё всех окон и балкона</p>
-                  <div className="mb-5">
-                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Как проходит мойка окон</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Мойщик приезжает в назначенное время со всем необходимым оборудованием и профессиональными моющими средствами. По окончании работ вам остаётся лишь принять работу.
-                    </p>
-                  </div>
-                  <div className="mb-6">
-                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Что мы поможем?</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Мойщик помоет окна с обеих сторон, рамы внутри и снаружи, подоконники и откосы. При заказе мытья окон и балконов — моются все окна и балконы в квартире, независимо от количества.
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm border-2 hover:opacity-80 transition-opacity"
-                      style={{ borderColor: "#25D366", color: "#25D366" }}>
-                      <Icon name="MessageCircle" size={16} />
-                      Написать WhatsApp
-                    </a>
-                    <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm border-2 hover:opacity-80 transition-opacity"
-                      style={{ borderColor: "#2AABEE", color: "#2AABEE" }}>
-                      <Icon name="Send" size={16} />
-                      Написать Telegram
-                    </a>
-                  </div>
-                </div>
-                <div className="p-8 md:p-10 flex flex-col justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
-                  <div className="relative mb-5">
-                    <div className="rounded-2xl p-6 text-center bg-white border-2" style={{ borderColor: ORANGE }}>
-                      <div className="text-4xl font-extrabold mb-1" style={{ color: ORANGE }}>3 000 руб.</div>
-                      <div className="text-gray-500 text-sm">Цена не зависит от количества окон в квартире</div>
-                    </div>
-                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center text-white text-xs font-extrabold text-center leading-tight" style={{ backgroundColor: "#e53e3e" }}>
-                      АКЦИЯ
-                    </div>
-                  </div>
-                  <p className="text-gray-700 font-medium mb-3 text-sm">Оставьте заявку</p>
-                  <div className="flex flex-col gap-2 mb-3">
-                    <label className="flex items-center gap-2 text-gray-600 text-sm cursor-pointer">
-                      <input type="radio" name="windows" defaultChecked className="accent-orange-500" />
-                      Окна и балконы
-                    </label>
-                    <label className="flex items-center gap-2 text-gray-600 text-sm cursor-pointer">
-                      <input type="radio" name="windows" className="accent-orange-500" />
-                      Только окна
-                    </label>
-                  </div>
-                  <input
-                    type="tel"
-                    placeholder="+7 (000) 000-00-00"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm outline-none focus:border-orange-400 transition-colors mb-3 bg-white"
-                  />
-                  <a
-                    href="tel:+79500990931"
-                    className="block w-full py-3 rounded-xl text-white font-bold text-sm text-center hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: ORANGE }}
-                  >
-                    Отправить заявку
-                  </a>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
