@@ -87,13 +87,16 @@ export default function Klining() {
         <section className="pt-28 mt-8 pb-0 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #fdf6f2 0%, #fff9f7 100%)" }}>
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
             <div className="flex-1 py-12 relative z-10">
-              <div className="flex flex-wrap items-start gap-3 mb-5">
+              <div className="mb-5">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                  Клининговые услуги в Усть-Куте
+                  Клининговые услуги в{" "}
+                  <span className="inline-flex items-baseline gap-2 whitespace-nowrap">
+                    Усть-Куте
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-white text-sm font-bold" style={{ backgroundColor: ORANGE, transform: "rotate(-8deg)", display: "inline-flex", verticalAlign: "middle", position: "relative", top: "-4px" }}>
+                      от 50 р./м²
+                    </span>
+                  </span>
                 </h1>
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-white text-sm font-bold mt-1" style={{ backgroundColor: ORANGE }}>
-                  от 50 р./м²
-                </span>
               </div>
               <p className="text-gray-500 text-lg mb-6">
                 Профессиональная уборка квартир, домов,<br />офисов и коммерческих помещений
