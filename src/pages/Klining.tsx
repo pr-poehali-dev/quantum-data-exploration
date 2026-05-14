@@ -88,8 +88,11 @@ export default function Klining() {
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
             <div className="flex-1 py-12 relative z-10">
               <div className="mb-5">
+                <div className="mb-3">
+                  <span className="px-4 py-2 rounded-2xl text-white text-base font-bold inline-block" style={{ backgroundColor: ORANGE, transform: "rotate(-6deg)" }}>от 50 р./м²</span>
+                </div>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                  Клининговые услуги в Усть-Куте{" "}<span className="px-4 py-2 rounded-2xl text-white text-base font-bold" style={{ backgroundColor: ORANGE, transform: "rotate(-6deg)", display: "inline-block", position: "relative", top: "-4px" }}>от 50 р./м²</span>
+                  Клининговые услуги в Усть-Куте
                 </h1>
               </div>
               <p className="text-gray-500 text-lg mb-6">
