@@ -143,7 +143,7 @@ export default function Klining() {
 
             <div className="hidden md:flex flex-1 justify-end items-end self-stretch">
               <img
-                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2768df91-13a5-440c-8740-756c54951b24.png"
+                src="https://cdn.poehali.dev/files/0f9d20cf-531b-4bc5-a6bd-5234c550a356.png"
                 alt="Клинер"
                 className="h-[460px] w-auto object-contain object-bottom"
               />
