@@ -302,45 +302,7 @@ export default function Klining() {
           </div>
         </section>
 
-        {/* Прайс */}
-        <section className="py-12 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-10"
-            >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Цены на уборку</h2>
-              <p className="text-gray-500">Фиксированные цены без скрытых доплат</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
-            >
-              <div className="grid grid-cols-4 px-6 py-4" style={{ backgroundColor: ORANGE }}>
-                <div className="text-white text-sm font-bold">Тип помещения</div>
-                <div className="text-white text-sm font-bold text-center">Генеральная</div>
-                <div className="text-white text-sm font-bold text-center">Поддерживающая</div>
-                <div className="text-white text-sm font-bold text-center">После ремонта</div>
-              </div>
-              {prices.map((p, i) => (
-                <div
-                  key={p.type}
-                  className={`grid grid-cols-4 px-6 py-4 ${i % 2 === 0 ? "bg-white" : "bg-orange-50"} ${i !== prices.length - 1 ? "border-b border-gray-100" : ""}`}
-                >
-                  <div className="text-gray-800 font-medium text-sm">{p.type}</div>
-                  <div className="text-center font-bold text-sm" style={{ color: ORANGE }}>{p.general}</div>
-                  <div className="text-center font-bold text-sm" style={{ color: ORANGE }}>{p.support}</div>
-                  <div className="text-center font-bold text-sm" style={{ color: ORANGE }}>{p.afterRepair}</div>
-                </div>
-              ))}
-            </motion.div>
-            <p className="text-gray-400 text-xs mt-3">* Точная стоимость рассчитывается после осмотра. Выезд для оценки — бесплатно.</p>
-          </div>
-        </section>
+
 
         {/* Почему мы + форма */}
         <section className="py-12 px-6 bg-gray-50">
