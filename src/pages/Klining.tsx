@@ -476,6 +476,172 @@ export default function Klining() {
           </div>
         </section>
 
+        {/* Интерактивная карта комнаты */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Что входит в уборку</h2>
+              <p className="text-gray-500">Мы убираем каждый уголок вашего дома</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              className="relative rounded-3xl overflow-hidden border border-gray-100 shadow-sm"
+              style={{ minHeight: 420 }}
+            >
+              <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/faeba036-d45d-4743-8028-b5a24fc6d89a.png"
+                alt="Что входит в уборку" className="w-full object-cover" />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Наше оборудование */}
+        <section className="py-12 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Наше оборудование</h2>
+              <p className="text-gray-600 text-base mb-1">Все наши бригады оснащены всем необходимым оборудованием для уборки.</p>
+              <p className="text-base">
+                <span style={{ color: ORANGE }} className="font-bold">Мы выполняем любые виды уборок,</span>{" "}
+                <span className="text-gray-600">в работе мы используем профессиональную технику Karcher и химию GRASS и Pro-Brite</span>
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-3 gap-5">
+              {[
+                { title: "Профессиональные пылесосы Karcher", desc: "Мощный помощник в уборке любых видов загрязнений. Сбора как мелкого и крупного, влажного или сухого мусора.", icon: "Wind" },
+                { title: "Профессиональные парогенераторы Karcher", desc: "Оптимальный для очистки разных поверхностей от разных загрязнений без использования химии.", icon: "Zap" },
+                { title: "Профессиональные экстракторы Karcher", desc: "Для химчистки ковровых покрытий, мягкой мебели, штор и матрасов.", icon: "Droplets" },
+              ].map((eq, i) => (
+                <motion.div key={eq.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  className="bg-white rounded-2xl p-6 border-2 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
+                  style={{ borderColor: `${ORANGE}33` }}
+                >
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                    <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
+                  </div>
+                  <h3 className="font-extrabold text-gray-900 text-base">{eq.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{eq.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 4 шага */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                <span style={{ color: ORANGE }}>4 шага</span> для идеальной чистоты Вашего дома
+              </h2>
+            </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+              {[
+                { num: "1", title: "Заявка", desc: "Оставьте заявку, позвоните или пишите нам в мессенджеры.", hasButtons: true },
+                { num: "2", title: "Консультация", desc: "Менеджер проконсультирует и рассчитает стоимость.", hasButtons: false },
+                { num: "3", title: "Уборка", desc: "Приезжает бригада и выполняет уборку.", hasButtons: false },
+                { num: "4", title: "Проверка и оплата", desc: "После проверки уборки оплачиваете удобным для Вас способом.", hasButtons: false },
+              ].map((step, i) => (
+                <motion.div key={step.num} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm relative"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center text-white font-extrabold text-base flex-shrink-0" style={{ backgroundColor: ORANGE }}>
+                      {step.num}
+                    </div>
+                    <h3 className="font-extrabold text-gray-900 text-base flex items-center gap-1">
+                      {step.title} <span className="text-gray-400">→</span>
+                    </h3>
+                  </div>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{step.desc}</p>
+                  {step.hasButtons && (
+                    <div className="flex gap-2">
+                      <a href="tel:+79500990931" className="px-4 py-2 rounded-xl text-white text-sm font-bold hover:opacity-90 transition-opacity" style={{ backgroundColor: ORANGE }}>
+                        Заявка
+                      </a>
+                      <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-xl text-sm font-bold border-2 hover:opacity-80 transition-opacity" style={{ borderColor: ORANGE, color: ORANGE }}>
+                        WhatsApp
+                      </a>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Точность цены 100% */}
+        <section className="py-12 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              className="rounded-3xl border-2 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8"
+              style={{ borderColor: `${ORANGE}44`, backgroundColor: "#fff" }}
+            >
+              <div className="flex-1">
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-3" style={{ color: ORANGE }}>
+                  Хотите узнать стоимость уборки с точностью 100%?
+                </h2>
+                <p className="text-gray-600 text-base leading-relaxed mb-6">
+                  Пришлите нам фото объекта в любой мессенджер и мы рассчитаем стоимость уборки с точностью{" "}
+                  <strong style={{ color: ORANGE }}>100%</strong> за несколько минут. Цена не изменится по приезду!
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#25D366" }}>
+                    <Icon name="MessageCircle" size={18} className="text-white" />
+                    Написать в WhatsApp
+                  </a>
+                  <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#2AABEE" }}>
+                    <Icon name="Send" size={18} className="text-white" />
+                    Написать в Telegram
+                  </a>
+                </div>
+              </div>
+              <div className="hidden md:block flex-shrink-0">
+                <div className="w-40 h-40 rounded-3xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                  <Icon name="Smartphone" size={64} style={{ color: ORANGE }} />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Акции */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Акции</h2>
+              <p className="text-gray-500">Выгодные предложения для наших клиентов</p>
+            </motion.div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: "Мойка окон в подарок!", badge: "bg-orange-100 text-orange-600", desc: "Закажи генеральную или уборку после ремонта и получи мойку всех комнатных окон в подарок.", note: "В акцию не входит балконное и панорамное остекление." },
+                { title: "Холодильник внутри в подарок!", badge: "bg-orange-100 text-orange-600", desc: "При заказе уборки чеком выше 15 000 ₽, холодильник внутри помоем бесплатно.", note: "" },
+                { title: "Скидка 30% на химчистку", badge: "bg-orange-100 text-orange-600", desc: "При заказе уборки химчистка мебели, матрасов, ковров со скидкой 30%.", note: "" },
+              ].map((promo, i) => (
+                <motion.div key={promo.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  className="rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+                >
+                  <div className="h-12 flex items-center px-5" style={{ backgroundColor: ORANGE_LIGHT }}>
+                    <span className="font-bold text-sm" style={{ color: ORANGE }}>Действует до: 1 сентября 2026</span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-extrabold text-lg mb-2" style={{ color: ORANGE }}>{promo.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-2">{promo.desc}</p>
+                    {promo.note && <p className="text-xs mb-4" style={{ color: ORANGE }}>{promo.note}</p>}
+                    <a href="tel:+79500990931"
+                      className="inline-flex items-center px-5 py-2.5 rounded-xl text-white text-sm font-bold hover:opacity-90 transition-opacity mt-2"
+                      style={{ backgroundColor: ORANGE }}>
+                      Заказать
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-12 px-6" style={{ backgroundColor: "#fdf6f2" }}>
           <div className="max-w-6xl mx-auto">
