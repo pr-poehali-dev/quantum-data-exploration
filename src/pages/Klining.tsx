@@ -145,7 +145,7 @@ export default function Klining() {
               <img
                 src="https://cdn.poehali.dev/files/0f9d20cf-531b-4bc5-a6bd-5234c550a356.png"
                 alt="Клинер"
-                className="h-[460px] w-auto object-contain object-bottom"
+                className="h-[600px] w-auto object-contain object-bottom"
               />
             </div>
           </div>
