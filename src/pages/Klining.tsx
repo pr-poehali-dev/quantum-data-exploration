@@ -441,19 +441,14 @@ export default function Klining() {
                   className="bg-white rounded-2xl p-6 border-2 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
                   style={{ borderColor: `${ORANGE}33` }}
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex-1">
-                      <h3 className="font-extrabold text-gray-900 text-base mb-2">{eq.title}</h3>
-                      <p className="text-gray-500 text-sm leading-relaxed">{eq.desc}</p>
-                    </div>
-                    {eq.img ? (
-                      <img src={eq.img} alt={eq.title} className="w-24 h-24 object-contain flex-shrink-0" />
-                    ) : (
-                      <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: ORANGE_LIGHT }}>
-                        <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
-                      </div>
-                    )}
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                    <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
                   </div>
+                  <h3 className="font-extrabold text-gray-900 text-base">{eq.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{eq.desc}</p>
+                  {eq.img && (
+                    <img src={eq.img} alt={eq.title} className="w-full object-contain mt-2" />
+                  )}
                 </motion.div>
               ))}
             </div>
