@@ -161,11 +161,11 @@ export default function Klining() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.08 }}
-                className="flex flex-col items-center text-center gap-3 p-5 rounded-2xl border"
-                style={{ backgroundColor: ORANGE_LIGHT, borderColor: `${ORANGE}22` }}
+                className="flex items-center gap-4 p-5 rounded-2xl bg-white border-2 shadow-md"
+                style={{ borderColor: ORANGE }}
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${ORANGE}20` }}>
-                  <Icon name={a.icon} size={22} style={{ color: ORANGE }} />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: ORANGE_LIGHT }}>
+                  <Icon name={a.icon} size={24} style={{ color: ORANGE }} />
                 </div>
                 <p className="text-gray-700 text-sm font-medium leading-snug">{a.text}</p>
               </motion.div>
