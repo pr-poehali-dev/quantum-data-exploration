@@ -84,7 +84,7 @@ export default function Klining() {
         <Navbar />
 
         {/* HERO */}
-        <section className="pt-20 mt-0 pb-0 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #fdf6f2 0%, #fff9f7 100%)" }}>
+        <section className="pt-0 mt-0 pb-0 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #fdf6f2 0%, #fff9f7 100%)" }}>
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
             <div className="flex-1 py-12 relative z-10">
               <div className="mb-5">
