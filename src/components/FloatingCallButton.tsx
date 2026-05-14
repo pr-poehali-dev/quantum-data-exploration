@@ -5,7 +5,7 @@ export function FloatingCallButton() {
   return (
     <a
       href="tel:+79500990931"
-      className="fixed bottom-8 right-6 flex items-center justify-center"
+      className="fixed bottom-24 right-6 flex items-center justify-center"
       style={{ zIndex: 2147483647 }}
       aria-label="Позвонить"
     >
