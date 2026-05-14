@@ -433,17 +433,21 @@ export default function Klining() {
             </motion.div>
             <div className="grid md:grid-cols-3 gap-5">
               {[
-                { title: "Профессиональные пылесосы Karcher", desc: "Мощный помощник в уборке любых видов загрязнений. Сбора как мелкого и крупного, влажного или сухого мусора.", icon: "Wind" },
-                { title: "Профессиональные парогенераторы Karcher", desc: "Оптимальный для очистки разных поверхностей от разных загрязнений без использования химии.", icon: "Zap" },
-                { title: "Профессиональные экстракторы Karcher", desc: "Для химчистки ковровых покрытий, мягкой мебели, штор и матрасов.", icon: "Droplets" },
+                { title: "Профессиональные пылесосы Karcher", desc: "Мощный помощник в уборке любых видов загрязнений. Сбора как мелкого и крупного, влажного или сухого мусора.", icon: "Wind", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ac3c539a-2771-41df-abb8-9a81985278b6.jpg" },
+                { title: "Профессиональные парогенераторы Karcher", desc: "Оптимальный для очистки разных поверхностей от разных загрязнений без использования химии.", icon: "Zap", img: "" },
+                { title: "Профессиональные экстракторы Karcher", desc: "Для химчистки ковровых покрытий, мягкой мебели, штор и матрасов.", icon: "Droplets", img: "" },
               ].map((eq, i) => (
                 <motion.div key={eq.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                   className="bg-white rounded-2xl p-6 border-2 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
                   style={{ borderColor: `${ORANGE}33` }}
                 >
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
-                    <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
-                  </div>
+                  {eq.img ? (
+                    <img src={eq.img} alt={eq.title} className="w-full h-36 object-contain object-center" />
+                  ) : (
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                      <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
+                    </div>
+                  )}
                   <h3 className="font-extrabold text-gray-900 text-base">{eq.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{eq.desc}</p>
                 </motion.div>
