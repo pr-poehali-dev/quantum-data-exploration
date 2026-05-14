@@ -152,7 +152,7 @@ export default function Klining() {
         </section>
 
         {/* Преимущества — 4 карточки */}
-        <section className="bg-white pt-0 pb-10 px-6 -mt-10 relative z-10">
+        <section className="bg-white pt-0 pb-10 px-6 -mt-20 relative z-10">
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
             {advantages.map((a, i) => (
               <motion.div
