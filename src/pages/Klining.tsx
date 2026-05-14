@@ -414,7 +414,7 @@ export default function Klining() {
               className="relative rounded-3xl overflow-hidden border border-gray-100 shadow-sm"
               style={{ minHeight: 420 }}
             >
-              <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/faeba036-d45d-4743-8028-b5a24fc6d89a.png"
+              <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/1e509d62-6d10-41b8-85e0-cf97af312741.png"
                 alt="Что входит в уборку" className="w-full object-cover" />
             </motion.div>
           </div>
