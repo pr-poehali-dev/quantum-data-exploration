@@ -2,382 +2,522 @@ import { motion } from "framer-motion"
 import { Helmet } from "@/components/Helmet"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
-import { AdvantagesSection } from "@/components/AdvantagesSection"
-import { WhyUsSection } from "@/components/WhyUsSection"
-import { TestimonialsSection } from "@/components/TestimonialsSection"
-import { CTASection } from "@/components/CTASection"
 import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
 
+const ORANGE = "#E8622A"
+const ORANGE_LIGHT = "#FFF0EA"
+
 const services = [
   {
-    icon: "Home",
-    title: "Генеральная уборка",
-    desc: "Полная уборка квартиры или дома: мытьё окон, плинтусов, сантехники, кухни. Уберём годами накопившиеся загрязнения.",
-    price: "от 3 000 ₽",
-    color: "#F5C518",
-    bg: "rgba(245,197,24,0.08)",
+    icon: "Sparkles",
+    title: "Уборка квартир",
+    items: ["Генеральная уборка", "Поддерживающая уборка", "Уборка после ремонта", "Уборка после праздников"],
   },
   {
-    icon: "Sparkles",
-    title: "Поддерживающая уборка",
-    desc: "Регулярная уборка для поддержания чистоты: пылесос, мытьё полов, протирка поверхностей, санузел.",
-    price: "от 1 500 ₽",
-    color: "#60a5fa",
-    bg: "rgba(96,165,250,0.08)",
+    icon: "Home",
+    title: "Уборка домов",
+    items: ["Генеральная уборка дома", "Регулярная уборка", "Уборка после строительства", "Сезонная уборка"],
   },
   {
     icon: "Building2",
-    title: "Уборка после ремонта",
-    desc: "Уберём строительную пыль, цементные разводы, остатки краски и стройматериалов. Приведём помещение в жилой вид.",
-    price: "от 4 000 ₽",
-    color: "#f97316",
-    bg: "rgba(249,115,22,0.08)",
+    title: "Коммерческая уборка",
+    items: ["Уборка офисов", "Уборка магазинов", "Уборка складов", "Уборка после мероприятий"],
   },
   {
     icon: "Sofa",
-    title: "Химчистка мягкой мебели",
-    desc: "Чистка диванов, кресел, матрасов профессиональным оборудованием. Выведем пятна, запахи, обеззаразим.",
-    price: "от 1 000 ₽",
-    color: "#a78bfa",
-    bg: "rgba(167,139,250,0.08)",
+    title: "Химчистка",
+    items: ["Химчистка диванов", "Химчистка матрасов", "Химчистка кресел", "Химчистка ковров"],
   },
-  {
-    icon: "Car",
-    title: "Уборка офисов",
-    desc: "Ежедневная или разовая уборка офисных помещений: полы, поверхности, санузлы, кухня, вынос мусора.",
-    price: "от 2 000 ₽",
-    color: "#34d399",
-    bg: "rgba(52,211,153,0.08)",
-  },
-  {
-    icon: "Droplets",
-    title: "Мытьё окон",
-    desc: "Профессиональная мойка окон снаружи и внутри. Рамы, стёкла, подоконники — без разводов и следов.",
-    price: "от 100 ₽/окно",
-    color: "#38bdf8",
-    bg: "rgba(56,189,248,0.08)",
-  },
-]
-
-const prices = [
-  { name: "Студия / 1-комн.", general: "3 000 ₽", support: "1 500 ₽", afterRepair: "4 000 ₽" },
-  { name: "2-комнатная", general: "4 000 ₽", support: "2 000 ₽", afterRepair: "5 500 ₽" },
-  { name: "3-комнатная", general: "5 500 ₽", support: "2 800 ₽", afterRepair: "7 000 ₽" },
-  { name: "4+ комнат", general: "от 7 000 ₽", support: "от 3 500 ₽", afterRepair: "от 9 000 ₽" },
-  { name: "Офис до 50 м²", general: "3 500 ₽", support: "2 000 ₽", afterRepair: "5 000 ₽" },
-  { name: "Офис до 100 м²", general: "6 000 ₽", support: "3 500 ₽", afterRepair: "8 500 ₽" },
 ]
 
 const whyItems = [
-  { icon: "ShieldCheck", title: "Проверенные клинеры", desc: "Все сотрудники прошли проверку. Работаем официально." },
-  { icon: "Package", title: "Своё оборудование", desc: "Привозим профессиональную химию и технику. Вам ничего не нужно." },
-  { icon: "Clock", title: "Выезд в день звонка", desc: "Принимаем заявки ежедневно. Приедем в удобное время." },
-  { icon: "BadgeCheck", title: "Гарантия качества", desc: "Если что-то не понравилось — бесплатно переделаем." },
-  { icon: "Wallet", title: "Фиксированная цена", desc: "Называем цену до начала работ. Никаких доплат на месте." },
-  { icon: "Leaf", title: "Безопасная химия", desc: "Используем сертифицированные средства. Безопасно для детей и животных." },
+  {
+    num: "01",
+    title: "Приезжаем вовремя.",
+    desc: "А если вдруг опоздаем — дадим скидку. Менеджер всегда с Вами на связи 24/7.",
+  },
+  {
+    num: "02",
+    title: "Фиксированная цена.",
+    desc: "После расчёта менеджером цена окончательная и не изменится по приезду бригады.",
+  },
+  {
+    num: "03",
+    title: "Бригадир контролирует.",
+    desc: "Бригаду клинеров сопровождает бригадир. Он проконтролирует уборку и сдаст её Вам.",
+  },
+  {
+    num: "04",
+    title: "Своё оборудование.",
+    desc: "Оборудование: стремянки, пылесосы, химия, тряпки, вёдра и прочее — привозим с собой.",
+  },
 ]
 
-const faq = [
-  { q: "Сколько времени занимает уборка?", a: "Зависит от площади и типа уборки. Поддерживающая уборка — 1,5–3 часа. Генеральная — 4–8 часов. Уборка после ремонта — от 6 часов." },
-  { q: "Нужно ли мне быть дома во время уборки?", a: "Не обязательно. Многие клиенты оставляют ключ или открывают дверь и уходят по делам." },
-  { q: "Вы привозите свои средства?", a: "Да, всё необходимое оборудование и профессиональную химию мы привозим с собой. Вам не нужно ничего покупать." },
-  { q: "Как оплатить услугу?", a: "Принимаем оплату наличными или переводом на карту после выполнения работ." },
-  { q: "Работаете ли вы в выходные?", a: "Да, работаем ежедневно, в том числе в выходные и праздники с 8:00 до 20:00." },
+const advantages = [
+  { icon: "ClipboardList", text: "Цена окончательная и не изменится по приезду бригады" },
+  { icon: "Package", text: "Оборудование, стремянки и химию привозим с собой" },
+  { icon: "Wallet", text: "Оплата только после оказания услуг. Никаких предоплат!" },
+  { icon: "HardHat", text: "Бригаду клинеров сопровождает бригадир" },
+]
+
+const prices = [
+  { type: "Студия", general: "2 500 ₽", support: "1 200 ₽", afterRepair: "3 500 ₽" },
+  { type: "1-комнатная", general: "3 000 ₽", support: "1 500 ₽", afterRepair: "4 000 ₽" },
+  { type: "2-комнатная", general: "4 000 ₽", support: "2 000 ₽", afterRepair: "5 500 ₽" },
+  { type: "3-комнатная", general: "5 500 ₽", support: "2 800 ₽", afterRepair: "7 000 ₽" },
+  { type: "4-комнатная", general: "7 000 ₽", support: "3 500 ₽", afterRepair: "9 000 ₽" },
+  { type: "Офис до 50 м²", general: "3 500 ₽", support: "2 000 ₽", afterRepair: "5 000 ₽" },
 ]
 
 export default function Klining() {
   return (
     <>
       <Helmet>
-        <title>Клининг в Усть-Куте | Уборка квартир, офисов — МАСТЕРОФФ</title>
-        <meta
-          name="description"
-          content="Профессиональный клининг в Усть-Куте. Генеральная и поддерживающая уборка, уборка после ремонта, химчистка мебели, мытьё окон. Выезд в день обращения. Звоните: +7 (950) 099-09-31"
-        />
-        <meta
-          name="keywords"
-          content="клининг усть-кут, уборка квартир усть-кут, генеральная уборка усть-кут, химчистка мебели усть-кут, уборка после ремонта усть-кут, клининговая компания усть-кут"
-        />
-        <meta property="og:title" content="Клининг в Усть-Куте | МАСТЕРОФФ" />
-        <meta property="og:description" content="Профессиональная уборка квартир, офисов, химчистка мебели в Усть-Куте. Выезд в день обращения." />
-        <meta property="og:type" content="website" />
+        <title>Клининг в Усть-Куте | Уборка квартир, домов, офисов — МАСТЕРОФФ</title>
+        <meta name="description" content="Профессиональный клининг в Усть-Куте. Генеральная уборка, уборка после ремонта, химчистка мебели. Выезд в день обращения. Звоните: +7 (950) 099-09-31" />
+        <meta name="keywords" content="клининг усть-кут, уборка квартир усть-кут, генеральная уборка усть-кут, химчистка мебели усть-кут, уборка после ремонта усть-кут" />
         <link rel="canonical" href="https://servismasteroff.ru/klining" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Клининг в Усть-Куте",
-          "provider": { "@type": "LocalBusiness", "name": "МАСТЕРОФФ", "telephone": "+79086461687" },
-          "areaServed": { "@type": "City", "name": "Усть-Кут" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "28", "bestRating": "5", "worstRating": "1" },
-          "review": [
-            { "@type": "Review", "author": { "@type": "Person", "name": "Ольга Р." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Заказала генеральную уборку после ремонта. Девочки отработали на отлично — всё блестит!" },
-            { "@type": "Review", "author": { "@type": "Person", "name": "Дмитрий А." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Регулярно заказываем поддерживающую уборку офиса. Всегда чисто, вовремя, без нареканий." },
-            { "@type": "Review", "author": { "@type": "Person", "name": "Татьяна В." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Почистили диван и кресло — как новые! Запах пропал, пятна вывели. Очень довольна." }
-          ]
-        })}</script>
       </Helmet>
 
-      <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
+      <div className="min-h-screen flex flex-col bg-white">
         <Navbar />
 
-        {/* Hero */}
-        <div className="w-full flex justify-center px-4 md:px-10 pt-28 mt-8 mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
-          >
-            <img
-              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2768df91-13a5-440c-8740-756c54951b24.png"
-              alt="Клининг"
-              className="hidden md:block absolute pointer-events-none"
-              style={{ right: "0px", bottom: 0, top: "auto", height: "105%", width: "auto", zIndex: 5, opacity: 0.3 }}
-            />
-
-            <div className="grid md:grid-cols-[1fr_420px]">
-              <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-5 w-fit" style={{ backgroundColor: "rgba(245,197,24,0.12)", color: "#F5C518" }}>
-                  <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 inline-block animate-pulse" />
-                  Профессиональный клининг
-                </div>
-
-                <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
-                  Уборка квартир<br />и офисов в Усть-Куте
+        {/* HERO */}
+        <section className="pt-28 mt-8 pb-0 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #fdf6f2 0%, #fff9f7 100%)" }}>
+          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
+            <div className="flex-1 py-12 relative z-10">
+              <div className="flex flex-wrap items-start gap-3 mb-5">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                  Клининговые услуги<br />в Усть-Куте
                 </h1>
+                <span className="inline-flex items-center px-4 py-2 rounded-full text-white text-sm font-bold mt-1" style={{ backgroundColor: ORANGE }}>
+                  от 50 р./м²
+                </span>
+              </div>
+              <p className="text-gray-500 text-lg mb-6">
+                Профессиональная уборка квартир, домов,<br />офисов и коммерческих помещений
+              </p>
 
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "Генеральная и поддерживающая уборка",
-                    "Уборка после ремонта и строительства",
-                    "Химчистка диванов, кресел, матрасов",
-                    "Мытьё окон без разводов",
-                    "Своё оборудование и безопасная химия",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-zinc-300 text-base">
-                      <span className="text-yellow-400 text-xl font-bold leading-none">›</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="rounded-2xl px-5 py-4 mb-7 text-gray-800 font-medium text-base" style={{ backgroundColor: "#FFF0EA", border: `1px solid ${ORANGE}44` }}>
+                Закажи уборку и получи мойку всех окон в{" "}
+                <span className="font-extrabold" style={{ color: ORANGE }}>ПОДАРОК!</span>
+              </div>
 
-                <p className="text-zinc-400 text-sm mb-3">
-                  Свяжитесь с нами для расчёта стоимости:
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
-                  <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-sky-500 transition-colors bg-zinc-800/60">
-                    <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Send" size={14} className="text-white" />
-                    </div>
-                    <div>
-                      <div className="text-white text-sm font-medium">Telegram</div>
-                      <div className="flex items-center gap-1 text-xs text-zinc-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse" />
-                        в сети
-                      </div>
-                    </div>
-                  </a>
-                  <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-green-500 transition-colors bg-zinc-800/60">
-                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-                      <Icon name="MessageCircle" size={14} className="text-white" />
-                    </div>
-                    <div>
-                      <div className="text-white text-sm font-medium">WhatsApp</div>
-                      <div className="flex items-center gap-1 text-xs text-zinc-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse" />
-                        в сети
-                      </div>
-                    </div>
-                  </a>
-                  <a href="tel:+79500990931"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60">
-                    <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Phone" size={14} className="text-white" />
-                    </div>
-                    <div>
-                      <div className="text-white text-sm font-medium">Позвонить</div>
-                      <div className="text-xs text-zinc-400">+7 (950) 099-09-31</div>
-                    </div>
-                  </a>
-                  <a href="tel:+73953270234"
-                    className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-yellow-500 transition-colors bg-zinc-800/60">
-                    <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Phone" size={14} className="text-black" />
-                    </div>
-                    <div>
-                      <div className="text-white text-sm font-medium">Городской</div>
-                      <div className="text-xs text-zinc-400">8 (3953) 27-02-34</div>
-                    </div>
-                  </a>
+              <div className="flex flex-wrap gap-5 mb-8">
+                <div className="flex items-center gap-2 text-gray-700 font-medium">
+                  <span className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
+                    <Icon name="Check" size={14} className="text-white" />
+                  </span>
+                  Уборка в день заказа
+                </div>
+                <div className="flex items-center gap-2 text-gray-700 font-medium">
+                  <span className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
+                    <Icon name="Check" size={14} className="text-white" />
+                  </span>
+                  −10% на первый заказ
                 </div>
               </div>
-              <div className="hidden md:block" />
-            </div>
-          </motion.div>
-        </div>
 
-        {/* Виды уборки */}
-        <div className="w-full flex justify-center px-4 md:px-10 mb-12">
-          <div className="w-full max-w-6xl">
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="tel:+79500990931"
+                  className="flex items-center gap-2 px-7 py-4 rounded-xl text-white font-bold text-base hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: ORANGE }}
+                >
+                  Заказать уборку
+                  <Icon name="ArrowRight" size={18} className="text-white" />
+                </a>
+                <a
+                  href="https://wa.me/79500990931"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-7 py-4 rounded-xl text-white font-bold text-base hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: "#25D366" }}
+                >
+                  Написать в WhatsApp
+                  <Icon name="MessageCircle" size={18} className="text-white" />
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden md:flex flex-1 justify-end items-end self-stretch">
+              <img
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2768df91-13a5-440c-8740-756c54951b24.png"
+                alt="Клинер"
+                className="h-[460px] w-auto object-contain object-bottom"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Преимущества — 4 карточки */}
+        <section className="bg-white py-10 px-6">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            {advantages.map((a, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, delay: i * 0.08 }}
+                className="flex flex-col items-center text-center gap-3 p-5 rounded-2xl border"
+                style={{ backgroundColor: ORANGE_LIGHT, borderColor: `${ORANGE}22` }}
+              >
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${ORANGE}20` }}>
+                  <Icon name={a.icon} size={22} style={{ color: ORANGE }} />
+                </div>
+                <p className="text-gray-700 text-sm font-medium leading-snug">{a.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Акционный баннер */}
+        <section className="py-8 px-6">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="mb-8"
+              className="rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8"
+              style={{ backgroundColor: ORANGE }}
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Виды уборки</h2>
-              <p className="text-zinc-400">Выполняем все виды клининговых работ</p>
+              <div>
+                <p className="text-orange-100 text-lg font-medium mb-1">При заказе уборки</p>
+                <h2 className="text-white text-3xl md:text-4xl font-extrabold mb-3">МОЙКА ОКОН В ПОДАРОК!</h2>
+                <p className="text-orange-100 text-base">
+                  Закажи генеральную или послестроительную уборку —<br />
+                  получи мойку всех стандартных окон в <strong className="text-white">ПОДАРОК.</strong>
+                </p>
+                <p className="text-orange-200 text-xs mt-3">*В акцию не входит балконное остекление</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+                <a
+                  href="https://wa.me/79500990931"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-6 py-4 rounded-2xl font-bold text-base hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: "white", color: ORANGE }}
+                >
+                  <Icon name="MessageCircle" size={20} style={{ color: "#25D366" }} />
+                  Написать WhatsApp
+                </a>
+                <a
+                  href="tel:+79500990931"
+                  className="flex items-center gap-3 px-6 py-4 rounded-2xl font-bold text-base text-white border-2 border-white hover:bg-white transition-all"
+                  style={{} as React.CSSProperties}
+                >
+                  <Icon name="Phone" size={20} />
+                  Или Звонок
+                </a>
+              </div>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-5">
+          </div>
+        </section>
+
+        {/* Наши услуги */}
+        <section className="py-12 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-10"
+            >
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Наши услуги</h2>
+              <p className="text-gray-500">Полный спектр клининговых услуг в Усть-Куте</p>
+            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               {services.map((s, i) => (
                 <motion.div
                   key={s.title}
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.07 }}
-                  className="rounded-2xl border border-zinc-800 p-6 flex flex-col gap-3"
-                  style={{ backgroundColor: "#111113" }}
+                  transition={{ duration: 0.35, delay: i * 0.08 }}
+                  className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: s.bg }}>
-                    <Icon name={s.icon} size={22} style={{ color: s.color }} />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: ORANGE_LIGHT }}>
+                    <Icon name={s.icon} size={22} style={{ color: ORANGE }} />
                   </div>
-                  <h3 className="text-white font-bold text-lg">{s.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed flex-1">{s.desc}</p>
-                  <div className="pt-2 border-t border-zinc-800">
-                    <span className="font-bold text-base" style={{ color: "#F5C518" }}>{s.price}</span>
-                  </div>
+                  <h3 className="font-extrabold text-gray-900 text-base mb-3">{s.title}</h3>
+                  <ul className="flex flex-col gap-2">
+                    {s.items.map(item => (
+                      <li key={item} className="flex items-center gap-2 text-gray-500 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ORANGE }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Прайс */}
-        <div className="w-full flex justify-center px-4 md:px-10 mb-12">
-          <div className="w-full max-w-6xl">
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="mb-8"
+              className="mb-10"
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Стоимость уборки</h2>
-              <p className="text-zinc-400">Фиксированные цены без скрытых доплат</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Цены на уборку</h2>
+              <p className="text-gray-500">Фиксированные цены без скрытых доплат</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="rounded-2xl border border-zinc-800 overflow-hidden"
-              style={{ backgroundColor: "#111113" }}
+              className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
             >
-              <div className="grid grid-cols-4 px-6 py-4 border-b border-zinc-800 bg-zinc-900/60">
-                <div className="text-zinc-400 text-sm font-medium">Тип помещения</div>
-                <div className="text-zinc-400 text-sm font-medium text-center">Генеральная</div>
-                <div className="text-zinc-400 text-sm font-medium text-center">Поддерживающая</div>
-                <div className="text-zinc-400 text-sm font-medium text-center">После ремонта</div>
+              <div className="grid grid-cols-4 px-6 py-4" style={{ backgroundColor: ORANGE }}>
+                <div className="text-white text-sm font-bold">Тип помещения</div>
+                <div className="text-white text-sm font-bold text-center">Генеральная</div>
+                <div className="text-white text-sm font-bold text-center">Поддерживающая</div>
+                <div className="text-white text-sm font-bold text-center">После ремонта</div>
               </div>
               {prices.map((p, i) => (
                 <div
-                  key={p.name}
-                  className={`grid grid-cols-4 px-6 py-4 ${i !== prices.length - 1 ? "border-b border-zinc-800" : ""}`}
+                  key={p.type}
+                  className={`grid grid-cols-4 px-6 py-4 ${i % 2 === 0 ? "bg-white" : "bg-orange-50"} ${i !== prices.length - 1 ? "border-b border-gray-100" : ""}`}
                 >
-                  <div className="text-white font-medium text-sm">{p.name}</div>
-                  <div className="text-center font-bold text-sm" style={{ color: "#F5C518" }}>{p.general}</div>
-                  <div className="text-center font-bold text-sm" style={{ color: "#F5C518" }}>{p.support}</div>
-                  <div className="text-center font-bold text-sm" style={{ color: "#F5C518" }}>{p.afterRepair}</div>
+                  <div className="text-gray-800 font-medium text-sm">{p.type}</div>
+                  <div className="text-center font-bold text-sm" style={{ color: ORANGE }}>{p.general}</div>
+                  <div className="text-center font-bold text-sm" style={{ color: ORANGE }}>{p.support}</div>
+                  <div className="text-center font-bold text-sm" style={{ color: ORANGE }}>{p.afterRepair}</div>
                 </div>
               ))}
             </motion.div>
-            <p className="text-zinc-500 text-xs mt-3">* Точная стоимость рассчитывается после осмотра. Выезд для оценки — бесплатно.</p>
+            <p className="text-gray-400 text-xs mt-3">* Точная стоимость рассчитывается после осмотра. Выезд для оценки — бесплатно.</p>
           </div>
-        </div>
+        </section>
 
-        {/* Почему мы */}
-        <div className="w-full flex justify-center px-4 md:px-10 mb-12">
-          <div className="w-full max-w-6xl">
+        {/* Почему мы + форма */}
+        <section className="py-12 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="mb-8"
+              className="mb-10"
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Почему выбирают нас</h2>
-              <p className="text-zinc-400">6 причин доверить уборку МАСТЕРОФФ</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                Почему стоит{" "}
+                <span style={{ color: ORANGE }}>заказать клининг</span>
+                <br />именно у нас?
+              </h2>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-5">
-              {whyItems.map((w, i) => (
-                <motion.div
-                  key={w.title}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.07 }}
-                  className="rounded-2xl border border-zinc-800 p-6 flex gap-4"
-                  style={{ backgroundColor: "#111113" }}
-                >
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(245,197,24,0.1)" }}>
-                    <Icon name={w.icon} size={20} style={{ color: "#F5C518" }} />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-base mb-1">{w.title}</h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">{w.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+
+            <div className="grid md:grid-cols-[1fr_380px] gap-8 items-start">
+              <div className="flex flex-col gap-5">
+                {whyItems.map((w, i) => (
+                  <motion.div
+                    key={w.num}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                    className="flex gap-4 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm relative overflow-hidden"
+                  >
+                    <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-gray-100 flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                      <Icon name="Sparkles" size={22} style={{ color: ORANGE }} />
+                    </div>
+                    <div className="flex-1 pr-10">
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        <span className="font-bold text-gray-800">{w.title}</span>{" "}
+                        {w.desc}
+                      </p>
+                    </div>
+                    <div
+                      className="absolute top-3 right-4 text-3xl font-extrabold select-none"
+                      style={{ color: `${ORANGE}25` }}
+                    >
+                      {w.num}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm sticky top-28"
+              >
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Не можете определиться с услугой?</h3>
+                <p className="text-gray-400 text-sm mb-5">Напишите нам в мессенджеры — мы всегда онлайн!</p>
+
+                <div className="flex gap-3 mb-5">
+                  <a
+                    href="https://wa.me/79500990931"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#25D366" }}
+                  >
+                    <Icon name="MessageCircle" size={18} className="text-white" />
+                    WhatsApp
+                  </a>
+                  <a
+                    href="https://t.me/masteroff_uk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#2AABEE" }}
+                  >
+                    <Icon name="Send" size={18} className="text-white" />
+                    Telegram
+                  </a>
+                </div>
+
+                <p className="text-gray-400 text-sm mb-4">Или оставьте свой номер и мы свяжемся с Вами в течение 5 минут.</p>
+                <div className="flex flex-col gap-3">
+                  <input
+                    type="tel"
+                    placeholder="+7 (000) 000-00-00"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-base outline-none focus:border-orange-400 transition-colors"
+                  />
+                  <a
+                    href="tel:+79500990931"
+                    className="w-full py-4 rounded-xl text-white font-bold text-base text-center hover:opacity-90 transition-opacity block"
+                    style={{ backgroundColor: ORANGE }}
+                  >
+                    Позвоните мне
+                  </a>
+                </div>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* FAQ */}
-        <div className="w-full flex justify-center px-4 md:px-10 mb-12">
-          <div className="w-full max-w-6xl">
+        {/* Мойка окон — акция */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="mb-8"
+              className="rounded-3xl overflow-hidden border border-gray-100 shadow-sm"
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Частые вопросы</h2>
-            </motion.div>
-            <div className="flex flex-col gap-4">
-              {faq.map((f, i) => (
-                <motion.div
-                  key={f.q}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.06 }}
-                  className="rounded-2xl border border-zinc-800 p-6"
-                  style={{ backgroundColor: "#111113" }}
-                >
-                  <div className="flex gap-4">
-                    <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "rgba(245,197,24,0.15)", color: "#F5C518" }}>
-                      <span className="text-xs font-bold">?</span>
+              <div className="grid md:grid-cols-2">
+                <div className="p-8 md:p-10 bg-gray-50">
+                  <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">
+                    Все окна и балконы в квартире по единой цене!
+                  </h2>
+                  <p className="text-gray-500 text-center mb-8">Закажите мытьё всех окон и балкона</p>
+                  <div className="mb-5">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Как проходит мойка окон</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Мойщик приезжает в назначенное время со всем необходимым оборудованием и профессиональными моющими средствами. По окончании работ вам остаётся лишь принять работу.
+                    </p>
+                  </div>
+                  <div className="mb-6">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Что мы поможем?</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Мойщик помоет окна с обеих сторон, рамы внутри и снаружи, подоконники и откосы. При заказе мытья окон и балконов — моются все окна и балконы в квартире, независимо от количества.
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/79500990931" target="_blank" rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm border-2 hover:opacity-80 transition-opacity"
+                      style={{ borderColor: "#25D366", color: "#25D366" }}>
+                      <Icon name="MessageCircle" size={16} />
+                      Написать WhatsApp
+                    </a>
+                    <a href="https://t.me/masteroff_uk" target="_blank" rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm border-2 hover:opacity-80 transition-opacity"
+                      style={{ borderColor: "#2AABEE", color: "#2AABEE" }}>
+                      <Icon name="Send" size={16} />
+                      Написать Telegram
+                    </a>
+                  </div>
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                  <div className="relative mb-5">
+                    <div className="rounded-2xl p-6 text-center bg-white border-2" style={{ borderColor: ORANGE }}>
+                      <div className="text-4xl font-extrabold mb-1" style={{ color: ORANGE }}>3 000 руб.</div>
+                      <div className="text-gray-500 text-sm">Цена не зависит от количества окон в квартире</div>
                     </div>
-                    <div>
-                      <h3 className="text-white font-bold text-base mb-2">{f.q}</h3>
-                      <p className="text-zinc-400 text-sm leading-relaxed">{f.a}</p>
+                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center text-white text-xs font-extrabold text-center leading-tight" style={{ backgroundColor: "#e53e3e" }}>
+                      АКЦИЯ
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <p className="text-gray-700 font-medium mb-3 text-sm">Оставьте заявку</p>
+                  <div className="flex flex-col gap-2 mb-3">
+                    <label className="flex items-center gap-2 text-gray-600 text-sm cursor-pointer">
+                      <input type="radio" name="windows" defaultChecked className="accent-orange-500" />
+                      Окна и балконы
+                    </label>
+                    <label className="flex items-center gap-2 text-gray-600 text-sm cursor-pointer">
+                      <input type="radio" name="windows" className="accent-orange-500" />
+                      Только окна
+                    </label>
+                  </div>
+                  <input
+                    type="tel"
+                    placeholder="+7 (000) 000-00-00"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm outline-none focus:border-orange-400 transition-colors mb-3 bg-white"
+                  />
+                  <a
+                    href="tel:+79500990931"
+                    className="block w-full py-3 rounded-xl text-white font-bold text-sm text-center hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: ORANGE }}
+                  >
+                    Отправить заявку
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
-        <AdvantagesSection />
-        <TestimonialsSection />
-        <CTASection />
+        {/* CTA */}
+        <section className="py-12 px-6" style={{ backgroundColor: "#fdf6f2" }}>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 bg-white border border-orange-100 shadow-sm"
+            >
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-gray-400 text-sm">Принимаем заявки ежедневно 8:00 — 20:00</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
+                  Готовы навести чистоту?{" "}
+                  <span style={{ color: ORANGE }}>Звоните!</span>
+                </h2>
+                <p className="text-gray-500 text-sm">Ответим за 2 минуты. Выезд в день обращения.</p>
+              </div>
+              <div className="flex flex-col gap-3 w-full md:w-auto min-w-[220px]">
+                <a
+                  href="tel:+79500990931"
+                  className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-bold text-base text-white hover:opacity-90 transition-opacity whitespace-nowrap"
+                  style={{ backgroundColor: ORANGE }}
+                >
+                  <Icon name="Phone" size={18} className="text-white" />
+                  +7 (950) 099-09-31
+                </a>
+                <a
+                  href="tel:+73953270234"
+                  className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-opacity border-2 whitespace-nowrap"
+                  style={{ borderColor: ORANGE, color: ORANGE }}
+                >
+                  <Icon name="Phone" size={18} />
+                  8 (3953) 27-02-34
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         <Footer />
       </div>
 
