@@ -157,12 +157,10 @@ export function Navbar() {
             </Link>
 
             <div className="flex items-center gap-3">
-              <div className="relative flex items-center justify-center w-9 h-9 flex-shrink-0">
-                <span className="absolute inline-flex rounded-full w-9 h-9 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
-                <span className="absolute inline-flex rounded-full w-11 h-11 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.15)", animationDuration: "1.4s", animationDelay: "0.3s" }} />
-                <span className="relative flex items-center justify-center w-9 h-9 rounded-full" style={{ backgroundColor: "#F5C518" }}>
-                  <Icon name="Phone" size={16} style={{ color: "#09090B" }} />
-                </span>
+              <div className="relative flex items-center justify-center w-6 h-6 flex-shrink-0">
+                <span className="absolute inline-flex rounded-full w-6 h-6 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
+                <span className="absolute inline-flex rounded-full w-8 h-8 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.15)", animationDuration: "1.4s", animationDelay: "0.3s" }} />
+                <Icon name="Phone" size={18} style={{ color: "#F5C518" }} className="relative" />
               </div>
               <div className="flex flex-col leading-tight">
                 <a href="tel:+73953270234" className="text-sm text-white hover:text-yellow-400 transition-colors">8 (3953) 27-02-34</a>
