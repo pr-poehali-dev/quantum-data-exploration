@@ -165,8 +165,8 @@ export function Navbar() {
                 </span>
               </div>
               <div className="flex flex-col leading-tight">
-                <a href="tel:+79500990931" className="text-sm font-bold text-white hover:text-yellow-400 transition-colors">+7 (950) 099-09-31</a>
-                <a href="tel:+73953270234" className="text-xs text-zinc-400 hover:text-yellow-400 transition-colors">8 (3953) 27-02-34</a>
+                <a href="tel:+73953270234" className="text-sm text-white hover:text-yellow-400 transition-colors">8 (3953) 27-02-34</a>
+                <a href="tel:+79500990931" className="text-xs text-zinc-400 hover:text-yellow-400 transition-colors">+7 (950) 099-09-31</a>
               </div>
             </div>
           </div>
