@@ -438,21 +438,23 @@ export default function Klining() {
                 { title: "Профессиональные экстракторы Karcher", desc: "Для химчистки ковровых покрытий, мягкой мебели, штор и матрасов.", icon: "Droplets", img: "" },
               ].map((eq, i) => (
                 <motion.div key={eq.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-2xl border-2 shadow-sm hover:shadow-md transition-shadow overflow-hidden relative"
-                  style={{ borderColor: `${ORANGE}55`, minHeight: 200 }}
+                  className="bg-white rounded-2xl border-2 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+                  style={{ borderColor: `${ORANGE}55`, minHeight: 220 }}
                 >
-                  <div className="p-6 pb-0">
-                    <h3 className="font-extrabold text-gray-800 text-base mb-2">{eq.title}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{eq.desc}</p>
-                  </div>
-                  <div className="flex justify-end">
-                    {eq.img ? (
-                      <img src={eq.img} alt={eq.title} className="h-40 w-auto object-contain" style={{ marginRight: -8, marginBottom: -8 }} />
-                    ) : (
-                      <div className="m-6 w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
-                        <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
-                      </div>
-                    )}
+                  <div className="flex h-full">
+                    <div className="flex-1 p-6 flex flex-col justify-between">
+                      <h3 className="font-extrabold text-gray-800 text-base mb-2">{eq.title}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">{eq.desc}</p>
+                    </div>
+                    <div className="flex items-end justify-end w-40 flex-shrink-0">
+                      {eq.img ? (
+                        <img src={eq.img} alt={eq.title} className="w-full h-auto object-contain object-bottom" />
+                      ) : (
+                        <div className="m-4 w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                          <Icon name={eq.icon} size={22} style={{ color: ORANGE }} />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               ))}
