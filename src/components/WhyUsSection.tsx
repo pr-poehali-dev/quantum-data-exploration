@@ -73,10 +73,17 @@ export function WhyUsSection() {
 
               <a
                 href="tel:+79500990931"
-                className="block w-full py-4 text-center font-bold rounded-xl text-black text-lg mb-4 hover:opacity-90 transition-opacity whitespace-nowrap"
+                className="block w-full py-4 text-center font-bold rounded-xl text-black text-lg hover:opacity-90 transition-opacity whitespace-nowrap"
                 style={{ backgroundColor: "#F5C518" }}
               >
                 +7 (950) 099-09-31
+              </a>
+              <a
+                href="tel:+73953270234"
+                className="block w-full py-3 text-center font-semibold rounded-xl text-white text-base mb-4 hover:border-yellow-500/50 transition-colors border border-zinc-700 whitespace-nowrap"
+                style={{ backgroundColor: "#111113" }}
+              >
+                8 (3953) 27-02-34
               </a>
 
               <div className="flex gap-3">

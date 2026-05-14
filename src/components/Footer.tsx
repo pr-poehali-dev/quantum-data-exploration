@@ -17,13 +17,22 @@ export function Footer() {
 
           {/* Контакты */}
           <div className="flex flex-col md:flex-row md:flex-wrap md:items-center gap-3 md:gap-4 text-sm">
-            <a 
-              href="tel:+79500990931" 
-              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <Icon name="Phone" size={16} />
-              +7 (950) 099-09-31
-            </a>
+            <div className="flex flex-col gap-1">
+              <a 
+                href="tel:+79500990931" 
+                className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+              >
+                <Icon name="Phone" size={16} />
+                +7 (950) 099-09-31
+              </a>
+              <a 
+                href="tel:+73953270234" 
+                className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+              >
+                <Icon name="Phone" size={16} />
+                8 (3953) 27-02-34
+              </a>
+            </div>
             <span className="hidden md:inline text-zinc-700">•</span>
             <p className="text-zinc-500 flex items-center gap-2">
               <Icon name="MapPin" size={16} />

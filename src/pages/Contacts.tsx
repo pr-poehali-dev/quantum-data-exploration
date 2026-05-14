@@ -15,6 +15,14 @@ const contacts = [
     bg: "rgba(245,197,24,0.08)",
   },
   {
+    icon: "Phone",
+    label: "Городской",
+    value: "8 (3953) 27-02-34",
+    href: "tel:+73953270234",
+    color: "#F5C518",
+    bg: "rgba(245,197,24,0.08)",
+  },
+  {
     icon: "Mail",
     label: "Почта",
     value: "masteroff.ustkut@mail.ru",

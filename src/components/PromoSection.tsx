@@ -36,13 +36,22 @@ export function PromoSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="tel:+79500990931"
-                className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2 whitespace-nowrap"
-              >
-                <Icon name="Phone" size={18} />
-                Позвонить сейчас
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="tel:+79500990931"
+                  className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2 whitespace-nowrap"
+                >
+                  <Icon name="Phone" size={18} />
+                  +7 (950) 099-09-31
+                </a>
+                <a
+                  href="tel:+73953270234"
+                  className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2 whitespace-nowrap"
+                >
+                  <Icon name="Phone" size={18} />
+                  8 (3953) 27-02-34
+                </a>
+              </div>
               <a
                 href="https://t.me/masteroff_ustkut"
                 target="_blank"
