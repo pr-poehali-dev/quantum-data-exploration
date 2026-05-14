@@ -52,7 +52,7 @@ export default function Raznorabochie() {
             className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
           >
             <img
-              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/08aead1c-bc7a-4800-beeb-aa975eeff2b1.png"
+              src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/5e0ae09b-7755-4c3b-990f-160d94621c37.png"
               alt="Разнорабочий"
               className="hidden md:block absolute pointer-events-none"
               style={{ right: "0px", bottom: 0, top: "auto", height: "105%", width: "auto", zIndex: 5 }}
