@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { FloatingCallButton } from "@/components/FloatingCallButton";
+import { Helmet } from "@/components/Helmet";
 
 const TOOLS = [
   { emoji: "🔨", size: 36, x: "8%",  y: "15%", duration: 6,  delay: 0 },
@@ -21,6 +22,10 @@ const Index = () => {
 
   return (
     <>
+    <Helmet>
+      <title>МАСТЕРОФФ — первый сервис бытовых услуг в Усть-Куте</title>
+      <meta name="description" content="Первый сервис бытовых услуг в Усть-Куте. Мастер на час, грузчики, сборка мебели, электрик, сантехник, клининг и другие услуги. Звоните — приедем быстро!" />
+    </Helmet>
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
       <Navbar />
       <main className="flex-1 flex items-center justify-center overflow-hidden relative">
