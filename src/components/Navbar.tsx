@@ -132,7 +132,7 @@ export function Navbar() {
                 />
               </button>
               {isZaboryOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl overflow-hidden">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl overflow-hidden">
                   <div className="p-1.5">
                     <Link
                       to="/zabory"
@@ -141,6 +141,14 @@ export function Navbar() {
                     >
                       <span className="text-sm text-white font-medium">Заборы</span>
                       <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Все виды ограждений</span>
+                    </Link>
+                    <Link
+                      to="/banya"
+                      onClick={() => setIsZaboryOpen(false)}
+                      className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-zinc-800 transition-colors group"
+                    >
+                      <span className="text-sm text-white font-medium">Строительство бань</span>
+                      <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Брус, бревно, каркас, бочка</span>
                     </Link>
                   </div>
                 </div>
@@ -249,6 +257,14 @@ export function Navbar() {
                 >
                   <span className="text-sm text-white font-medium">Заборы</span>
                   <span className="text-xs text-zinc-500">Все виды ограждений</span>
+                </Link>
+                <Link
+                  to="/banya"
+                  onClick={handleLinkClick}
+                  className="flex flex-col py-2 border-l border-zinc-800 pl-4"
+                >
+                  <span className="text-sm text-white font-medium">Строительство бань</span>
+                  <span className="text-xs text-zinc-500">Брус, бревно, каркас, бочка</span>
                 </Link>
               </div>
             )}
