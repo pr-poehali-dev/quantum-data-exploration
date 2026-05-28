@@ -26,13 +26,13 @@ export function KliningPromo() {
           >
             <Icon name="X" size={10} className="text-white" />
           </button>
-          <Link to="/klining" className="flex flex-col items-center gap-2 px-4 py-5 pr-6">
-            <span className="text-white text-xs font-bold uppercase tracking-wide opacity-80">Новинка!</span>
-            <Icon name="Sparkles" size={28} className="text-white" />
-            <div className="text-white text-xs font-extrabold text-center leading-tight" style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)", maxHeight: 140 }}>
+          <Link to="/klining" className="flex flex-col items-center gap-3 px-5 py-6 pr-7">
+            <span className="text-white text-sm font-bold uppercase tracking-wide opacity-90">Новинка!</span>
+            <Icon name="Sparkles" size={32} className="text-white" />
+            <div className="text-white text-base font-extrabold text-center leading-snug" style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)", maxHeight: 180 }}>
               Теперь доступен клининг!
             </div>
-            <span className="text-white/80 text-xs font-medium">→</span>
+            <span className="text-white text-base font-bold">→</span>
           </Link>
         </div>
       </motion.div>
