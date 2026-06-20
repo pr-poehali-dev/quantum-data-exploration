@@ -171,18 +171,18 @@ export default function Banya() {
         className="relative flex flex-col overflow-hidden"
         style={{ minHeight: "90vh", background: BG_HERO }}
       >
-        {/* Картинка бани — по центру-справа */}
-        <div className="absolute bottom-16 right-0 w-full md:w-3/4 pointer-events-none select-none" style={{ zIndex: 1 }}>
+        {/* Фон — фото на весь блок */}
+        <div className="absolute inset-0 pointer-events-none select-none" style={{ zIndex: 1 }}>
           <img
             src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/8f54a791-5a76-4ea3-b3e3-b1d36c18fe49.jpg"
             alt="Баня под ключ"
-            className="w-full object-contain object-bottom"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ zIndex: 2, background: "linear-gradient(to right, rgba(232,221,200,1) 0%, rgba(232,221,200,0.85) 25%, rgba(232,221,200,0.3) 45%, transparent 65%)" }}
+          style={{ zIndex: 2, background: "linear-gradient(to right, rgba(232,221,200,0.97) 0%, rgba(232,221,200,0.88) 30%, rgba(232,221,200,0.4) 55%, transparent 75%)" }}
         />
 
         <div className="relative z-10 flex-1 flex flex-col justify-center max-w-6xl mx-auto px-6 md:px-10 w-full pt-4 pb-8">
