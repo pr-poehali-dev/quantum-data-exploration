@@ -6,25 +6,46 @@ import Icon from "@/components/ui/icon"
 interface OrderFormProps {
   isOpen: boolean
   onClose: () => void
+  serviceTitle?: string
 }
 
-export function OrderForm({ isOpen, onClose }: OrderFormProps) {
+const EMAIL_URL = "https://functions.poehali.dev/6ca76235-597b-415f-b999-da850d533986"
+
+export function OrderForm({ isOpen, onClose, serviceTitle }: OrderFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    service: "",
+    service: serviceTitle || "",
     description: "",
   })
   const [agreed, setAgreed] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
+  const [error, setError] = useState("")
 
-  const buildMessage = () =>
-    `Новая заявка с сайта МАСТЕРОФФ:%0A%0AИмя: ${encodeURIComponent(formData.name)}%0AТелефон: ${encodeURIComponent(formData.phone)}%0AУслуга: ${encodeURIComponent(formData.service)}%0AОписание: ${encodeURIComponent(formData.description)}`
-
-  const sendByEmail = () => {
-    const subject = encodeURIComponent(`Заявка с сайта — ${formData.service || "Услуга не указана"}`)
-    const body = buildMessage()
-    window.open(`mailto:masteroff38@mail.ru?subject=${subject}&body=${body}`, "_blank")
-    onClose()
+  const sendByEmail = async () => {
+    setSending(true)
+    setError("")
+    try {
+      const res = await fetch(EMAIL_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setSent(true)
+        setTimeout(() => {
+          setSent(false)
+          onClose()
+        }, 2500)
+      } else {
+        setError("Ошибка отправки. Попробуйте ещё раз.")
+      }
+    } catch {
+      setError("Ошибка соединения. Попробуйте ещё раз.")
+    } finally {
+      setSending(false)
+    }
   }
 
   const sendByVk = () => {
@@ -55,119 +76,122 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
           <Icon name="X" size={20} />
         </button>
 
-        <h2 className="text-2xl font-medium text-white mb-6">Заказать услугу</h2>
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm text-zinc-400 mb-2">Ваше имя</label>
-            <input
-              type="text"
-              required
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
-              placeholder="Иван Иванов"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm text-zinc-400 mb-2">Телефон</label>
-            <input
-              type="tel"
-              required
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
-              placeholder="+7 (999) 123-45-67"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm text-zinc-400 mb-2">Услуга</label>
-            <select
-              required
-              value={formData.service}
-              onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
-            >
-              <option value="">Выберите услугу</option>
-              <option value="Уборка снега">Уборка снега</option>
-              <option value="Уборка территории">Уборка территории</option>
-              <option value="Копка ям">Копка ям</option>
-              <option value="Помощь на стройке">Помощь на стройке</option>
-              <option value="Услуги грузчиков">Услуги грузчиков</option>
-              <option value="Перенос мебели">Перенос мебели</option>
-              <option value="Другое">Другое</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm text-zinc-400 mb-2">Описание работы</label>
-            <textarea
-              value={formData.description}
-              onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors h-24 resize-none"
-              placeholder="Расскажите подробнее о работе..."
-            />
-          </div>
-
-          <label className="flex items-start gap-3 cursor-pointer pt-1">
-            <input
-              type="checkbox"
-              required
-              checked={agreed}
-              onChange={(e) => setAgreed(e.target.checked)}
-              className="mt-0.5 w-4 h-4 rounded border-zinc-600 bg-zinc-800 text-white accent-white"
-            />
-            <span className="text-xs text-zinc-500 leading-relaxed">
-              Я даю согласие на обработку{" "}
-              <Link
-                to="/privacy"
-                target="_blank"
-                className="text-zinc-400 underline hover:text-white transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                персональных данных
-              </Link>
-            </span>
-          </label>
-
-          <div className="flex flex-col gap-2 pt-2">
-            <button
-              type="submit"
-              className="w-full px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm flex items-center justify-center gap-2"
-            >
-              <Icon name="Send" size={16} />
-              Отправить в Telegram
-            </button>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  const form = document.querySelector("form") as HTMLFormElement
-                  if (form?.checkValidity() && agreed) sendTo("max")
-                  else form?.reportValidity()
-                }}
-                className="flex-1 px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm flex items-center justify-center gap-2"
-              >
-                <Icon name="MessageCircle" size={16} />
-                Max
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  const form = document.querySelector("form") as HTMLFormElement
-                  if (form?.checkValidity() && agreed) sendTo("vk")
-                  else form?.reportValidity()
-                }}
-                className="flex-1 px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm flex items-center justify-center gap-2"
-              >
-                <Icon name="MessageSquare" size={16} />
-                ВКонтакте
-              </button>
+        {sent ? (
+          <div className="flex flex-col items-center justify-center py-8 gap-4">
+            <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
+              <Icon name="CheckCircle2" size={36} className="text-green-400" />
             </div>
+            <h2 className="text-xl font-bold text-white text-center">Заявка отправлена!</h2>
+            <p className="text-zinc-400 text-sm text-center">Мы свяжемся с вами в ближайшее время</p>
           </div>
-        </form>
+        ) : (
+          <>
+            <h2 className="text-2xl font-medium text-white mb-6">Оставить заявку</h2>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm text-zinc-400 mb-2">Ваше имя</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                  placeholder="Иван Иванов"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-zinc-400 mb-2">Телефон</label>
+                <input
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                  placeholder="+7 (999) 123-45-67"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-zinc-400 mb-2">Услуга</label>
+                <select
+                  required
+                  value={formData.service}
+                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                  className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                >
+                  <option value="">Выберите услугу</option>
+                  <option value="Строительство бани">Строительство бани</option>
+                  <option value="Строительство забора">Строительство забора</option>
+                  <option value="Уборка снега">Уборка снега</option>
+                  <option value="Уборка территории">Уборка территории</option>
+                  <option value="Копка ям">Копка ям</option>
+                  <option value="Помощь на стройке">Помощь на стройке</option>
+                  <option value="Услуги грузчиков">Услуги грузчиков</option>
+                  <option value="Перенос мебели">Перенос мебели</option>
+                  <option value="Другое">Другое</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm text-zinc-400 mb-2">Описание работы</label>
+                <textarea
+                  value={formData.description}
+                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                  className="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors h-24 resize-none"
+                  placeholder="Расскажите подробнее о работе..."
+                />
+              </div>
+
+              <label className="flex items-start gap-3 cursor-pointer pt-1">
+                <input
+                  type="checkbox"
+                  required
+                  checked={agreed}
+                  onChange={(e) => setAgreed(e.target.checked)}
+                  className="mt-0.5 w-4 h-4 rounded border-zinc-600 bg-zinc-800 text-white accent-white"
+                />
+                <span className="text-xs text-zinc-500 leading-relaxed">
+                  Я даю согласие на обработку{" "}
+                  <Link
+                    to="/privacy"
+                    target="_blank"
+                    className="text-zinc-400 underline hover:text-white transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    персональных данных
+                  </Link>
+                </span>
+              </label>
+
+              {error && <p className="text-red-400 text-sm">{error}</p>}
+
+              <div className="flex flex-col gap-2 pt-2">
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="w-full px-5 py-3 bg-white text-zinc-900 font-bold rounded-lg hover:bg-zinc-100 transition-colors text-sm flex items-center justify-center gap-2 disabled:opacity-60"
+                >
+                  <Icon name={sending ? "Loader" : "Mail"} size={16} className={sending ? "animate-spin" : ""} />
+                  {sending ? "Отправляем..." : "Отправить на Email"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const form = document.querySelector("form") as HTMLFormElement
+                    if (form?.checkValidity() && agreed) sendByVk()
+                    else form?.reportValidity()
+                  }}
+                  className="w-full px-5 py-2.5 border border-zinc-700 text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm flex items-center justify-center gap-2"
+                >
+                  <Icon name="MessageSquare" size={16} />
+                  Написать ВКонтакте
+                </button>
+              </div>
+            </form>
+          </>
+        )}
       </motion.div>
     </div>
   )
