@@ -22,18 +22,21 @@ const stats = [
     title: "Более 10 лет строим бани",
     subtitle: "в Усть-Куте и Иркутской области.",
     desc: "Знаем все особенности сибирского климата — строим так, чтобы баня служила десятилетиями без проблем.",
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/62ef153c-15ea-451a-8057-866d71396a1c.jpg",
   },
   {
     num: "300+",
     title: "300+ построенных бань",
     subtitle: "по всей Иркутской области.",
     desc: "Работаем с частными домами, дачами и загородными участками. Сдаём объект в срок и убираем за собой.",
+    img: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80",
   },
   {
     num: "6",
     title: "6 видов бань на выбор",
     subtitle: "Брус, бревно, каркас, газобетон, кирпич, бочка.",
     desc: "Подберём материал под ваш бюджет и участок. Поможем с проектом и не навяжем лишнего.",
+    img: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80",
   },
 ]
 
@@ -260,7 +263,7 @@ export default function Banya() {
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                      backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80')",
+                      backgroundImage: `url('${s.img}')`,
                       filter: "blur(2px) brightness(0.55) saturate(1.2)",
                       transform: "scale(1.08)",
                     }}
