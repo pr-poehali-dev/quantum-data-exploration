@@ -418,7 +418,7 @@ export default function Banya() {
                       {stage.items.map((item, j) => (
                         <li key={j} className="flex items-start gap-2">
                           {j === 0 && item.endsWith(":") ? (
-                            <span className="text-sm leading-relaxed" style={{ color: stage.dark ? "#aaa" : "#666" }}>{item}</span>
+                            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: ACCENT_LIGHT }}>{item}</span>
                           ) : (
                             <>
                               <span className="mt-0.5 flex-shrink-0">
