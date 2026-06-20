@@ -466,7 +466,7 @@ export default function Banya() {
             </div>
             <div className="hidden md:flex items-end justify-center overflow-hidden bg-amber-50" style={{ minHeight: 320 }}>
               <img
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80"
+                src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/a7698751-e9bf-41b3-9ba2-1c17ab2305ba.png"
                 alt="Баня"
                 className="object-cover w-full h-full"
                 style={{ maxHeight: "360px" }}
