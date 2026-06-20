@@ -382,16 +382,8 @@ export default function Banya() {
       </section>
 
       {/* Этапы работ */}
-      <section className="py-12 md:py-20 px-4 md:px-6 relative overflow-hidden" style={{ backgroundColor: "#f4f4f4" }}>
-        {/* Декоративные деревья */}
-        <div className="absolute left-0 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 180, lineHeight: 1 }}>🌲</div>
-        <div className="absolute left-10 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 140, lineHeight: 1 }}>🌳</div>
-        <div className="absolute right-0 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 180, lineHeight: 1 }}>🌲</div>
-        <div className="absolute right-12 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 150, lineHeight: 1 }}>🌳</div>
-        <div className="absolute right-36 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 120, lineHeight: 1 }}>🌲</div>
-        <div className="absolute left-36 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 110, lineHeight: 1 }}>🌲</div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
+      <section className="py-12 md:py-20 px-4 md:px-6" style={{ backgroundColor: "#f4f4f4" }}>
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
