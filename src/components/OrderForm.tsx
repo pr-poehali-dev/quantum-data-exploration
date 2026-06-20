@@ -18,22 +18,24 @@ export function OrderForm({ isOpen, onClose }: OrderFormProps) {
   const [agreed, setAgreed] = useState(false)
 
   const buildMessage = () =>
-    `Новая заявка:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nУслуга: ${formData.service}\nОписание: ${formData.description}`
+    `Новая заявка с сайта МАСТЕРОФФ:%0A%0AИмя: ${encodeURIComponent(formData.name)}%0AТелефон: ${encodeURIComponent(formData.phone)}%0AУслуга: ${encodeURIComponent(formData.service)}%0AОписание: ${encodeURIComponent(formData.description)}`
 
-  const sendTo = (target: "telegram" | "max" | "vk") => {
-    const message = encodeURIComponent(buildMessage())
-    const urls = {
-      telegram: `https://t.me/masteroff38?text=${message}`,
-      max: `https://ok.me/89086461687?text=${message}`,
-      vk: `https://vk.com/m_off38ru?message=${message}`,
-    }
-    window.open(urls[target], "_blank")
+  const sendByEmail = () => {
+    const subject = encodeURIComponent(`Заявка с сайта — ${formData.service || "Услуга не указана"}`)
+    const body = buildMessage()
+    window.open(`mailto:masteroff38@mail.ru?subject=${subject}&body=${body}`, "_blank")
+    onClose()
+  }
+
+  const sendByVk = () => {
+    const message = encodeURIComponent(`Новая заявка:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nУслуга: ${formData.service}\nОписание: ${formData.description}`)
+    window.open(`https://vk.com/m_off38ru?message=${message}`, "_blank")
     onClose()
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    sendTo("telegram")
+    sendByEmail()
   }
 
   if (!isOpen) return null
