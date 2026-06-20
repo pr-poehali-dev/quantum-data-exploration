@@ -49,21 +49,25 @@ const reasons = [
 const workStages = [
   {
     title: "Заявка и выезд",
+    icon: "Phone",
     items: ["Что входит:", "Звонок или заявка на сайте", "Выезд на участок", "Оценка условий строительства", "Консультация по материалам и проекту"],
     dark: false,
   },
   {
     title: "Проект и смета",
+    icon: "FileText",
     items: ["Что входит:", "Разработка или подбор проекта", "Подробная смета с материалами и работами", "Фиксированная стоимость", "Подписание договора"],
     dark: true,
   },
   {
     title: "Строительство",
+    icon: "Hammer",
     items: ["Что входит:", "Фундамент под баню", "Возведение стен и кровли", "Установка дверей и окон", "Утепление и гидроизоляция"],
     dark: true,
   },
   {
     title: "Сдача объекта",
+    icon: "BadgeCheck",
     items: ["Что входит:", "Отделка парилки и предбанника", "Установка печи (при необходимости)", "Уборка строительного мусора", "Оплата только после приёмки"],
     dark: false,
   },
@@ -378,8 +382,16 @@ export default function Banya() {
       </section>
 
       {/* Этапы работ */}
-      <section className="py-12 md:py-20 px-4 md:px-6" style={{ backgroundColor: "#f4f4f4" }}>
-        <div className="max-w-6xl mx-auto">
+      <section className="py-12 md:py-20 px-4 md:px-6 relative overflow-hidden" style={{ backgroundColor: "#f4f4f4" }}>
+        {/* Декоративные деревья */}
+        <div className="absolute left-0 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 180, lineHeight: 1 }}>🌲</div>
+        <div className="absolute left-10 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 140, lineHeight: 1 }}>🌳</div>
+        <div className="absolute right-0 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 180, lineHeight: 1 }}>🌲</div>
+        <div className="absolute right-12 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 150, lineHeight: 1 }}>🌳</div>
+        <div className="absolute right-36 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 120, lineHeight: 1 }}>🌲</div>
+        <div className="absolute left-36 bottom-0 pointer-events-none select-none opacity-10" style={{ fontSize: 110, lineHeight: 1 }}>🌲</div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -411,9 +423,14 @@ export default function Banya() {
                   style={{ backgroundColor: stage.dark ? "#1e1e1e" : "#fff", border: `1px solid ${stage.dark ? "#333" : "#e0c8a8"}`, borderLeft: "none" }}
                 >
                   <div className="flex-1 p-6">
-                    <h3 className="font-bold text-base leading-tight mb-4" style={{ color: stage.dark ? ACCENT_LIGHT : ACCENT }}>
-                      {stage.title}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: stage.dark ? "rgba(200,149,106,0.15)" : "rgba(200,149,106,0.12)" }}>
+                        <Icon name={stage.icon as "Home"} size={18} style={{ color: ACCENT_LIGHT }} />
+                      </div>
+                      <h3 className="font-bold text-base leading-tight" style={{ color: stage.dark ? ACCENT_LIGHT : ACCENT }}>
+                        {stage.title}
+                      </h3>
+                    </div>
                     <ul className="flex flex-col gap-3">
                       {stage.items.map((item, j) => (
                         <li key={j} className="flex items-start gap-2">
