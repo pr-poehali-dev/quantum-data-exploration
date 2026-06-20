@@ -10,7 +10,7 @@ import { FloatingCallButton } from "@/components/FloatingCallButton"
 const banyaTypes = [
   { title: "Баня из бруса", price: "от 350 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/57e21683-60e3-4650-b41e-3bcb86d2b793.jpg" },
   { title: "Баня из бревна", price: "от 420 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ecd9f7fb-f790-4aff-944d-0b2d1ee78823.jpg" },
-  { title: "Каркасная баня", price: "от 220 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/8f54a791-5a76-4ea3-b3e3-b1d36c18fe49.jpg" },
+  { title: "Каркасная баня", price: "от 220 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/337278f3-6861-4de4-ac26-ee2e373b0246.jpg" },
   { title: "Баня из газобетона", price: "от 280 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c8c98287-b8f2-461c-bda5-2b8ee49b0069.jpg" },
   { title: "Баня из кирпича", price: "от 500 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d40c82ff-7853-42c2-aa84-286330a2d069.jpg" },
   { title: "Баня-бочка", price: "от 80 000 ₽", img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c3c79fbd-aab9-4805-8957-ce2ed646afa0.jpg" },
