@@ -411,10 +411,17 @@ export default function Banya() {
               >
                 <div className="flex-shrink-0 rounded-l-2xl" style={{ width: 7, backgroundColor: ACCENT_LIGHT }} />
                 <div
-                  className="flex-1 rounded-r-2xl flex overflow-hidden"
+                  className="flex-1 rounded-r-2xl overflow-hidden relative"
                   style={{ backgroundColor: stage.dark ? "#1e1e1e" : "#fff", border: `1px solid ${stage.dark ? "#333" : "#e0c8a8"}`, borderLeft: "none" }}
                 >
-                  <div className="flex-1 p-6">
+                  {/* Берёза декоративная */}
+                  <img
+                    src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/21f660e7-eca2-49b2-8ab4-0637173fa28c.png"
+                    alt=""
+                    className="absolute bottom-0 right-0 pointer-events-none select-none"
+                    style={{ height: "130%", width: "auto", opacity: stage.dark ? 0.07 : 0.12, objectFit: "contain", objectPosition: "bottom right" }}
+                  />
+                  <div className="relative z-10 flex-1 p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: stage.dark ? "rgba(200,149,106,0.15)" : "rgba(200,149,106,0.12)" }}>
                         <Icon name={stage.icon as "Home"} size={18} style={{ color: ACCENT_LIGHT }} />
