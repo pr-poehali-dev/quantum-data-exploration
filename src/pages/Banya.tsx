@@ -174,7 +174,7 @@ export default function Banya() {
         {/* Картинка бани — по центру-справа */}
         <div className="absolute bottom-16 right-0 w-full md:w-3/4 pointer-events-none select-none" style={{ zIndex: 1 }}>
           <img
-            src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/91ac8ee1-77dd-4791-9149-1726793c50ab.jpg"
+            src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/8f54a791-5a76-4ea3-b3e3-b1d36c18fe49.jpg"
             alt="Баня под ключ"
             className="w-full object-contain object-bottom"
           />
