@@ -32,7 +32,7 @@ def handler(event: dict, context) -> dict:
         }
 
     smtp_password = os.environ.get("SMTP_PASSWORD", "")
-    from_email = "masteroff38@mail.ru"
+    from_email = "info.svodka24ustkut@mail.ru"
     to_email = "masteroff38@mail.ru"
 
     subject = f"Новая заявка с сайта — {service or 'Услуга не указана'}"
