@@ -25,6 +25,7 @@ const servicesMenu = [
   { label: "Электрик", href: "/elektrik", description: "Проводка, розетки, щитки, техника" },
   { label: "Сантехник", href: "/santehnik", description: "Трубы, смесители, протечки, монтаж" },
   { label: "Клининг", href: "/klining", description: "Уборка квартир, офисов, химчистка" },
+  { label: "Отделка квартир", href: "/otdelka-kvartir", description: "Косметический и капитальный ремонт" },
 ]
 
 export function Navbar() {
