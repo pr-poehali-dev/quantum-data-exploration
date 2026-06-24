@@ -163,8 +163,14 @@ export default function OtdelkaKvartir() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
       <Helmet>
-        <title>Отделка квартир в Усть-Куте под ключ | Бригада мастеров</title>
-        <meta name="description" content="Ремонт и отделка квартир в Усть-Куте под ключ. Косметический и капитальный ремонт, дизайн-проект. Гарантия 3 года. Звоните!" />
+        <title>Отделка квартир в Усть-Куте под ключ — цены от 800 ₽/м² | МАСТЕРОФФ</title>
+        <meta name="description" content="Ремонт и отделка квартир в Усть-Куте под ключ. Косметический от 800 ₽/м², капитальный от 2500 ₽/м². Гарантия 3 года, договор, чеки. Бесплатный замер — звоните!" />
+        <meta name="keywords" content="отделка квартир Усть-Кут, ремонт квартир Усть-Кут, ремонт под ключ Усть-Кут, косметический ремонт Усть-Кут, капитальный ремонт Усть-Кут, отделка квартир цена Усть-Кут" />
+        <meta property="og:title" content="Отделка квартир в Усть-Куте под ключ | МАСТЕРОФФ" />
+        <meta property="og:description" content="Ремонт квартир в Усть-Куте: косметический, капитальный, под ключ. Гарантия 3 года. Бесплатный замер и смета за 24 часа." />
+        <meta property="og:image" content="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/96b30de2-deeb-4151-aed8-b0952d14597f.jpg" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://masteroff38.ru/otdelka-kvartir" />
       </Helmet>
       <Navbar />
       <FloatingCallButton />
