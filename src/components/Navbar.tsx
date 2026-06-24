@@ -166,6 +166,18 @@ export function Navbar() {
               Контакты
             </Link>
 
+            <a
+              href="https://ust-kut-masters-app--preview.poehali.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm text-black transition-all hover:scale-105"
+              style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)", boxShadow: "0 0 16px rgba(245,197,24,0.45)" }}
+            >
+              <Icon name="Smartphone" size={15} />
+              Скачать приложение
+              <span className="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full leading-none">NEW</span>
+            </a>
+
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center w-6 h-6 flex-shrink-0">
                 <span className="absolute inline-flex rounded-full w-6 h-6 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
@@ -291,6 +303,19 @@ export function Navbar() {
             >
               Контакты
             </Link>
+            <a
+              href="https://ust-kut-masters-app--preview.poehali.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleLinkClick}
+              className="relative flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm text-black mt-1"
+              style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)", boxShadow: "0 0 16px rgba(245,197,24,0.35)" }}
+            >
+              <Icon name="Smartphone" size={16} />
+              Скачать приложение
+              <span className="absolute -top-1.5 right-3 bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full leading-none">NEW</span>
+            </a>
+
             <div className="flex items-center gap-3 pt-2 pb-1">
               <div className="relative flex items-center justify-center w-9 h-9 flex-shrink-0">
                 <span className="absolute inline-flex rounded-full w-9 h-9 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
