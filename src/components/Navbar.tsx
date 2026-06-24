@@ -2,6 +2,138 @@ import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Icon from "@/components/ui/icon"
 
+function AppInstallModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose() }
+    document.addEventListener("keydown", handler)
+    return () => document.removeEventListener("keydown", handler)
+  }, [onClose])
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div
+        className="relative w-full max-w-md rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl"
+        style={{ backgroundColor: "#18181B" }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-800">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)" }}>
+              <Icon name="Smartphone" size={18} className="text-black" />
+            </div>
+            <div>
+              <div className="text-white font-bold text-base leading-tight">Установить приложение</div>
+              <div className="text-zinc-500 text-xs">МастерОФФ на телефон</div>
+            </div>
+          </div>
+          <button onClick={onClose} className="text-zinc-500 hover:text-white transition-colors">
+            <Icon name="X" size={20} />
+          </button>
+        </div>
+
+        <div className="px-6 py-5 flex flex-col gap-5 max-h-[70vh] overflow-y-auto">
+
+          {/* Android */}
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl">🤖</span>
+              <span className="text-white font-semibold">Android (Chrome)</span>
+            </div>
+            <ol className="flex flex-col gap-2">
+              {[
+                "Откройте браузер Google Chrome на телефоне",
+                <>Перейдите на сайт <span className="text-yellow-400 font-medium">servismasteroff.ru</span></>,
+                <>Нажмите на <span className="text-white font-medium">три точки (⋮)</span> в правом верхнем углу</>,
+                <>Выберите <span className="text-white font-medium">«Добавить на главный экран»</span></>,
+                "Нажмите «Добавить» в появившемся окне",
+                "Иконка МастерОФФ появится на рабочем столе",
+              ].map((step, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400 text-black text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                  <span className="text-zinc-300 text-sm leading-relaxed">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="border-t border-zinc-800" />
+
+          {/* iPhone */}
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl">🍎</span>
+              <span className="text-white font-semibold">iPhone (Safari)</span>
+            </div>
+            <ol className="flex flex-col gap-2">
+              {[
+                "Откройте браузер Safari на iPhone",
+                <>Перейдите на сайт <span className="text-yellow-400 font-medium">servismasteroff.ru</span></>,
+                <>Нажмите кнопку <span className="text-white font-medium">«Поделиться»</span> — значок квадрата со стрелкой (внизу)</>,
+                <>Выберите <span className="text-white font-medium">«На экран Домой»</span></>,
+                "Нажмите «Добавить» в правом верхнем углу",
+                "Иконка МастерОФФ появится на рабочем столе",
+              ].map((step, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400 text-black text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                  <span className="text-zinc-300 text-sm leading-relaxed">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="border-t border-zinc-800" />
+
+          {/* Уведомления */}
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl">🔔</span>
+              <span className="text-white font-semibold">Включение уведомлений</span>
+            </div>
+            <ol className="flex flex-col gap-2">
+              {[
+                "Откройте приложение",
+                <>Нажмите на <span className="text-white font-medium">колокольчик 🔔</span> в верхнем левом углу</>,
+                "Нажмите «Разрешить»",
+                "Готово — будете получать уведомления о статусе заказа",
+              ].map((step, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400 text-black text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                  <span className="text-zinc-300 text-sm leading-relaxed">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* Важно */}
+          <div className="rounded-xl px-4 py-3 flex gap-3" style={{ backgroundColor: "#27272A" }}>
+            <span className="text-lg flex-shrink-0">⚠️</span>
+            <p className="text-zinc-400 text-xs leading-relaxed">
+              На iPhone уведомления работают только начиная с <span className="text-white">iOS 16.4</span> и только если приложение добавлено на экран «Домой».
+            </p>
+          </div>
+
+        </div>
+
+        {/* Footer */}
+        <div className="px-6 py-4 border-t border-zinc-800">
+          <a
+            href="https://ust-kut-masters-app--preview.poehali.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm text-black transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)" }}
+          >
+            <Icon name="ExternalLink" size={15} />
+            Открыть приложение
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const zaboryMenu = [
   { label: "Забор из дерева", href: "/zabory#derevo" },
   { label: "Забор из евроштакетника", href: "/zabory#evroshtaketnik" },
@@ -34,6 +166,7 @@ export function Navbar() {
   const [isZaboryOpen, setIsZaboryOpen] = useState(false)
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
   const [isMobileZaboryOpen, setIsMobileZaboryOpen] = useState(false)
+  const [isAppModalOpen, setIsAppModalOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const zaboryDropdownRef = useRef<HTMLDivElement>(null)
 
@@ -57,6 +190,8 @@ export function Navbar() {
   }, [])
 
   return (
+    <>
+    {isAppModalOpen && <AppInstallModal onClose={() => setIsAppModalOpen(false)} />}
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-[#09090B]/80 backdrop-blur-md">
       <div className="w-full flex justify-center px-6 py-4">
         <div className="w-full max-w-6xl flex items-center justify-between">
@@ -166,17 +301,15 @@ export function Navbar() {
               Контакты
             </Link>
 
-            <a
-              href="https://ust-kut-masters-app--preview.poehali.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsAppModalOpen(true)}
               className="relative flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm text-black transition-all hover:scale-105"
               style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)", boxShadow: "0 0 16px rgba(245,197,24,0.45)" }}
             >
               <Icon name="Smartphone" size={15} />
               Скачать приложение
               <span className="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full leading-none">NEW</span>
-            </a>
+            </button>
 
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center w-6 h-6 flex-shrink-0">
@@ -303,18 +436,15 @@ export function Navbar() {
             >
               Контакты
             </Link>
-            <a
-              href="https://ust-kut-masters-app--preview.poehali.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleLinkClick}
+            <button
+              onClick={() => { handleLinkClick(); setIsAppModalOpen(true) }}
               className="relative flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm text-black mt-1"
               style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)", boxShadow: "0 0 16px rgba(245,197,24,0.35)" }}
             >
               <Icon name="Smartphone" size={16} />
               Скачать приложение
               <span className="absolute -top-1.5 right-3 bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full leading-none">NEW</span>
-            </a>
+            </button>
 
             <div className="flex items-center gap-3 pt-2 pb-1">
               <div className="relative flex items-center justify-center w-9 h-9 flex-shrink-0">
@@ -333,5 +463,6 @@ export function Navbar() {
         </div>
       )}
     </nav>
+    </>
   )
 }
