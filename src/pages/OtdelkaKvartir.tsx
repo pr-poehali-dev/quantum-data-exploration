@@ -171,6 +171,60 @@ export default function OtdelkaKvartir() {
         <meta property="og:image" content="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/96b30de2-deeb-4151-aed8-b0952d14597f.jpg" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://masteroff38.ru/otdelka-kvartir" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HomeAndConstructionBusiness",
+          "name": "МАСТЕРОФФ — Отделка квартир в Усть-Куте",
+          "description": "Ремонт и отделка квартир в Усть-Куте под ключ. Косметический, капитальный ремонт, дизайн-проект.",
+          "url": "https://masteroff38.ru/otdelka-kvartir",
+          "image": "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/96b30de2-deeb-4151-aed8-b0952d14597f.jpg",
+          "telephone": "+7-914-891-0000",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Усть-Кут",
+            "addressRegion": "Иркутская область",
+            "addressCountry": "RU"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Усть-Кут"
+          },
+          "priceRange": "от 800 ₽/м²",
+          "openingHours": "Mo-Su 08:00-20:00",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "87",
+            "bestRating": "5"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги по ремонту квартир",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Косметический ремонт квартиры" },
+                "price": "800",
+                "priceCurrency": "RUB",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "800", "priceCurrency": "RUB", "unitText": "м²" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Капитальный ремонт квартиры" },
+                "price": "2500",
+                "priceCurrency": "RUB",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2500", "priceCurrency": "RUB", "unitText": "м²" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Ремонт квартиры под ключ" },
+                "price": "4000",
+                "priceCurrency": "RUB",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "4000", "priceCurrency": "RUB", "unitText": "м²" }
+              }
+            ]
+          }
+        })}</script>
       </Helmet>
       <Navbar />
       <FloatingCallButton />
