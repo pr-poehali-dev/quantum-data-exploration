@@ -146,6 +146,21 @@ const projects = [
       "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ea468128-ade4-4c74-bb67-f2ff0c171144.jpg",
     ],
   },
+  {
+    id: 2,
+    title: "Квартира-студия под ключ",
+    desc: "Ремонт под ключ в современном стиле — чистовая отделка стен и потолков, укладка ламината, монтаж встроенной мебели, кухонного гарнитура с техникой, обустройство спальной зоны и зоны отдыха.",
+    tag: "Ремонт под ключ",
+    area: "32 м²",
+    duration: "6 недель",
+    photos: [
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/8a824ff2-5722-475b-9d06-b9b4a6cf4d62.jpg",
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/386b81ce-2d99-46bd-b42c-cd568ca98272.jpg",
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/95ebef77-4f16-4997-81e0-58bcd3901dfb.jpg",
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/5dc14102-cab1-4738-bbaa-f8a17b68a181.jpg",
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2e690547-09fe-4b02-a720-93502790d8a7.jpg",
+    ],
+  },
 ]
 
 const faq = [
