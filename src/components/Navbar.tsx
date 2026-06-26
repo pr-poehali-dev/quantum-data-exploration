@@ -339,7 +339,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-zinc-800 bg-[#09090B]/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-zinc-800 bg-[#09090B]/95 backdrop-blur-md overflow-y-auto" style={{ maxHeight: "calc(100dvh - 65px)" }}>
           <div className="px-6 py-4 flex flex-col gap-1">
             {/* Аккордеон услуги */}
             <button
