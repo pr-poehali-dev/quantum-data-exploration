@@ -132,6 +132,22 @@ const workStages = [
 
 const galleryPhotos = [HERO_IMG, KITCHEN_IMG, BEDROOM_IMG, WORK_IMG]
 
+const projects = [
+  {
+    id: 1,
+    title: "Ванная комната с мраморной плиткой",
+    desc: "Капитальный ремонт ванной под ключ — укладка крупноформатной мраморной плитки, монтаж душевой кабины с стеклянными дверями, установка подвесного унитаза и полотенцесушителя из нержавеющей стали.",
+    tag: "Капитальный ремонт",
+    area: "8 м²",
+    duration: "3 недели",
+    photos: [
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/fc143117-853c-4fc6-bdc8-5e4057630994.jpg",
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/c6d8659f-8d20-480f-87d9-2e2d31c11fe0.jpg",
+      "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ea468128-ade4-4c74-bb67-f2ff0c171144.jpg",
+    ],
+  },
+]
+
 const faq = [
   {
     q: "Сколько стоит ремонт квартиры под ключ?",
@@ -159,6 +175,8 @@ export default function OtdelkaKvartir() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null)
+  const [activeProjectPhoto, setActiveProjectPhoto] = useState<Record<number, number>>({0: 0})
+  const [projectLightbox, setProjectLightbox] = useState<{pi: number; idx: number} | null>(null)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
@@ -374,6 +392,88 @@ export default function OtdelkaKvartir() {
         </div>
       </section>
 
+      {/* PROJECTS */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <span className="text-yellow-400 text-sm font-bold tracking-widest uppercase">Примеры работ</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Реализованные проекты</h2>
+          </motion.div>
+
+          <div className="flex flex-col gap-16">
+            {projects.map((project, pi) => {
+              const activeIdx = activeProjectPhoto[pi] ?? 0
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="grid md:grid-cols-2 gap-8 items-start"
+                >
+                  {/* Фото */}
+                  <div className="flex flex-col gap-3">
+                    <div className="rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer group relative" onClick={() => setProjectLightbox({ pi, idx: activeIdx })}>
+                      <img
+                        src={project.photos[activeIdx]}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <Icon name="ZoomIn" size={36} className="text-white" />
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      {project.photos.map((photo, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setActiveProjectPhoto(prev => ({ ...prev, [pi]: idx }))}
+                          className={`flex-1 rounded-xl overflow-hidden aspect-square border-2 transition-all ${activeIdx === idx ? "border-yellow-400 scale-95" : "border-transparent opacity-60 hover:opacity-100"}`}
+                        >
+                          <img src={photo} alt="" className="w-full h-full object-cover" />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Описание */}
+                  <div className="flex flex-col gap-5">
+                    <div className="inline-flex items-center gap-2 w-fit">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold text-black" style={{ backgroundColor: "#F5C518" }}>{project.tag}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white leading-tight">{project.title}</h3>
+                    <p className="text-zinc-400 leading-relaxed">{project.desc}</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="rounded-xl p-4" style={{ backgroundColor: "#18181B" }}>
+                        <div className="text-zinc-500 text-xs mb-1 uppercase tracking-wide">Площадь</div>
+                        <div className="text-white font-bold text-lg">{project.area}</div>
+                      </div>
+                      <div className="rounded-xl p-4" style={{ backgroundColor: "#18181B" }}>
+                        <div className="text-zinc-500 text-xs mb-1 uppercase tracking-wide">Срок</div>
+                        <div className="text-white font-bold text-lg">{project.duration}</div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setIsFormOpen(true)}
+                      className="mt-2 flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-bold text-sm text-black transition-all hover:opacity-90"
+                      style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)" }}
+                    >
+                      <Icon name="Phone" size={16} />
+                      Хочу такой же ремонт
+                    </button>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* GALLERY */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
@@ -516,38 +616,50 @@ export default function OtdelkaKvartir() {
         </div>
       </section>
 
-      {/* LIGHTBOX */}
+      {/* LIGHTBOX gallery */}
       {lightboxIdx !== null && (
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
           onClick={() => setLightboxIdx(null)}
         >
-          <button
-            className="absolute top-4 right-4 text-white/70 hover:text-white"
-            onClick={() => setLightboxIdx(null)}
-          >
+          <button className="absolute top-4 right-4 text-white/70 hover:text-white" onClick={() => setLightboxIdx(null)}>
             <Icon name="X" size={32} />
           </button>
-          <img
-            src={galleryPhotos[lightboxIdx]}
-            alt=""
-            className="max-w-full max-h-[90vh] rounded-xl object-contain"
-            onClick={e => e.stopPropagation()}
-          />
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
-            onClick={e => { e.stopPropagation(); setLightboxIdx((lightboxIdx - 1 + galleryPhotos.length) % galleryPhotos.length) }}
-          >
+          <img src={galleryPhotos[lightboxIdx]} alt="" className="max-w-full max-h-[90vh] rounded-xl object-contain" onClick={e => e.stopPropagation()} />
+          <button className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white" onClick={e => { e.stopPropagation(); setLightboxIdx((lightboxIdx - 1 + galleryPhotos.length) % galleryPhotos.length) }}>
             <Icon name="ChevronLeft" size={40} />
           </button>
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
-            onClick={e => { e.stopPropagation(); setLightboxIdx((lightboxIdx + 1) % galleryPhotos.length) }}
-          >
+          <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white" onClick={e => { e.stopPropagation(); setLightboxIdx((lightboxIdx + 1) % galleryPhotos.length) }}>
             <Icon name="ChevronRight" size={40} />
           </button>
         </div>
       )}
+
+      {/* LIGHTBOX project */}
+      {projectLightbox !== null && (() => {
+        const proj = projects[projectLightbox.pi]
+        const total = proj.photos.length
+        const idx = projectLightbox.idx
+        return (
+          <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={() => setProjectLightbox(null)}>
+            <button className="absolute top-4 right-4 text-white/70 hover:text-white" onClick={() => setProjectLightbox(null)}>
+              <Icon name="X" size={32} />
+            </button>
+            <img src={proj.photos[idx]} alt="" className="max-w-full max-h-[85vh] rounded-xl object-contain" onClick={e => e.stopPropagation()} />
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+              {proj.photos.map((_, i) => (
+                <button key={i} onClick={e => { e.stopPropagation(); setProjectLightbox({ pi: projectLightbox.pi, idx: i }) }} className={`w-2 h-2 rounded-full transition-all ${i === idx ? "bg-yellow-400 w-6" : "bg-white/40"}`} />
+              ))}
+            </div>
+            <button className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white" onClick={e => { e.stopPropagation(); setProjectLightbox({ pi: projectLightbox.pi, idx: (idx - 1 + total) % total }) }}>
+              <Icon name="ChevronLeft" size={40} />
+            </button>
+            <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white" onClick={e => { e.stopPropagation(); setProjectLightbox({ pi: projectLightbox.pi, idx: (idx + 1) % total }) }}>
+              <Icon name="ChevronRight" size={40} />
+            </button>
+          </div>
+        )
+      })()}
 
       <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} defaultService="Отделка квартир" />
       <Footer />
