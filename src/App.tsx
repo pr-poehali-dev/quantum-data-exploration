@@ -26,7 +26,6 @@ import OtdelkaKvartir from "./pages/OtdelkaKvartir";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner"
 import { PromoPopup } from "./components/PromoPopup";
-import { KliningPromo } from "./components/KliningPromo";
 
 const queryClient = new QueryClient();
 
@@ -61,7 +60,6 @@ const App = () => (
           </Routes>
           <CookieBanner />
           <PromoPopup />
-          <KliningPromo />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
