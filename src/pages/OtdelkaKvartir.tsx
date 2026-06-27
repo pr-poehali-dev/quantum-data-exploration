@@ -421,7 +421,7 @@ export default function OtdelkaKvartir() {
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* PROJECTS */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -430,26 +430,75 @@ export default function OtdelkaKvartir() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <span className="text-yellow-400 text-sm font-bold tracking-widest uppercase">Наши работы</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Примеры готовых квартир</h2>
+            <span className="text-yellow-400 text-sm font-bold tracking-widest uppercase">Примеры работ</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Реализованные проекты</h2>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {galleryPhotos.map((photo, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.96 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="rounded-xl overflow-hidden aspect-square cursor-pointer group relative"
-                onClick={() => setLightboxIdx(i)}
-              >
-                <img src={photo} alt="Пример работы" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Icon name="ZoomIn" size={32} className="text-white" />
-                </div>
-              </motion.div>
-            ))}
+
+          <div className="flex flex-col gap-16">
+            {projects.map((project, pi) => {
+              const activeIdx = activeProjectPhoto[pi] ?? 0
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="grid md:grid-cols-2 gap-8 items-start"
+                >
+                  {/* Фото */}
+                  <div className="flex flex-col gap-3">
+                    <div className="rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer group relative" onClick={() => setProjectLightbox({ pi, idx: activeIdx })}>
+                      <img
+                        src={project.photos[activeIdx]}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <Icon name="ZoomIn" size={36} className="text-white" />
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      {project.photos.map((photo, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setActiveProjectPhoto(prev => ({ ...prev, [pi]: idx }))}
+                          className={`flex-1 rounded-xl overflow-hidden aspect-square border-2 transition-all ${activeIdx === idx ? "border-yellow-400 scale-95" : "border-transparent opacity-60 hover:opacity-100"}`}
+                        >
+                          <img src={photo} alt="" className="w-full h-full object-cover" />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Описание */}
+                  <div className="flex flex-col gap-5">
+                    <div className="inline-flex items-center gap-2 w-fit">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold text-black" style={{ backgroundColor: "#F5C518" }}>{project.tag}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white leading-tight">{project.title}</h3>
+                    <p className="text-zinc-400 leading-relaxed">{project.desc}</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="rounded-xl p-4" style={{ backgroundColor: "#18181B" }}>
+                        <div className="text-zinc-500 text-xs mb-1 uppercase tracking-wide">Площадь</div>
+                        <div className="text-white font-bold text-lg">{project.area}</div>
+                      </div>
+                      <div className="rounded-xl p-4" style={{ backgroundColor: "#18181B" }}>
+                        <div className="text-zinc-500 text-xs mb-1 uppercase tracking-wide">Срок</div>
+                        <div className="text-white font-bold text-lg">{project.duration}</div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setIsFormOpen(true)}
+                      className="mt-2 flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-bold text-sm text-black transition-all hover:opacity-90"
+                      style={{ background: "linear-gradient(135deg, #F5C518 0%, #ff9d00 100%)" }}
+                    >
+                      <Icon name="Phone" size={16} />
+                      Хочу такой же ремонт
+                    </button>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
