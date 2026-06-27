@@ -65,7 +65,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} МАСТЕРОФФ. Все права защищены.
             </p>
             <span className="hidden md:inline text-zinc-700 text-xs">•</span>
-            <p className="text-zinc-500 text-xs font-medium">ПРОЕКТ ООО ПЕРСОНАЛ24</p>
+            <p className="text-zinc-500 text-xs font-medium">ИП ЛЕГОСТАЕВ К.О.</p>
           </div>
           <Link
             to="/privacy"
