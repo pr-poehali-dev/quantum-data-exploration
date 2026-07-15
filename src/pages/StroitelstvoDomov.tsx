@@ -150,7 +150,7 @@ const projects = [
     tag: "Дом из бруса",
     area: "90 м²",
     duration: "2,5 месяца",
-    img: LOG_IMG,
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/97581c1f-cde1-4782-b01b-501e33994f81.png",
   },
   {
     id: 3,
