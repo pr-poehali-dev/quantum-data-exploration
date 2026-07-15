@@ -158,6 +158,7 @@ const servicesMenu = [
   { label: "Сантехник", href: "/santehnik", description: "Трубы, смесители, протечки, монтаж" },
   { label: "Клининг", href: "/klining", description: "Уборка квартир, офисов, химчистка" },
   { label: "Отделка квартир", href: "/otdelka-kvartir", description: "Косметический и капитальный ремонт" },
+  { label: "Строительство домов", href: "/stroitelnaya-kompaniya", description: "Дома и коттеджи под ключ" },
 ]
 
 export function Navbar() {
