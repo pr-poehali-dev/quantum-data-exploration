@@ -283,7 +283,7 @@ export default function StroitelstvoDomov() {
               Усть-Кут
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
-              Строительство домов<br />
+              Строительство домов в Усть-Куте<br />
               <span className="text-yellow-400">под ключ</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-8">
