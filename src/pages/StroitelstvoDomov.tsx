@@ -159,7 +159,7 @@ const projects = [
     tag: "Кирпичный дом",
     area: "150 м²",
     duration: "5 месяцев",
-    img: BRICK_IMG,
+    img: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/efe5a645-9682-42c0-9fc7-7b7b2a992d31.jpg",
   },
 ]
 
