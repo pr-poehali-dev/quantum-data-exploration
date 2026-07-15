@@ -415,7 +415,7 @@ export default function StroitelnayaKompaniya() {
             viewport={{ once: true }}
             className="rounded-3xl overflow-hidden relative"
           >
-            <img src={ROOF_IMG} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
+            <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/9cf5c326-530f-4834-a949-ceb36ce8defe.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
             <div className="relative z-10 p-10 md:p-16 text-center">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
                 Свяжитесь с нами<br />и обсудим ваш проект
