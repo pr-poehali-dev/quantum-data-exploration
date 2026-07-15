@@ -25,6 +25,7 @@ import Banya from "./pages/Banya";
 import OtdelkaKvartir from "./pages/OtdelkaKvartir";
 import StroitelnayaKompaniya from "./pages/StroitelnayaKompaniya";
 import StroitelstvoDomov from "./pages/StroitelstvoDomov";
+import Fundamenty from "./pages/Fundamenty";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner"
 import { PromoPopup } from "./components/PromoPopup";
@@ -59,6 +60,7 @@ const App = () => (
             <Route path="/otdelka-kvartir" element={<OtdelkaKvartir />} />
             <Route path="/stroitelnaya-kompaniya" element={<StroitelnayaKompaniya />} />
             <Route path="/stroitelstvo-domov" element={<StroitelstvoDomov />} />
+            <Route path="/fundamenty" element={<Fundamenty />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
