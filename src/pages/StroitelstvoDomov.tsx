@@ -13,6 +13,7 @@ const BRICK_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa
 const FOUNDATION_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/d83922ab-5446-437f-a07d-c41b636b371c.jpg"
 const ROOF_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/a1c5a52b-6feb-4c47-9ed2-e216ac7ef97a.jpg"
 const HOZBLOK_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/6a1574e2-5da1-4b7b-ba84-76bed581484c.jpg"
+const PROJECT1_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d4700c76-71b9-49dd-9772-a8bcef8d1842.jpg"
 
 const stats = [
   { num: "10+", label: "лет на рынке" },
@@ -140,7 +141,7 @@ const projects = [
     tag: "Каркасный дом",
     area: "120 м²",
     duration: "3 месяца",
-    img: HERO_IMG,
+    img: PROJECT1_IMG,
   },
   {
     id: 2,
