@@ -283,7 +283,7 @@ export default function StroitelnayaKompaniya() {
             viewport={{ once: true }}
             className="rounded-2xl overflow-hidden aspect-[4/3]"
           >
-            <img src={LOG_IMG} alt="Строительные работы МАСТЕРОФФ" className="w-full h-full object-cover" />
+            <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/83d3f932-e03f-4194-80ad-de8f282c546b.jpg" alt="Построенный дом МАСТЕРОФФ" className="w-full h-full object-cover" />
           </motion.div>
         </div>
       </section>
