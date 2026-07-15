@@ -283,8 +283,8 @@ export default function StroitelstvoDomov() {
               Усть-Кут
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
-              Строительство домов в Усть-Куте<br />
-              <span className="text-yellow-400">под ключ</span>
+              Строительство домов <span className="text-yellow-400">под ключ</span><br />
+              в Усть-Куте
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-8">
               Строим каркасные, брусовые и кирпичные дома. Фундамент, стены, кровля — полный цикл с гарантией 5 лет.
