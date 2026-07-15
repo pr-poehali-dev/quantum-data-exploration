@@ -158,7 +158,6 @@ const servicesMenu = [
   { label: "Сантехник", href: "/santehnik", description: "Трубы, смесители, протечки, монтаж" },
   { label: "Клининг", href: "/klining", description: "Уборка квартир, офисов, химчистка" },
   { label: "Отделка квартир", href: "/otdelka-kvartir", description: "Косметический и капитальный ремонт" },
-  { label: "Строительство домов", href: "/stroitelnaya-kompaniya", description: "Дома и коттеджи под ключ" },
 ]
 
 export function Navbar() {
@@ -292,6 +291,9 @@ export function Navbar() {
               )}
             </div>
 
+            <Link to="/stroitelnaya-kompaniya" className="text-sm text-zinc-400 hover:text-white transition-colors">
+              О компании
+            </Link>
             <Link to="/vakansii" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Вакансии
             </Link>
@@ -416,6 +418,13 @@ export function Navbar() {
               </div>
             )}
 
+            <Link
+              to="/stroitelnaya-kompaniya"
+              onClick={handleLinkClick}
+              className="text-base text-zinc-400 hover:text-white transition-colors py-2"
+            >
+              О компании
+            </Link>
             <Link
               to="/vakansii"
               onClick={handleLinkClick}
