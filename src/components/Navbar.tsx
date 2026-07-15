@@ -156,6 +156,14 @@ export function Navbar() {
                       <span className="text-sm text-white font-medium">Строительство бань</span>
                       <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Брус, бревно, каркас, бочка</span>
                     </Link>
+                    <Link
+                      to="/stroitelstvo-domov"
+                      onClick={() => setIsZaboryOpen(false)}
+                      className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-zinc-800 transition-colors group"
+                    >
+                      <span className="text-sm text-white font-medium">Строительство домов</span>
+                      <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Каркас, брус, кирпич под ключ</span>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -279,6 +287,14 @@ export function Navbar() {
                 >
                   <span className="text-sm text-white font-medium">Строительство бань</span>
                   <span className="text-xs text-zinc-500">Брус, бревно, каркас, бочка</span>
+                </Link>
+                <Link
+                  to="/stroitelstvo-domov"
+                  onClick={handleLinkClick}
+                  className="flex flex-col py-2 border-l border-zinc-800 pl-4"
+                >
+                  <span className="text-sm text-white font-medium">Строительство домов</span>
+                  <span className="text-xs text-zinc-500">Каркас, брус, кирпич под ключ</span>
                 </Link>
               </div>
             )}
