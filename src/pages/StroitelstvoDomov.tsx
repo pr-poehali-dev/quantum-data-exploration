@@ -7,7 +7,7 @@ import { OrderForm } from "@/components/OrderForm"
 import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/867ca448-26b4-4ca5-a093-eed307c8d325.jpg"
+const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/f89a9f63-3010-4c3c-ba73-c6b539da17e9.jpg"
 const LOG_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/75589bf6-5e4a-4f65-ada7-2cd555ea13f5.jpg"
 const BRICK_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/f83b2edb-4410-408c-90b8-11984bd1e441.jpg"
 const FOUNDATION_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/d83922ab-5446-437f-a07d-c41b636b371c.jpg"
