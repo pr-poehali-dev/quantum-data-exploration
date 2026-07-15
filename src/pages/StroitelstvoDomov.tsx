@@ -520,7 +520,7 @@ export default function StroitelstvoDomov() {
             viewport={{ once: true }}
             className="rounded-3xl overflow-hidden relative"
           >
-            <img src={ROOF_IMG} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
+            <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/065aa718-52b1-4437-98fe-efc15fc98c02.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
             <div className="relative z-10 p-10 md:p-16 text-center">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
                 Бесплатный выезд<br />и смета за 24 часа
