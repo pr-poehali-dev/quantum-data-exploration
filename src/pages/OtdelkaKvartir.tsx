@@ -228,6 +228,7 @@ export default function OtdelkaKvartir() {
           "telephone": "+7-914-891-0000",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "ул. Кирова, 77, офис 29",
             "addressLocality": "Усть-Кут",
             "addressRegion": "Иркутская область",
             "addressCountry": "RU"

@@ -177,6 +177,7 @@ export default function StroitelnayaKompaniya() {
           "telephone": "+7-950-099-09-31",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "ул. Кирова, 77, офис 29",
             "addressLocality": "Усть-Кут",
             "addressRegion": "Иркутская область",
             "addressCountry": "RU"

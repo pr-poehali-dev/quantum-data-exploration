@@ -36,7 +36,7 @@ export function Footer() {
             <span className="hidden md:inline text-zinc-700">•</span>
             <p className="text-zinc-500 flex items-center gap-2">
               <Icon name="MapPin" size={16} />
-              Усть-Кут, Иркутская обл.
+              г. Усть-Кут, ул. Кирова, 77, офис 29
             </p>
             <span className="hidden md:inline text-zinc-700">•</span>
             <a 
@@ -65,7 +65,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} МАСТЕРОФФ. Все права защищены.
             </p>
             <span className="hidden md:inline text-zinc-700 text-xs">•</span>
-            <p className="text-zinc-500 text-xs font-medium">ИП ЛЕГОСТАЕВ К.О.</p>
+            <p className="text-zinc-500 text-xs font-medium">ООО МАСТЕРОФФ СТРОЙ</p>
           </div>
           <Link
             to="/privacy"

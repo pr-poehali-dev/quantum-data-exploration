@@ -28,7 +28,6 @@ import StroitelstvoDomov from "./pages/StroitelstvoDomov";
 import Fundamenty from "./pages/Fundamenty";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner"
-import { PromoPopup } from "./components/PromoPopup";
 
 const queryClient = new QueryClient();
 
@@ -65,7 +64,6 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />
-          <PromoPopup />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

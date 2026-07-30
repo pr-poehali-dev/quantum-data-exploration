@@ -83,6 +83,7 @@ export default function Contacts() {
           "url": "https://servismasteroff.ru",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "ул. Кирова, 77, офис 29",
             "addressLocality": "Усть-Кут",
             "addressRegion": "Иркутская область",
             "addressCountry": "RU"
