@@ -196,6 +196,7 @@ export function Navbar() {
               <div className="flex flex-col leading-tight">
                 <a href="tel:+73953270234" className="text-sm text-white hover:text-yellow-400 transition-colors">8 (3953) 27-02-34</a>
                 <a href="tel:+79500990931" className="text-xs text-zinc-400 hover:text-yellow-400 transition-colors">+7 (950) 099-09-31</a>
+                <a href="tel:+79500838835" className="text-xs text-zinc-400 hover:text-yellow-400 transition-colors">+7 (950) 083-88-35</a>
               </div>
             </div>
           </div>
@@ -347,6 +348,7 @@ export function Navbar() {
               </div>
               <div className="flex flex-col leading-tight">
                 <a href="tel:+79500990931" className="text-base font-bold text-white">+7 (950) 099-09-31</a>
+                <a href="tel:+79500838835" className="text-sm text-zinc-400">+7 (950) 083-88-35</a>
                 <a href="tel:+73953270234" className="text-sm text-zinc-400">8 (3953) 27-02-34</a>
               </div>
             </div>

@@ -45,6 +45,13 @@ export function PromoSection() {
                   +7 (950) 099-09-31
                 </a>
                 <a
+                  href="tel:+79500838835"
+                  className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2 whitespace-nowrap"
+                >
+                  <Icon name="Phone" size={18} />
+                  +7 (950) 083-88-35
+                </a>
+                <a
                   href="tel:+73953270234"
                   className="px-6 py-3 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors flex items-center gap-2 whitespace-nowrap"
                 >

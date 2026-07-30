@@ -26,6 +26,13 @@ export function Footer() {
                 +7 (950) 099-09-31
               </a>
               <a 
+                href="tel:+79500838835" 
+                className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+              >
+                <Icon name="Phone" size={16} />
+                +7 (950) 083-88-35
+              </a>
+              <a 
                 href="tel:+73953270234" 
                 className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
               >

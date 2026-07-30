@@ -34,6 +34,14 @@ export function CTASection() {
               +7 (950) 099-09-31
             </a>
             <a
+              href="tel:+79500838835"
+              className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-colors whitespace-nowrap"
+              style={{ backgroundColor: "#111113" }}
+            >
+              <Icon name="Phone" size={18} style={{ color: "#F5C518" }} />
+              +7 (950) 083-88-35
+            </a>
+            <a
               href="tel:+73953270234"
               className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-semibold text-base text-white border border-zinc-700 hover:border-yellow-500/50 transition-colors whitespace-nowrap"
               style={{ backgroundColor: "#111113" }}

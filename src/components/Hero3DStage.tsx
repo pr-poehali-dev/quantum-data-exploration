@@ -124,6 +124,18 @@ export function Hero3DStage() {
                       </div>
                     </a>
                     <a
+                      href="tel:+79500838835"
+                      className="flex items-center gap-3 border border-zinc-700 rounded-xl px-4 py-3 hover:border-orange-500 transition-colors bg-zinc-800/60 whitespace-nowrap"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Phone" size={14} className="text-white" />
+                      </div>
+                      <div>
+                        <div className="text-white text-sm font-medium">Позвонить</div>
+                        <div className="text-xs text-zinc-400">+7 (950) 083-88-35</div>
+                      </div>
+                    </a>
+                    <a
                       href="https://max.ru/79500990931"
                       target="_blank"
                       rel="noopener noreferrer"

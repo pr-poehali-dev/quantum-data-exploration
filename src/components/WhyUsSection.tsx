@@ -79,6 +79,13 @@ export function WhyUsSection() {
                 +7 (950) 099-09-31
               </a>
               <a
+                href="tel:+79500838835"
+                className="block w-full py-3 text-center font-semibold rounded-xl text-white text-base mb-2 hover:border-yellow-500/50 transition-colors border border-zinc-700 whitespace-nowrap"
+                style={{ backgroundColor: "#111113" }}
+              >
+                +7 (950) 083-88-35
+              </a>
+              <a
                 href="tel:+73953270234"
                 className="block w-full py-3 text-center font-semibold rounded-xl text-white text-base mb-4 hover:border-yellow-500/50 transition-colors border border-zinc-700 whitespace-nowrap"
                 style={{ backgroundColor: "#111113" }}
