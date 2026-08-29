@@ -93,7 +93,7 @@ const Index = () => {
             onClick={() => navigate("/master-na-chas")}
             className="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 font-bold text-lg md:text-xl px-10 py-4 rounded-2xl transition-colors"
           >
-            Вызвать мастера
+            Заказать услугу
           </motion.button>
         </div>
       </main>
