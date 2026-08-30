@@ -180,6 +180,14 @@ export function Navbar() {
                       <span className="text-sm text-white font-medium">Печи и камины</span>
                       <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Кладка печей, каминов, дымоходов</span>
                     </Link>
+                    <Link
+                      to="/plastikovye-okna"
+                      onClick={() => setIsZaboryOpen(false)}
+                      className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-zinc-800 transition-colors group"
+                    >
+                      <span className="text-sm text-white font-medium">Пластиковые окна</span>
+                      <span className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Производство и монтаж</span>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -328,6 +336,14 @@ export function Navbar() {
                 >
                   <span className="text-sm text-white font-medium">Печи и камины</span>
                   <span className="text-xs text-zinc-500">Кладка печей, каминов, дымоходов</span>
+                </Link>
+                <Link
+                  to="/plastikovye-okna"
+                  onClick={handleLinkClick}
+                  className="flex flex-col py-2 border-l border-zinc-800 pl-4"
+                >
+                  <span className="text-sm text-white font-medium">Пластиковые окна</span>
+                  <span className="text-xs text-zinc-500">Производство и монтаж</span>
                 </Link>
               </div>
             )}
