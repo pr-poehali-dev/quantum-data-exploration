@@ -10,11 +10,31 @@ import { FloatingCallButton } from "@/components/FloatingCallButton"
 const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2fa02e05-5b6f-4c2b-b817-076b465ada15.jpg"
 
 const worksPhotos = [
-  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d3515bd3-6d9e-4fb9-a67d-eb746c1c795b.jpeg",
-  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b01eae4c-f6a7-48ef-b819-75e3c0ff7f0f.jpeg",
-  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/61d026b0-0c94-4a9f-814e-7d3a2dcce29f.png",
-  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/22eff517-49c5-479d-9117-81a6a8cfb315.png",
-  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/fdccd222-2313-4be7-bf16-5917524b5d91.jpg",
+  {
+    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d3515bd3-6d9e-4fb9-a67d-eb746c1c795b.jpeg",
+    title: "Отопительно-варочная печь",
+    desc: "Кирпичная печь с топкой и варочной панелью для загородного дома",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b01eae4c-f6a7-48ef-b819-75e3c0ff7f0f.jpeg",
+    title: "Печь-камин с открытой топкой",
+    desc: "Комбинированная конструкция для беседки с дровником и варочной поверхностью",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/61d026b0-0c94-4a9f-814e-7d3a2dcce29f.png",
+    title: "Печь-барбекю",
+    desc: "Уличный комплекс для барбекю с двумя топками и коваными дверцами",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/22eff517-49c5-479d-9117-81a6a8cfb315.png",
+    title: "Двухъярусная печь",
+    desc: "Кладка из облицовочного кирпича с фигурными коваными элементами",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/fdccd222-2313-4be7-bf16-5917524b5d91.jpg",
+    title: "Угловая печь с топкой",
+    desc: "Компактная печь со стеклянной дверцей топки для гостиной в доме",
+  },
 ]
 
 const stats = [
@@ -444,12 +464,17 @@ export default function PechiKaminy() {
                 className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
                 onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i - 1 + worksPhotos.length) % worksPhotos.length : null) }}
               >‹</button>
-              <img
-                src={worksPhotos[worksLightbox]}
-                alt={`Наша работа ${worksLightbox + 1}`}
-                className="max-h-[88vh] max-w-[88vw] rounded-2xl object-contain shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              />
+              <div className="flex flex-col items-center gap-3" onClick={(e) => e.stopPropagation()}>
+                <img
+                  src={worksPhotos[worksLightbox].src}
+                  alt={worksPhotos[worksLightbox].title}
+                  className="max-h-[75vh] max-w-[88vw] rounded-2xl object-contain shadow-2xl"
+                />
+                <div className="text-center px-4">
+                  <div className="text-white font-semibold text-base">{worksPhotos[worksLightbox].title}</div>
+                  <div className="text-gray-400 text-sm mt-1 max-w-md">{worksPhotos[worksLightbox].desc}</div>
+                </div>
+              </div>
               <button
                 className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
                 onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i + 1) % worksPhotos.length : null) }}
@@ -463,7 +488,7 @@ export default function PechiKaminy() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {worksPhotos.map((photo, i) => (
               <motion.div
-                key={photo}
+                key={photo.src}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -473,10 +498,15 @@ export default function PechiKaminy() {
                 onClick={() => setWorksLightbox(i)}
               >
                 <img
-                  src={photo}
-                  alt={`Наша работа ${i + 1}`}
+                  src={photo.src}
+                  alt={photo.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <div className="text-white font-semibold text-sm leading-tight">{photo.title}</div>
+                  <div className="text-gray-300 text-xs mt-0.5 leading-snug hidden md:block">{photo.desc}</div>
+                </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-11 h-11 rounded-full bg-white/25 backdrop-blur-sm flex items-center justify-center">
                     <Icon name="ZoomIn" size={20} className="text-white" />
