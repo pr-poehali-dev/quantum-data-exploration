@@ -248,9 +248,10 @@ export default function PlastikovyeOkna() {
             <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded mb-5 tracking-widest uppercase">
               Усть-Кут
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+            <h1 className="text-3xl md:text-6xl font-bold text-white leading-tight mb-5">
               Пластиковые окна<br />
-              <span className="text-yellow-400">производство и монтаж</span> в Усть-Куте
+              <span className="text-yellow-400">производство и монтаж</span>{" "}
+              <span className="whitespace-nowrap">в Усть-Куте</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-8">
               Собственное производство окон ПВХ. Замер, изготовление и установка под ключ с гарантией 5 лет.
