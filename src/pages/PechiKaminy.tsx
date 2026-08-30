@@ -530,7 +530,7 @@ export default function PechiKaminy() {
             <img src={HERO_IMG} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
             <div className="relative z-10 p-10 md:p-16 text-center">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-                Бесплатный выезд<br />и смета за 24 часа
+                Бесплатный выезд и смета за 24 часа
               </h2>
               <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
                 Оставьте заявку — приедем, оценим помещение и пришлём смету на печь или камин. Без обязательств.
