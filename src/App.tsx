@@ -28,6 +28,7 @@ import StroitelstvoDomov from "./pages/StroitelstvoDomov";
 import Fundamenty from "./pages/Fundamenty";
 import PechiKaminy from "./pages/PechiKaminy";
 import PlastikovyeOkna from "./pages/PlastikovyeOkna";
+import RusskayaPech from "./pages/RusskayaPech";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner"
 
@@ -64,6 +65,7 @@ const App = () => (
             <Route path="/fundamenty" element={<Fundamenty />} />
             <Route path="/pechi-kaminy" element={<PechiKaminy />} />
             <Route path="/plastikovye-okna" element={<PlastikovyeOkna />} />
+            <Route path="/russkaya-pech" element={<RusskayaPech />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
