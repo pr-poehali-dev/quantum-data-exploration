@@ -11,19 +11,29 @@ const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa7
 
 const worksPhotos = [
   {
-    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/23fd7dd5-64a6-46df-93fd-85d9c16f8309.jpg",
+    src: "/uploads/pechi/work-1.webp",
     title: "Русская печь с лежанкой",
-    desc: "Классическая печь с тёплой лежанкой для деревенского дома",
+    desc: "Кирпичная кладка с арочными нишами и тёплой лежанкой",
   },
   {
-    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/92698e99-f502-4d1e-a98e-a8917c3dbcee.jpg",
-    title: "Кладка печи мастером",
-    desc: "Ручная кладка на глиняный раствор по традиционной порядовке",
+    src: "/uploads/pechi/work-2.webp",
+    title: "Печь с побелкой и изразцами",
+    desc: "Двухъярусная конструкция с духовым шкафом для деревянного дома",
   },
   {
-    src: "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/65c9a2d0-726e-4773-81e7-5727d066a411.jpg",
-    title: "Печь с изразцами",
-    desc: "Русская печь с декоративной облицовкой для кухни в доме",
+    src: "/uploads/pechi/work-3.webp",
+    title: "Печь с варочной плитой",
+    desc: "Чугунная плита и кованая дверца для приготовления пищи",
+  },
+  {
+    src: "/uploads/pechi/work-4.webp",
+    title: "Печь с духовкой",
+    desc: "Отбеленная кладка с нишами и топкой для дома в стадии отделки",
+  },
+  {
+    src: "/uploads/pechi/work-5.webp",
+    title: "Печь с фигурной аркой",
+    desc: "Облицовка светлым кирпичом с декоративной аркой горнила",
   },
 ]
 
