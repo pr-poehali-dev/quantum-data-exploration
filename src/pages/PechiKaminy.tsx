@@ -247,7 +247,7 @@ export default function PechiKaminy() {
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
               Печи и камины<br />
-              <span className="text-yellow-400">под ключ</span> в Усть-Куте
+              <span className="text-yellow-400">под ключ</span> <span className="whitespace-nowrap">в Усть-Куте</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-8">
               Кирпичные печи, банные каменки, камины и дымоходы. Кладём вручную по проверенным порядовкам с гарантией.
