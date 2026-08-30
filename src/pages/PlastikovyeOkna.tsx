@@ -7,7 +7,7 @@ import { OrderForm } from "@/components/OrderForm"
 import Icon from "@/components/ui/icon"
 import { FloatingCallButton } from "@/components/FloatingCallButton"
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/files/1858fa8d-f743-444b-b903-467515c9c11a.jpg"
+const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/ce4e43a9-df6a-4752-ac9d-ff563a858901.webp"
 
 const stats = [
   { num: "10+", label: "лет на рынке" },
