@@ -9,6 +9,14 @@ import { FloatingCallButton } from "@/components/FloatingCallButton"
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/2fa02e05-5b6f-4c2b-b817-076b465ada15.jpg"
 
+const worksPhotos = [
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/d3515bd3-6d9e-4fb9-a67d-eb746c1c795b.jpeg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/b01eae4c-f6a7-48ef-b819-75e3c0ff7f0f.jpeg",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/61d026b0-0c94-4a9f-814e-7d3a2dcce29f.png",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/22eff517-49c5-479d-9117-81a6a8cfb315.png",
+  "https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/fdccd222-2313-4be7-bf16-5917524b5d91.jpg",
+]
+
 const stats = [
   { num: "10+", label: "лет на рынке" },
   { num: "150+", label: "печей и каминов сложено" },
@@ -159,6 +167,7 @@ const faq = [
 export default function PechiKaminy() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [worksLightbox, setWorksLightbox] = useState<number | null>(null)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#09090B" }}>
@@ -408,8 +417,79 @@ export default function PechiKaminy() {
         </div>
       </section>
 
-      {/* CTA BANNER */}
+      {/* WORKS GALLERY */}
       <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-10"
+          >
+            <span className="text-yellow-400 text-sm font-bold tracking-widest uppercase">Портфолио</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Наши работы</h2>
+            <p className="text-gray-400 mt-2">Нажмите на фото, чтобы рассмотреть подробнее</p>
+          </motion.div>
+
+          {worksLightbox !== null && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/92"
+              onClick={() => setWorksLightbox(null)}
+            >
+              <button
+                className="absolute top-4 right-4 text-white text-3xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-full"
+                onClick={() => setWorksLightbox(null)}
+              >✕</button>
+              <button
+                className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
+                onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i - 1 + worksPhotos.length) % worksPhotos.length : null) }}
+              >‹</button>
+              <img
+                src={worksPhotos[worksLightbox]}
+                alt={`Наша работа ${worksLightbox + 1}`}
+                className="max-h-[88vh] max-w-[88vw] rounded-2xl object-contain shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
+                onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i + 1) % worksPhotos.length : null) }}
+              >›</button>
+              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/70 text-sm bg-black/40 px-4 py-1.5 rounded-full">
+                {worksLightbox + 1} / {worksPhotos.length}
+              </div>
+            </div>
+          )}
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {worksPhotos.map((photo, i) => (
+              <motion.div
+                key={photo}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="relative overflow-hidden rounded-2xl cursor-pointer group"
+                style={{ height: "220px" }}
+                onClick={() => setWorksLightbox(i)}
+              >
+                <img
+                  src={photo}
+                  alt={`Наша работа ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-11 h-11 rounded-full bg-white/25 backdrop-blur-sm flex items-center justify-center">
+                    <Icon name="ZoomIn" size={20} className="text-white" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA BANNER */}
+      <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
