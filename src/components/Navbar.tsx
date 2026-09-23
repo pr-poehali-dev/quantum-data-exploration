@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Icon from "@/components/ui/icon"
+import { SiteSearch } from "@/components/SiteSearch"
 
 const zaboryMenu = [
   { label: "Забор из дерева", href: "/zabory#derevo" },
@@ -211,6 +212,8 @@ export function Navbar() {
               Контакты
             </Link>
 
+            <SiteSearch />
+
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center w-6 h-6 flex-shrink-0">
                 <span className="absolute inline-flex rounded-full w-6 h-6 animate-ping" style={{ backgroundColor: "rgba(245, 197, 24, 0.35)", animationDuration: "1.4s" }} />
@@ -227,6 +230,7 @@ export function Navbar() {
 
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-3">
+            <SiteSearch />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-zinc-400 hover:text-white transition-colors"
