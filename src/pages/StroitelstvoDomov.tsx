@@ -283,11 +283,11 @@ export default function StroitelstvoDomov() {
             <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded mb-5 tracking-widest uppercase">
               Усть-Кут
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+            <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3">
               Строительство домов<br />
               <span className="text-yellow-400">под ключ</span> в Усть-Куте
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-8">
+            <p className="text-sm md:text-base text-gray-300 max-w-xl mb-6">
               Строим каркасные, брусовые и кирпичные дома. Фундамент, стены, кровля — полный цикл с гарантией 5 лет.
             </p>
             <div className="flex flex-wrap gap-4">
