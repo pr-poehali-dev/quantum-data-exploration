@@ -9,14 +9,20 @@ import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Gruzchiki from "./pages/Gruzchiki";
 import MasterNaChas from "./pages/MasterNaChas";
+import MuzhNaChas from "./pages/MuzhNaChas";
 import Raznorabochie from "./pages/Raznorabochie";
 import Vakansii from "./pages/Vakansii";
 import Pricing from "./pages/Pricing";
+import SborkaMebeli from "./pages/SborkaMebeli";
 import Contacts from "./pages/Contacts";
+import Plotnik from "./pages/Plotnik";
 import Zabory from "./pages/Zabory";
+import OtdelkaBani from "./pages/OtdelkaBani";
 import Elektrik from "./pages/Elektrik";
 import Santehnik from "./pages/Santehnik"
+import Klining from "./pages/Klining";
 import Banya from "./pages/Banya";
+import OtdelkaKvartir from "./pages/OtdelkaKvartir";
 import StroitelnayaKompaniya from "./pages/StroitelnayaKompaniya";
 import StroitelstvoDomov from "./pages/StroitelstvoDomov";
 import Fundamenty from "./pages/Fundamenty";
@@ -40,14 +46,20 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/gruzchiki" element={<Gruzchiki />} />
             <Route path="/master-na-chas" element={<MasterNaChas />} />
+            <Route path="/muzh-na-chas" element={<MuzhNaChas />} />
             <Route path="/raznorabochie" element={<Raznorabochie />} />
             <Route path="/vakansii" element={<Vakansii />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/sborka-mebeli" element={<SborkaMebeli />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path="/plotnik" element={<Plotnik />} />
             <Route path="/zabory" element={<Zabory />} />
+            <Route path="/otdelka-bani" element={<OtdelkaBani />} />
             <Route path="/elektrik" element={<Elektrik />} />
             <Route path="/santehnik" element={<Santehnik />} />
+            <Route path="/klining" element={<Klining />} />
             <Route path="/banya" element={<Banya />} />
+            <Route path="/otdelka-kvartir" element={<OtdelkaKvartir />} />
             <Route path="/stroitelnaya-kompaniya" element={<StroitelnayaKompaniya />} />
             <Route path="/stroitelstvo-domov" element={<StroitelstvoDomov />} />
             <Route path="/fundamenty" element={<Fundamenty />} />

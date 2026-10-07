@@ -19,8 +19,14 @@ const servicesMenu = [
   { label: "Разнорабочие", href: "/raznorabochie", description: "Ремонт, сборка, монтаж" },
   { label: "Грузчики", href: "/gruzchiki", description: "Переезд, погрузка, разгрузка" },
   { label: "Мастер на час", href: "/master-na-chas", description: "Сантехника, электрика, ремонт" },
+  { label: "Муж на час", href: "/muzh-na-chas", description: "Мелкий ремонт на дому" },
+  { label: "Сборка мебели", href: "/sborka-mebeli", description: "Шкафы, кухни, кровати, прихожие" },
+  { label: "Плотник", href: "/plotnik", description: "Двери, ламинат, обшивка, полки" },
+  { label: "Отделка бань и саун", href: "/otdelka-bani", description: "Внутренняя отделка под ключ" },
   { label: "Электрик", href: "/elektrik", description: "Проводка, розетки, щитки, техника" },
   { label: "Сантехник", href: "/santehnik", description: "Трубы, смесители, протечки, монтаж" },
+  { label: "Клининг", href: "/klining", description: "Уборка квартир, офисов, химчистка" },
+  { label: "Отделка квартир", href: "/otdelka-kvartir", description: "Косметический и капитальный ремонт" },
 ]
 
 export function Navbar() {
