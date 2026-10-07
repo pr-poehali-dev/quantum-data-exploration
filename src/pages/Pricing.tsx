@@ -37,17 +37,6 @@ const services = [
       { label: "Полный день", hours: 8, price: 4000, rate: 500 },
     ],
   },
-  {
-    title: "Муж на час",
-    href: "/muzh-na-chas",
-    icon: "Screwdriver",
-    color: "purple",
-    description: "Мелкий бытовой ремонт, сборка мебели, установка",
-    plans: [
-      { label: "Минимальный заказ", hours: 4, price: 2000, rate: 500 },
-      { label: "Полный день", hours: 8, price: 4000, rate: 500 },
-    ],
-  },
 ]
 
 const colorMap: Record<string, { border: string; iconBg: string; iconText: string; badge: string; badgeText: string }> = {
