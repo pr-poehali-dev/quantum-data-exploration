@@ -226,7 +226,7 @@ export function WorkflowsSection() {
   }
 
   return (
-    <section className="relative py-24" style={{ backgroundColor: "#09090B" }}>
+    <section className="relative py-14 md:py-24" style={{ backgroundColor: "#09090B" }}>
       {/* Top gradient */}
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"
@@ -248,7 +248,7 @@ export function WorkflowsSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
+            <h2 className="text-3xl md:text-5xl font-medium text-white leading-[1.1]">
               Работайте слаженно
               <br />
               между инструментами

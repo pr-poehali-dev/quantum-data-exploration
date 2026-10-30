@@ -209,7 +209,7 @@ export default function OtdelkaBani() {
             className="text-center"
           >
             <h1
-              className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10 text-white"
+              className="text-3xl md:text-6xl leading-tight mb-8 md:mb-10 text-white"
               style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
               Внутренняя отделка бань<br />
@@ -566,7 +566,7 @@ export default function OtdelkaBani() {
       </div>
 
       {/* Галерея проектов */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
+      <section className="py-10 md:py-16 px-6" style={{ backgroundColor: "#f0ede8" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -590,7 +590,7 @@ export default function OtdelkaBani() {
                 onClick={() => setLightbox(null)}
               >✕</button>
               <button
-                className="absolute left-4 text-white text-4xl font-bold z-10 px-4"
+                className="absolute left-4 text-white text-3xl md:text-4xl font-bold z-10 px-4"
                 onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx - 1 + l.photos.length) % l.photos.length } : null); }}
               >‹</button>
               <img
@@ -599,7 +599,7 @@ export default function OtdelkaBani() {
                 onClick={(e) => e.stopPropagation()}
               />
               <button
-                className="absolute right-4 text-white text-4xl font-bold z-10 px-4"
+                className="absolute right-4 text-white text-3xl md:text-4xl font-bold z-10 px-4"
                 onClick={(e) => { e.stopPropagation(); setLightbox(l => l ? { ...l, idx: (l.idx + 1) % l.photos.length } : null); }}
               >›</button>
               <div className="absolute bottom-4 text-white text-sm">{lightbox.idx + 1} / {lightbox.photos.length}</div>

@@ -95,7 +95,7 @@ export default function Pricing() {
               <Icon name="Tag" size={14} />
               Прозрачные цены
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Стоимость услуг
             </h1>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto">

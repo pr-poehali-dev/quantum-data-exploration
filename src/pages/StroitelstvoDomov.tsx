@@ -321,7 +321,7 @@ export default function StroitelstvoDomov() {
               className="text-center py-6 px-4 rounded-2xl"
               style={{ backgroundColor: "#18181B" }}
             >
-              <div className="text-4xl font-black text-yellow-400 mb-1">{s.num}</div>
+              <div className="text-3xl md:text-4xl font-black text-yellow-400 mb-1">{s.num}</div>
               <div className="text-gray-400 text-sm">{s.label}</div>
             </motion.div>
           ))}
@@ -329,7 +329,7 @@ export default function StroitelstvoDomov() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -372,7 +372,7 @@ export default function StroitelstvoDomov() {
       </section>
 
       {/* WHY US */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+      <section className="py-12 md:py-20 px-4" style={{ backgroundColor: "#111113" }}>
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -411,7 +411,7 @@ export default function StroitelstvoDomov() {
       </section>
 
       {/* PROJECTS */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -478,7 +478,7 @@ export default function StroitelstvoDomov() {
       </section>
 
       {/* STAGES */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+      <section className="py-12 md:py-20 px-4" style={{ backgroundColor: "#111113" }}>
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -514,7 +514,7 @@ export default function StroitelstvoDomov() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -523,7 +523,7 @@ export default function StroitelstvoDomov() {
             className="rounded-3xl overflow-hidden relative"
           >
             <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/065aa718-52b1-4437-98fe-efc15fc98c02.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
-            <div className="relative z-10 p-10 md:p-16 text-center">
+            <div className="relative z-10 p-6 md:p-16 text-center">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
                 Бесплатный выезд<br />и смета за 24 часа
               </h2>
@@ -542,7 +542,7 @@ export default function StroitelstvoDomov() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+      <section className="py-12 md:py-20 px-4" style={{ backgroundColor: "#111113" }}>
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

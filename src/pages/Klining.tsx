@@ -586,7 +586,7 @@ export default function Klining() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 bg-white border border-orange-100 shadow-sm"
+              className="rounded-3xl p-6 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 bg-white border border-orange-100 shadow-sm"
             >
               <div>
                 <div className="flex items-center gap-2 mb-3">

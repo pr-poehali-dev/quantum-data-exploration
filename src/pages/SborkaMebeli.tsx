@@ -237,7 +237,7 @@ function WorksSection() {
 
   return (
     <section className="px-4 md:px-10 pb-20" style={{ backgroundColor: "#0d0d10" }}>
-      <div className="max-w-6xl mx-auto py-16">
+      <div className="max-w-6xl mx-auto py-10 md:py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">
             Примеры <HighlightWord>наших работ</HighlightWord>
@@ -357,8 +357,8 @@ export default function SborkaMebeli() {
             className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
           >
             <div className="grid md:grid-cols-[1fr_420px]">
-              <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
+              <div className="p-6 md:p-12 flex flex-col justify-start relative z-10">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                   Сборка мебели<br />в Усть-Куте
                 </h1>
                 <ul className="space-y-3 mb-8">
@@ -538,7 +538,7 @@ export default function SborkaMebeli() {
 
         {/* Почему выбирают нас */}
         <section className="px-4 md:px-10 pb-20" style={{ backgroundColor: "#0d0d10" }}>
-          <div className="max-w-6xl mx-auto py-16">
+          <div className="max-w-6xl mx-auto py-10 md:py-16">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="text-center mb-4">
               <h2 className="text-3xl md:text-4xl font-extrabold text-white">
                 Почему выбирают <HighlightWord>нас?</HighlightWord>
@@ -603,7 +603,7 @@ export default function SborkaMebeli() {
 
         {/* Как мы работаем */}
         <section className="px-4 md:px-10 pb-20" style={{ backgroundColor: "#0d0d10" }}>
-          <div className="max-w-6xl mx-auto py-16">
+          <div className="max-w-6xl mx-auto py-10 md:py-16">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-extrabold text-white">
                 Как мы <HighlightWord>работаем</HighlightWord>
@@ -677,7 +677,7 @@ export default function SborkaMebeli() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl border border-zinc-800 p-8 md:p-12 text-center"
+              className="rounded-3xl border border-zinc-800 p-6 md:p-12 text-center"
               style={{ backgroundColor: "#111113" }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">

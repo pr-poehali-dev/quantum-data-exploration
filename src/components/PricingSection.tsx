@@ -9,7 +9,7 @@ const prices = [
 
 export function PricingSection() {
   return (
-    <section className="py-16 md:py-24 px-6" style={{ backgroundColor: "#0d0d10" }} id="pricing">
+    <section className="py-10 md:py-24 px-6" style={{ backgroundColor: "#0d0d10" }} id="pricing">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export function PricingSection() {
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: "rgba(245,197,24,0.12)" }}>
             <Icon name="Clock" size={30} style={{ color: "#F5C518" }} />
           </div>
-          <div className="text-6xl font-extrabold text-white mb-2">500 ₽</div>
+          <div className="text-3xl md:text-6xl font-extrabold text-white mb-2">500 ₽</div>
           <div className="text-xl text-zinc-400 mb-6">за час работы</div>
 
           <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-8 border border-zinc-700" style={{ backgroundColor: "#111113" }}>

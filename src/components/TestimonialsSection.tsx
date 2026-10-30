@@ -12,7 +12,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="relative py-16 md:py-24 px-6" style={{ backgroundColor: "#09090B" }}>
+    <section className="relative py-10 md:py-24 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

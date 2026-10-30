@@ -131,8 +131,8 @@ export default function Plotnik() {
               style={{ right: "20px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
             />
             <div className="grid md:grid-cols-[1fr_420px]">
-              <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
+              <div className="p-6 md:p-12 flex flex-col justify-start relative z-10">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                   Плотник<br />в Усть-Куте
                 </h1>
 
@@ -212,7 +212,7 @@ export default function Plotnik() {
         </div>
 
         {/* Услуги */}
-        <section className="py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
+        <section className="py-10 md:py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">Виды столярных работ</h2>
@@ -246,7 +246,7 @@ export default function Plotnik() {
         </section>
 
         {/* Преимущества */}
-        <section className="py-16 px-6" style={{ backgroundColor: "#09090B" }}>
+        <section className="py-10 md:py-16 px-6" style={{ backgroundColor: "#09090B" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">Почему выбирают нас</h2>
@@ -274,7 +274,7 @@ export default function Plotnik() {
         </section>
 
         {/* Прайс */}
-        <section className="py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
+        <section className="py-10 md:py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">Стоимость услуг</h2>
@@ -335,7 +335,7 @@ export default function Plotnik() {
         </section>
 
         {/* Как работаем */}
-        <section className="py-16 px-6" style={{ backgroundColor: "#09090B" }}>
+        <section className="py-10 md:py-16 px-6" style={{ backgroundColor: "#09090B" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">Как мы работаем</h2>
@@ -352,7 +352,7 @@ export default function Plotnik() {
                   className="rounded-2xl p-5 border border-zinc-800 relative"
                   style={{ backgroundColor: "#1a1a1a" }}
                 >
-                  <div className="text-4xl font-black mb-3 opacity-10 absolute top-4 right-5" style={{ color: "#F5C518" }}>{step.num}</div>
+                  <div className="text-3xl md:text-4xl font-black mb-3 opacity-10 absolute top-4 right-5" style={{ color: "#F5C518" }}>{step.num}</div>
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: "#1f1f22" }}>
                     <Icon name={step.icon as "Home"} size={20} style={{ color: "#F5C518" }} />
                   </div>
@@ -365,7 +365,7 @@ export default function Plotnik() {
         </section>
 
         {/* Отзывы */}
-        <section className="py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
+        <section className="py-10 md:py-16 px-6" style={{ backgroundColor: "#0f0f11" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">Отзывы клиентов</h2>
@@ -398,14 +398,14 @@ export default function Plotnik() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20 px-6" style={{ backgroundColor: "#09090B" }}>
+        <section className="py-10 md:py-20 px-6" style={{ backgroundColor: "#09090B" }}>
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8"
+              className="rounded-3xl p-6 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8"
               style={{ backgroundColor: "#1a1a1a" }}
             >
               <div>

@@ -57,8 +57,8 @@ export default function Santehnik() {
             className="w-full max-w-6xl bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden"
           >
             <div className="grid md:grid-cols-[1fr_420px]">
-              <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
+              <div className="p-6 md:p-12 flex flex-col justify-start relative z-10">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                   Сантехник<br />в Усть-Куте
                 </h1>
 
@@ -216,7 +216,7 @@ export default function Santehnik() {
 
         {/* Отзывы с микроразметкой для Яндекса */}
         <section
-          className="py-16 px-4 md:px-10"
+          className="py-10 md:py-16 px-4 md:px-10"
           style={{ backgroundColor: "#111113" }}
           itemScope
           itemType="https://schema.org/LocalBusiness"

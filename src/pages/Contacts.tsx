@@ -108,7 +108,7 @@ export default function Contacts() {
               transition={{ duration: 0.4 }}
               className="mb-10 text-center"
             >
-              <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+              <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4">
                 Контакты
               </h1>
               <p className="text-zinc-400 text-lg">

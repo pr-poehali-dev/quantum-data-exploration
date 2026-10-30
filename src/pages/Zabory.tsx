@@ -284,7 +284,7 @@ export default function Zabory() {
             transition={{ duration: 0.7 }}
           >
             <h1
-              className="text-4xl md:text-6xl leading-tight mb-4 text-zinc-900"
+              className="text-3xl md:text-6xl leading-tight mb-4 text-zinc-900"
               style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
               Строительство<br />и установка заборов<br />в Усть-Куте
@@ -707,7 +707,7 @@ export default function Zabory() {
                 onClick={() => setWorksLightbox(null)}
               >✕</button>
               <button
-                className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
+                className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
                 onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i - 1 + worksPhotos.length) % worksPhotos.length : null) }}
               >‹</button>
               <img
@@ -717,7 +717,7 @@ export default function Zabory() {
                 onClick={(e) => e.stopPropagation()}
               />
               <button
-                className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
+                className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/40 rounded-xl"
                 onClick={(e) => { e.stopPropagation(); setWorksLightbox(i => i !== null ? (i + 1) % worksPhotos.length : null) }}
               >›</button>
               <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/70 text-sm bg-black/40 px-4 py-1.5 rounded-full">

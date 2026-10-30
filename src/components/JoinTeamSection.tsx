@@ -3,14 +3,14 @@ import Icon from "@/components/ui/icon"
 
 export function JoinTeamSection() {
   return (
-    <section className="py-16 md:py-20 px-6" style={{ backgroundColor: "#09090B" }}>
+    <section className="py-10 md:py-20 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl p-8 md:p-12"
+          className="relative overflow-hidden rounded-3xl p-6 md:p-12"
           style={{ backgroundColor: "#1a1a1a" }}
         >
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">

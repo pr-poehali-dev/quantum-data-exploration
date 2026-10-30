@@ -195,7 +195,7 @@ export default function Banya() {
         <div className="relative z-10 flex-1 flex flex-col justify-center max-w-6xl mx-auto px-6 md:px-10 w-full pt-4 pb-8">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <h1
-              className="text-4xl md:text-6xl leading-tight mb-4 text-zinc-900"
+              className="text-3xl md:text-6xl leading-tight mb-4 text-zinc-900"
               style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: "-0.02em" }}
             >
               Строительство<br />бань под ключ<br />в Усть-Куте

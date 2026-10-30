@@ -3,14 +3,14 @@ import Icon from "@/components/ui/icon"
 
 export function CTASection() {
   return (
-    <section className="py-16 md:py-20 px-6" style={{ backgroundColor: "#09090B" }} id="contacts">
+    <section className="py-10 md:py-20 px-6" style={{ backgroundColor: "#09090B" }} id="contacts">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8"
+          className="rounded-3xl p-6 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8"
           style={{ backgroundColor: "#1a1a1a" }}
         >
           <div>

@@ -3,14 +3,14 @@ import Icon from "@/components/ui/icon"
 
 export function PromoSection() {
   return (
-    <section className="relative py-16 md:py-24 px-6" style={{ backgroundColor: "#09090B" }}>
+    <section className="relative py-10 md:py-24 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 overflow-hidden"
+          className="relative bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-3xl p-6 md:p-12 overflow-hidden"
         >
           {/* Accent glow */}
           <div

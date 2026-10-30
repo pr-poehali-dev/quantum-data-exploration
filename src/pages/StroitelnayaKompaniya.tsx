@@ -216,7 +216,7 @@ export default function StroitelnayaKompaniya() {
             <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded mb-5 tracking-widest uppercase">
               Усть-Кут
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+            <h1 className="text-3xl md:text-6xl font-bold text-white leading-tight mb-5">
               Строительная компания<br />
               <span className="text-yellow-400">МАСТЕРОФФ</span>
             </h1>
@@ -254,7 +254,7 @@ export default function StroitelnayaKompaniya() {
               className="text-center py-6 px-4 rounded-2xl"
               style={{ backgroundColor: "#18181B" }}
             >
-              <div className="text-4xl font-black text-yellow-400 mb-1">{s.num}</div>
+              <div className="text-3xl md:text-4xl font-black text-yellow-400 mb-1">{s.num}</div>
               <div className="text-gray-400 text-sm">{s.label}</div>
             </motion.div>
           ))}
@@ -262,7 +262,7 @@ export default function StroitelnayaKompaniya() {
       </section>
 
       {/* ABOUT TEXT */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -290,7 +290,7 @@ export default function StroitelnayaKompaniya() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+      <section className="py-12 md:py-20 px-4" style={{ backgroundColor: "#111113" }}>
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -333,7 +333,7 @@ export default function StroitelnayaKompaniya() {
       </section>
 
       {/* WHY US */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -372,7 +372,7 @@ export default function StroitelnayaKompaniya() {
       </section>
 
       {/* STAGES */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+      <section className="py-12 md:py-20 px-4" style={{ backgroundColor: "#111113" }}>
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -408,7 +408,7 @@ export default function StroitelnayaKompaniya() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -417,7 +417,7 @@ export default function StroitelnayaKompaniya() {
             className="rounded-3xl overflow-hidden relative"
           >
             <img src="https://cdn.poehali.dev/projects/15ec8a0b-bce5-45ef-9e7c-5faa77ada60e/bucket/9cf5c326-530f-4834-a949-ceb36ce8defe.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.2)" }} />
-            <div className="relative z-10 p-10 md:p-16 text-center">
+            <div className="relative z-10 p-6 md:p-16 text-center">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
                 Свяжитесь с нами<br />и обсудим ваш проект
               </h2>
@@ -436,7 +436,7 @@ export default function StroitelnayaKompaniya() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#111113" }}>
+      <section className="py-12 md:py-20 px-4" style={{ backgroundColor: "#111113" }}>
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

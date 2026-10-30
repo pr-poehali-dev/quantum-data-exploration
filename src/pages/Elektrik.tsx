@@ -63,8 +63,8 @@ export default function Elektrik() {
               style={{ right: "-160px", bottom: 0, top: 0, height: "100%", width: "auto", zIndex: 5 }}
             />
             <div className="grid md:grid-cols-[1fr_420px]">
-              <div className="p-8 md:p-12 flex flex-col justify-start relative z-10">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-7">
+              <div className="p-6 md:p-12 flex flex-col justify-start relative z-10">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-7">
                   Электрик<br />в Усть-Куте
                 </h1>
 

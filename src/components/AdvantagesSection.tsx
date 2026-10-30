@@ -12,7 +12,7 @@ const advantages = [
 
 export function AdvantagesSection() {
   return (
-    <div className="relative z-20 py-16 md:py-24" style={{ backgroundColor: "#09090B" }}>
+    <div className="relative z-20 py-10 md:py-24" style={{ backgroundColor: "#09090B" }}>
       <div className="w-full flex justify-center px-6">
         <div className="w-full max-w-6xl">
           <motion.div
