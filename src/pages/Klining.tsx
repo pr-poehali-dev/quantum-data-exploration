@@ -84,18 +84,18 @@ export default function Klining() {
         <Navbar />
 
         {/* HERO */}
-        <section className="pt-0 mt-0 pb-0 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #fdf6f2 0%, #fff9f7 100%)" }}>
-          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
-            <div className="flex-1 py-12 relative z-10">
+        <section className="pt-20 md:pt-0 mt-0 pb-0 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #fdf6f2 0%, #fff9f7 100%)" }}>
+          <div className="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center gap-8 md:min-h-[500px]">
+            <div className="flex-1 py-8 md:py-12 relative z-10">
               <div className="mb-5">
                 <div className="mb-3">
                   <span className="px-4 py-2 rounded-2xl text-white text-base font-bold inline-block" style={{ backgroundColor: ORANGE, transform: "rotate(-6deg)" }}>от 50 р./м²</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                   Клининговые услуги в Усть-Куте
                 </h1>
               </div>
-              <p className="text-gray-500 text-lg mb-6">
+              <p className="text-gray-500 text-base md:text-lg mb-6">
                 Профессиональная уборка квартир, домов,<br />офисов и коммерческих помещений
               </p>
 
@@ -104,7 +104,7 @@ export default function Klining() {
                 <span className="font-extrabold" style={{ color: ORANGE }}>ПОДАРОК!</span>
               </div>
 
-              <div className="flex flex-wrap gap-5 mb-8">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-5 mb-8">
                 <div className="flex items-center gap-2 text-gray-700 font-medium">
                   <span className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
                     <Icon name="Check" size={14} className="text-white" />
@@ -119,10 +119,10 @@ export default function Klining() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="tel:+79500990931"
-                  className="flex items-center gap-2 px-7 py-4 rounded-xl text-white font-bold text-base hover:opacity-90 transition-opacity"
+                  className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-white font-bold text-base hover:opacity-90 transition-opacity"
                   style={{ backgroundColor: ORANGE }}
                 >
                   Заказать уборку
@@ -132,7 +132,7 @@ export default function Klining() {
                   href="https://wa.me/79500990931"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-7 py-4 rounded-xl text-white font-bold text-base hover:opacity-90 transition-opacity"
+                  className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-white font-bold text-base hover:opacity-90 transition-opacity"
                   style={{ backgroundColor: "#25D366" }}
                 >
                   Написать в WhatsApp
@@ -152,8 +152,8 @@ export default function Klining() {
         </section>
 
         {/* Преимущества — 4 карточки */}
-        <section className="bg-white pt-0 pb-10 px-6 -mt-20 relative z-10">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+        <section className="bg-white pt-6 md:pt-0 pb-10 px-4 md:px-6 md:-mt-20 relative z-10">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {advantages.map((a, i) => (
               <motion.div
                 key={i}
@@ -161,7 +161,7 @@ export default function Klining() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.08 }}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-white border-2 shadow-md"
+                className="flex items-center gap-4 p-4 md:p-5 rounded-2xl bg-white border-2 shadow-md"
                 style={{ borderColor: ORANGE }}
               >
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: ORANGE_LIGHT }}>
@@ -174,18 +174,18 @@ export default function Klining() {
         </section>
 
         {/* Акционный баннер */}
-        <section className="py-8 px-6">
+        <section className="py-6 md:py-8 px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8"
+              className="rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 md:gap-8"
               style={{ backgroundColor: ORANGE }}
             >
               <div>
                 <p className="text-orange-100 text-lg font-medium mb-1">При заказе уборки</p>
-                <h2 className="text-white text-3xl md:text-4xl font-extrabold mb-3">МОЙКА ОКОН В ПОДАРОК!</h2>
+                <h2 className="text-white text-2xl md:text-4xl font-extrabold mb-3">МОЙКА ОКОН В ПОДАРОК!</h2>
                 <p className="text-orange-100 text-base">
                   Закажи генеральную или послестроительную уборку —<br />
                   получи мойку всех стандартных окон в <strong className="text-white">ПОДАРОК.</strong>
@@ -197,7 +197,7 @@ export default function Klining() {
                   href="https://wa.me/79500990931"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-6 py-4 rounded-2xl font-bold text-base hover:opacity-90 transition-opacity"
+                  className="flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold text-base hover:opacity-90 transition-opacity"
                   style={{ backgroundColor: "white", color: ORANGE }}
                 >
                   <Icon name="MessageCircle" size={20} style={{ color: "#25D366" }} />
@@ -205,7 +205,7 @@ export default function Klining() {
                 </a>
                 <a
                   href="tel:+79500990931"
-                  className="flex items-center gap-3 px-6 py-4 rounded-2xl font-bold text-base text-white border-2 border-white hover:bg-white transition-all"
+                  className="flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold text-base text-white border-2 border-white hover:bg-white transition-all"
                   style={{} as React.CSSProperties}
                 >
                   <Icon name="Phone" size={20} />
@@ -217,7 +217,7 @@ export default function Klining() {
         </section>
 
         {/* Наши услуги */}
-        <section className="py-12 px-6 bg-gray-50">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -225,7 +225,7 @@ export default function Klining() {
               viewport={{ once: true }}
               className="mb-10"
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Наши услуги</h2>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-2">Наши услуги</h2>
               <p className="text-gray-500">Полный спектр клининговых услуг в Усть-Куте</p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -257,11 +257,11 @@ export default function Klining() {
         </section>
 
         {/* Мойка окон — акция */}
-        <section className="py-12 px-6 bg-white">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
               <div className="grid md:grid-cols-2">
-                <div className="p-8 md:p-10 bg-gray-50">
+                <div className="p-5 md:p-10 bg-gray-50">
                   <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 text-center">Все окна и балконы в квартире по единой цене!</h2>
                   <p className="text-gray-500 text-center mb-8">Закажите мытьё всех окон и балкона</p>
                   <div className="mb-5">
@@ -281,13 +281,13 @@ export default function Klining() {
                     </a>
                   </div>
                 </div>
-                <div className="p-8 md:p-10 flex flex-col justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
+                <div className="p-5 md:p-10 flex flex-col justify-center" style={{ backgroundColor: ORANGE_LIGHT }}>
                   <div className="relative mb-5">
                     <div className="rounded-2xl p-6 text-center bg-white border-2" style={{ borderColor: ORANGE }}>
-                      <div className="text-4xl font-extrabold mb-1" style={{ color: ORANGE }}>3 000 руб.</div>
+                      <div className="text-3xl md:text-4xl font-extrabold mb-1" style={{ color: ORANGE }}>3 000 руб.</div>
                       <div className="text-gray-500 text-sm">Цена не зависит от количества окон в квартире</div>
                     </div>
-                    <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center text-white text-xs font-extrabold text-center leading-tight" style={{ backgroundColor: "#e53e3e" }}>АКЦИЯ</div>
+                    <div className="absolute -top-3 -right-2 md:-top-4 md:-right-4 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-white text-xs font-extrabold text-center leading-tight" style={{ backgroundColor: "#e53e3e" }}>АКЦИЯ</div>
                   </div>
                   <p className="text-gray-700 font-medium mb-3 text-sm">Оставьте заявку</p>
                   <div className="flex flex-col gap-2 mb-3">
@@ -305,7 +305,7 @@ export default function Klining() {
 
 
         {/* Почему мы + форма */}
-        <section className="py-12 px-6 bg-gray-50">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -313,7 +313,7 @@ export default function Klining() {
               viewport={{ once: true }}
               className="mb-10"
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 leading-tight">
                 Почему стоит{" "}
                 <span style={{ color: ORANGE }}>заказать клининг</span>
                 <br />именно у нас?
@@ -355,7 +355,7 @@ export default function Klining() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm sticky top-28"
+                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm md:sticky md:top-28"
               >
                 <h3 className="text-xl font-extrabold text-gray-900 mb-1">Не можете определиться с услугой?</h3>
                 <p className="text-gray-400 text-sm mb-5">Напишите нам в мессенджеры — мы всегда онлайн!</p>
@@ -404,7 +404,7 @@ export default function Klining() {
         </section>
 
         {/* Интерактивная карта комнаты */}
-        <section className="py-12 px-6 bg-white">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Что входит в уборку</h2>
@@ -421,7 +421,7 @@ export default function Klining() {
         </section>
 
         {/* Наше оборудование */}
-        <section className="py-12 px-6 bg-gray-50">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Наше оборудование</h2>
@@ -463,7 +463,7 @@ export default function Klining() {
         </section>
 
         {/* 4 шага */}
-        <section className="py-12 px-6 bg-white">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
@@ -506,7 +506,7 @@ export default function Klining() {
         </section>
 
         {/* Точность цены 100% */}
-        <section className="py-12 px-6 bg-gray-50">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               className="rounded-3xl border-2 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8"
@@ -545,7 +545,7 @@ export default function Klining() {
         </section>
 
         {/* Акции */}
-        <section className="py-12 px-6 bg-white">
+        <section className="py-10 md:py-12 px-4 md:px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Акции</h2>
