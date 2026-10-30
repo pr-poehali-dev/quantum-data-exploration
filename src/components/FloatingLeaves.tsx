@@ -37,9 +37,11 @@ function generateLeaf(id: number): Leaf {
 const TOTAL_LEAVES = 12;
 
 export const FloatingLeaves = () => {
-  const [leaves] = useState<Leaf[]>(() =>
-    Array.from({ length: TOTAL_LEAVES }, (_, i) => generateLeaf(i))
-  );
+  // Random leaves are generated after hydration so server and client markup match.
+  const [leaves, setLeaves] = useState<Leaf[]>([]);
+  useEffect(() => {
+    setLeaves(Array.from({ length: TOTAL_LEAVES }, (_, i) => generateLeaf(i)));
+  }, []);
 
   return (
     <div

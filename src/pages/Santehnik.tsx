@@ -265,7 +265,7 @@ export default function Santehnik() {
                       <span itemProp="name">{r.name}</span>
                     </span>
                     <time className="text-zinc-500 text-xs" itemProp="datePublished" dateTime={r.date}>
-                      {new Date(r.date).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" })}
+                      {new Date(r.date).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}
                     </time>
                   </div>
                 </div>

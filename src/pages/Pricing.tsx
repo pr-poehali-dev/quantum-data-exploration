@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import Icon from "@/components/ui/icon"
-import { Link } from "react-router-dom"
+import { Link } from "@/lib/router-compat"
 
 const services = [
   {
@@ -173,7 +173,7 @@ export default function Pricing() {
                           <div className="text-xs text-zinc-500 mt-0.5">{plan.hours} часа × {plan.rate} ₽</div>
                         </div>
                         <div className="text-right">
-                          <div className="text-xl font-bold text-white">{plan.price.toLocaleString()} ₽</div>
+                          <div className="text-xl font-bold text-white">{plan.price.toLocaleString("ru-RU")} ₽</div>
                         </div>
                       </div>
                     ))}

@@ -449,7 +449,7 @@ export default function Plotnik() {
       <FloatingCallButton />
 
       {isFormOpen && (
-        <OrderForm onClose={() => setIsFormOpen(false)} defaultService="Плотник" />
+        <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} serviceTitle="Плотник" />
       )}
     </>
   )

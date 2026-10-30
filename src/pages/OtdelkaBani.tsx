@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Helmet } from "@/components/Helmet"
+import { useAfterLoad } from "@/hooks/use-after-load"
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
@@ -164,6 +165,7 @@ const project1Photos = [
 ];
 
 export default function OtdelkaBani() {
+  const afterLoad = useAfterLoad()
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [p1Idx, setP1Idx] = useState(0)
@@ -255,7 +257,7 @@ export default function OtdelkaBani() {
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                      backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80')",
+                      backgroundImage: afterLoad ? "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80')" : undefined,
                       filter: "blur(2px) brightness(0.55) saturate(1.4)",
                       transform: "scale(1.08)",
                     }}

@@ -658,7 +658,7 @@ export default function OtdelkaKvartir() {
         )
       })()}
 
-      <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} defaultService="Отделка квартир" />
+      <OrderForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} serviceTitle="Отделка квартир" />
       <Footer />
     </div>
   )
